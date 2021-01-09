@@ -1,0 +1,46 @@
+spring:
+
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: ${namespace:LOCAL}_EVENTS
+          producer:
+            use-native-encoding: true
+            partition-count: 1
+        input:
+          destination: ${namespace:LOCAL}_EVENTS
+          group: search-service
+          consumer:
+            use-native-decoding: true
+      kafka:
+        binder:
+          brokers: ${spring.kafka.bootstrap-servers}
+          consumer-properties:
+            max.poll.records: 50
+          auto-add-partitions: true
+          replication-factor: 1
+        bindings:
+          default:
+            consumer:
+              autoCommitOnError: false
+              autoCommitOffset: true
+              startOffset: earliest
+              headerMode: raw
+          input:
+            consumer:
+              configuration:
+                value.deserializer: com.simonjamesrowe.model.serialization.EventDeserializer
+                key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+          output:
+            producer:
+              configuration:
+                value.serializer: com.simonjamesrowe.model.serialization.EventSerializer
+                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+  kafka:
+    consumer:
+      properties:
+        spring.json.trusted.packages: com.simonjamesrowe.model
