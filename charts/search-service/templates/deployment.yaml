@@ -31,7 +31,7 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
         - name: NAMESPACE
-          value: { { .Release.Namespace } }
+          value: {{ .Release.Namespace }}
 {{- range $pkey, $pval := .Values.env }}
         - name: {{ $pkey }}
           value: {{ quote $pval }}
