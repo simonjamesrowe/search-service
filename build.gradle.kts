@@ -23,6 +23,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-starter:1.0.1")
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+	implementation("io.github.openfeign:feign-jackson:11.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
 	implementation("com.simonjamesrowe:model:0.0.7")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -32,6 +34,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("com.ninja-squad:springmockk:3.0.1")
+	testImplementation("org.awaitility:awaitility:4.0.3")
 	testImplementation("com.simonjamesrowe:component-test:0.0.8")
 }
 

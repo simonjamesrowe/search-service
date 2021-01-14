@@ -1,9 +1,12 @@
+cms:
+  url: https://api.simonjamesrowe.com
 spring:
-
   jackson:
     serialization:
       write_dates_as_timestamps: false
   cloud:
+    function:
+      definition: consumeEvent
     stream:
       bindings:
         output:
@@ -11,10 +14,11 @@ spring:
           producer:
             use-native-encoding: true
             partition-count: 1
-        input:
+        consumeEvent-in-0:
           destination: ${namespace:LOCAL}_EVENTS
           group: search-service
           consumer:
+            batch-mode: true
             use-native-decoding: true
       kafka:
         binder:
@@ -30,7 +34,7 @@ spring:
               autoCommitOffset: true
               startOffset: earliest
               headerMode: raw
-          input:
+          consumeEvent-in-0:
             consumer:
               configuration:
                 value.deserializer: com.simonjamesrowe.model.serialization.EventDeserializer
@@ -44,3 +48,7 @@ spring:
     consumer:
       properties:
         spring.json.trusted.packages: com.simonjamesrowe.model
+
+elasticsearch:
+  index:
+    blog: blog_${namespace:local}

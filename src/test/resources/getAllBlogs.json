@@ -1,0 +1,2499 @@
+[
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5e495da7bc8d7d001ddbd7c5",
+        "name": "Kubernetes",
+        "createdAt": "2020-02-16T15:20:07.909Z",
+        "updatedAt": "2020-02-16T22:04:13.013Z",
+        "__v": 0,
+        "id": "5e495da7bc8d7d001ddbd7c5"
+      },
+      {
+        "_id": "5f02da709d8081001fd38fa4",
+        "name": "Jenkins",
+        "createdAt": "2020-07-06T08:01:52.572Z",
+        "updatedAt": "2020-07-06T08:01:52.572Z",
+        "__v": 0,
+        "id": "5f02da709d8081001fd38fa4"
+      },
+      {
+        "_id": "5f03901b9d8081001fd38fa7",
+        "name": "Strapi",
+        "createdAt": "2020-07-06T20:56:59.818Z",
+        "updatedAt": "2020-07-06T20:56:59.818Z",
+        "__v": 0,
+        "id": "5f03901b9d8081001fd38fa7"
+      },
+      {
+        "_id": "5f0390249d8081001fd38fa8",
+        "name": "TLS",
+        "createdAt": "2020-07-06T20:57:08.354Z",
+        "updatedAt": "2020-07-06T20:57:08.354Z",
+        "__v": 0,
+        "id": "5f0390249d8081001fd38fa8"
+      },
+      {
+        "_id": "5f0390329d8081001fd38fa9",
+        "name": "MongoDB",
+        "createdAt": "2020-07-06T20:57:22.633Z",
+        "updatedAt": "2020-07-06T20:57:22.633Z",
+        "__v": 0,
+        "id": "5f0390329d8081001fd38fa9"
+      },
+      {
+        "_id": "5f0390499d8081001fd38faa",
+        "name": "React",
+        "createdAt": "2020-07-06T20:57:45.054Z",
+        "updatedAt": "2020-07-06T20:57:45.054Z",
+        "__v": 0,
+        "id": "5f0390499d8081001fd38faa"
+      }
+    ],
+    "skills": [
+      {
+        "_id": "5f635b6a5ee4c9001d2b9632",
+        "name": "Spring Boot",
+        "rating": 9.7,
+        "order": 1,
+        "createdAt": "2020-09-17T12:49:46.739Z",
+        "updatedAt": "2020-09-21T21:05:20.308Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6851a85ee4c9001d2b96af",
+          "name": "spring-boot.jpeg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "spring_boot_5ee37de4c1",
+          "ext": ".jpeg",
+          "mime": "image/png",
+          "size": 7.98,
+          "width": 400,
+          "height": 400,
+          "url": "/uploads/spring_boot_5ee37de4c1.jpeg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_spring-boot.jpeg",
+              "hash": "thumbnail_spring_boot_5ee37de4c1",
+              "ext": ".jpeg",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 5.21,
+              "path": null,
+              "url": "/uploads/thumbnail_spring_boot_5ee37de4c1.jpeg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635b6a5ee4c9001d2b9632",
+            "5feed4c667bdd6001e9c12d0"
+          ],
+          "createdAt": "2020-09-21T07:09:28.458Z",
+          "updatedAt": "2021-01-01T21:02:32.991Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6851a85ee4c9001d2b96af"
+        },
+        "description": "Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can \"just run\".\n\n- Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)\n- Provide opinionated 'starter' dependencies to simplify your build configuration\n- Automatically configure Spring and 3rd party libraries whenever possible\n- Provide production-ready features such as metrics, health checks, and externalized configuration",
+        "id": "5f635b6a5ee4c9001d2b9632"
+      },
+      {
+        "_id": "5f635b555ee4c9001d2b9631",
+        "name": "Kotlin",
+        "rating": 8,
+        "createdAt": "2020-09-17T12:49:25.636Z",
+        "updatedAt": "2020-09-21T21:01:54.939Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f65ec765ee4c9001d2b9676",
+          "name": "kotlin_250x250.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "kotlin_250x250_dfc086e243",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 3.69,
+          "width": 250,
+          "height": 250,
+          "url": "/uploads/kotlin_250x250_dfc086e243.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_kotlin_250x250.png",
+              "hash": "thumbnail_kotlin_250x250_dfc086e243",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 6.89,
+              "path": null,
+              "url": "/uploads/thumbnail_kotlin_250x250_dfc086e243.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f6359c55ee4c9001d2b9627",
+            "5f635b555ee4c9001d2b9631"
+          ],
+          "createdAt": "2020-09-19T11:33:10.896Z",
+          "updatedAt": "2020-09-21T06:17:06.069Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f65ec765ee4c9001d2b9676"
+        },
+        "description": "- Lambda expressions + Inline functions = performant custom control structures\n- Extension functions\n- Null-safety\n- Smart casts\n- String templates\n- Properties\n- Primary constructors\n- First-class delegation\n- Type inference for variable and property types\n- Singletons\n- Declaration-site variance & Type projections\n- Range expressions\n- Operator overloading\n- Companion objects\n- Data classes\n- Separate interfaces for read-only and mutable collections\n- Coroutines",
+        "id": "5f635b555ee4c9001d2b9631"
+      },
+      {
+        "_id": "5f635c2e5ee4c9001d2b963c",
+        "name": "Jenkins Pipeline",
+        "rating": 8,
+        "createdAt": "2020-09-17T12:53:02.588Z",
+        "updatedAt": "2020-09-22T06:41:07.845Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f65ed105ee4c9001d2b967c",
+          "name": "jenkins-5-569553.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "jenkins_5_569553_cb54b85a4c",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 12.15,
+          "width": 256,
+          "height": 256,
+          "url": "/uploads/jenkins_5_569553_cb54b85a4c.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_jenkins-5-569553.png",
+              "hash": "thumbnail_jenkins_5_569553_cb54b85a4c",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 16.21,
+              "path": null,
+              "url": "/uploads/thumbnail_jenkins_5_569553_cb54b85a4c.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635a195ee4c9001d2b962a",
+            "5f635c2e5ee4c9001d2b963c"
+          ],
+          "createdAt": "2020-09-19T11:35:44.624Z",
+          "updatedAt": "2020-09-21T07:16:50.216Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f65ed105ee4c9001d2b967c"
+        },
+        "description": "Pipeline is a suite of plugins that supports implementing and integrating continuous delivery pipelines into Jenkins. Pipeline provides an extensible set of tools for modelling simple-to-complex delivery pipelines \"as code\" via the Pipeline DSL (groovy). ",
+        "id": "5f635c2e5ee4c9001d2b963c"
+      },
+      {
+        "_id": "5f635c375ee4c9001d2b963d",
+        "name": "Jenkins X",
+        "rating": 9,
+        "createdAt": "2020-09-17T12:53:11.954Z",
+        "updatedAt": "2020-09-22T21:19:16.887Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6616545ee4c9001d2b9690",
+          "name": "jenkinsx.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "jenkinsx_d56c6fea15",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 25.16,
+          "width": 696,
+          "height": 398,
+          "url": "/uploads/jenkinsx_d56c6fea15.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_jenkinsx.png",
+              "hash": "thumbnail_jenkinsx_d56c6fea15",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 140,
+              "size": 9.18,
+              "path": null,
+              "url": "/uploads/thumbnail_jenkinsx_d56c6fea15.png"
+            },
+            "small": {
+              "name": "small_jenkinsx.png",
+              "hash": "small_jenkinsx_d56c6fea15",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 500,
+              "height": 286,
+              "size": 22.51,
+              "path": null,
+              "url": "/uploads/small_jenkinsx_d56c6fea15.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f0413739d8081001fd38fb6",
+            "5f635c375ee4c9001d2b963d"
+          ],
+          "createdAt": "2020-09-19T14:31:48.129Z",
+          "updatedAt": "2020-09-21T07:17:01.500Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6616545ee4c9001d2b9690"
+        },
+        "description": "Jenkins X provides pipeline automation, built-in GitOps, and preview environments to help teams collaborate and accelerate their software delivery at any scale. Jenkins X builds upon the following core components:\n- Kubernetes and Docker\n- Helm and Draft",
+        "id": "5f635c375ee4c9001d2b963d"
+      },
+      {
+        "_id": "5f635f8f5ee4c9001d2b966c",
+        "name": "Helm",
+        "rating": 8,
+        "createdAt": "2020-09-17T13:07:27.527Z",
+        "updatedAt": "2020-09-30T06:20:10.213Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6854785ee4c9001d2b96cf",
+          "name": "helm.jpg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "helm_9127651c35",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 12.82,
+          "width": 366,
+          "height": 366,
+          "url": "/uploads/helm_9127651c35.jpg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_helm.jpg",
+              "hash": "thumbnail_helm_9127651c35",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "width": 156,
+              "height": 156,
+              "size": 5.11,
+              "path": null,
+              "url": "/uploads/thumbnail_helm_9127651c35.jpg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635f8f5ee4c9001d2b966c"
+          ],
+          "createdAt": "2020-09-21T07:21:28.306Z",
+          "updatedAt": "2020-09-21T07:21:30.887Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6854785ee4c9001d2b96cf"
+        },
+        "description": "Helm is a tool that streamlines installing and managing Kubernetes applications. ... A single chart might be used to deploy something simple, like a memcached pod, or something complex, like a full web app stack with HTTP servers, databases, caches, etc,",
+        "id": "5f635f8f5ee4c9001d2b966c"
+      },
+      {
+        "_id": "5f635f995ee4c9001d2b966d",
+        "name": "Chart Museum",
+        "rating": 7,
+        "createdAt": "2020-09-17T13:07:37.145Z",
+        "updatedAt": "2020-09-30T06:22:03.609Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6854c05ee4c9001d2b96d1",
+          "name": "chart-museum.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "chart_museum_a56509005a",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 72.28,
+          "width": 500,
+          "height": 225,
+          "url": "/uploads/chart_museum_a56509005a.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_chart-museum.png",
+              "hash": "thumbnail_chart_museum_a56509005a",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 110,
+              "size": 29.64,
+              "path": null,
+              "url": "/uploads/thumbnail_chart_museum_a56509005a.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635f995ee4c9001d2b966d"
+          ],
+          "createdAt": "2020-09-21T07:22:40.798Z",
+          "updatedAt": "2020-09-21T07:22:43.401Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6854c05ee4c9001d2b96d1"
+        },
+        "description": "ChartMuseum is an open-source Helm Chart Repository written in Go (Golang), with support for cloud storage backends, including Google Cloud Storage, Amazon S3, Microsoft Azure Blob Storage, Alibaba Cloud OSS Storage and Openstack Object Storage.",
+        "id": "5f635f995ee4c9001d2b966d"
+      },
+      {
+        "_id": "5f635c185ee4c9001d2b963a",
+        "name": "Maven",
+        "rating": 9.6,
+        "createdAt": "2020-09-17T12:52:40.922Z",
+        "updatedAt": "2020-09-22T06:36:50.576Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6853265ee4c9001d2b96bf",
+          "name": "maven.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "maven_8510b1d6fa",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 30.77,
+          "width": 1280,
+          "height": 324,
+          "url": "/uploads/maven_8510b1d6fa.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_maven.png",
+              "hash": "thumbnail_maven_8510b1d6fa",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 62,
+              "size": 10.07,
+              "path": null,
+              "url": "/uploads/thumbnail_maven_8510b1d6fa.png"
+            },
+            "large": {
+              "name": "large_maven.png",
+              "hash": "large_maven_8510b1d6fa",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 1000,
+              "height": 253,
+              "size": 68.02,
+              "path": null,
+              "url": "/uploads/large_maven_8510b1d6fa.png"
+            },
+            "medium": {
+              "name": "medium_maven.png",
+              "hash": "medium_maven_8510b1d6fa",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 750,
+              "height": 190,
+              "size": 46.3,
+              "path": null,
+              "url": "/uploads/medium_maven_8510b1d6fa.png"
+            },
+            "small": {
+              "name": "small_maven.png",
+              "hash": "small_maven_8510b1d6fa",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 500,
+              "height": 127,
+              "size": 27.01,
+              "path": null,
+              "url": "/uploads/small_maven_8510b1d6fa.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635c185ee4c9001d2b963a"
+          ],
+          "createdAt": "2020-09-21T07:15:50.288Z",
+          "updatedAt": "2020-09-21T07:15:57.208Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6853265ee4c9001d2b96bf"
+        },
+        "description": "Maven is a build automation tool used primarily for Java projects. Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. \n\nMaven addresses two aspects of building software: how software is built, and its dependencies. An XML file describes the software project being built, its dependencies on other external modules and components, the build order, directories, and required plug-ins. ",
+        "id": "5f635c185ee4c9001d2b963a"
+      },
+      {
+        "_id": "5f635c4f5ee4c9001d2b963f",
+        "name": "Tekton",
+        "createdAt": "2020-09-17T12:53:35.722Z",
+        "updatedAt": "2020-09-22T21:20:48.795Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "rating": 8,
+        "image": {
+          "_id": "5f6853a55ee4c9001d2b96c7",
+          "name": "tekton.jpeg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "tekton_8b8bad63e8",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 13.24,
+          "width": 213,
+          "height": 237,
+          "url": "/uploads/tekton_8b8bad63e8.jpeg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_tekton.jpeg",
+              "hash": "thumbnail_tekton_8b8bad63e8",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 140,
+              "height": 156,
+              "size": 7.5,
+              "path": null,
+              "url": "/uploads/thumbnail_tekton_8b8bad63e8.jpeg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635c4f5ee4c9001d2b963f"
+          ],
+          "createdAt": "2020-09-21T07:17:57.258Z",
+          "updatedAt": "2020-09-21T07:17:59.250Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6853a55ee4c9001d2b96c7"
+        },
+        "description": "The Tekton Pipelines project provides k8s-style resources for declaring CI/CD-style pipelines.\n\nTekton Pipelines are Cloud Native:\n\n- Run on Kubernetes\n- Have Kubernetes clusters as a first class type\n- Use containers as their building blocks\n",
+        "id": "5f635c4f5ee4c9001d2b963f"
+      },
+      {
+        "_id": "5f635ca45ee4c9001d2b9643",
+        "name": "Kubernetes",
+        "rating": 8,
+        "createdAt": "2020-09-17T12:55:00.632Z",
+        "updatedAt": "2020-09-22T21:28:44.327Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f66163d5ee4c9001d2b968e",
+          "name": "kubernetes.jpeg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "kubernetes_c13e33fa8c",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 17.62,
+          "width": 400,
+          "height": 388,
+          "url": "/uploads/kubernetes_c13e33fa8c.jpeg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_kubernetes.jpeg",
+              "hash": "thumbnail_kubernetes_c13e33fa8c",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 161,
+              "height": 156,
+              "size": 6.17,
+              "path": null,
+              "url": "/uploads/thumbnail_kubernetes_c13e33fa8c.jpeg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f0408c59d8081001fd38fb1",
+            "5f635ca45ee4c9001d2b9643"
+          ],
+          "createdAt": "2020-09-19T14:31:25.284Z",
+          "updatedAt": "2020-09-21T12:08:28.703Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f66163d5ee4c9001d2b968e"
+        },
+        "description": "Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes provides you with:\n\n- **Service discovery and load balancing**\n- **Automated rollouts and rollbacks**: You provide Kubernetes with a cluster of nodes that it can use to run containerized tasks. You tell Kubernetes how much CPU and memory (RAM) each container needs. Kubernetes can fit containers onto your nodes to make the best use of your resources.\n- **Self-healing** Kubernetes restarts containers that fail, replaces containers, kills containers that don't respond to your user-defined health check, and doesn't advertise them to clients until they are ready to serve.\n- **Secret and configuration management** ",
+        "id": "5f635ca45ee4c9001d2b9643"
+      },
+      {
+        "_id": "5f635e935ee4c9001d2b9665",
+        "name": "Typescript",
+        "rating": 7.5,
+        "createdAt": "2020-09-17T13:03:15.410Z",
+        "updatedAt": "2020-09-27T08:10:06.054Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f689aee76320d001e515e8b",
+          "name": "ts.jpg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "ts_1c7c89d06d",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 11.59,
+          "width": 400,
+          "height": 400,
+          "url": "/uploads/ts_1c7c89d06d.jpg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_ts.jpg",
+              "hash": "thumbnail_ts_1c7c89d06d",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "width": 156,
+              "height": 156,
+              "size": 4.38,
+              "path": null,
+              "url": "/uploads/thumbnail_ts_1c7c89d06d.jpg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635e935ee4c9001d2b9665"
+          ],
+          "createdAt": "2020-09-21T12:22:06.356Z",
+          "updatedAt": "2020-09-21T12:22:08.459Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f689aee76320d001e515e8b"
+        },
+        "description": "TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for development of large applications and transcompiles to JavaScript",
+        "id": "5f635e935ee4c9001d2b9665"
+      },
+      {
+        "_id": "5f635e625ee4c9001d2b9660",
+        "name": "React",
+        "rating": 8.5,
+        "createdAt": "2020-09-17T13:02:26.277Z",
+        "updatedAt": "2020-09-27T08:07:00.023Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f66167a5ee4c9001d2b9692",
+          "name": "react.jpeg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "react_56f28418d3",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 11.98,
+          "width": 500,
+          "height": 353,
+          "url": "/uploads/react_56f28418d3.jpeg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_react.jpeg",
+              "hash": "thumbnail_react_56f28418d3",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 221,
+              "height": 156,
+              "size": 4.08,
+              "path": null,
+              "url": "/uploads/thumbnail_react_56f28418d3.jpeg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f04152d9d8081001fd38fb9",
+            "5f635e625ee4c9001d2b9660"
+          ],
+          "createdAt": "2020-09-19T14:32:26.690Z",
+          "updatedAt": "2020-09-21T12:19:36.732Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f66167a5ee4c9001d2b9692"
+        },
+        "description": "React.js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. It’s used for handling the view layer for web and mobile apps.\n\nReact allows developers to create large web applications that can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple. It works only on user interfaces in the application",
+        "id": "5f635e625ee4c9001d2b9660"
+      }
+    ],
+    "_id": "5f0215c69d8081001fd38fa1",
+    "title": "Creating a rich web app that can be hosted from home",
+    "shortDescription": "A quick introduction into the various components of my personal website including jenkinsx, kubernetes, letsencrypt and more.",
+    "createdAt": "2020-07-05T18:02:46.731Z",
+    "updatedAt": "2021-01-05T21:43:56.202Z",
+    "__v": 0,
+    "image": {
+      "_id": "5f6616045ee4c9001d2b968a",
+      "name": "Website Icon.jpeg",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "Website_Icon_727b161f01",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 29.24,
+      "width": 801,
+      "height": 401,
+      "url": "/uploads/Website_Icon_727b161f01.jpeg",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_Website Icon.jpeg",
+          "hash": "thumbnail_Website_Icon_727b161f01",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 245,
+          "height": 123,
+          "size": 6.52,
+          "path": null,
+          "url": "/uploads/thumbnail_Website_Icon_727b161f01.jpeg"
+        },
+        "medium": {
+          "name": "medium_Website Icon.jpeg",
+          "hash": "medium_Website_Icon_727b161f01",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 750,
+          "height": 375,
+          "size": 27.25,
+          "path": null,
+          "url": "/uploads/medium_Website_Icon_727b161f01.jpeg"
+        },
+        "small": {
+          "name": "small_Website Icon.jpeg",
+          "hash": "small_Website_Icon_727b161f01",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 500,
+          "height": 250,
+          "size": 16.14,
+          "path": null,
+          "url": "/uploads/small_Website_Icon_727b161f01.jpeg"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f0215c69d8081001fd38fa1"
+      ],
+      "createdAt": "2020-09-19T14:30:28.441Z",
+      "updatedAt": "2020-09-19T14:30:33.163Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f6616045ee4c9001d2b968a"
+    },
+    "content": "I'm the kind of person that learns by doing - the more I do, the more it sinks in. Whilst attempting to keep my skills up to date, I had the idea of building a rich web application which would serve up my CV, and it could also double as a place to hone and demonstrate my skillsets in certain technologies. Eventually, I could even start blogging about these experiences. \n\nThe first thing I decided I would need would be a CMS (Content Management System). The content of my website would have to be dynamic, as I would like to keep my CV and blog up to date.  There were many options available here, but I finally settled on a headless CMS named ([strapi](https://strapi.io/)). Strapi would also require some sort of persistence layer, and  [mongodb](https://www.mongodb.com/ seemed to be a sensible choice.\n\nFor the web interface itself, there was a bit of competition between React and Angular. After spending years commercially working on Angular projects, I decided that React could be a good thing to learn and went with that.  \n\n```npx create-react-app my-app --template typescript``` is the command used to boostrap my react SPA (single page application) and I found a boostrap template from [here](https://wrapbootstrap.com/).\n\nSo far so good right ? I had picked the basic building blocks for building this dynamic CV/blog, but where would I run it ? I had a perfectly good iMac that was unused, and a fast enough internet connection. This app doesnt need to be highly available, as its just a little hobby app so this would suit well. I could use [ngrok](https://ngrok.com/) to make my app available to the internet, and I could use [Route 53](https://aws.amazon.com/route53/) to set up and configure my domain.\n\nKubernetes is a very popular way or running cloud native apps, so this was a pretty easy choice, the only issue was what flavour of it would work best on a mac. I started off with minikube, but started to have issues with persistent volumes, so eventually went with [kind (kubernetes in docker)](https://kind.sigs.k8s.io/). I could easily install nginx ingress controller, and it was super easy to configure.\n\nThe last thing to consider was how to deploy the individual components or services to the kubernetes cluster. One of my requirements was that I would want to make continual improvments to my app, so the deployment process must be as simple as possible. I would want to have git projects for each service,  build a container image, and deploy a helm chart (a helm chart is a collection of files that describe a related set of Kubernetes resources).  [Jenkins X](https://jenkins-x.io/) describes itself as *Jenkins X provides pipeline automation, built-in GitOps, and preview environments to help teams collaborate and accelerate their software delivery at any scale*. There was out of the box support for kubernetes flavours such as GKE (google cloud) and EKS (amazon web services), but a bit of customisation would be required if i wanted to run this on my local kubernetes cluster. This was easy enough and I was able to configure the following:\n- [Harbor](https://goharbor.io/) as the container registry of choice\n- [Cert Manager](https://cert-manager.io/) - configure cert manager to generate lets encrpt certificates using ACME challennges based on my use of AWS Route 53 for dns.\n- Installed MongoDB in the control plane.\n\nOverall my initial architecture looked something like this:\n\n![Website V1](/uploads/Website_V1_c3889a1afa.jpeg)\n\n\n*All source code for this app can be found here: (https://github.com/simonjamesrowe)*",
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "id": "5f0215c69d8081001fd38fa1"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5f0407a99d8081001fd38fae",
+        "name": "AWS",
+        "createdAt": "2020-07-07T05:27:05.331Z",
+        "updatedAt": "2020-07-07T05:27:05.331Z",
+        "__v": 0,
+        "id": "5f0407a99d8081001fd38fae"
+      },
+      {
+        "_id": "5f0407b99d8081001fd38faf",
+        "name": "NGROK",
+        "createdAt": "2020-07-07T05:27:21.560Z",
+        "updatedAt": "2020-07-07T05:27:21.560Z",
+        "__v": 0,
+        "id": "5f0407b99d8081001fd38faf"
+      }
+    ],
+    "skills": [],
+    "_id": "5f04077e9d8081001fd38fac",
+    "title": "Using ngrock and route53",
+    "shortDescription": "This blog post looks in detail of how dns is configured with AWS Route 53 and configuration of the ngrok tunnel running locally.",
+    "createdAt": "2020-08-07T05:26:22.187Z",
+    "updatedAt": "2020-09-19T14:31:02.300Z",
+    "__v": 0,
+    "image": {
+      "_id": "5f6616225ee4c9001d2b968c",
+      "name": "Route53Ngrok.jpeg",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "Route53_Ngrok_e87b6151d7",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 5.98,
+      "width": 322,
+      "height": 332,
+      "url": "/uploads/Route53_Ngrok_e87b6151d7.jpeg",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_Route53Ngrok.jpeg",
+          "hash": "thumbnail_Route53_Ngrok_e87b6151d7",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 151,
+          "height": 156,
+          "size": 2.71,
+          "path": null,
+          "url": "/uploads/thumbnail_Route53_Ngrok_e87b6151d7.jpeg"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f04077e9d8081001fd38fac"
+      ],
+      "createdAt": "2020-09-19T14:30:58.690Z",
+      "updatedAt": "2020-09-19T14:31:02.297Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f6616225ee4c9001d2b968c"
+    },
+    "content": "\nI was really interested in installing and playing around with [jenkinsx](https://jenkins-x.io/) which would require webhooks to git repositories for applications and environments, in order to trigger builds. I didnt want the extra expense of running this in any of the public clouds (AWS, GCloud, Azure), so I needed a solution where I could tunnel requests to my domain (simonjamesrowe.com), via the internet. \n\n[Ngrok](https://ngrok.com/) is a service that does the following:  *ngrok exposes local servers behind NATs and firewalls to the public internet over secure tunnels.* One of the use cases for this tool is:\n\n-  *Running personal cloud services from your home*.\n\nSo how does this work? I had a domain name registered via AWS's Route53, and I would need to have a cname record that would point to a ngrok cloud service which accepts traffic on a public address and relays that traffic through to the ngrok process running on your machine and then on to the local address you specified.\n\nTo set up ngrok with a custom domain the following configuration is required in ngrok:\n![ngrok-config](/uploads/Screenshot_2020_07_18_at_19_03_33_977c4e8dee.png)\n\nHere is a look at my route53 configuration for my hosted zone:\n![Route53config.png](/uploads/Route53config_png_e03698c725.png)\n\nFinally just a bit more config was required on my local machine. I created this file :*~/.ngrok2/ngrok.yml* with the contents:\n```\nauthtoken: fasdfdsafdssdfadsfasd \nregion: eu\ntunnels:\n   default:\n      proto: tls\n      hostname: \"*.simonjamesrowe.com\"\n      addr: \"127.0.0.1:443\"\n   http:\n      proto: http\n      hostname: \"*.simonjamesrowe.com\"\n      addr: \"127.0.0.1:80\"\n      bind_tls: false\n```\n\nIn the above configuration I have set up 2 tunnels:\n\n1.  A TLS tunnel to Ingress controller running on my local k8s kind cluster. This tunnel means that SSL termination will be done at my machine, using certificates issues by [letsencrypt](https://letsencrypt.org/).\n2. A http tunnel",
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "id": "5f04077e9d8081001fd38fac"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5e495da7bc8d7d001ddbd7c5",
+        "name": "Kubernetes",
+        "createdAt": "2020-02-16T15:20:07.909Z",
+        "updatedAt": "2020-02-16T22:04:13.013Z",
+        "__v": 0,
+        "id": "5e495da7bc8d7d001ddbd7c5"
+      }
+    ],
+    "skills": [],
+    "_id": "5f0408c59d8081001fd38fb1",
+    "title": "Installing Kubernetes with Kind",
+    "shortDescription": "The post will explain how to install kubernetes with kind (Kubernetes In Docker).",
+    "createdAt": "2020-08-31T05:31:49.613Z",
+    "updatedAt": "2020-11-21T11:10:56.177Z",
+    "__v": 0,
+    "image": {
+      "_id": "5f66163d5ee4c9001d2b968e",
+      "name": "kubernetes.jpeg",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "kubernetes_c13e33fa8c",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 17.62,
+      "width": 400,
+      "height": 388,
+      "url": "/uploads/kubernetes_c13e33fa8c.jpeg",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_kubernetes.jpeg",
+          "hash": "thumbnail_kubernetes_c13e33fa8c",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 161,
+          "height": 156,
+          "size": 6.17,
+          "path": null,
+          "url": "/uploads/thumbnail_kubernetes_c13e33fa8c.jpeg"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f0408c59d8081001fd38fb1",
+        "5f635ca45ee4c9001d2b9643"
+      ],
+      "createdAt": "2020-09-19T14:31:25.284Z",
+      "updatedAt": "2020-09-21T12:08:28.703Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f66163d5ee4c9001d2b968e"
+    },
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "content": "Kind is a tool for running kubernetes master and worker nodes using docker containers. It is a great way to run and test apps on kubernetes locally and supports a variety of ingress controllers such as nginx.\n\n![kind.png](/uploads/kind_859c5f857a.png)\n\nIn order to to create a kubernetes cluster using kind, we must first install the kind cli (command line interface). On a mac with homebrew installed, this is as easy as typing\n\n```brew install kind```\n\nNext to create a cluster.  ```kind create cluster``` will create a simple kubernetes cluster with one node (being both a master and a worker node). If we want to customise this further then we can define a configuration file to specify exactly how we would like our nodes configured.\n\n*kind-config.yaml*\n```\nkind: Cluster\napiVersion: kind.x-k8s.io/v1alpha4\nnodes:\n- role: control-plane\n  image: kindest/node:v1.15.11\n  kubeadmConfigPatches:\n    - |\n      kind: InitConfiguration\n      nodeRegistration:\n        kubeletExtraArgs:\n          node-labels: \"ingress-ready=true\"\n  extraPortMappings:\n  - containerPort: 80\n    hostPort: 80\n    protocol: TCP\n  - containerPort: 443\n    hostPort: 443\n    protocol: TCP\n```\n\nA couple of things to note here: \n1. We are adding a node label of ingress-ready=true to the one node that we have in the cluster.\n2. There are 2 extra port mappings, which means that docker will create port bindings for 80:80 and 443:443 to the master node. This is extremely helpful if you have an ingress controller running and you want to send traffic through this ingress controller.\n\nTo use this configuration to create a cluster simply type ```kind create cluster --config kind-config.yml```\n\nFor extra points, if we want to install the nginx ingress controller in this cluster we could by running \n```kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml```\n\nn.b. you would also need to install kubectl, which you can do via homebrew: ```brew install kubectl```.\n",
+    "id": "5f0408c59d8081001fd38fb1"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5e495da7bc8d7d001ddbd7c5",
+        "name": "Kubernetes",
+        "createdAt": "2020-02-16T15:20:07.909Z",
+        "updatedAt": "2020-02-16T22:04:13.013Z",
+        "__v": 0,
+        "id": "5e495da7bc8d7d001ddbd7c5"
+      },
+      {
+        "_id": "5f02da709d8081001fd38fa4",
+        "name": "Jenkins",
+        "createdAt": "2020-07-06T08:01:52.572Z",
+        "updatedAt": "2020-07-06T08:01:52.572Z",
+        "__v": 0,
+        "id": "5f02da709d8081001fd38fa4"
+      },
+      {
+        "_id": "5f0390329d8081001fd38fa9",
+        "name": "MongoDB",
+        "createdAt": "2020-07-06T20:57:22.633Z",
+        "updatedAt": "2020-07-06T20:57:22.633Z",
+        "__v": 0,
+        "id": "5f0390329d8081001fd38fa9"
+      }
+    ],
+    "skills": [],
+    "_id": "5f0413739d8081001fd38fb6",
+    "title": "Installing Jenkins X with jx boot",
+    "shortDescription": "A guide on how to install the jenkinsx control plane on kubernetes with some customisation. ",
+    "createdAt": "2020-09-13T06:17:23.580Z",
+    "updatedAt": "2020-11-22T16:08:08.176Z",
+    "__v": 0,
+    "image": {
+      "_id": "5f6616545ee4c9001d2b9690",
+      "name": "jenkinsx.png",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "jenkinsx_d56c6fea15",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 25.16,
+      "width": 696,
+      "height": 398,
+      "url": "/uploads/jenkinsx_d56c6fea15.png",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_jenkinsx.png",
+          "hash": "thumbnail_jenkinsx_d56c6fea15",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 245,
+          "height": 140,
+          "size": 9.18,
+          "path": null,
+          "url": "/uploads/thumbnail_jenkinsx_d56c6fea15.png"
+        },
+        "small": {
+          "name": "small_jenkinsx.png",
+          "hash": "small_jenkinsx_d56c6fea15",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 500,
+          "height": 286,
+          "size": 22.51,
+          "path": null,
+          "url": "/uploads/small_jenkinsx_d56c6fea15.png"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f0413739d8081001fd38fb6",
+        "5f635c375ee4c9001d2b963d"
+      ],
+      "createdAt": "2020-09-19T14:31:48.129Z",
+      "updatedAt": "2020-09-21T07:17:01.500Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f6616545ee4c9001d2b9690"
+    },
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "content": "Whilst JenkinsX can be installed on cloud providers like AWS , GCP and Azure with a relatively low amount of fuss, it is slightly different story when it comes to installing it local kubernetes distributions such as Kind (Kubernetes in Docker) or minikube.\n\nIn this guide I will demonstrate using ```jx boot``` to install JenkinsX on Kind with some customisations.\n\n![jx-arch.png](/uploads/jx_arch_70d5a197eb.png)\n\nThe first thing that we will need to do is install the jx cli. This can be easily done via homebrew via the command:\n```\nbrew install jenkins-x/jx/jx\n```\n\nOther things that will need to be installed are helm (version 2), and kubectl. Helm 2 can be installed via ```brew install helm@2``` and kubectl with ```brew install kubectl```. This [blog](https://www.simonjamesrowe.com/blogs/5f0408c59d8081001fd38fb1) also describes how you can install and configure a kind cluster.\n\nOnce this is all in place, we will need to fork the repo [jenkins-x/jenkins-x-boot-config](https://github.com/jenkins-x/jenkins-x-boot-config). You can see the forked repo I am using [here](https://github.com/simonjamesrowe/environment-simonjamesrowe-dev).\n\nBecause I am not using a cloud provider like AWS or GCP I won't have DNS registry or docker image registry available to me by default. Also I want to install a couple of additional things in my control plane like mongodb. This means that I will need to define a couple of extra parameters. In the file ```env/parameters.tmpl.schema.json``` we can define any extra parameters that we may need - e.g.:\n```\n  \"aws\": {\n      \"type\": \"object\",\n      \"required\" : [\"accessKeyId\", \"accessSecret\", \"hostedZoneId\"],\n      \"properties\": {\n        \"accessKeyId\": {\n          \"type\": \"string\",\n          \"format\": \"password\",\n          \"title\": \"AWS Access Key for Route 53 Access\",\n          \"description\": \"AWS Access Key for Route 53 Access\"\n        },\n        \"accessSecret\": {\n          \"type\": \"string\",\n          \"format\": \"password\",\n          \"title\": \"AWS Secret for Route 53 Access\",\n          \"description\": \"AWS Secret for Route 53 Access\"\n        },\n        \"hostedZoneId\": {\n          \"type\": \"string\",\n          \"format\": \"password\",\n          \"title\": \"Route 53 zone id\",\n          \"description\": \"AWS Secret for Route 53 Access\"\n        }\n      }\n    },\n    \"mongo\": {\n      \"type\": \"object\",\n      \"required\" : [\"rootPassword\"],\n      \"properties\": {\n        \"rootPassword\": {\n          \"type\": \"string\",\n          \"format\": \"password\",\n          \"title\": \"Root Password for mongoDB\",\n          \"description\": \"Root Password for mongodb\"\n        }\n      }\n    },\n    \"strapi\": {\n      \"type\": \"object\",\n      \"required\" : [\"jwtSigningKey\"],\n      \"properties\": {\n        \"jwtSigningKey\": {\n          \"type\": \"string\",\n          \"format\": \"password\",\n          \"title\": \"Jwt Signing Key for Strapi CMS\",\n          \"description\": \"Jwt Signing Key for Strapi CMS\"\n        }\n      }\n    }\n```\nFrom the env directory type in ```jx step create values --name parameters``` and there will be prompts where you can enter the values of each individual parameter. The result of this command is that it will update the parameters.yaml file, which will look something like this afterwards:\n```\nadminUser:\n  password: local:simonjamesrowe/adminUser:password\n  username: admin\naws:\n  accessKeyId: local:simonjamesrowe/aws:accessKeyId\n  accessSecret: local:simonjamesrowe/aws:accessSecret\n  hostedZoneId: local:simonjamesrowe/aws:hostedZoneId\ndocker:\n  email: simon@simonjamesrowe.com\n  password: local:simonjamesrowe/docker:password\n  url: harbor.simonjamesrowe.com\n  username: admin\nenableDocker: true\nmongo:\n  rootPassword: local:simonjamesrowe/mongo:rootPassword\npipelineUser:\n  email: simon@simonjamesrowe.com\n  token: local:simonjamesrowe/pipelineUser:token\n  username: simonrowe-bot\nprow:\n  hmacToken: local:simonjamesrowe/prow:hmacToken\nstrapi:\n  jwtSigningKey: local:simonjamesrowe/strapi:jwtSigningKey\n```\n\nNext, for the additional items that I will want to install as part of the control plane. Each of these items is packaged as a helm chart, and can be added by modifying the env/requirements.yaml file. I have added a few additional charts:\n```\n- alias: harbor\n  name: harbor\n  repository: https://helm.goharbor.io\n  version: 1.3.2\n- alias: mongodb\n  name: mongodb\n  repository: https://charts.bitnami.com/bitnami\n  version: 7.14.0\n- alias: kubernetes-replicator\n  name: kubernetes-replicator\n  repository: https://helm.mittwald.de\n  version: 2.3.0\n- name: jx-app-ui\n  repository: http://chartmuseum.jenkins-x.io\n  version: 0.1.211\n```\n\nYou can also configure the values for each chart by either modifying env/values.tmpl.yaml or modifying env/{chartName}/values.tmpl.yaml. For example we have used custom values for the mongodb chart by specifying the file env/mongodb/values,yaml:\n```\nserviceAccount:\n  create: false\nmongodbRootPassword: {{ .Parameters.mongo.rootPassword}}\nimage:\n  debug: true\ntag: 4.2\npersistence:\n  size: 50Gi\n```\n\nAs mentioned above, we would need to install an image repository for JenkinsX to push container images to. In this example I have chosen [harbor](https://goharbor.io/) . I will need to configure JenkinsX to push images from harbor. This can be done in the file kubeProviders/kind/values.tmpl.yaml:\n```\n# Override configuration from https://github.com/jenkins-x/jenkins-x-platform/blob/master/jenkins-x-platform/values.yaml\ndocker-registry:\n    enabled: false\n\njenkins-x-platform:\n  PipelineSecrets:\n\n{{- if eq .Parameters.enableDocker true }}\n    DockerConfig: |-\n      {\n        \"auths\":{\n          {{ .Parameters.docker.url | quote }}:\n            {\n              \"auth\": {{ printf \"%s:%s\" .Parameters.docker.username .Parameters.docker.password | b64enc | quote}},\n              \"email\": {{ .Parameters.docker.email | quote}}\n            }\n        }\n      }\n{{- end}}\n```\n\nNow most of my dependencies are configured, I can go ahead and configure my environments. For my cluster I want 2 environments (staging and production). The configuration file can be located at jx-requirements.yaml\n```\nautoUpdate:\n  enabled: false\n  schedule: \"\"\nbootConfigURL: https://github.com/simonjamesrowe/environment-simonjamesrowe-dev\ncluster:\n  clusterName: simonjamesrowe\n  devEnvApprovers:\n  - simonrowe\n  environmentGitOwner: simonjamesrowe\n  environmentGitPublic: true\n  gitKind: github\n  gitName: github\n  gitServer: https://github.com\n  namespace: jx\n  provider: kind\n  registry: harbor.simonjamesrowe.com\nenvironments:\n- ingress:\n    domain: simonjamesrowe.com\n    externalDNS: false\n    namespaceSubDomain: -jx.\n    tls:\n      email: simon.rowe@gmail.com\n      enabled: true\n      production: true\n  key: dev\n  repository: environment-simonjamesrowe-dev\n- ingress:\n    domain: \"\"\n    externalDNS: false\n    namespaceSubDomain: \"\"\n    tls:\n      email: \"\"\n      enabled: true\n      production: true\n  key: staging\n  repository: environment-simonjamesrowe-staging\n- ingress:\n    domain: \"\"\n    externalDNS: false\n    namespaceSubDomain: \"\"\n    tls:\n      email: \"\"\n      enabled: true\n      production: true\n  key: production\n  repository: environment-simonjamesrowe-production\ngitops: true\ningress:\n  domain: simonjamesrowe.com\n  externalDNS: false\n  namespaceSubDomain: -jx.\n  tls:\n    email: simon.rowe@gmail.com\n    enabled: true\n    production: true\nkaniko: true\nrepository: nexus\nsecretStorage: local\nstorage:\n  backup:\n    enabled: false\n    url: \"\"\n  logs:\n    enabled: false\n    url: \"\"\n  reports:\n    enabled: false\n    url: \"\"\n  repository:\n    enabled: false\n    url: \"\"\nvault: {}\nvelero:\n  schedule: \"\"\n  ttl: \"\"\nversionStream:\n  ref: v1.0.497\n  url: https://github.com/jenkins-x/jenkins-x-versions.git\nwebhook: lighthouse\n```\n\nA couple of things to note here:\n\n1.  Cluster:\n```\ncluster:\n  clusterName: simonjamesrowe\n  devEnvApprovers:\n  - simonrowe\n  environmentGitOwner: simonjamesrowe\n  environmentGitPublic: true\n  gitKind: github\n  gitName: github\n  gitServer: https://github.com\n  namespace: jx\n  provider: kind\n  registry: harbor.simonjamesrowe.com\n```\n\nI have chosen to use github, and the public org simonjamesrowe. The control plane will be installed in the k8s \"jx\" namespace, we will use configuration from the kind provider, and our image registry url is set to ```harbor.simonjamesrowe.com``` (as we have configured harbour above). \n\n2. Environments - there is 3 environments, [dev](https://github.com/simonjamesrowe/environment-simonjamesrowe-dev), [staging](https://github.com/simonjamesrowe/environment-simonjamesrowe-staging) and [production](https://github.com/simonjamesrowe/environment-simonjamesrowe-production). Dev is the control plane (jx namespace) where things like harbor, nexus and mongo live, where all other services will live in the jx-staging and jx-production namespaces.\n\nNow that everything is configured, the only thing left to do is to run ```jx boot```.\n\n\n\n\n",
+    "id": "5f0413739d8081001fd38fb6"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5f04154f9d8081001fd38fbb",
+        "name": "Docker",
+        "createdAt": "2020-07-07T06:25:19.500Z",
+        "updatedAt": "2020-07-07T06:25:19.500Z",
+        "__v": 0,
+        "id": "5f04154f9d8081001fd38fbb"
+      },
+      {
+        "_id": "5f0390499d8081001fd38faa",
+        "name": "React",
+        "createdAt": "2020-07-06T20:57:45.054Z",
+        "updatedAt": "2020-07-06T20:57:45.054Z",
+        "__v": 0,
+        "id": "5f0390499d8081001fd38faa"
+      },
+      {
+        "_id": "5f0415779d8081001fd38fbc",
+        "name": "Node",
+        "createdAt": "2020-07-07T06:25:59.682Z",
+        "updatedAt": "2020-07-07T06:25:59.682Z",
+        "__v": 0,
+        "id": "5f0415779d8081001fd38fbc"
+      },
+      {
+        "_id": "5f04157d9d8081001fd38fbd",
+        "name": "Express",
+        "createdAt": "2020-07-07T06:26:05.107Z",
+        "updatedAt": "2020-07-07T06:26:05.107Z",
+        "__v": 0,
+        "id": "5f04157d9d8081001fd38fbd"
+      }
+    ],
+    "skills": [],
+    "_id": "5f04152d9d8081001fd38fb9",
+    "title": "Serving a React App with Node and Express",
+    "shortDescription": "In this post I will demonstrate how to serve a react app with node and express.",
+    "createdAt": "2020-10-17T06:24:45.118Z",
+    "updatedAt": "2020-11-22T16:53:32.254Z",
+    "__v": 0,
+    "image": {
+      "_id": "5f66167a5ee4c9001d2b9692",
+      "name": "react.jpeg",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "react_56f28418d3",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 11.98,
+      "width": 500,
+      "height": 353,
+      "url": "/uploads/react_56f28418d3.jpeg",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_react.jpeg",
+          "hash": "thumbnail_react_56f28418d3",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 221,
+          "height": 156,
+          "size": 4.08,
+          "path": null,
+          "url": "/uploads/thumbnail_react_56f28418d3.jpeg"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f04152d9d8081001fd38fb9",
+        "5f635e625ee4c9001d2b9660"
+      ],
+      "createdAt": "2020-09-19T14:32:26.690Z",
+      "updatedAt": "2020-09-21T12:19:36.732Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f66167a5ee4c9001d2b9692"
+    },
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "content": "This very website is built with the [React](https://reactjs.org/) framework, and hosted inside a nodejs container.\nAll source code can be found [here](https://github.com/simonjamesrowe/react-ui).\n\nTo create this app I simply ran the command:\n\n```yarn create react-app my-app --template typescript```\n\nWe need to configure nodejs to serve this react app, so lets add ```server.js```\n```\nconst express = require('express');\nconst path = require('path');\nconst app = express();\napp.use(express.static(path.join(__dirname, 'build')));\n\napp.get('/ping', function (req, res) {\n    return res.send('pong');\n})\n\napp.get('/environment/config.js', function (req, res) {\n    res.sendFile(path.join(__dirname, 'build/environment', 'config.js'));\n});\n\napp.get('*', function (req, res) {\n    res.sendFile(path.join(__dirname, 'build', 'index.html'));\n});\n\napp.listen(process.env.PORT || 8080);\n```\n\nWe have 3 routes which will be used to serve requests: \n\n- /ping will be used for health check purposes (checking if the nodejs container is still running)\n- /environment/config.js will serve up a special config.js file. This file will be injected into the container via a kubernetes configmap (lets explore this a little later in this post)\n- all other routes (*) will serve up the index.html file build for our React SPA (single page application).[React Router DOM](https://www.npmjs.com/package/react-router-dom) will handle routes within the SPA.\n\nTo build a docker image we will also need to add a ```Dockerfile```\n\n```\nFROM node:14\nWORKDIR /app\nCOPY . .\nENV NODE_ENV=production\nRUN yarn install\nRUN yarn run build\nENV PORT=8080\nCMD [\"node\", \"server.js\"]\n```\nHere we are doing all of the work in /app, and all of the minified, obfuscated html, css and other artefacts will appear in /app/build directory, We can see from the above express config we are serving the index.html file from /build/index.html\n\nSince we are using JenkinsX, this application will be packaged in a helm chart and run on kubernetes. In charts/react-ui/templates/configmap.yaml the config.js file is configured. Every environment will use a different domain to connect to RESTful api, as well as using different tracking tokens for google analytics and hotjar.\n```\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ template \"fullname\" . }}-config\ndata:\n  config.js: >\n    window.API_URL=\"{{ .Values.apiUrl }}\";\n    window.GA_TRACKING_TOKEN=\"{{ .Values.gaTrackingToken }}\";\n    window.HOT_JAR_TRACKING_TOKEN=\"{{ .Values.hotJarTrackingToken}}\";\n```\n\nTo mount this configmap as a file in the running container on kubernetes, we are going to need to add some config to the deployment manifest. This can be found in charts/react-ui/templates/deployment.yaml:\n```\n    volumes:\n      - name: environment-volume\n        configMap:\n          name: {{ template \"fullname\" . }}-config\n      containers:\n      - name: {{ .Chart.Name }}\n        image: \"{{ .Values.image.repository }}:{{ .Values.image.tag }}\"\n        imagePullPolicy: {{ .Values.image.pullPolicy }}\n        env:\n{{- range $pkey, $pval := .Values.env }}\n        - name: {{ $pkey }}\n          value: {{ quote $pval }}\n{{- end }}\n        envFrom:\n{{ toYaml .Values.envFrom | indent 10 }}\n        ports:\n        - containerPort: {{ .Values.service.internalPort }}\n        volumeMounts:\n        - name: environment-volume\n          mountPath: /app/build/environment/\n\n```\nThe points to highlight from above are firstly the creation of a volume from a configmap, and then further on to mount this volume to the path /app/build/environment. This will result in one file named ```config.js``` appearing in the directory /app/build/environment. And this file will be served up from the /environment/config.js route.\n\n\n\n",
+    "id": "5f04152d9d8081001fd38fb9"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5f04154f9d8081001fd38fbb",
+        "name": "Docker",
+        "createdAt": "2020-07-07T06:25:19.500Z",
+        "updatedAt": "2020-07-07T06:25:19.500Z",
+        "__v": 0,
+        "id": "5f04154f9d8081001fd38fbb"
+      },
+      {
+        "_id": "5f02da709d8081001fd38fa4",
+        "name": "Jenkins",
+        "createdAt": "2020-07-06T08:01:52.572Z",
+        "updatedAt": "2020-07-06T08:01:52.572Z",
+        "__v": 0,
+        "id": "5f02da709d8081001fd38fa4"
+      },
+      {
+        "_id": "5e495da7bc8d7d001ddbd7c5",
+        "name": "Kubernetes",
+        "createdAt": "2020-02-16T15:20:07.909Z",
+        "updatedAt": "2020-02-16T22:04:13.013Z",
+        "__v": 0,
+        "id": "5e495da7bc8d7d001ddbd7c5"
+      },
+      {
+        "_id": "5f03901b9d8081001fd38fa7",
+        "name": "Strapi",
+        "createdAt": "2020-07-06T20:56:59.818Z",
+        "updatedAt": "2020-07-06T20:56:59.818Z",
+        "__v": 0,
+        "id": "5f03901b9d8081001fd38fa7"
+      }
+    ],
+    "skills": [],
+    "_id": "5f041f6f9d8081001fd38fc0",
+    "title": "Exploring the Javascript JX Buildpack",
+    "shortDescription": "In this post I will explore the javascript jenkins x buildpack that was used to build and run strapi headless cms on kubernetes with jenkins x.",
+    "createdAt": "2020-11-21T07:08:31.641Z",
+    "updatedAt": "2020-11-24T21:17:43.576Z",
+    "__v": 0,
+    "image": {
+      "_id": "5f6616a35ee4c9001d2b9694",
+      "name": "node.jpeg",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "node_0cc5851aeb",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 15.31,
+      "width": 600,
+      "height": 367,
+      "url": "/uploads/node_0cc5851aeb.jpeg",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_node.jpeg",
+          "hash": "thumbnail_node_0cc5851aeb",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 245,
+          "height": 150,
+          "size": 5.29,
+          "path": null,
+          "url": "/uploads/thumbnail_node_0cc5851aeb.jpeg"
+        },
+        "small": {
+          "name": "small_node.jpeg",
+          "hash": "small_node_0cc5851aeb",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 500,
+          "height": 306,
+          "size": 12.46,
+          "path": null,
+          "url": "/uploads/small_node_0cc5851aeb.jpeg"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f041f6f9d8081001fd38fc0"
+      ],
+      "createdAt": "2020-09-19T14:33:07.258Z",
+      "updatedAt": "2020-09-19T14:33:10.529Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f6616a35ee4c9001d2b9694"
+    },
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "content": "Kubernetes buildpacks in JenkinsX will consist of the following things:\n\n- Declarative pipeline\n- Dockerfile\n- Skaffold\n- Helm Chart\n\n##### Declarative Pipeline\nThe declarative pipeline actually consists of 3 separate logical pipelines:\n- release (triggered from master branch)\n- pullRequest (triggered when a Pull Request is made)\n- feature (triggered from a feature branch)\n\nIn addition each logical pipeline has a lifecycle that consists of a number of steps:\n- setup\n- preBuild\n- build \n- postBuild\n- promote\n\nJenkinsX also has 2 separate git repositories which contain buildpacks:\n- [jenkins-x-classic](https://github.com/jenkins-x-buildpacks/jenkins-x-classic) - Classic Build Pack for libraries (CI + Release but no CD) for releasing Java, Maven, Gradle, NPM modules but without deploying on any specific cloud or infrastructure\n- [jenkins-x-kubernetes](https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes) Kubernetes Build Pack extends the Classic Build Pack to add opinionated CI+CD for Kubernetes Environments with GitOps based promotion\n\nIf we explore the git repo [strapi-cms](https://github.com/simonjamesrowe/strapi-cms), we see that I am trying to build and deploy [strapi](https://strapi.io/) to kubernetes. I have the following jenkins-x.yaml file:\n```\nbuildPack: javascript\npipelineConfig:\n  pipelines:\n    pullRequest:\n      build:\n        replace: true\n        steps:\n        - sh: export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml\n          name: container-build\n    release:\n      build:\n        replace: true\n        steps:\n        - sh: export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml\n          name: container-build\n        - sh: jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:\\$(cat VERSION)\n          name: post-build\n```\n\nWe can see that this is going to inherit directly from the [javascript buildpack](https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/tree/master/packs/javascript). For the build stage of the pullRequest and release pipelines, I am replacing the entire inherited build phase with my own steps. The reason for this is that I do not want the steps to be run (these steps are actually from the classic javascript buildpack which is inherited from the kubernetes javascript buildpack):\n```\n      - sh: jx step credential -s npm-token -k file -f /builder/home/.npmrc --optional=true\n        name: npmrc\n      - sh: npm install\n        name: npm-install\n      - sh: CI=true DISPLAY=:99 npm test\n        name: npm-test\n```\nAs my Dockerfile already runs ```npm install``` there is no need to repeat this in the build.\n\nThe following lines will build and tag the docker image: \n``` \n- sh: export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml\n  name: container-build\n```\nAnd the following will push the image to the image repository (in my case harbor)\n```\n- sh: jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:\\$(cat VERSION)\n  name: post-build\n```\n\nEverything else in my build is inherited from the [kubernetes-javascript-pipeline](https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/blob/master/packs/javascript/pipeline.yaml) and [classic-javascript-pipeline](https://github.com/jenkins-x-buildpacks/jenkins-x-classic/blob/master/packs/javascript/pipeline.yaml). Steps will be run from the classic javascript pipeline and then the kubernetes javascript pipeline (with the exception of the build phase, as I've chosen to replace what is in the buildpack with my own version.\n\n##### Dockerfile\nAlthough the buildpack does come with a default [Dockerfile](https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/blob/master/packs/javascript/Dockerfile), I wanted to use a more specific Dockerfile for creating a strapi image:\n```\nFROM strapi/base\n\nWORKDIR /app\n\nCOPY ./package.json ./\nCOPY ./yarn.lock ./\n\nRUN yarn install --network-timeout 1000000\n\nCOPY . .\n\nRUN yarn build\n\nEXPOSE 1337\n\nENV NODE_ENV production\n\nCMD [\"yarn\", \"start\"]\n```\n\n##### Skaffold\n[Skaffold](https://skaffold.dev/)  handles the workflow for building, pushing and deploying your application, allowing you to focus on what matters most: writing code. There is a very simple skaffold config file [here](https://github.com/simonjamesrowe/strapi-cms/blob/master/skaffold.yaml) which is part of the kubernetes javascript buildpack.\n\n##### Helm Chart\n[Helm](https://helm.sh/) is a way to package kubernetes applications, by including manifests for the kubernetes constructs that make up the application. In this case, strapi is a web application, so on kubernetes it will need at least the following:\n- deployment\n- service\n- ingress\n- pvc (persistent volume claim)\n\nThe helm chart is initially taken from the javascript buildpack, and I have modified the [deployment.yaml](https://github.com/simonjamesrowe/strapi-cms/blob/master/charts/strapi-cms/templates/deployment.yaml) to include some extra environment variables (to allow strapi to connect to mongodb), and also mounted a volume for file attachments.",
+    "id": "5f041f6f9d8081001fd38fc0"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5e495da7bc8d7d001ddbd7c5",
+        "name": "Kubernetes",
+        "createdAt": "2020-02-16T15:20:07.909Z",
+        "updatedAt": "2020-02-16T22:04:13.013Z",
+        "__v": 0,
+        "id": "5e495da7bc8d7d001ddbd7c5"
+      },
+      {
+        "_id": "5f0390249d8081001fd38fa8",
+        "name": "TLS",
+        "createdAt": "2020-07-06T20:57:08.354Z",
+        "updatedAt": "2020-07-06T20:57:08.354Z",
+        "__v": 0,
+        "id": "5f0390249d8081001fd38fa8"
+      },
+      {
+        "_id": "5f0407a99d8081001fd38fae",
+        "name": "AWS",
+        "createdAt": "2020-07-07T05:27:05.331Z",
+        "updatedAt": "2020-07-07T05:27:05.331Z",
+        "__v": 0,
+        "id": "5f0407a99d8081001fd38fae"
+      }
+    ],
+    "skills": [],
+    "_id": "5f0420269d8081001fd38fc3",
+    "title": "Configuring Cert Manager on Jenkins X",
+    "shortDescription": "In this post I will explore how I customised cert manager on jenkins x to perform ACME challenges on AWS Route 53,  with a kubernetes cluster running outside of AWS.",
+    "createdAt": "2020-12-19T07:11:34.803Z",
+    "updatedAt": "2020-12-19T21:18:10.492Z",
+    "__v": 0,
+    "image": {
+      "_id": "5f6616bb5ee4c9001d2b9696",
+      "name": "lets-encrypt.png",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "lets_encrypt_9d78b3ddcb",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 4,
+      "width": 256,
+      "height": 256,
+      "url": "/uploads/lets_encrypt_9d78b3ddcb.png",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_lets-encrypt.png",
+          "hash": "thumbnail_lets_encrypt_9d78b3ddcb",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 156,
+          "height": 156,
+          "size": 6.36,
+          "path": null,
+          "url": "/uploads/thumbnail_lets_encrypt_9d78b3ddcb.png"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f0420269d8081001fd38fc3"
+      ],
+      "createdAt": "2020-09-19T14:33:31.727Z",
+      "updatedAt": "2020-09-19T14:33:34.024Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f6616bb5ee4c9001d2b9696"
+    },
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "content": "As mention in a [previous post](https://www.simonjamesrowe.com/blogs/5f0215c69d8081001fd38fa1#top) I am running jenkins x inside a kubernetes cluster provisioned [kind](https://kind.sigs.k8s.io/). If we are running AWS EKS, then configuration for using certmanager with route 53 is a lot easier. \n\nSo what is Cert Manager anyway? Cert Manager is a native Kubernetes certificate management controller. It can help with issuing certificates from a variety of sources, such as Let’s Encrypt (which is what we will be demonstrating in this example).  Let's Encrypt is a free, automated, and open certificate authority brought to you by the nonprofit Internet Security Research Group (ISRG).\n\nCert Manager supports requesting certificates from ACME servers, including from Let’s Encrypt, with use of the ACME Issuer. These certificates are typically trusted on the public Internet by most computers. To successfully request a certificate, cert-manager must solve ACME Challenges which are completed in order to prove that the client owns the DNS addresses that are being requested.\n\nIn this case the ACME challenge will be performed is to look at a TXT record on the domain simonjamesrowe.com. Cert Manager must be able to create that TXT record, so it will need access to [Route 53](https://aws.amazon.com/route53/) which is where I have this domain registered.\n\nSo first lets create an policy in IAM that allows such permissions to Route 53:\n```\n{\n    \"Version\": \"2012-10-17\",\n    \"Id\": \"certbot-dns-route53\",\n    \"Statement\": [\n        {\n            \"Effect\": \"Allow\",\n            \"Action\": [\n                \"route53:ListHostedZones\",\n                \"route53:GetChange\"\n            ],\n            \"Resource\": [\n                \"*\"\n            ]\n        },\n        {\n            \"Effect\": \"Allow\",\n            \"Action\": [\n                \"route53:ChangeResourceRecordSets\"\n            ],\n            \"Resource\": [\n                \"arn:aws:route53:::hostedzone/ZKF198WQXTUV4\"\n            ]\n        }\n    ]\n}\n```\n\nThen we can create a new user and attach this policy to the user (we will also want to create keypair for this user as well). \n![iam-user-certbot.png](/uploads/iam_user_certbot_94640d5b40.png).\n\n\nNow to the configuration in our [jenkins x control plane repository]( https://github.com/simonjamesrowe/environment-simonjamesrowe-dev). Our ACME challenges are set up as a helm chart in the following directory : ```/systems/acme```:\n![Screenshot 2020-12-19 at 21.04.54.png](/uploads/Screenshot_2020_12_19_at_21_04_54_a9cbeb8ef0.png)\n\nLets' take a look at the values.yaml. These are the values injected into the templates defined in the templates directory.\n\n```\ncluster:\n  domain: simonjamesrowe.com\n  projectID: \"\"\n  region: \"\"\ncertmanager:\n  production: \"true\"\n  email:  \"simon.rowe@gmail.com\"\n  enabled: true\n\naws:\n  accessKeyId: \"local:simonjamesrowe/aws:accessKeyId\"\n  accessSecret:  \"local:simonjamesrowe/aws:accessSecret\"\n  hostedZoneId: \"local:simonjamesrowe/aws:hostedZoneId\"\n```\n\nIn the templates directory we firstly define a k8s secret for our aws access secret: (cert-manager-aws-secret.yaml)\n```\napiVersion: v1\nkind: Secret\nmetadata:\n  name: cert-manager-aws-creds\ntype: Opaque\ndata:\n  accessSecret: {{ .Values.aws.accessSecret | b64enc | quote}}\n```\n\nThen we can define our Certificate Issuer (cert-manager-prod-issuer.yaml). This configures an ACME dns challenge using AWS Route 53.\n```\n{{- if .Values.certmanager.enabled }}\n{{- if eq .Values.certmanager.production \"true\" }}\napiVersion: cert-manager.io/v1alpha2\nkind: Issuer\nmetadata:\n  name: letsencrypt-prod\nspec:\n  acme:\n    server: https://acme-v02.api.letsencrypt.org/directory\n    email: \"{{ .Values.certmanager.email }}\"\n    # Name of a secret used to store the ACME account private key\n    privateKeySecretRef:\n      name: letsencrypt-prod\n    solvers:\n    - selector:\n        dnsNames:\n        - \"*.{{ .Values.cluster.domain }}\"\n        - \"{{ .Values.cluster.domain }}\"\n      # ACME DNS-01 provider configurations\n      dns01:\n        route53:\n          region: us-east-1\n          hostedZoneID: {{ .Values.aws.hostedZoneId}}\n          accessKeyID: {{ .Values.aws.accessKeyId}}\n          secretAccessKeySecretRef:\n            name: cert-manager-aws-creds\n            key: accessSecret\n{{- end }}\n{{- end }}\n```\n\nAnd finally the certificate ( cert-manager-prod-certificate.yaml):\n```\n{{- if .Values.certmanager.enabled }}\n{{- if eq .Values.certmanager.production \"true\" }}\napiVersion: cert-manager.io/v1alpha2\nkind: Certificate\nmetadata:\n  name: \"tls-{{ .Values.cluster.domain | replace \".\" \"-\" }}-p\"\n  labels:\n    jenkins.io/letsencrypt-service: production\n  annotations:\n    replicator.v1.mittwald.de/replication-allowed: \"true\"\n    replicator.v1.mittwald.de/replication-allowed-namespaces: \"jx-staging,jx-production\"\nspec:\n  secretName: \"tls-{{ .Values.cluster.domain | replace \".\" \"-\" }}-p\"\n  issuerRef:\n    name: letsencrypt-prod\n  commonName: \"*.{{ .Values.cluster.domain }}\"\n  dnsNames:\n  - \"*.{{ .Values.cluster.domain }}\"\n{{- end }}\n{{- end }}\n```\n\nCert Manager will create a k8s secret with type tls in the jx namespace that is able to be copied to other namespaces. ",
+    "id": "5f0420269d8081001fd38fc3"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5f04154f9d8081001fd38fbb",
+        "name": "Docker",
+        "createdAt": "2020-07-07T06:25:19.500Z",
+        "updatedAt": "2020-07-07T06:25:19.500Z",
+        "__v": 0,
+        "id": "5f04154f9d8081001fd38fbb"
+      },
+      {
+        "_id": "5feed20367bdd6001e9c12cc",
+        "name": "Spring",
+        "createdAt": "2021-01-01T07:40:51.082Z",
+        "updatedAt": "2021-01-01T07:40:51.101Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "id": "5feed20367bdd6001e9c12cc"
+      },
+      {
+        "_id": "5feed20e67bdd6001e9c12cd",
+        "name": "Testing",
+        "createdAt": "2021-01-01T07:41:02.213Z",
+        "updatedAt": "2021-01-01T07:41:02.217Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "id": "5feed20e67bdd6001e9c12cd"
+      },
+      {
+        "_id": "5f0390329d8081001fd38fa9",
+        "name": "MongoDB",
+        "createdAt": "2020-07-06T20:57:22.633Z",
+        "updatedAt": "2020-07-06T20:57:22.633Z",
+        "__v": 0,
+        "id": "5f0390329d8081001fd38fa9"
+      }
+    ],
+    "skills": [
+      {
+        "_id": "5f635b6a5ee4c9001d2b9632",
+        "name": "Spring Boot",
+        "rating": 9.7,
+        "order": 1,
+        "createdAt": "2020-09-17T12:49:46.739Z",
+        "updatedAt": "2020-09-21T21:05:20.308Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6851a85ee4c9001d2b96af",
+          "name": "spring-boot.jpeg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "spring_boot_5ee37de4c1",
+          "ext": ".jpeg",
+          "mime": "image/png",
+          "size": 7.98,
+          "width": 400,
+          "height": 400,
+          "url": "/uploads/spring_boot_5ee37de4c1.jpeg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_spring-boot.jpeg",
+              "hash": "thumbnail_spring_boot_5ee37de4c1",
+              "ext": ".jpeg",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 5.21,
+              "path": null,
+              "url": "/uploads/thumbnail_spring_boot_5ee37de4c1.jpeg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635b6a5ee4c9001d2b9632",
+            "5feed4c667bdd6001e9c12d0"
+          ],
+          "createdAt": "2020-09-21T07:09:28.458Z",
+          "updatedAt": "2021-01-01T21:02:32.991Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6851a85ee4c9001d2b96af"
+        },
+        "description": "Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can \"just run\".\n\n- Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)\n- Provide opinionated 'starter' dependencies to simplify your build configuration\n- Automatically configure Spring and 3rd party libraries whenever possible\n- Provide production-ready features such as metrics, health checks, and externalized configuration",
+        "id": "5f635b6a5ee4c9001d2b9632"
+      },
+      {
+        "_id": "5f635dd35ee4c9001d2b9657",
+        "name": "Test Containers",
+        "rating": 8,
+        "createdAt": "2020-09-17T13:00:03.265Z",
+        "updatedAt": "2020-09-27T07:46:42.738Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f689d0c76320d001e515e9c",
+          "name": "testcontainers.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "testcontainers_15703f40de",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 18.16,
+          "width": 400,
+          "height": 400,
+          "url": "/uploads/testcontainers_15703f40de.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_testcontainers.png",
+              "hash": "thumbnail_testcontainers_15703f40de",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 7.48,
+              "path": null,
+              "url": "/uploads/thumbnail_testcontainers_15703f40de.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635dd35ee4c9001d2b9657"
+          ],
+          "createdAt": "2020-09-21T12:31:08.912Z",
+          "updatedAt": "2021-01-01T07:37:21.880Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f689d0c76320d001e515e9c"
+        },
+        "description": "Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.\n\nTestcontainers make the following kinds of tests easier:\n\n-** Data access layer integration tests**: use a containerized instance of a MySQL, PostgreSQL or Oracle database to test your data access layer code for complete compatibility, but without requiring complex setup on developers' machines and safe in the knowledge that your tests will always start with a known DB state. Any other database type that can be containerized can also be used.\n- **Application integration tests**: for running your application in a short-lived test mode with dependencies, such as databases, message queues or web servers.\n- **UI/Acceptance tests**: use containerized web browsers, compatible with Selenium, for conducting automated UI tests. Each test can get a fresh instance of the browser, with no browser state, plugin variations or automated browser upgrades to worry about. And you get a video recording of each test session, or just each session where tests failed",
+        "id": "5f635dd35ee4c9001d2b9657"
+      },
+      {
+        "_id": "5f63608d5ee4c9001d2b966e",
+        "name": "TDD",
+        "rating": 8,
+        "createdAt": "2020-09-17T13:11:41.563Z",
+        "updatedAt": "2020-09-30T06:22:54.746Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f689c2276320d001e515e98",
+          "name": "test-driven-development-TDD.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "test_driven_development_TDD_e8a614217f",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 33.13,
+          "width": 1024,
+          "height": 680,
+          "url": "/uploads/test_driven_development_TDD_e8a614217f.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_test-driven-development-TDD.png",
+              "hash": "thumbnail_test_driven_development_TDD_e8a614217f",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 235,
+              "height": 156,
+              "size": 12.92,
+              "path": null,
+              "url": "/uploads/thumbnail_test_driven_development_TDD_e8a614217f.png"
+            },
+            "large": {
+              "name": "large_test-driven-development-TDD.png",
+              "hash": "large_test_driven_development_TDD_e8a614217f",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 1000,
+              "height": 664,
+              "size": 77.52,
+              "path": null,
+              "url": "/uploads/large_test_driven_development_TDD_e8a614217f.png"
+            },
+            "medium": {
+              "name": "medium_test-driven-development-TDD.png",
+              "hash": "medium_test_driven_development_TDD_e8a614217f",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 750,
+              "height": 498,
+              "size": 53.53,
+              "path": null,
+              "url": "/uploads/medium_test_driven_development_TDD_e8a614217f.png"
+            },
+            "small": {
+              "name": "small_test-driven-development-TDD.png",
+              "hash": "small_test_driven_development_TDD_e8a614217f",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 500,
+              "height": 332,
+              "size": 31.8,
+              "path": null,
+              "url": "/uploads/small_test_driven_development_TDD_e8a614217f.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f63608d5ee4c9001d2b966e"
+          ],
+          "createdAt": "2020-09-21T12:27:14.778Z",
+          "updatedAt": "2020-09-21T12:27:17.966Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f689c2276320d001e515e98"
+        },
+        "description": "Test-driven development (TDD) , is an evolutionary approach to development which combines test-first development where you write a test before you write just enough production code to fulfill that test and refactoring. ",
+        "id": "5f63608d5ee4c9001d2b966e"
+      },
+      {
+        "_id": "5f635d905ee4c9001d2b9651",
+        "name": "MongoDB",
+        "rating": 9,
+        "createdAt": "2020-09-17T12:58:56.643Z",
+        "updatedAt": "2020-09-27T07:41:31.043Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6855b65ee4c9001d2b96db",
+          "name": "mongodb.jpg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "mongodb_1846260238",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 5.25,
+          "width": 399,
+          "height": 399,
+          "url": "/uploads/mongodb_1846260238.jpg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_mongodb.jpg",
+              "hash": "thumbnail_mongodb_1846260238",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "width": 156,
+              "height": 156,
+              "size": 1.85,
+              "path": null,
+              "url": "/uploads/thumbnail_mongodb_1846260238.jpg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635d905ee4c9001d2b9651"
+          ],
+          "createdAt": "2020-09-21T07:26:46.012Z",
+          "updatedAt": "2020-09-21T07:26:49.716Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6855b65ee4c9001d2b96db"
+        },
+        "description": "MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.",
+        "id": "5f635d905ee4c9001d2b9651"
+      },
+      {
+        "_id": "5f635b3f5ee4c9001d2b962f",
+        "name": "Java 8",
+        "rating": 9,
+        "order": 1,
+        "createdAt": "2020-09-17T12:49:03.944Z",
+        "updatedAt": "2020-09-21T20:44:17.441Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "description": "- Generics\n- Optional\n- Lambdas\n- Streams\n- Date & Time",
+        "image": {
+          "_id": "5f6841c35ee4c9001d2b96aa",
+          "name": "java8_logo.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "java8_logo_b017642616",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 41.06,
+          "width": 400,
+          "height": 427,
+          "url": "/uploads/java8_logo_b017642616.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_java8_logo.png",
+              "hash": "thumbnail_java8_logo_b017642616",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 146,
+              "height": 156,
+              "size": 19.29,
+              "path": null,
+              "url": "/uploads/thumbnail_java8_logo_b017642616.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635b3f5ee4c9001d2b962f"
+          ],
+          "createdAt": "2020-09-21T06:01:39.266Z",
+          "updatedAt": "2020-09-21T06:03:30.457Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6841c35ee4c9001d2b96aa"
+        },
+        "id": "5f635b3f5ee4c9001d2b962f"
+      },
+      {
+        "_id": "5f635b495ee4c9001d2b9630",
+        "name": "Java 9-11",
+        "rating": 9,
+        "createdAt": "2020-09-17T12:49:13.752Z",
+        "updatedAt": "2020-09-21T20:58:46.765Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "description": "- **Convenience Factory Methods for Collections** – collections can be now initialized using of() methods\n- Local variable type inference(**var**)\n- New handy Collectors to be used with unmodifiable collections: (Collectors.toUnmodifiableList(), Collectors.toUnmodifiableSet(), Collectors.toUnmodifiableMap()\n- New utility methods in String class (isBlank, lines, repeat, strip, stripLeading, stripTrailing\n- Local-Variable Syntax for Lambda Parameters\n- HTTP Client\n- Reading/Writing Strings to and from the Files\n- Flight Recorder",
+        "image": {
+          "_id": "5f6844255ee4c9001d2b96ac",
+          "name": "java-11.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "java_11_1056ba3fe8",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 6.4,
+          "width": 400,
+          "height": 225,
+          "url": "/uploads/java_11_1056ba3fe8.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_java-11.png",
+              "hash": "thumbnail_java_11_1056ba3fe8",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 138,
+              "size": 9.21,
+              "path": null,
+              "url": "/uploads/thumbnail_java_11_1056ba3fe8.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635b495ee4c9001d2b9630"
+          ],
+          "createdAt": "2020-09-21T06:11:49.363Z",
+          "updatedAt": "2020-09-21T06:13:03.741Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6844255ee4c9001d2b96ac"
+        },
+        "id": "5f635b495ee4c9001d2b9630"
+      }
+    ],
+    "_id": "5feed01b67bdd6001e9c12c8",
+    "title": "Component Testing Spring Apps using Test Containers",
+    "shortDescription": "In this post we will look at how we can use test containers to perform component tests for Spring Boot applications.",
+    "createdAt": "2021-01-01T07:32:43.596Z",
+    "updatedAt": "2021-01-01T20:15:23.841Z",
+    "__v": 0,
+    "created_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "image": {
+      "_id": "5feed11f67bdd6001e9c12ca",
+      "name": "testcontainers.png",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "testcontainers_2f37d400f4",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 42,
+      "width": 1024,
+      "height": 512,
+      "url": "/uploads/testcontainers_2f37d400f4.png",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_testcontainers.png",
+          "hash": "thumbnail_testcontainers_2f37d400f4",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 245,
+          "height": 122,
+          "size": 10.52,
+          "path": null,
+          "url": "/uploads/thumbnail_testcontainers_2f37d400f4.png"
+        },
+        "large": {
+          "name": "large_testcontainers.png",
+          "hash": "large_testcontainers_2f37d400f4",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 1000,
+          "height": 500,
+          "size": 63.76,
+          "path": null,
+          "url": "/uploads/large_testcontainers_2f37d400f4.png"
+        },
+        "medium": {
+          "name": "medium_testcontainers.png",
+          "hash": "medium_testcontainers_2f37d400f4",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 750,
+          "height": 375,
+          "size": 41.92,
+          "path": null,
+          "url": "/uploads/medium_testcontainers_2f37d400f4.png"
+        },
+        "small": {
+          "name": "small_testcontainers.png",
+          "hash": "small_testcontainers_2f37d400f4",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 500,
+          "height": 250,
+          "size": 24.53,
+          "path": null,
+          "url": "/uploads/small_testcontainers_2f37d400f4.png"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5feed01b67bdd6001e9c12c8"
+      ],
+      "createdAt": "2021-01-01T07:37:03.807Z",
+      "updatedAt": "2021-01-01T07:37:21.880Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5feed11f67bdd6001e9c12ca"
+    },
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "content": "If we look at the test pyramid, below the first dotted lines are the kinds of tests that provide developers the fastest possible feedback on whether their software does what they expect it to do. \n\n![test pyramid.png](/uploads/test_pyramid_20a291f0ee.png)\n\nUnit tests can be used to test individual classes, and can use mocks (using libraries like mockito, mockk or easy mock) to mock dependencies. But what about when we need to test whether our application can read and write from a database in the expected manner, or produce and consume from some messaging middleware like kafka or rabbitmq ? \n\n[Test Containers](https://www.testcontainers.org/) is a fantastic library where you can spin up docker containers  where you can run these kinds of tests. It has fantastic built in support for all sorts of technologies from nosql to rdbc datastores, kafka, in memory data grids like redis and so forth.  It has fantastic integration with JUnit5 and also Spring Boot.\n\nHere is an example of how we can write a simple component test to test an applications data access layer (DAO) where we are using postgres as the data store:\n```\n@DataJpaTest\n@ContextConfiguration(initializers = {SampleRepositoryComponentTest.Initializer.class})\npublic class SampleRepositoryComponentTest {\n\n    @Autowired\n    private SampleRepository sampleRepository;\n\n    @ClassRule\n    public static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer(\"postgres:11.1\")\n      .withDatabaseName(\"test\")\n      .withUsername(\"user\")\n      .withPassword(\"password\");\n\n    static class Initializer\n      implements ApplicationContextInitializer<ConfigurableApplicationContext> {\n        public void initialize(ConfigurableApplicationContext configurableApplicationContext) {\n            TestPropertyValues.of(\n              \"spring.datasource.url=\" + postgreSQLContainer.getJdbcUrl(),\n              \"spring.datasource.username=\" + postgreSQLContainer.getUsername(),\n              \"spring.datasource.password=\" + postgreSQLContainer.getPassword()\n            ).applyTo(configurableApplicationContext.getEnvironment());\n        }\n    }\n\n   @Test\n   public void testInsertSampleRecords() {\n      .....\n   }\n}\n```\n\nPretty neat right ? We can create a @ClassRule to define what kind of test container we want, and then use a static class to provide the spring context with the appropriate properties so that it can create the Datasource and run the tests. \n\nIf we have a number of other repositories that need similar tests, we could easily start to see a lot of duplicated code creep in, as well as the fact that this container will only stay alive for the duration that tests on this class are being executed. If we had a number of other @DataJpaTest's as well as other integration tests, this overhead of spinning up and destroying containers could have a negative impact on the feedback cycle back to the developer.\n\nI have created my own library called component-test, that allows some simple annotations to be used when working with Spring Boot tests and test containers. You can check out the github repo [here](https://github.com/simonjamesrowe/component-test), and if you want to use this library you can simply include my nexus repository ```https://nexus-jx.simonjamesrowe.com/repository/maven-group/``` and include the test dependency ```testImplementation(\"com.simonjamesrowe:component-test:0.0.5\")```.\n\nIf we were to write a similar test to the one above using the component-test library it would look something like this:\n```\n@ExtendWith(TestContainersExtension.class)\n@WithPostgresContainer\n@DataJpaTest\npublic class SampleRepositoryComponentTest {\n\n  @Autowired\n  private SampleRepository sampleRepository;\n\n   @Test\n   public void testInsertSampleRecords() {\n      .....\n   }\n}\n```\n\nMost of the work here is done in the ```TestContainersExtension``` class, which looks at any annotation on the test class that extends ```@TestContainer``` annotation and co-ordinates the initialisation of the containers before the spring test context is started, and provides the test context with the relevant properties. At the time of this writing my projects caused me to support a number of containers (that all extend the ```@TestContainer``` annotation):\n-  ```@WithElasticSearchContainer```\n-  ```@WithMongoDbContainer```\n-  ```@WithRedisContainer```\n-  ```@WithVaultContainer```\n\nThe library also supports use of Embedded Kafka via a customised @EmbeddedKafka annotation. An example of how to use this is here:\n\n```\n@WithEmbeddedKafka\n@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)\n@Import({TestKafkaListener.class, KafkaAutoConfiguration.class})\npublic class EmbeddedKafkaTest extends BaseComponentTest {\n\n  @Autowired\n  private KafkaTemplate kafkaTemplate;\n\n  @Autowired\n  private TestKafkaListener testKafkaListener;\n\n  @Test\n  public void testKafkaContainer() throws Exception {\n    kafkaTemplate.send(\"test\", \"key\", \"Hello World\");\n\n    Failsafe.with(new RetryPolicy().withMaxRetries(5).withBackoff(1, 10, ChronoUnit.SECONDS))\n        .get(() -> assertThat(testKafkaListener.getData()).isEqualTo(\"Hello World\")\n        );\n  }\n}\n\n@Service\n@Lazy\nclass TestKafkaListener {\n\n  private String data;\n\n  public String getData() {\n    return data;\n  }\n\n  @KafkaListener(topics = \"test\", groupId = \"test\")\n  public void listen(@Payload String messagePayload) {\n    data = messagePayload;\n  }\n\n}\n```\n\nLast but not least, this library also includes support for wiremock. Simple add a json file containing these contents in the ```src/main/resources/META-INF/mappings``` directory: \n```\n{\n  \"request\": {\n    \"method\": \"GET\",\n    \"url\": \"/test\"\n  },\n  \"response\": {\n    \"status\": 200,\n    \"jsonBody\":  {\n      \"hello\" : \"world\"\n    },\n    \"headers\": {\n      \"Content-Type\": \"application/json\"\n    }\n  }\n}\n```\n\nAnd we can write a test that looks like this:\n```\npublic class WiremockBootstrapContextTest extends BaseComponentTest {\n\n    @Value(\"http://localhost:${wiremock.server.port}/test\")\n    private String testEndpoint;\n\n    @Test\n    public void testCanAccessWiremockServer() {\n        RestTemplate restTemplate = new RestTemplate();\n        Map<String,String> helloWorld = restTemplate.getForObject(testEndpoint, Map.class);\n        assertThat(helloWorld).containsEntry(\"hello\", \"world\");\n    }\n\n}\n```\nThis is extremely useful if the service that we are performing component tests for is consuming some 3rd party api's via http(s). ",
+    "id": "5feed01b67bdd6001e9c12c8"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5f02da709d8081001fd38fa4",
+        "name": "Jenkins",
+        "createdAt": "2020-07-06T08:01:52.572Z",
+        "updatedAt": "2020-07-06T08:01:52.572Z",
+        "__v": 0,
+        "id": "5f02da709d8081001fd38fa4"
+      },
+      {
+        "_id": "5e495da7bc8d7d001ddbd7c5",
+        "name": "Kubernetes",
+        "createdAt": "2020-02-16T15:20:07.909Z",
+        "updatedAt": "2020-02-16T22:04:13.013Z",
+        "__v": 0,
+        "id": "5e495da7bc8d7d001ddbd7c5"
+      }
+    ],
+    "skills": [
+      {
+        "_id": "5f635b495ee4c9001d2b9630",
+        "name": "Java 9-11",
+        "rating": 9,
+        "createdAt": "2020-09-17T12:49:13.752Z",
+        "updatedAt": "2020-09-21T20:58:46.765Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "description": "- **Convenience Factory Methods for Collections** – collections can be now initialized using of() methods\n- Local variable type inference(**var**)\n- New handy Collectors to be used with unmodifiable collections: (Collectors.toUnmodifiableList(), Collectors.toUnmodifiableSet(), Collectors.toUnmodifiableMap()\n- New utility methods in String class (isBlank, lines, repeat, strip, stripLeading, stripTrailing\n- Local-Variable Syntax for Lambda Parameters\n- HTTP Client\n- Reading/Writing Strings to and from the Files\n- Flight Recorder",
+        "image": {
+          "_id": "5f6844255ee4c9001d2b96ac",
+          "name": "java-11.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "java_11_1056ba3fe8",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 6.4,
+          "width": 400,
+          "height": 225,
+          "url": "/uploads/java_11_1056ba3fe8.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_java-11.png",
+              "hash": "thumbnail_java_11_1056ba3fe8",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 138,
+              "size": 9.21,
+              "path": null,
+              "url": "/uploads/thumbnail_java_11_1056ba3fe8.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635b495ee4c9001d2b9630"
+          ],
+          "createdAt": "2020-09-21T06:11:49.363Z",
+          "updatedAt": "2020-09-21T06:13:03.741Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6844255ee4c9001d2b96ac"
+        },
+        "id": "5f635b495ee4c9001d2b9630"
+      },
+      {
+        "_id": "5f635c1e5ee4c9001d2b963b",
+        "name": "Gradle",
+        "rating": 9,
+        "createdAt": "2020-09-17T12:52:46.994Z",
+        "updatedAt": "2020-09-22T06:39:39.136Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6853535ee4c9001d2b96c1",
+          "name": "Gradle_logo.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "Gradle_logo_eec2d0b60b",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 7.59,
+          "width": 876,
+          "height": 306,
+          "url": "/uploads/Gradle_logo_eec2d0b60b.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_Gradle_logo.png",
+              "hash": "thumbnail_Gradle_logo_eec2d0b60b",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 86,
+              "size": 6.94,
+              "path": null,
+              "url": "/uploads/thumbnail_Gradle_logo_eec2d0b60b.png"
+            },
+            "medium": {
+              "name": "medium_Gradle_logo.png",
+              "hash": "medium_Gradle_logo_eec2d0b60b",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 750,
+              "height": 262,
+              "size": 25.22,
+              "path": null,
+              "url": "/uploads/medium_Gradle_logo_eec2d0b60b.png"
+            },
+            "small": {
+              "name": "small_Gradle_logo.png",
+              "hash": "small_Gradle_logo_eec2d0b60b",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 500,
+              "height": 175,
+              "size": 15.87,
+              "path": null,
+              "url": "/uploads/small_Gradle_logo_eec2d0b60b.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635c1e5ee4c9001d2b963b",
+            "5feed34e67bdd6001e9c12ce"
+          ],
+          "createdAt": "2020-09-21T07:16:35.326Z",
+          "updatedAt": "2021-01-01T07:46:22.759Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6853535ee4c9001d2b96c1"
+        },
+        "description": "Gradle is a build automation tool for multi-language software development. It controls the development process in the tasks of compilation and packaging to testing, deployment, and publishing.\n \nIt uses groovy-based domain-specific language, rather than using the XML form used by Maven for declaring the project configuration.\n\nGradle was designed for multi-project builds, which can grow to be large. It operates based on a series of build tasks that can run serially or in parallel. Incremental builds are supported by determining the parts of the build tree that are already up to date; any task dependent only on those parts does not need to be re-executed",
+        "id": "5f635c1e5ee4c9001d2b963b"
+      },
+      {
+        "_id": "5f635f8f5ee4c9001d2b966c",
+        "name": "Helm",
+        "rating": 8,
+        "createdAt": "2020-09-17T13:07:27.527Z",
+        "updatedAt": "2020-09-30T06:20:10.213Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6854785ee4c9001d2b96cf",
+          "name": "helm.jpg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "helm_9127651c35",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 12.82,
+          "width": 366,
+          "height": 366,
+          "url": "/uploads/helm_9127651c35.jpg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_helm.jpg",
+              "hash": "thumbnail_helm_9127651c35",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "width": 156,
+              "height": 156,
+              "size": 5.11,
+              "path": null,
+              "url": "/uploads/thumbnail_helm_9127651c35.jpg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635f8f5ee4c9001d2b966c"
+          ],
+          "createdAt": "2020-09-21T07:21:28.306Z",
+          "updatedAt": "2020-09-21T07:21:30.887Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6854785ee4c9001d2b96cf"
+        },
+        "description": "Helm is a tool that streamlines installing and managing Kubernetes applications. ... A single chart might be used to deploy something simple, like a memcached pod, or something complex, like a full web app stack with HTTP servers, databases, caches, etc,",
+        "id": "5f635f8f5ee4c9001d2b966c"
+      },
+      {
+        "_id": "5f635c2e5ee4c9001d2b963c",
+        "name": "Jenkins Pipeline",
+        "rating": 8,
+        "createdAt": "2020-09-17T12:53:02.588Z",
+        "updatedAt": "2020-09-22T06:41:07.845Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f65ed105ee4c9001d2b967c",
+          "name": "jenkins-5-569553.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "jenkins_5_569553_cb54b85a4c",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 12.15,
+          "width": 256,
+          "height": 256,
+          "url": "/uploads/jenkins_5_569553_cb54b85a4c.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_jenkins-5-569553.png",
+              "hash": "thumbnail_jenkins_5_569553_cb54b85a4c",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 16.21,
+              "path": null,
+              "url": "/uploads/thumbnail_jenkins_5_569553_cb54b85a4c.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635a195ee4c9001d2b962a",
+            "5f635c2e5ee4c9001d2b963c"
+          ],
+          "createdAt": "2020-09-19T11:35:44.624Z",
+          "updatedAt": "2020-09-21T07:16:50.216Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f65ed105ee4c9001d2b967c"
+        },
+        "description": "Pipeline is a suite of plugins that supports implementing and integrating continuous delivery pipelines into Jenkins. Pipeline provides an extensible set of tools for modelling simple-to-complex delivery pipelines \"as code\" via the Pipeline DSL (groovy). ",
+        "id": "5f635c2e5ee4c9001d2b963c"
+      },
+      {
+        "_id": "5f635c375ee4c9001d2b963d",
+        "name": "Jenkins X",
+        "rating": 9,
+        "createdAt": "2020-09-17T12:53:11.954Z",
+        "updatedAt": "2020-09-22T21:19:16.887Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6616545ee4c9001d2b9690",
+          "name": "jenkinsx.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "jenkinsx_d56c6fea15",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 25.16,
+          "width": 696,
+          "height": 398,
+          "url": "/uploads/jenkinsx_d56c6fea15.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_jenkinsx.png",
+              "hash": "thumbnail_jenkinsx_d56c6fea15",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 140,
+              "size": 9.18,
+              "path": null,
+              "url": "/uploads/thumbnail_jenkinsx_d56c6fea15.png"
+            },
+            "small": {
+              "name": "small_jenkinsx.png",
+              "hash": "small_jenkinsx_d56c6fea15",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 500,
+              "height": 286,
+              "size": 22.51,
+              "path": null,
+              "url": "/uploads/small_jenkinsx_d56c6fea15.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f0413739d8081001fd38fb6",
+            "5f635c375ee4c9001d2b963d"
+          ],
+          "createdAt": "2020-09-19T14:31:48.129Z",
+          "updatedAt": "2020-09-21T07:17:01.500Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6616545ee4c9001d2b9690"
+        },
+        "description": "Jenkins X provides pipeline automation, built-in GitOps, and preview environments to help teams collaborate and accelerate their software delivery at any scale. Jenkins X builds upon the following core components:\n- Kubernetes and Docker\n- Helm and Draft",
+        "id": "5f635c375ee4c9001d2b963d"
+      },
+      {
+        "_id": "5f635b555ee4c9001d2b9631",
+        "name": "Kotlin",
+        "rating": 8,
+        "createdAt": "2020-09-17T12:49:25.636Z",
+        "updatedAt": "2020-09-21T21:01:54.939Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f65ec765ee4c9001d2b9676",
+          "name": "kotlin_250x250.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "kotlin_250x250_dfc086e243",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 3.69,
+          "width": 250,
+          "height": 250,
+          "url": "/uploads/kotlin_250x250_dfc086e243.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_kotlin_250x250.png",
+              "hash": "thumbnail_kotlin_250x250_dfc086e243",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 6.89,
+              "path": null,
+              "url": "/uploads/thumbnail_kotlin_250x250_dfc086e243.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f6359c55ee4c9001d2b9627",
+            "5f635b555ee4c9001d2b9631"
+          ],
+          "createdAt": "2020-09-19T11:33:10.896Z",
+          "updatedAt": "2020-09-21T06:17:06.069Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f65ec765ee4c9001d2b9676"
+        },
+        "description": "- Lambda expressions + Inline functions = performant custom control structures\n- Extension functions\n- Null-safety\n- Smart casts\n- String templates\n- Properties\n- Primary constructors\n- First-class delegation\n- Type inference for variable and property types\n- Singletons\n- Declaration-site variance & Type projections\n- Range expressions\n- Operator overloading\n- Companion objects\n- Data classes\n- Separate interfaces for read-only and mutable collections\n- Coroutines",
+        "id": "5f635b555ee4c9001d2b9631"
+      },
+      {
+        "_id": "5f635c4f5ee4c9001d2b963f",
+        "name": "Tekton",
+        "createdAt": "2020-09-17T12:53:35.722Z",
+        "updatedAt": "2020-09-22T21:20:48.795Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "rating": 8,
+        "image": {
+          "_id": "5f6853a55ee4c9001d2b96c7",
+          "name": "tekton.jpeg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "tekton_8b8bad63e8",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 13.24,
+          "width": 213,
+          "height": 237,
+          "url": "/uploads/tekton_8b8bad63e8.jpeg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_tekton.jpeg",
+              "hash": "thumbnail_tekton_8b8bad63e8",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 140,
+              "height": 156,
+              "size": 7.5,
+              "path": null,
+              "url": "/uploads/thumbnail_tekton_8b8bad63e8.jpeg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635c4f5ee4c9001d2b963f"
+          ],
+          "createdAt": "2020-09-21T07:17:57.258Z",
+          "updatedAt": "2020-09-21T07:17:59.250Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6853a55ee4c9001d2b96c7"
+        },
+        "description": "The Tekton Pipelines project provides k8s-style resources for declaring CI/CD-style pipelines.\n\nTekton Pipelines are Cloud Native:\n\n- Run on Kubernetes\n- Have Kubernetes clusters as a first class type\n- Use containers as their building blocks\n",
+        "id": "5f635c4f5ee4c9001d2b963f"
+      }
+    ],
+    "_id": "5feed34e67bdd6001e9c12ce",
+    "title": "Adding Custom Gradle 6 Build Pack to Jenkins X",
+    "shortDescription": "In this post we will look at how to add a new custom build pack to Jenkins X so we can support builds using Gradle 6 and JDK 11.",
+    "createdAt": "2021-01-01T07:46:22.753Z",
+    "updatedAt": "2021-01-01T22:22:21.095Z",
+    "__v": 0,
+    "created_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "image": {
+      "_id": "5f6853535ee4c9001d2b96c1",
+      "name": "Gradle_logo.png",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "Gradle_logo_eec2d0b60b",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 7.59,
+      "width": 876,
+      "height": 306,
+      "url": "/uploads/Gradle_logo_eec2d0b60b.png",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_Gradle_logo.png",
+          "hash": "thumbnail_Gradle_logo_eec2d0b60b",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 245,
+          "height": 86,
+          "size": 6.94,
+          "path": null,
+          "url": "/uploads/thumbnail_Gradle_logo_eec2d0b60b.png"
+        },
+        "medium": {
+          "name": "medium_Gradle_logo.png",
+          "hash": "medium_Gradle_logo_eec2d0b60b",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 750,
+          "height": 262,
+          "size": 25.22,
+          "path": null,
+          "url": "/uploads/medium_Gradle_logo_eec2d0b60b.png"
+        },
+        "small": {
+          "name": "small_Gradle_logo.png",
+          "hash": "small_Gradle_logo_eec2d0b60b",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 500,
+          "height": 175,
+          "size": 15.87,
+          "path": null,
+          "url": "/uploads/small_Gradle_logo_eec2d0b60b.png"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f635c1e5ee4c9001d2b963b",
+        "5feed34e67bdd6001e9c12ce"
+      ],
+      "createdAt": "2020-09-21T07:16:35.326Z",
+      "updatedAt": "2021-01-01T07:46:22.759Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f6853535ee4c9001d2b96c1"
+    },
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "content": "Jenkins X supports quite a lot of build packs out of the box, but support for gradle build packs is quite limited. The [jenkins-x-kubernetes](https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes) does contain a gradle build pack, but the builder image only contains gradle 5 and JDK 8. Seeing as I wanted to use spring boot 2.3.3 (which requires gradle 6) and above to build the microservices that power this web application, and I also want to use kotlin and java 11, I will need to add this build pack myself.\n\nThe first thing I will need to do is provide an image for this. Luckily this is pretty easy as I can just copy the existing gradle builder image from [here](https://github.com/jenkins-x/jenkins-x-builders/blob/master/builder-gradle5/Dockerfile) and change a few things:\n\nHere is the result (all source code can also be found [here](https://github.com/simonjamesrowe/jenkinsx-buildpacks/))\n```\nFROM gcr.io/jenkinsxio/builder-base:0.0.86\n\nCMD [\"gradle\"]\n\nENV ANDROID_VERSION 4333796\nENV ANDROID_HOME /opt/android-sdk-linux\nENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools\n\nRUN yum install -y java-11-openjdk-devel\n\nENV GRADLE_HOME /opt/gradle\nENV GRADLE_VERSION 6.5.1\n\nRUN set -o errexit -o nounset \\\n    && echo \"Set URLS\" \\\n    && GRADLE_URL=\"https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip\" \\\n    && SHA256_URL=\"${GRADLE_URL}.sha256\" \\\n    \\\n    && echo \"Determine sha256sum\" \\\n    && GRADLE_DOWNLOAD_SHA256=$(curl -sLf \"${SHA256_URL}\") \\\n    \\\n\t&& echo \"Downloading Gradle\" \\\n\t&& wget -q -O gradle.zip \"${GRADLE_URL}\" \\\n\t\\\n\t&& echo \"Checking download hash\" \\\n\t&& echo \"${GRADLE_DOWNLOAD_SHA256} *gradle.zip\" | sha256sum -c - \\\n\t\\\n\t&& echo \"Installing Gradle\" \\\n\t&& unzip -q gradle.zip \\\n\t&& rm gradle.zip \\\n\t&& mkdir -p /opt \\\n\t&& mv \"gradle-${GRADLE_VERSION}\" \"${GRADLE_HOME}/\" \\\n\t&& ln -s \"${GRADLE_HOME}/bin/gradle\" /usr/bin/gradle\n\nRUN gradle --version\n\n# jx\nENV JX_VERSION 2.1.153\nRUN curl -f -L https://github.com/jenkins-x/jx/releases/download/v${JX_VERSION}/jx-linux-amd64.tar.gz | tar xzv && \\\n  mv jx /usr/bin/\n```\n\nThe image can be built and pushed with the following commands (we will also need docker login)\n```\ndocker build -t simonjamesrowe/gradle6-java11:2020-26-12 .\ndocker push simonjamesrowe/gradle6-java11:2020-26-12\n```\n\nNow that the image has been pushed to the container registry the next thing we will need to think about is defining the build pod template. This template is something which jenkins x and tekton use to spin up pods in kubernetes which run these builds. In order to do this we will need to make some modifications to the jenkins-x control plane, which has its own gitops repo (which can be found [here](https://github.com/simonjamesrowe/environment-simonjamesrowe-dev)). \n\nI want to define a kubernetes secret that contains a gradle initialisation script that can be used to define where our nexus repository lives, and also credentials for publishing artefacts to this repository. The following helm values can be defined in ```env/values.tmpl.yaml```:\n```\ngradle:\n  initScript: |-\n    allprojects {\n\n        apply plugin: 'maven-publish'\n\n        repositories {\n            maven {\n                url \"http://nexus/repository/maven-group/\"\n            }\n            mavenCentral()\n        }\n\n      publishing {\n            repositories {\n                maven {\n                    def releasesRepoUrl = \"http://nexus/repository/maven-releases/\"\n                    def snapshotsRepoUrl = \"http://nexus/repository/maven-snapshots/\"\n                    url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl\n                    credentials {\n                        username \"{{ .Parameters.adminUser.username }}\"\n                        password \"{{ .Parameters.adminUser.password }}\"\n                    }\n                }\n            }\n        }\n\n       configurations.all {\n          resolutionStrategy.cacheChangingModulesFor 0, 'seconds'\n          resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'\n       }\n    }\n```\nThen the secret can be defined in ```env/templates/jenkins-gradle-secret.yaml```:\n```\napiVersion: v1\nkind: Secret\ntype: Opaque\nmetadata:\n  name: jenkins-gradle-init\ndata:\n  init.gradle: {{ .Values.gradle.initScript | b64enc }}\n```\n\nFor the build pod template, this will require some more values to be defined in ```env/jenkins-x-platform/values.tmpl.yaml```:\n```\njenkins:\n  Agent:\n    PodTemplates:\n      Gradle6-Java11:\n        Name: gradle6-java11\n        Label: jenkins-gradle6-java11\n        DevPodPorts: 5005, 8080\n        volumes:\n          - type: Secret\n            secretName: jenkins-docker-cfg\n            mountPath: /home/jenkins/.docker\n          - type: Secret\n            secretName: jenkins-release-gpg\n            mountPath: /home/jenkins/.gnupg\n          - type: Secret\n            secretName: jenkins-gradle-init\n            mountPath: /home/jenkins/.gradle\n        EnvVars:\n          GIT_COMMITTER_EMAIL: jenkins-x@googlegroups.com\n          GIT_AUTHOR_EMAIL: jenkins-x@googlegroups.com\n          GIT_AUTHOR_NAME: jenkins-x-bot\n          GIT_COMMITTER_NAME: jenkins-x-bot\n          XDG_CONFIG_HOME: /home/jenkins\n          DOCKER_CONFIG: /home/jenkins/.docker/\n        ServiceAccount: jenkins\n        Containers:\n          Gradle6-Java11:\n            Image: simonjamesrowe/gradle6-java11:2020-12-26\n            Privileged: true\n            RequestCpu: \"400m\"\n            RequestMemory: \"512Mi\"\n            LimitCpu: \"1\"\n            Command: \"/bin/sh -c\"\n            Args: \"cat\"\n            Tty: true\n```\n\nThe next thing to do is define the tekton pipeline. I have another my github repo containing buildpacks [jenkinsx-buildpacks](https://github.com/simonjamesrowe/jenkinsx-buildpacks). In ```packs/gradle6-java11/pipeline.yaml, we define the tekton pipeline:\n```\nagent:\n  label: jenkins-gradle6-java11\n  container: gradle6-java11\npipelines:\n  pullRequest:\n    build:\n      steps:\n        - sh: echo \\$(jx-release-version)-SNAPSHOT > VERSION\n          name: next-version\n          comment: so we can retrieve the version in later steps\n        - sh: gradle -I /home/jenkins/.gradle/init.gradle clean build publish -Pversion=\\$(cat VERSION) --info\n          name: gradle-build\n  release:\n    setVersion:\n      steps:\n        - sh: echo \\$(jx-release-version) > VERSION\n          name: next-version\n          comment: so we can retrieve the version in later step\n        - sh: jx step tag --version \\$(cat VERSION)\n          name: tag-version\n    build:\n      steps:\n        - sh: gradle -I /home/jenkins/.gradle/init.gradle clean build publish -Pversion=\\$(cat VERSION) --info\n          name: gradle-build\n```\nPay attention to the ```agent.label``` which specifies the build pod template to use (i.e. the one that has been defined above).  Here we also have 2 pipelines, one for a pull request that simply publishes a snapshot to the nexus repository (which is part of the jenkins x control plane), and another one for master. Also you can see that ```-I /home/jenkins/.gradle/init.gradle``` is also included so that we can run the initialisation script that we defined in a k8s secret above. In this example the secret is mounted into the container as a volume.\n\nLastly, we will need to tell jx about the git repository that we are using to host our build packs. This can be simply added to the ```jx-requirements.yml``` file\n```\nbuildPacks:\n  buildPackLibrary:\n    gitRef: master\n    gitURL: https://github.com/simonjamesrowe/jenkinsx-buildpacks.git\n    name: simonjamesrowe\n```\nAnd of course we will need to run ```jx boot``` to update our control plane with all of the changes that we have made:\n- gradle init script k8s secret\n- build pod template\n- custom build pack library configuration.\n\nNow we can use this build pack in order to build [https://github.com/simonjamesrowe/component-test](https://github.com/simonjamesrowe/component-test).  See ```jenkins-x.yml```:\n```\nbuildPack: gradle6-java11\n```\n\nWe can see that this project now deploys artefacts to nexus:\n![nexus-component-test.png](/uploads/nexus_component_test_7e8f5aea69.png)\n",
+    "id": "5feed34e67bdd6001e9c12ce"
+  },
+  {
+    "published": true,
+    "tags": [
+      {
+        "_id": "5f02da709d8081001fd38fa4",
+        "name": "Jenkins",
+        "createdAt": "2020-07-06T08:01:52.572Z",
+        "updatedAt": "2020-07-06T08:01:52.572Z",
+        "__v": 0,
+        "id": "5f02da709d8081001fd38fa4"
+      },
+      {
+        "_id": "5feed20367bdd6001e9c12cc",
+        "name": "Spring",
+        "createdAt": "2021-01-01T07:40:51.082Z",
+        "updatedAt": "2021-01-01T07:40:51.101Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "id": "5feed20367bdd6001e9c12cc"
+      }
+    ],
+    "skills": [
+      {
+        "_id": "5f635b495ee4c9001d2b9630",
+        "name": "Java 9-11",
+        "rating": 9,
+        "createdAt": "2020-09-17T12:49:13.752Z",
+        "updatedAt": "2020-09-21T20:58:46.765Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "description": "- **Convenience Factory Methods for Collections** – collections can be now initialized using of() methods\n- Local variable type inference(**var**)\n- New handy Collectors to be used with unmodifiable collections: (Collectors.toUnmodifiableList(), Collectors.toUnmodifiableSet(), Collectors.toUnmodifiableMap()\n- New utility methods in String class (isBlank, lines, repeat, strip, stripLeading, stripTrailing\n- Local-Variable Syntax for Lambda Parameters\n- HTTP Client\n- Reading/Writing Strings to and from the Files\n- Flight Recorder",
+        "image": {
+          "_id": "5f6844255ee4c9001d2b96ac",
+          "name": "java-11.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "java_11_1056ba3fe8",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 6.4,
+          "width": 400,
+          "height": 225,
+          "url": "/uploads/java_11_1056ba3fe8.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_java-11.png",
+              "hash": "thumbnail_java_11_1056ba3fe8",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 138,
+              "size": 9.21,
+              "path": null,
+              "url": "/uploads/thumbnail_java_11_1056ba3fe8.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635b495ee4c9001d2b9630"
+          ],
+          "createdAt": "2020-09-21T06:11:49.363Z",
+          "updatedAt": "2020-09-21T06:13:03.741Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6844255ee4c9001d2b96ac"
+        },
+        "id": "5f635b495ee4c9001d2b9630"
+      },
+      {
+        "_id": "5f635b555ee4c9001d2b9631",
+        "name": "Kotlin",
+        "rating": 8,
+        "createdAt": "2020-09-17T12:49:25.636Z",
+        "updatedAt": "2020-09-21T21:01:54.939Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f65ec765ee4c9001d2b9676",
+          "name": "kotlin_250x250.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "kotlin_250x250_dfc086e243",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 3.69,
+          "width": 250,
+          "height": 250,
+          "url": "/uploads/kotlin_250x250_dfc086e243.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_kotlin_250x250.png",
+              "hash": "thumbnail_kotlin_250x250_dfc086e243",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 6.89,
+              "path": null,
+              "url": "/uploads/thumbnail_kotlin_250x250_dfc086e243.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f6359c55ee4c9001d2b9627",
+            "5f635b555ee4c9001d2b9631"
+          ],
+          "createdAt": "2020-09-19T11:33:10.896Z",
+          "updatedAt": "2020-09-21T06:17:06.069Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f65ec765ee4c9001d2b9676"
+        },
+        "description": "- Lambda expressions + Inline functions = performant custom control structures\n- Extension functions\n- Null-safety\n- Smart casts\n- String templates\n- Properties\n- Primary constructors\n- First-class delegation\n- Type inference for variable and property types\n- Singletons\n- Declaration-site variance & Type projections\n- Range expressions\n- Operator overloading\n- Companion objects\n- Data classes\n- Separate interfaces for read-only and mutable collections\n- Coroutines",
+        "id": "5f635b555ee4c9001d2b9631"
+      },
+      {
+        "_id": "5f635b6a5ee4c9001d2b9632",
+        "name": "Spring Boot",
+        "rating": 9.7,
+        "order": 1,
+        "createdAt": "2020-09-17T12:49:46.739Z",
+        "updatedAt": "2020-09-21T21:05:20.308Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6851a85ee4c9001d2b96af",
+          "name": "spring-boot.jpeg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "spring_boot_5ee37de4c1",
+          "ext": ".jpeg",
+          "mime": "image/png",
+          "size": 7.98,
+          "width": 400,
+          "height": 400,
+          "url": "/uploads/spring_boot_5ee37de4c1.jpeg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_spring-boot.jpeg",
+              "hash": "thumbnail_spring_boot_5ee37de4c1",
+              "ext": ".jpeg",
+              "mime": "image/png",
+              "width": 156,
+              "height": 156,
+              "size": 5.21,
+              "path": null,
+              "url": "/uploads/thumbnail_spring_boot_5ee37de4c1.jpeg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635b6a5ee4c9001d2b9632",
+            "5feed4c667bdd6001e9c12d0"
+          ],
+          "createdAt": "2020-09-21T07:09:28.458Z",
+          "updatedAt": "2021-01-01T21:02:32.991Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6851a85ee4c9001d2b96af"
+        },
+        "description": "Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can \"just run\".\n\n- Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)\n- Provide opinionated 'starter' dependencies to simplify your build configuration\n- Automatically configure Spring and 3rd party libraries whenever possible\n- Provide production-ready features such as metrics, health checks, and externalized configuration",
+        "id": "5f635b6a5ee4c9001d2b9632"
+      },
+      {
+        "_id": "5f635c375ee4c9001d2b963d",
+        "name": "Jenkins X",
+        "rating": 9,
+        "createdAt": "2020-09-17T12:53:11.954Z",
+        "updatedAt": "2020-09-22T21:19:16.887Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6616545ee4c9001d2b9690",
+          "name": "jenkinsx.png",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "jenkinsx_d56c6fea15",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 25.16,
+          "width": 696,
+          "height": 398,
+          "url": "/uploads/jenkinsx_d56c6fea15.png",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_jenkinsx.png",
+              "hash": "thumbnail_jenkinsx_d56c6fea15",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 245,
+              "height": 140,
+              "size": 9.18,
+              "path": null,
+              "url": "/uploads/thumbnail_jenkinsx_d56c6fea15.png"
+            },
+            "small": {
+              "name": "small_jenkinsx.png",
+              "hash": "small_jenkinsx_d56c6fea15",
+              "ext": ".png",
+              "mime": "image/png",
+              "width": 500,
+              "height": 286,
+              "size": 22.51,
+              "path": null,
+              "url": "/uploads/small_jenkinsx_d56c6fea15.png"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f0413739d8081001fd38fb6",
+            "5f635c375ee4c9001d2b963d"
+          ],
+          "createdAt": "2020-09-19T14:31:48.129Z",
+          "updatedAt": "2020-09-21T07:17:01.500Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6616545ee4c9001d2b9690"
+        },
+        "description": "Jenkins X provides pipeline automation, built-in GitOps, and preview environments to help teams collaborate and accelerate their software delivery at any scale. Jenkins X builds upon the following core components:\n- Kubernetes and Docker\n- Helm and Draft",
+        "id": "5f635c375ee4c9001d2b963d"
+      },
+      {
+        "_id": "5f635f8f5ee4c9001d2b966c",
+        "name": "Helm",
+        "rating": 8,
+        "createdAt": "2020-09-17T13:07:27.527Z",
+        "updatedAt": "2020-09-30T06:20:10.213Z",
+        "__v": 0,
+        "created_by": "5e4839cd1c2d53001dcc0696",
+        "updated_by": "5e4839cd1c2d53001dcc0696",
+        "image": {
+          "_id": "5f6854785ee4c9001d2b96cf",
+          "name": "helm.jpg",
+          "alternativeText": "",
+          "caption": "",
+          "hash": "helm_9127651c35",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 12.82,
+          "width": 366,
+          "height": 366,
+          "url": "/uploads/helm_9127651c35.jpg",
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_helm.jpg",
+              "hash": "thumbnail_helm_9127651c35",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "width": 156,
+              "height": 156,
+              "size": 5.11,
+              "path": null,
+              "url": "/uploads/thumbnail_helm_9127651c35.jpg"
+            }
+          },
+          "provider": "local",
+          "related": [
+            "5f635f8f5ee4c9001d2b966c"
+          ],
+          "createdAt": "2020-09-21T07:21:28.306Z",
+          "updatedAt": "2020-09-21T07:21:30.887Z",
+          "__v": 0,
+          "created_by": "5e4839cd1c2d53001dcc0696",
+          "updated_by": "5e4839cd1c2d53001dcc0696",
+          "id": "5f6854785ee4c9001d2b96cf"
+        },
+        "description": "Helm is a tool that streamlines installing and managing Kubernetes applications. ... A single chart might be used to deploy something simple, like a memcached pod, or something complex, like a full web app stack with HTTP servers, databases, caches, etc,",
+        "id": "5f635f8f5ee4c9001d2b966c"
+      }
+    ],
+    "_id": "5feed4c667bdd6001e9c12d0",
+    "title": "Creating custom version of Spring Initializr",
+    "shortDescription": "In this post we will look at forking the start.spring.io github repo to create a customised version of the spring initializr that will generate skeleton apps that can be imported into jenkins x.",
+    "createdAt": "2021-01-01T07:52:38.827Z",
+    "updatedAt": "2021-01-01T22:20:45.282Z",
+    "__v": 0,
+    "created_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "image": {
+      "_id": "5f6851a85ee4c9001d2b96af",
+      "name": "spring-boot.jpeg",
+      "alternativeText": "",
+      "caption": "",
+      "hash": "spring_boot_5ee37de4c1",
+      "ext": ".jpeg",
+      "mime": "image/png",
+      "size": 7.98,
+      "width": 400,
+      "height": 400,
+      "url": "/uploads/spring_boot_5ee37de4c1.jpeg",
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_spring-boot.jpeg",
+          "hash": "thumbnail_spring_boot_5ee37de4c1",
+          "ext": ".jpeg",
+          "mime": "image/png",
+          "width": 156,
+          "height": 156,
+          "size": 5.21,
+          "path": null,
+          "url": "/uploads/thumbnail_spring_boot_5ee37de4c1.jpeg"
+        }
+      },
+      "provider": "local",
+      "related": [
+        "5f635b6a5ee4c9001d2b9632",
+        "5feed4c667bdd6001e9c12d0"
+      ],
+      "createdAt": "2020-09-21T07:09:28.458Z",
+      "updatedAt": "2021-01-01T21:02:32.991Z",
+      "__v": 0,
+      "created_by": "5e4839cd1c2d53001dcc0696",
+      "updated_by": "5e4839cd1c2d53001dcc0696",
+      "id": "5f6851a85ee4c9001d2b96af"
+    },
+    "updated_by": {
+      "_id": "5e4839cd1c2d53001dcc0696",
+      "username": "simon.rowe@gmail.com",
+      "createdAt": "2020-02-15T18:34:53.155Z",
+      "updatedAt": "2020-09-17T07:45:13.526Z",
+      "__v": 0,
+      "id": "5e4839cd1c2d53001dcc0696"
+    },
+    "content": "The spring initializr [start.spring.io](https://start.spring.io) allows developers to get up and running quickly when developing spring boot based microservices. It generates a skeleton spring boot project with the specified dependencies that you can easily import into your IDE (or trigger generation directly from your IDE)\n![start-spring-io.png](/uploads/start_spring_io_f4e9eaab9b.png)\n\n This website [www.simonjamesrowe.com](https://www.simonjamesrowe.com) is currently fairly limited in terms of functionality, but I would like to keep adding to it in my spare time. I have chosen to use Jenkins X for my CI/CD pipelines and kubernetes as the container orchestrator to run my microservices, so it would be nice if I could have my own version of the spring initializr that did the following:\n- Generated Dockerfile and skaffold template for image definition.\n- Generated the helm charts that the services would use when deploying to kubernetes\n- Automatically add the nexus repository that is part of the jenkins x control plane to ```build.gradle.kts``` and also allow the component-test library to be automatically included\n-  Generation of the ```jenkins-x.yml``` Jenkins X pipeline declaration file.\n\nIn the future it would also be nice for this version to also automatically create the project in github as well as importing into Jenkins X (*but this can wait for v2 or v3*).\n\nSo where to begin? Firstly lets fork the repository ([https://github.com/spring-io/start.spring.io](https://github.com/spring-io/start.spring.io)). The repository contains a multi module maven project that consists of:\n- start-client - a react SPA (single page application)\n- start-site - a spring boot application that includes start-client as a web-jar and also contains the various REST endpoints that the react client consumes.\n\n\nLet look at our first requirement, we want to be able to generate new files. We can do this by implementing an interface named ```ProjectContributor```. I have defined an abstract ProjectContributor that the rest of the Contributors extend:\n```\npublic abstract class BaseProjectContributor implements ProjectContributor {\n\n\t@Autowired\n\tprotected MutableProjectDescription mutableProjectDescription;\n\n\t@Autowired(required = false)\n\tprotected GradleBuild gradleBuild;\n\n\t@Autowired\n\tprotected Cache cache;\n\n\tprotected MustacheTemplateRenderer mustacheTemplateRenderer;\n\n\t@PostConstruct\n\tpublic void postInit() {\n\t\tmustacheTemplateRenderer = new MustacheTemplateRenderer(\"classpath:/templates/\", cache);\n\t}\n\n\tprotected Map<String, ?> parameters() {\n\t\treturn Map.of(\"artifactId\", mutableProjectDescription.getArtifactId());\n\t}\n\n\tprotected boolean isLib() {\n\t\treturn mutableProjectDescription.getArtifactId().startsWith(\"lib\");\n\t}\n\n\tprotected boolean isService() {\n\t\treturn !isLib();\n\t}\n\n\tprotected boolean isGradleBuild() {\n\t\treturn gradleBuild != null;\n\t}\n\n\t@Override\n\tpublic int getOrder() {\n\t\treturn 0;\n\t}\n\n}\n```\n\nAs we can see in the code snippet above, this uses [moustache templates](https://mustache.github.io/). Lets look at the following:\n```\npublic class SkaffoldContributor extends BaseProjectContributor {\n\n\t@Override\n\tpublic void contribute(Path path) throws IOException {\n\t\tif (isLib()) {\n\t\t\treturn;\n\t\t}\n\t\tPath file = Files.createFile(path.resolve(\"skaffold.yml\"));\n\t\tPrintWriter writer = new PrintWriter(Files.newBufferedWriter(file));\n\t\twriter.println(mustacheTemplateRenderer.render(\"ms/skaffold.yaml\", parameters()));\n\t\twriter.close();\n\t}\n\n}\n```\n\n```src/main/resources/tempaltes/ms/skaffold.yaml.moustache```\n```\napiVersion: skaffold/v1beta2\nkind: Config\nbuild:\n  artifacts:\n    - image: simonjamesrowe/{{artifactId}}\n      context: .\n      docker: {}\n  tagPolicy:\n    envTemplate:\n{{=<% %>=}}\n      template: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}:{{.VERSION}}'\n<%={{ }}=%>\n  local: {}\ndeploy:\n  kubectl: {}\nprofiles:\n  - name: dev\n    build:\n      tagPolicy:\n        envTemplate:\n{{=<% %>=}}\n          template: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}:{{.DIGEST_HEX}}'\n<%={{ }}=%>\n      local: {}\n    deploy:\n      helm:\n        releases:\n          - name: {{artifactId}}\n            chartPath: charts/{{artifactId}}\n            setValueTemplates:\n{{=<% %>=}}\n              image.repository: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}'\n              image.tag: '{{.DIGEST_HEX}}'<%={{ }}=%>\n\n```\n\nThis will generate a file that looks like this:\n![skaffold-generation.png](/uploads/skaffold_generation_a3e6a9dda0.png)\n\nNext let's look at how we can customize our ```build.gradle.kts```. We can define a class that extends BuildCustomizer:\n```\npublic class GradleBuildCustomiser extends KotlinDslGradleBuildWriter implements BuildCustomizer<GradleBuild> {\n\n\t@Autowired\n\tprivate MutableProjectDescription mutableProjectDescription;\n\n\t@Override\n\tpublic void customize(GradleBuild build) {\n\t\tbuild.repositories().add(MavenRepository\n\t\t\t\t.withIdAndUrl(\"simonjamesrowe\", \"https://nexus-jx.simonjamesrowe.com/repository/maven-group/\").build());\n\t\tbuild.dependencies().add(\"component-test\");\n\t}\n\n\t@Override\n\tprotected void writeTasks(IndentingWriter writer, GradleTaskContainer tasks) {\n\t\tif (mutableProjectDescription.getArtifactId().startsWith(\"lib\")) {\n\t\t\tString extraTasks = \"\\ntasks.getByName<Jar>(\\\"jar\\\") {\\n\" + \"\\tenabled = true\\n\" + \"}\\n\" + \"\\n\"\n\t\t\t\t\t+ \"tasks.getByName<Jar>(\\\"bootJar\\\") {\\n\" + \"\\tenabled = false\\n\" + \"}\";\n\t\t\twriter.println(extraTasks);\n\t\t}\n\n\t\tString publishing = \"\\npublishing {\\n\" + \"\\tpublications {\\n\" + \"\\t\\tcreate<MavenPublication>(\\\"maven\\\") {\\n\"\n\t\t\t\t+ \"\\t\\t\\tfrom(components[\\\"java\\\"])\\n\" + \"\\t\\t}\\n\" + \"\\t}\\n\" + \"}\";\n\t\twriter.println(publishing);\n\t}\n\n\t@Override\n\tpublic int getOrder() {\n\t\treturn 0;\n\t}\n\n}\n```\n\nThis will simply disable bootJar task for libraries (like component-test) and also configure the maven-publish plugin, as well as adding the component-test dependency (see ```src/main/resources/application.yml``` for more configuration of dependencies, repositories, languages, build tools).\n\nWe will need to ensure that these classes ```GradleBuildCustomiser``` and ```SkaffoldContributor``` are spring beans, so we have a @Configuration class for this:\n```\n@Configuration\npublic class Config {\n\n\t@Bean\n\t@Primary\n\tpublic GradleBuildCustomiser gradleBuildCustomiser() {\n\t\treturn new GradleBuildCustomiser();\n\t}\n\n\t@Bean\n\tpublic DockerfileManifestContributor dockerfileManifestContributor() {\n\t\treturn new DockerfileManifestContributor();\n\t}\n\n\t@Bean\n\tpublic HelmContributor helmContributor() {\n\t\treturn new HelmContributor();\n\t}\n\n\t@Bean\n\tpublic JenkinsPipelineContributor jenkinsPipelineContributor() {\n\t\treturn new JenkinsPipelineContributor();\n\t}\n\n\t@Bean\n\tpublic SkaffoldContributor skaffoldContributor() {\n\t\treturn new SkaffoldContributor();\n\t}\n\n\t@Bean\n\tpublic Cache templatesCache() {\n\t\treturn new ConcurrentMapCache(\"templatesCache\");\n\t}\n\n}\n```\n\nAlso as I have placed all of my classes in the ```com.simonjamesrowe``` package,  the ```src/main/resources/META-INF/spring.factories``` will need to be changed so that it picks up configuration from this package:\n```\nio.spring.initializr.generator.project.ProjectGenerationConfiguration=\\\nio.spring.start.site.extension.build.gradle.GradleProjectGenerationConfiguration,\\\nio.spring.start.site.extension.build.maven.MavenProjectGenerationConfiguration,\\\n.....\ncom.simonjamesrowe.initializr.Config  \n```\n\nAnd with a bit of help from Jenkins X, the final result is here: [start.simonjamesrowe.com](https://start.simonjamesrowe.com). All source code can be found [here](https://github.com/simonjamesrowe/start.spring.io).\n\n![simon-initializr.png](/uploads/simon_initializr_5121135095.png)",
+    "id": "5feed4c667bdd6001e9c12d0"
+  }
+]
