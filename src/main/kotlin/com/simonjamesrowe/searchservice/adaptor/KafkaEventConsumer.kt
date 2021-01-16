@@ -32,7 +32,7 @@ class KafkaEventConsumer(
         .map(BlogMapper::map)
         .run {
           if (isNotEmpty()) {
-            log.info("Indexing document $this")
+            log.info("Indexing documents $this")
             blogDocumentRepository.saveAll(this)
           }
         }
