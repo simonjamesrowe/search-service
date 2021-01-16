@@ -23,7 +23,7 @@ class KafkaEventConsumer(
   @Bean
   fun consumeEvent(): Consumer<List<Event>> =
     Consumer { events ->
-      log.info("Received events from kafka: $events")
+      log.info("Received events from kafka: ${events.map{"${it.event}-${it.model}"}}")
       blogSearchRepository.saveAll(
         events
           .filter { it.model == TYPE_BLOG }
