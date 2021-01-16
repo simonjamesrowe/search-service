@@ -52,8 +52,3 @@ spring:
 elasticsearch:
   index:
     blog: blog_${namespace:local}
-
-
-logging:
-  level:
-    org.springframework : TRACE
