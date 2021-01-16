@@ -6,6 +6,7 @@ import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContaine
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
 import com.simonjamesrowe.searchservice.adaptor.BlogRestApi
 import com.simonjamesrowe.searchservice.dao.BlogDocumentRepository
+import com.simonjamesrowe.searchservice.dao.BlogSearchRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -27,6 +28,9 @@ internal class BlogSynchronizationInteractorTest : BaseComponentTest() {
   private lateinit var blogDocumentRepository: BlogDocumentRepository
 
   @Autowired
+  private lateinit var blogSearchRepository: BlogSearchRepository
+
+  @Autowired
   private lateinit var blogRestApi: BlogRestApi
 
   private lateinit var blogSynchronizationInteractor: BlogSynchronizationInteractor
@@ -39,7 +43,7 @@ internal class BlogSynchronizationInteractorTest : BaseComponentTest() {
 
   @BeforeEach
   fun createTestInstance() {
-    blogSynchronizationInteractor = BlogSynchronizationInteractor(blogRestApi, blogDocumentRepository)
+    blogSynchronizationInteractor = BlogSynchronizationInteractor(blogRestApi, blogSearchRepository)
   }
 
   @BeforeEach

@@ -2,6 +2,7 @@ package com.simonjamesrowe.searchservice.service
 
 import com.simonjamesrowe.searchservice.adaptor.BlogRestApi
 import com.simonjamesrowe.searchservice.dao.BlogDocumentRepository
+import com.simonjamesrowe.searchservice.dao.BlogSearchRepository
 import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Profile
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Service
 @Service
 class BlogSynchronizationInteractor(
   private val blogRestApi: BlogRestApi,
-  private val blogDocumentRepository: BlogDocumentRepository
+  private val blogSearchRepository: BlogSearchRepository
 ) {
 
   companion object {
@@ -24,16 +25,8 @@ class BlogSynchronizationInteractor(
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
   fun syncBlogDocuments() {
     log.info("Synchronising blog documents from cms")
-    blogRestApi
-      .getAllBlogs()
-      .filter { it.published }
-      .map(BlogMapper::map)
-      .run {
-        if (isNotEmpty()) {
-          log.info("Indexing documents $this")
-          blogDocumentRepository.saveAll(this)
-        }
-      }
+    val allBlogs = blogRestApi.getAllBlogs()
+    blogSearchRepository.saveAll(allBlogs)
   }
 
 }
