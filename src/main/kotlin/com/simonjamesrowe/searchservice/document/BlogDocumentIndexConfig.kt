@@ -37,7 +37,7 @@ class BlogDocumentIndexConfig(
       {
             "properties" : {
               "title" : {
-                "type" : "text",
+                "type" : "search_as_you_type",
                 "store" : true,
                 "index" : true
               },

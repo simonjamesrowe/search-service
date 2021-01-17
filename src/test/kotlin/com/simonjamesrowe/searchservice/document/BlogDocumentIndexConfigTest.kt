@@ -28,45 +28,63 @@ internal class BlogDocumentIndexConfigTest : BaseComponentTest() {
   fun `blog index should have expected mappings and settings`() {
     val indexOps = elasticsearchRestTemplate.indexOps(IndexCoordinates.of("blog_local"))
     val mapping = indexOps.mapping
-    val properties = mapping["properties"] as Map<String,Any>
-    assertThat(properties["skills"]).isEqualTo(mapOf(
-      "analyzer" to "lowercase_keyword",
-      "store" to true,
-      "type" to "text"
-    ))
-    assertThat(properties["tags"]).isEqualTo(mapOf(
-      "analyzer" to "lowercase_keyword",
-      "store" to true,
-      "type" to "text"
-    ))
-    assertThat(properties["createdDate"]).isEqualTo(mapOf(
-      "format" to "uuuu-MM-dd",
-      "store" to true,
-      "type" to "date"
-    ))
-    assertThat(properties["smallImage"]).isEqualTo(mapOf(
-      "index" to false,
-      "store" to true,
-      "type" to "keyword"
-    ))
-    assertThat(properties["mediumImage"]).isEqualTo(mapOf(
-      "index" to false,
-      "store" to true,
-      "type" to "keyword"
-    ))
-    assertThat(properties["thumbnailImage"]).isEqualTo(mapOf(
-      "index" to false,
-      "store" to true,
-      "type" to "keyword"
-    ))
-    assertThat(properties["title"]).isEqualTo(mapOf(
-      "store" to true,
-      "type" to "text"
-    ))
-    assertThat(properties["content"]).isEqualTo(mapOf(
-      "analyzer" to "markdown_text",
-      "type" to "text"
-    ))
+    val properties = mapping["properties"] as Map<String, Any>
+    assertThat(properties["skills"]).isEqualTo(
+      mapOf(
+        "analyzer" to "lowercase_keyword",
+        "store" to true,
+        "type" to "text"
+      )
+    )
+    assertThat(properties["tags"]).isEqualTo(
+      mapOf(
+        "analyzer" to "lowercase_keyword",
+        "store" to true,
+        "type" to "text"
+      )
+    )
+    assertThat(properties["createdDate"]).isEqualTo(
+      mapOf(
+        "format" to "uuuu-MM-dd",
+        "store" to true,
+        "type" to "date"
+      )
+    )
+    assertThat(properties["smallImage"]).isEqualTo(
+      mapOf(
+        "index" to false,
+        "store" to true,
+        "type" to "keyword"
+      )
+    )
+    assertThat(properties["mediumImage"]).isEqualTo(
+      mapOf(
+        "index" to false,
+        "store" to true,
+        "type" to "keyword"
+      )
+    )
+    assertThat(properties["thumbnailImage"]).isEqualTo(
+      mapOf(
+        "index" to false,
+        "store" to true,
+        "type" to "keyword"
+      )
+    )
+    assertThat(properties["title"]).isEqualTo(
+      mapOf(
+        "store" to true,
+        "doc_values" to false,
+        "max_shingle_size" to 3,
+        "type" to "search_as_you_type"
+      )
+    )
+    assertThat(properties["content"]).isEqualTo(
+      mapOf(
+        "analyzer" to "markdown_text",
+        "type" to "text"
+      )
+    )
   }
 
 }
