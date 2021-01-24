@@ -1,7 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 
 plugins {
-	id("org.springframework.boot") version "2.4.1"
+	id("org.springframework.boot") version "2.4.2"
 	id("io.spring.dependency-management") version "1.0.10.RELEASE"
 	id("maven-publish")
 	kotlin("jvm") version "1.4.21"
@@ -60,4 +61,8 @@ publishing {
 			from(components["java"])
 		}
 	}
+}
+
+tasks.getByName<BootBuildImage>("bootBuildImage") {
+	imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
 }
