@@ -6,6 +6,7 @@ import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Sort
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin
 @RestController
 class BlogController(
   private val blogDocumentRepository: BlogDocumentRepository
