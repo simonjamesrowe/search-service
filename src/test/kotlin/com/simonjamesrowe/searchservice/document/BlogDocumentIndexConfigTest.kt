@@ -36,6 +36,12 @@ internal class BlogDocumentIndexConfigTest : BaseComponentTest() {
         "type" to "text"
       )
     )
+    assertThat(properties["shortDescription"]).isEqualTo(
+      mapOf(
+        "store" to true,
+        "type" to "text"
+      )
+    )
     assertThat(properties["tags"]).isEqualTo(
       mapOf(
         "analyzer" to "lowercase_keyword",

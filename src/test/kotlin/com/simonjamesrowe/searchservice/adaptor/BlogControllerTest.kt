@@ -34,7 +34,8 @@ internal class BlogControllerTest : BaseComponentTest() {
       createdDate = LocalDate.of(2021, 1, 1),
       mediumImage = "/uploads/blog1-med.jpg",
       smallImage = "/uploads/blog1-small.jpg",
-      thumbnailImage = "/uploads/blog2-thumb.jpg"
+      thumbnailImage = "/uploads/blog2-thumb.jpg",
+      shortDescription = "Short description 1"
     )
     val blog2 = BlogDocument(
       id = "2",
@@ -45,7 +46,8 @@ internal class BlogControllerTest : BaseComponentTest() {
       createdDate = LocalDate.of(2021, 1, 2),
       mediumImage = "/uploads/blog2-med.jpg",
       smallImage = "/uploads/blog2-small.jpg",
-      thumbnailImage = "/uploads/blog2-thumb.jpg"
+      thumbnailImage = "/uploads/blog2-thumb.jpg",
+      shortDescription = "shortDescription2"
     )
     val blog3 = BlogDocument(
       id = "3",
@@ -56,7 +58,8 @@ internal class BlogControllerTest : BaseComponentTest() {
       createdDate = LocalDate.of(2021, 1, 3),
       mediumImage = "/uploads/blog3-med.jpg",
       smallImage = "/uploads/blog3-small.jpg",
-      thumbnailImage = "/uploads/blog3-thumb.jpg"
+      thumbnailImage = "/uploads/blog3-thumb.jpg",
+      shortDescription = "shortDescription3"
     )
     blogDocumentRepository.saveAll(listOf(blog1, blog2, blog3))
   }

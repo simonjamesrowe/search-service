@@ -47,6 +47,10 @@ class BlogDocumentIndexConfig(
                 "index": true,
                 "analyzer": "markdown_text"
               },
+              "shortDescription" :{
+                "type" : "text",
+                "store" : true
+              },
               "tags": {
                 "type" : "text",
                 "store": true,

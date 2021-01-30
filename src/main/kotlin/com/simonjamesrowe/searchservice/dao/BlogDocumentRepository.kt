@@ -31,6 +31,7 @@ interface BlogDocumentRepository : ElasticsearchRepository<BlogDocument, String>
                 "fields": [
                   "title",
                   "content",
+                  "shortDescription", 
                   "skills^2",
                   "tags^2"
                 ]

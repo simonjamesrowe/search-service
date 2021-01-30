@@ -1,5 +1,6 @@
 package com.simonjamesrowe.searchservice.document
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import org.springframework.data.annotation.Id
 import org.springframework.data.elasticsearch.annotations.DateFormat
 import org.springframework.data.elasticsearch.annotations.Document
@@ -19,6 +20,10 @@ data class BlogDocument(
   val title: String,
 
   @Field
+  val shortDescription: String,
+
+  @Field
+  @JsonIgnore
   val content: String?,
 
   @Field

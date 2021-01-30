@@ -14,6 +14,7 @@ object BlogMapper {
       thumbnailImage = blog.image.formats?.thumbnail?.url ?: "",
       smallImage = blog.image.formats?.small?.url,
       mediumImage = blog.image.formats?.medium?.url,
-      createdDate = blog.createdAt.toLocalDate()
+      createdDate = blog.createdAt.toLocalDate(),
+      shortDescription = blog.shortDescription
     )
 }
