@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice.adaptor
+package com.simonjamesrowe.searchservice.adapter
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.convertValue
@@ -6,10 +6,10 @@ import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
 import com.simonjamesrowe.model.data.*
+import com.simonjamesrowe.searchservice.TestUtils.image
 import com.simonjamesrowe.searchservice.dao.BlogDocumentRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.awaitility.Awaitility.await
-import org.junit.BeforeClass
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -74,55 +74,11 @@ internal class KafkaEventConsumerTest : BaseComponentTest() {
           createdAt = ZonedDateTime.now(),
           updatedAt = ZonedDateTime.now(),
           rating = 7.8,
-          order = 2
+          order = 2,
+          image = image("jenkins", 10)
         )
       ),
-      image = Image(
-        url = "uploads/image1.jpg",
-        name = "image1",
-        size = 34,
-        width = 400,
-        height = 200,
-        mime = "jpg",
-        formats = Image.ImageFormats(
-          thumbnail = Image(
-            url = "uploads/image1-thumb.jpg",
-            name = "image1-thumb",
-            size = 3,
-            width = 10,
-            height = 10,
-            mime = "jpg",
-            formats = null
-          ),
-          small = Image(
-            url = "uploads/image1-sml.jpg",
-            name = "image1-sml",
-            size = 3,
-            width = 50,
-            height = 50,
-            mime = "jpg",
-            formats = null
-          ),
-          medium = Image(
-            url = "uploads/image1-med.jpg",
-            name = "image1-mde",
-            size = 3,
-            width = 100,
-            height = 100,
-            mime = "jpg",
-            formats = null
-          ),
-          large = Image(
-            url = "uploads/image1-lg.jpg",
-            name = "image1-lg",
-            size = 3,
-            width = 200,
-            height = 200,
-            mime = "jpg",
-            formats = null
-          )
-        )
-      )
+      image = image("image1", 10)
     )
     val blog2 = Blog(
       id = "2",
@@ -156,55 +112,11 @@ internal class KafkaEventConsumerTest : BaseComponentTest() {
           createdAt = ZonedDateTime.now(),
           updatedAt = ZonedDateTime.now(),
           rating = 4.0,
-          order = 1
+          order = 1,
+          image = image("test-containers",5 )
         )
       ),
-      image = Image(
-        url = "uploads/image2.jpg",
-        name = "image2",
-        size = 34,
-        width = 400,
-        height = 200,
-        mime = "jpg",
-        formats = Image.ImageFormats(
-          thumbnail = Image(
-            url = "uploads/image2-thumb.jpg",
-            name = "image1-thumb",
-            size = 3,
-            width = 10,
-            height = 10,
-            mime = "jpg",
-            formats = null
-          ),
-          small = Image(
-            url = "uploads/image2-sml.jpg",
-            name = "image2-sml",
-            size = 3,
-            width = 50,
-            height = 50,
-            mime = "jpg",
-            formats = null
-          ),
-          medium = Image(
-            url = "uploads/image2-med.jpg",
-            name = "image2-mde",
-            size = 3,
-            width = 100,
-            height = 100,
-            mime = "jpg",
-            formats = null
-          ),
-          large = Image(
-            url = "uploads/image2-lg.jpg",
-            name = "image2-lg",
-            size = 3,
-            width = 200,
-            height = 200,
-            mime = "jpg",
-            formats = null
-          )
-        )
-      )
+      image = image("image2", 6)
     )
     val blog3 = Blog(
       id = "3",
@@ -238,55 +150,11 @@ internal class KafkaEventConsumerTest : BaseComponentTest() {
           createdAt = ZonedDateTime.now(),
           updatedAt = ZonedDateTime.now(),
           rating = 4.0,
-          order = 1
+          order = 1,
+          image = image("testcontainers", 8)
         )
       ),
-      image = Image(
-        url = "uploads/image2.jpg",
-        name = "image2",
-        size = 34,
-        width = 400,
-        height = 200,
-        mime = "jpg",
-        formats = Image.ImageFormats(
-          thumbnail = Image(
-            url = "uploads/image2-thumb.jpg",
-            name = "image1-thumb",
-            size = 3,
-            width = 10,
-            height = 10,
-            mime = "jpg",
-            formats = null
-          ),
-          small = Image(
-            url = "uploads/image2-sml.jpg",
-            name = "image2-sml",
-            size = 3,
-            width = 50,
-            height = 50,
-            mime = "jpg",
-            formats = null
-          ),
-          medium = Image(
-            url = "uploads/image2-med.jpg",
-            name = "image2-mde",
-            size = 3,
-            width = 100,
-            height = 100,
-            mime = "jpg",
-            formats = null
-          ),
-          large = Image(
-            url = "uploads/image2-lg.jpg",
-            name = "image2-lg",
-            size = 3,
-            width = 200,
-            height = 200,
-            mime = "jpg",
-            formats = null
-          )
-        )
-      )
+      image = image("image2", 9)
     )
     val event1 = Event(
       event = "created",

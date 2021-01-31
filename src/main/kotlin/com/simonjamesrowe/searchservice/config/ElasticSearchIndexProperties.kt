@@ -6,5 +6,6 @@ import org.springframework.boot.context.properties.ConstructorBinding
 @ConstructorBinding
 @ConfigurationProperties("elasticsearch.index")
 data class ElasticSearchIndexProperties(
-  val blog: String
+  val blog: String,
+  val site: String
 )

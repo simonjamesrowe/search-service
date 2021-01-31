@@ -52,3 +52,4 @@ spring:
 elasticsearch:
   index:
     blog: blog_${namespace:local}
+    site: site_${namespace:local}

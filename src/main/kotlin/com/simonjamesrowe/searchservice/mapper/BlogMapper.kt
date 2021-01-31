@@ -2,9 +2,10 @@ package com.simonjamesrowe.searchservice.mapper
 
 import com.simonjamesrowe.model.data.Blog
 import com.simonjamesrowe.searchservice.document.BlogDocument
+import com.simonjamesrowe.searchservice.document.SiteDocument
 
 object BlogMapper {
-  fun map(blog: Blog) =
+  fun toBlogDocument(blog: Blog) =
     BlogDocument(
       id = blog.id,
       title = blog.title,
@@ -16,5 +17,16 @@ object BlogMapper {
       mediumImage = blog.image.formats?.medium?.url,
       createdDate = blog.createdAt.toLocalDate(),
       shortDescription = blog.shortDescription
+    )
+
+  fun toSiteDocument(blog: Blog) =
+    SiteDocument(
+      id = "blog_${blog.id}",
+      siteUrl = "/blogs/${blog.id}",
+      shortDescription = blog.shortDescription,
+      longDescription = blog.content,
+      name = blog.title,
+      type = "Blog",
+      image = blog.image.formats?.thumbnail?.url ?: ""
     )
 }

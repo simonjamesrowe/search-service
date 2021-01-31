@@ -31,7 +31,7 @@ class BlogSearchRepository(
   }
 
   private fun saveDocuments(blogs: List<Blog>) {
-    blogs.map(BlogMapper::map)
+    blogs.map(BlogMapper::toBlogDocument)
       .run {
         if (isNotEmpty()) {
           log.info("Indexing documents ${this.map { it.title }}")

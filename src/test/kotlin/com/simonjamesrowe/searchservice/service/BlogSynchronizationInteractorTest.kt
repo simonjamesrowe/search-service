@@ -4,9 +4,10 @@ import com.github.tomakehurst.wiremock.client.WireMock.*
 import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
-import com.simonjamesrowe.searchservice.adaptor.BlogRestApi
+import com.simonjamesrowe.searchservice.adapter.CmsRestApi
 import com.simonjamesrowe.searchservice.dao.BlogDocumentRepository
 import com.simonjamesrowe.searchservice.dao.BlogSearchRepository
+import com.simonjamesrowe.searchservice.dao.SiteDocumentRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -31,9 +32,12 @@ internal class BlogSynchronizationInteractorTest : BaseComponentTest() {
   private lateinit var blogSearchRepository: BlogSearchRepository
 
   @Autowired
-  private lateinit var blogRestApi: BlogRestApi
+  private lateinit var siteDocumentRepository: SiteDocumentRepository
 
-  private lateinit var blogSynchronizationInteractor: BlogSynchronizationInteractor
+  @Autowired
+  private lateinit var blogRestRestApi: CmsRestApi
+
+  private lateinit var cmsSynchronizationInteractor: CmsSynchronizationInteractor
 
   @BeforeEach
   @AfterEach
@@ -43,7 +47,8 @@ internal class BlogSynchronizationInteractorTest : BaseComponentTest() {
 
   @BeforeEach
   fun createTestInstance() {
-    blogSynchronizationInteractor = BlogSynchronizationInteractor(blogRestApi, blogSearchRepository)
+    cmsSynchronizationInteractor =
+      CmsSynchronizationInteractor(blogRestRestApi, blogSearchRepository, siteDocumentRepository)
   }
 
   @BeforeEach
@@ -66,7 +71,7 @@ internal class BlogSynchronizationInteractorTest : BaseComponentTest() {
 
   @Test
   fun `should synchronize all blogs from cms into elasticsearch`() {
-    blogSynchronizationInteractor.syncBlogDocuments()
+    cmsSynchronizationInteractor.syncBlogDocuments()
     assertThat(blogDocumentRepository.count()).isEqualTo(10)
   }
 

@@ -7,6 +7,12 @@ import org.springframework.context.annotation.Configuration
 class ElasticSearchDocumentNameConfig {
 
   @Bean
-  fun blogIndexName(elasticSearchIndexProperties: ElasticSearchIndexProperties): String =
-    elasticSearchIndexProperties.blog
+  fun blogIndexName(
+    elasticSearchIndexProperties: ElasticSearchIndexProperties
+  ): String = elasticSearchIndexProperties.blog
+
+  @Bean
+  fun siteIndexName(
+    elasticSearchIndexProperties: ElasticSearchIndexProperties
+  ): String = elasticSearchIndexProperties.site
 }

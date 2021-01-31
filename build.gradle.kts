@@ -27,7 +27,7 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 	implementation("io.github.openfeign:feign-jackson:11.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
-	implementation("com.simonjamesrowe:model:0.0.7")
+	implementation("com.simonjamesrowe:model:0.0.8")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")

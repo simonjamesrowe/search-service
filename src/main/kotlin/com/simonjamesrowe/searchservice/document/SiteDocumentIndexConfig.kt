@@ -1,19 +1,16 @@
 package com.simonjamesrowe.searchservice.document
 
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
-import org.elasticsearch.client.Request
 import org.elasticsearch.client.RestHighLevelClient
-import org.springframework.boot.ApplicationArguments
-import org.springframework.boot.ApplicationRunner
 import org.springframework.stereotype.Component
 
 @Component
-class BlogDocumentIndexConfig(
+class SiteDocumentIndexConfig(
   elasticSearchClient: RestHighLevelClient,
   elasticSearchIndexProperties: ElasticSearchIndexProperties
 ) : AbstractIndexConfig(
   elasticSearchClient,
-  elasticSearchIndexProperties.blog
+  elasticSearchIndexProperties.site
 ) {
 
   override val settings = """
@@ -37,56 +34,36 @@ class BlogDocumentIndexConfig(
     """
   override val mappings = """
       {
-            "properties" : {
-              "title" : {
+           "properties" : {
+              "name" : {
                 "type" : "search_as_you_type",
                 "store" : true,
                 "index" : true
               },
-              "content" : {
+              "shortDescription" : {
                 "type": "text",
                 "store": false,
                 "index": true,
                 "analyzer": "markdown_text"
               },
-              "shortDescription" :{
-                "type" : "text",
-                "store" : true
+              "longDescription" : {
+                "type": "text",
+                "store": false,
+                "index": true,
+                "analyzer": "markdown_text"
               },
-              "tags": {
-                "type" : "text",
-                "store": true,
-                "analyzer": "lowercase_keyword"
-              },
-              "skills": {
-                "type" : "text",
-                "store": true,
-                "analyzer": "lowercase_keyword"
-              },
-              "thumbnailImage" : {
+              "siteUrl" :{
                 "type" : "keyword",
-                "store": true,
+                "store" : true,
                 "index" : false
               },
-              "smallImage" : {
+              "image" :{
                 "type" : "keyword",
-                "store": true,
+                "store" : true,
                 "index" : false
-              },
-              "mediumImage" : {
-                "type" : "keyword",
-                "store": true,
-                "index" : false
-              },
-              "createdDate" : {
-                "type" : "date",
-                "store": true,
-                "index" : true,
-                "format": "uuuu-MM-dd"
-              }
-            }
-          }
-        }
+             }
+           }
+       }
     """
 
 }

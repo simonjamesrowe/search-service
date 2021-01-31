@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice.adaptor
+package com.simonjamesrowe.searchservice.adapter
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.convertValue

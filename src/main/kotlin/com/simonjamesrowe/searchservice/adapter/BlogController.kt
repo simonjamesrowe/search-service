@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice.adaptor
+package com.simonjamesrowe.searchservice.adapter
 
 import com.simonjamesrowe.searchservice.dao.BlogDocumentRepository
 import com.simonjamesrowe.searchservice.document.BlogDocument
