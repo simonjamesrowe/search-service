@@ -10,7 +10,7 @@ object SkillsGroupMapper {
       SiteDocument(
         id = "skill_${skill.id}",
         siteUrl = "/skills-groups/${skillsGroup.id}",
-        shortDescription = skill.description,
+        shortDescription = skill.description ?: "",
         longDescription = skillsGroup.description,
         name = skill.name,
         type = "Skill",
