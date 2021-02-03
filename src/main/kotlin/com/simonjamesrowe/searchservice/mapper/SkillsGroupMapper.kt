@@ -1,6 +1,5 @@
 package com.simonjamesrowe.searchservice.mapper
 
-import com.simonjamesrowe.model.data.Job
 import com.simonjamesrowe.model.data.SkillsGroup
 import com.simonjamesrowe.searchservice.document.SiteDocument
 

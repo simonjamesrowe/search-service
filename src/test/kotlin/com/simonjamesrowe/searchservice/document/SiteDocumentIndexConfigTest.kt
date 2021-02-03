@@ -17,10 +17,11 @@ internal class SiteDocumentIndexConfigTest : BaseComponentTest() {
   private lateinit var elasticsearchRestTemplate: ElasticsearchRestTemplate
 
   @Test
-  fun `blog index should have expected mappings and settings`() {
+  fun `site index should have expected mappings and settings`() {
     val indexOps = elasticsearchRestTemplate.indexOps(IndexCoordinates.of("site_local"))
     val mapping = indexOps.mapping
     val properties = mapping["properties"] as Map<String, Any>
+    println(properties)
     assertThat(properties["name"]).isEqualTo(
       mapOf(
         "doc_values" to false,

@@ -38,7 +38,12 @@ class SiteDocumentIndexConfig(
               "name" : {
                 "type" : "search_as_you_type",
                 "store" : true,
-                "index" : true
+                "index" : true,
+                "fields": {
+                  "raw": { 
+                    "type":  "keyword"
+                  }
+                }
               },
               "shortDescription" : {
                 "type": "text",
