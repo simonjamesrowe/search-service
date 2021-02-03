@@ -21,13 +21,21 @@ internal class SiteDocumentIndexConfigTest : BaseComponentTest() {
     val indexOps = elasticsearchRestTemplate.indexOps(IndexCoordinates.of("site_local"))
     val mapping = indexOps.mapping
     val properties = mapping["properties"] as Map<String, Any>
-    println(properties)
     assertThat(properties["name"]).isEqualTo(
       mapOf(
-        "doc_values" to false,
-        "max_shingle_size" to 3,
-        "store" to true,
-        "type" to "search_as_you_type"
+        "type" to "text",
+        "fields" to mapOf(
+          "search" to mapOf(
+            "doc_values" to false,
+            "max_shingle_size" to 3,
+            "type" to "search_as_you_type"
+          ),
+          "raw" to mapOf(
+            "type" to "keyword"
+          )
+        )
+
+
       )
     )
     assertThat(properties["siteUrl"]).isEqualTo(

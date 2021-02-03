@@ -36,12 +36,13 @@ class SiteDocumentIndexConfig(
       {
            "properties" : {
               "name" : {
-                "type" : "search_as_you_type",
-                "store" : true,
-                "index" : true,
+                "type" : "text",
                 "fields": {
                   "raw": { 
                     "type":  "keyword"
+                  },
+                  "search": {
+                    "type" : "search_as_you_type"
                   }
                 }
               },
