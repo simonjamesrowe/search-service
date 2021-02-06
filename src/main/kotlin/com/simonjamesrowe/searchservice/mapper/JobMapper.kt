@@ -11,7 +11,7 @@ object JobMapper {
       shortDescription = job.shortDescription,
       longDescription = job.longDescription ?: "",
       name = "${job.title} (${job.company}) - ${job.startDate.year} - ${job.endDate?.year ?: "Present"}",
-      type = "Job",
+      type = "Jobs",
       image = job.companyImage.formats?.thumbnail?.url ?: ""
     )
 }

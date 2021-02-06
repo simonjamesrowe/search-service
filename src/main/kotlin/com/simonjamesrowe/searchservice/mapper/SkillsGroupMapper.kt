@@ -12,7 +12,7 @@ object SkillsGroupMapper {
         shortDescription = skill.description ?: "",
         longDescription = skillsGroup.description,
         name = skill.name,
-        type = "Skill",
+        type = "Skills",
         image = skill.image.formats?.thumbnail?.url ?: ""
       )
     }

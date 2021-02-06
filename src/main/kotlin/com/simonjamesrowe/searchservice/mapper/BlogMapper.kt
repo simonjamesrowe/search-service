@@ -26,7 +26,7 @@ object BlogMapper {
       shortDescription = blog.shortDescription,
       longDescription = blog.content,
       name = blog.title,
-      type = "Blog",
+      type = "Blogs",
       image = blog.image.formats?.thumbnail?.url ?: ""
     )
 }
