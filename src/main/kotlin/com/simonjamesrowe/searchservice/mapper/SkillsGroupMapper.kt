@@ -8,7 +8,7 @@ object SkillsGroupMapper {
     skillsGroup.skills.map { skill ->
       SiteDocument(
         id = "skill_${skill.id}",
-        siteUrl = "/skills-groups/${skillsGroup.id}",
+        siteUrl = "/skills-groups/${skillsGroup.id}#${skill.id}",
         shortDescription = skill.description ?: "",
         longDescription = skillsGroup.description,
         name = skill.name,
