@@ -7,8 +7,10 @@ import org.elasticsearch.action.search.SearchRequest
 import org.elasticsearch.client.RequestOptions
 import org.elasticsearch.client.RestHighLevelClient
 import org.elasticsearch.index.query.QueryBuilders
+import org.elasticsearch.script.Script
 import org.elasticsearch.search.aggregations.AggregationBuilders
 import org.elasticsearch.search.aggregations.AggregatorFactories
+import org.elasticsearch.search.aggregations.BucketOrder
 import org.elasticsearch.search.builder.SearchSourceBuilder
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Repository
@@ -42,11 +44,13 @@ class SiteSearchRepository(
         AggregationBuilders.terms("type").field("type.keyword").size(5)
           .subAggregation(
             AggregationBuilders.terms("id").field("_id").size(100)
+              .order(BucketOrder.aggregation("score", false))
               .subAggregations(
                 AggregatorFactories.Builder()
                   .addAggregator(AggregationBuilders.terms("url").field("siteUrl"))
                   .addAggregator(AggregationBuilders.terms("imageUrl").field("image"))
                   .addAggregator(AggregationBuilders.terms("name").field("name.raw"))
+                  .addAggregator(AggregationBuilders.max("score").script(Script.parse("_score")))
               )
           )
       )
