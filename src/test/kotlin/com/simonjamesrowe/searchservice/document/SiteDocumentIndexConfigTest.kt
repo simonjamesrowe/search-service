@@ -34,8 +34,6 @@ internal class SiteDocumentIndexConfigTest : BaseComponentTest() {
             "type" to "keyword"
           )
         )
-
-
       )
     )
     assertThat(properties["siteUrl"]).isEqualTo(
