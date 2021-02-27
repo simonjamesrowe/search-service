@@ -27,9 +27,17 @@ class KafkaEventConsumer(
   @Bean
   fun consumeEvent(): Consumer<List<Event>> =
     Consumer { events ->
-      log.info("Received events from kafka: ${events.map { "${it.event}-${it.model}" }}")
-      updateBlogSearchIndex(events)
-      updateSiteSearchIndex(events)
+      runCatching {
+        log.info("Received events from kafka: ${events.map { "${it.event}-${it.model}" }}")
+        updateBlogSearchIndex(events)
+        updateSiteSearchIndex(events)
+      }.onFailure { exception ->
+        if (exception.cause?.javaClass?.packageName?.startsWith("com.fasterxml.jackson") == true) {
+          log.error("Error with json deserialization", exception)
+        } else {
+          throw exception
+        }
+      }
     }
 
   private fun updateSiteSearchIndex(events: List<Event>) {
