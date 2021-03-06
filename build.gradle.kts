@@ -33,6 +33,7 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
 	implementation("net.logstash.logback:logstash-logback-encoder:6.6")
 	implementation("ch.qos.logback:logback-classic:1.2.3")
+	implementation("co.elastic.apm:apm-agent-attach:1.21.0")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

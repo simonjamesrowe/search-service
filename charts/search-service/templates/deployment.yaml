@@ -36,6 +36,8 @@ spec:
         env:
         - name: NAMESPACE
           value: {{ .Release.Namespace }}
+        - name: ELASTIC_APM_ENVIRONMENT
+          value: {{ .Release.Namespace }}
 {{- range $pkey, $pval := .Values.env }}
         - name: {{ $pkey }}
           value: {{ quote $pval }}
