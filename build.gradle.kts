@@ -18,7 +18,7 @@ repositories {
 	maven { url = uri("https://repo.spring.io/milestone") }
 }
 
-extra["springCloudVersion"] = "2020.0.0"
+extra["springCloudVersion"] = "2020.0.1"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
@@ -34,6 +34,10 @@ dependencies {
 	implementation("net.logstash.logback:logstash-logback-encoder:6.6")
 	implementation("ch.qos.logback:logback-classic:1.2.3")
 	implementation("co.elastic.apm:apm-agent-attach:1.21.0")
+	implementation("co.elastic.apm:apm-opentracing:1.21.0")
+	implementation("io.opentracing.contrib:opentracing-spring-cloud-starter:0.5.9") {
+		exclude(group = "io.opentracing.contrib", module = "opentracing-spring-cloud-feign-starter")
+	}
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
