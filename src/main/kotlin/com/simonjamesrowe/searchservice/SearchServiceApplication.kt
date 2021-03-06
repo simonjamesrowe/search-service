@@ -1,5 +1,6 @@
 package com.simonjamesrowe.searchservice
 
+import co.elastic.apm.attach.ElasticApmAttacher
 import com.simonjamesrowe.searchservice.config.CmsProperties
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration
@@ -20,5 +21,6 @@ import org.springframework.scheduling.annotation.EnableScheduling
 class SearchServiceApplication
 
 fun main(args: Array<String>) {
+	ElasticApmAttacher.attach()
 	runApplication<SearchServiceApplication>(*args)
 }
