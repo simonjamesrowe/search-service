@@ -1,0 +1,1151 @@
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1615052319.8074641,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-search-service-m-67s6j-mrvvb[0m
+{"level":"info","ts":1615052327.884607,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/search-service.git @ v0.0.31 in path /workspace/source"}
+{"level":"warn","ts":1615052327.8848798,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1615052327.956636,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f6b7671b126d1fc2a688b75db69f700413a3ebe9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-build-gradle-build[0m
+Initialized native services in: /****/.gradle/native
+Removing 0 daemon stop events from registry
+Starting a Gradle Daemon (subsequent builds will be faster)
+Starting process 'Gradle build daemon'. Working directory: /****/.gradle/daemon/6.5.1 Command: /usr/lib/jvm/java-11-openjdk-11.0.9.11-2.el7_9.x86_64/bin/java --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED --add-opens java.prefs/java.util.prefs=ALL-UNNAMED -XX:MaxMetaspaceSize=256m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp /opt/gradle/lib/gradle-launcher-6.5.1.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 6.5.1
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 2.763 secs.
+The client will now receive all logging from the daemon (pid: 48). The daemon log file: /****/.gradle/daemon/6.5.1/daemon-48.out.log
+Starting build in new daemon [memory: 519.0 MB]
+Closing daemon's stdin at end of input.
+The daemon will no longer process any standard input.
+Using 1 worker leases.
+Starting Build
+Compiling initialization script '/home/jenkins/.gradle/init.gradle' using SubsetScriptTransformer.
+Compiling initialization script '/home/jenkins/.gradle/init.gradle' using BuildScriptTransformer.
+Generating /****/.gradle/caches/6.5.1/generated-gradle-jars/gradle-api-6.5.1.jar
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions23.kt:40:47: 'VariantTransform' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions23.kt:40:153: 'ArtifactTransform' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions23.kt:50:47: 'VariantTransform' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions23.kt:50:153: 'ArtifactTransform' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions41.kt:50:5: 'local(Class<T!>!): T!' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions41.kt:60:5: 'local(Class<T!>!, Action<in T!>!): T!' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions48.kt:41:5: 'submit(Class<out Runnable!>!, Action<in WorkerConfiguration!>!): Unit' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions56.kt:39:151: 'GroovyMavenDeployer' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions56.kt:48:194: 'GroovyMavenDeployer' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions56.kt:48:248: 'GroovyMavenDeployer' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions56.kt:57:152: 'MavenResolver' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions56.kt:66:195: 'MavenResolver' is deprecated. Deprecated in Java
+w: /tmp/gradle-kotlin-dsl-extensions-6.51356885715237202684914671945517722094252jar/org/gradle/kotlin/dsl/GradleApiKotlinDslExtensions56.kt:66:243: 'MavenResolver' is deprecated. Deprecated in Java
+Settings evaluated using settings file '/workspace/source/settings.gradle.kts'.
+Projects loaded. Root project using build file '/workspace/source/build.gradle.kts'.
+Included projects: [**** project 'search-service']
+
+> Configure project :
+Evaluating **** project 'search-service' using build file '/workspace/source/build.gradle.kts'.
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/org.springframework.boot.gradle.plugin/2.4.2/org.springframework.boot.gradle.plugin-2.4.2.pom to /tmp/gradle_download12107370953462956524bin
+Resource missing. [HTTP HEAD: https://plugins.gradle.org/m2/org/springframework/boot/org.springframework.boot.gradle.plugin/2.4.2/org.springframework.boot.gradle.plugin-2.4.2.jar]
+Downloading https://plugins.gradle.org/m2/io/spring/dependency-management/io.spring.dependency-management.gradle.plugin/1.0.10.RELEASE/io.spring.dependency-management.gradle.plugin-1.0.10.RELEASE.pom to /tmp/gradle_download14838023713889123478bin
+Resource missing. [HTTP HEAD: https://plugins.gradle.org/m2/io/spring/dependency-management/io.spring.dependency-management.gradle.plugin/1.0.10.RELEASE/io.spring.dependency-management.gradle.plugin-1.0.10.RELEASE.jar]
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/jvm/org.jetbrains.kotlin.jvm.gradle.plugin/1.4.21/org.jetbrains.kotlin.jvm.gradle.plugin-1.4.21.pom to /tmp/gradle_download3648263496978388440bin
+Resource missing. [HTTP HEAD: https://plugins.gradle.org/m2/org/jetbrains/kotlin/jvm/org.jetbrains.kotlin.jvm.gradle.plugin/1.4.21/org.jetbrains.kotlin.jvm.gradle.plugin-1.4.21.jar]
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/plugin/spring/org.jetbrains.kotlin.plugin.spring.gradle.plugin/1.4.21/org.jetbrains.kotlin.plugin.spring.gradle.plugin-1.4.21.pom to /tmp/gradle_download15178133975772992221bin
+Resource missing. [HTTP HEAD: https://plugins.gradle.org/m2/org/jetbrains/kotlin/plugin/spring/org.jetbrains.kotlin.plugin.spring.gradle.plugin/1.4.21/org.jetbrains.kotlin.plugin.spring.gradle.plugin-1.4.21.jar]
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/2.4.2/spring-boot-gradle-plugin-2.4.2.pom to /tmp/gradle_download12183837940456912556bin
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/2.4.2/spring-boot-gradle-plugin-2.4.2.module to /tmp/gradle_download15843137479641305753bin
+Downloading https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.0.10.RELEASE/dependency-management-plugin-1.0.10.RELEASE.pom to /tmp/gradle_download6542234222924561053bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin/1.4.21/kotlin-gradle-plugin-1.4.21.pom to /tmp/gradle_download14096473419144240608bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-allopen/1.4.21/kotlin-allopen-1.4.21.pom to /tmp/gradle_download6706998703133825511bin
+Downloading https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.0.11.RELEASE/dependency-management-plugin-1.0.11.RELEASE.pom to /tmp/gradle_download3330504638121265595bin
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/2.4.2/spring-boot-loader-tools-2.4.2.pom to /tmp/gradle_download1601880158235917457bin
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/2.4.2/spring-boot-loader-tools-2.4.2.module to /tmp/gradle_download8691099920767577622bin
+Downloading https://plugins.gradle.org/m2/org/apache/commons/commons-compress/1.20/commons-compress-1.20.pom to /tmp/gradle_download4287330520194726356bin
+Downloading https://plugins.gradle.org/m2/org/apache/commons/commons-parent/48/commons-parent-48.pom to /tmp/gradle_download15600942199232720204bin
+Downloading https://plugins.gradle.org/m2/org/apache/apache/21/apache-21.pom to /tmp/gradle_download9086886748045979468bin
+Downloading https://plugins.gradle.org/m2/org/springframework/spring-core/5.3.3/spring-core-5.3.3.pom to /tmp/gradle_download7567784505748287421bin
+Downloading https://plugins.gradle.org/m2/org/springframework/spring-core/5.3.3/spring-core-5.3.3.module to /tmp/gradle_download3056508997949700641bin
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/2.4.2/spring-boot-buildpack-platform-2.4.2.pom to /tmp/gradle_download7305155245259706961bin
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/2.4.2/spring-boot-buildpack-platform-2.4.2.module to /tmp/gradle_download6569306135262922875bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin-api/1.4.21/kotlin-gradle-plugin-api-1.4.21.pom to /tmp/gradle_download2898331398236882097bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-util-klib/1.4.21/kotlin-util-klib-1.4.21.pom to /tmp/gradle_download1049091299212056907bin
+Downloading https://plugins.gradle.org/m2/com/google/code/gson/gson/2.8.6/gson-2.8.6.pom to /tmp/gradle_download16397169303339257091bin
+Downloading https://plugins.gradle.org/m2/com/google/code/gson/gson-parent/2.8.6/gson-parent-2.8.6.pom to /tmp/gradle_download6128842956329820255bin
+Downloading https://plugins.gradle.org/m2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom to /tmp/gradle_download6492856587988509689bin
+Downloading https://plugins.gradle.org/m2/de/undercouch/gradle-download-task/4.0.2/gradle-download-task-4.0.2.pom to /tmp/gradle_download5386757538808492676bin
+Downloading https://plugins.gradle.org/m2/com/github/gundy/semver4j/0.16.4/semver4j-0.16.4.pom to /tmp/gradle_download17303019115134665387bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.4.21/kotlin-compiler-embeddable-1.4.21.pom to /tmp/gradle_download16092738415141029639bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-annotation-processing-gradle/1.4.21/kotlin-annotation-processing-gradle-1.4.21.pom to /tmp/gradle_download3733143197006895287bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-android-extensions/1.4.21/kotlin-android-extensions-1.4.21.pom to /tmp/gradle_download13997977028552796526bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-runner/1.4.21/kotlin-compiler-runner-1.4.21.pom to /tmp/gradle_download10071142399761659628bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/1.4.21/kotlin-scripting-compiler-embeddable-1.4.21.pom to /tmp/gradle_download10200078875648716084bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/1.4.21/kotlin-scripting-compiler-impl-embeddable-1.4.21.pom to /tmp/gradle_download17246579823601115075bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin-model/1.4.21/kotlin-gradle-plugin-model-1.4.21.pom to /tmp/gradle_download13859102305477186535bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-stdlib/1.3.72/kotlin-stdlib-1.3.72.pom to /tmp/gradle_download14172863170706218862bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-reflect/1.3.72/kotlin-reflect-1.3.72.pom to /tmp/gradle_download6759262354270315465bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.pom to /tmp/gradle_download86377783338887086bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-base/2.11.4/jackson-base-2.11.4.pom to /tmp/gradle_download7434609971727883507bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-bom/2.11.4/jackson-bom-2.11.4.pom to /tmp/gradle_download5636265162919931053bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-parent/2.11/jackson-parent-2.11.pom to /tmp/gradle_download4337486456834927163bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/oss-parent/38/oss-parent-38.pom to /tmp/gradle_download8471911134570664038bin
+Downloading https://plugins.gradle.org/m2/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.pom to /tmp/gradle_download9449846761899449752bin
+Downloading https://plugins.gradle.org/m2/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.pom to /tmp/gradle_download1438743815779755562bin
+Downloading https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcomponents-client/4.5.13/httpcomponents-client-4.5.13.pom to /tmp/gradle_download10138159902121654712bin
+Downloading https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcomponents-parent/11/httpcomponents-parent-11.pom to /tmp/gradle_download14022701617008901769bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.pom to /tmp/gradle_download1229562483349830002bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-modules-java8/2.11.4/jackson-modules-java8-2.11.4.pom to /tmp/gradle_download5835629974480679718bin
+Downloading https://plugins.gradle.org/m2/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.pom to /tmp/gradle_download10852172534835390858bin
+Downloading https://plugins.gradle.org/m2/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.module to /tmp/gradle_download2118296143429437816bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-util-io/1.4.21/kotlin-util-io-1.4.21.pom to /tmp/gradle_download10746667860255910099bin
+Downloading https://plugins.gradle.org/m2/org/antlr/antlr4-runtime/4.5.2-1/antlr4-runtime-4.5.2-1.pom to /tmp/gradle_download8788944863134903343bin
+Downloading https://plugins.gradle.org/m2/org/antlr/antlr4-master/4.5.2-1/antlr4-master-4.5.2-1.pom to /tmp/gradle_download9491284813325065888bin
+Downloading https://plugins.gradle.org/m2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom to /tmp/gradle_download13488491926781225833bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-script-runtime/1.4.21/kotlin-script-runtime-1.4.21.pom to /tmp/gradle_download969148228790467909bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/intellij/deps/trove4j/1.0.20181211/trove4j-1.0.20181211.pom to /tmp/gradle_download1087171230848185423bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/1.4.21/kotlin-daemon-embeddable-1.4.21.pom to /tmp/gradle_download13380530411552522824bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-build-common/1.4.21/kotlin-build-common-1.4.21.pom to /tmp/gradle_download5316624469607961877bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.3.7/kotlinx-coroutines-core-1.3.7.pom to /tmp/gradle_download16826470933417602764bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-daemon-client/1.4.21/kotlin-daemon-client-1.4.21.pom to /tmp/gradle_download4356558581371823105bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-common/1.4.21/kotlin-scripting-common-1.4.21.pom to /tmp/gradle_download16158666190278906200bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-jvm/1.4.21/kotlin-scripting-jvm-1.4.21.pom to /tmp/gradle_download7647802490316638298bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-stdlib-common/1.3.72/kotlin-stdlib-common-1.3.72.pom to /tmp/gradle_download14761443509042481546bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/annotations/13.0/annotations-13.0.pom to /tmp/gradle_download4352831492190278076bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.pom to /tmp/gradle_download11598399198903602303bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.pom to /tmp/gradle_download18113138246824565528bin
+Downloading https://plugins.gradle.org/m2/net/java/dev/jna/jna/5.5.0/jna-5.5.0.pom to /tmp/gradle_download7625814793372497851bin
+Downloading https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.pom to /tmp/gradle_download12346846258755325250bin
+Downloading https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcomponents-core/4.4.13/httpcomponents-core-4.4.13.pom to /tmp/gradle_download12358520171719304320bin
+Downloading https://plugins.gradle.org/m2/commons-codec/commons-codec/1.11/commons-codec-1.11.pom to /tmp/gradle_download9571151977217091655bin
+Downloading https://plugins.gradle.org/m2/org/apache/commons/commons-parent/42/commons-parent-42.pom to /tmp/gradle_download13812844022587302863bin
+Downloading https://plugins.gradle.org/m2/org/apache/apache/18/apache-18.pom to /tmp/gradle_download17273145094060416403bin
+Downloading https://plugins.gradle.org/m2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom to /tmp/gradle_download7544704271981522713bin
+Downloading https://plugins.gradle.org/m2/org/apache/commons/commons-parent/34/commons-parent-34.pom to /tmp/gradle_download10439193574438082374bin
+Downloading https://plugins.gradle.org/m2/org/apache/apache/13/apache-13.pom to /tmp/gradle_download2409193954434039980bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin/1.4.21/kotlin-gradle-plugin-1.4.21.jar to /tmp/gradle_download8342673344584554630bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin-api/1.4.21/kotlin-gradle-plugin-api-1.4.21.jar to /tmp/gradle_download10833901392476160661bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin-model/1.4.21/kotlin-gradle-plugin-model-1.4.21.jar to /tmp/gradle_download5522640832314942801bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-util-klib/1.4.21/kotlin-util-klib-1.4.21.jar to /tmp/gradle_download10554978246159350392bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-annotation-processing-gradle/1.4.21/kotlin-annotation-processing-gradle-1.4.21.jar to /tmp/gradle_download13681651681866591309bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-android-extensions/1.4.21/kotlin-android-extensions-1.4.21.jar to /tmp/gradle_download5932844527131023826bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-runner/1.4.21/kotlin-compiler-runner-1.4.21.jar to /tmp/gradle_download9969535208506461487bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.4.21/kotlin-compiler-embeddable-1.4.21.jar to /tmp/gradle_download6449130221573789611bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/1.4.21/kotlin-scripting-compiler-embeddable-1.4.21.jar to /tmp/gradle_download1284255127452395986bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/1.4.21/kotlin-scripting-compiler-impl-embeddable-1.4.21.jar to /tmp/gradle_download4712171588790527611bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-daemon-client/1.4.21/kotlin-daemon-client-1.4.21.jar to /tmp/gradle_download4862628036655241063bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-reflect/1.3.72/kotlin-reflect-1.3.72.jar to /tmp/gradle_download6447559094108850121bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-util-io/1.4.21/kotlin-util-io-1.4.21.jar to /tmp/gradle_download738924759641731122bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-jvm/1.4.21/kotlin-scripting-jvm-1.4.21.jar to /tmp/gradle_download13296207688872173449bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-common/1.4.21/kotlin-scripting-common-1.4.21.jar to /tmp/gradle_download2925713456891530981bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.3.7/kotlinx-coroutines-core-1.3.7.jar to /tmp/gradle_download4961275106374332589bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-stdlib/1.3.72/kotlin-stdlib-1.3.72.jar to /tmp/gradle_download18293761826466420298bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-stdlib-common/1.3.72/kotlin-stdlib-common-1.3.72.jar to /tmp/gradle_download3506717320897650337bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/annotations/13.0/annotations-13.0.jar to /tmp/gradle_download15933330507670885337bin
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/2.4.2/spring-boot-gradle-plugin-2.4.2.jar to /tmp/gradle_download13714223403169438657bin
+Downloading https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.0.11.RELEASE/dependency-management-plugin-1.0.11.RELEASE.jar to /tmp/gradle_download2266577604655145083bin
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/2.4.2/spring-boot-buildpack-platform-2.4.2.jar to /tmp/gradle_download11036279343329376442bin
+Downloading https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/2.4.2/spring-boot-loader-tools-2.4.2.jar to /tmp/gradle_download13049279016806561470bin
+Downloading https://plugins.gradle.org/m2/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar to /tmp/gradle_download3854770379245893339bin
+Downloading https://plugins.gradle.org/m2/org/springframework/spring-core/5.3.3/spring-core-5.3.3.jar to /tmp/gradle_download16409143437024201884bin
+Downloading https://plugins.gradle.org/m2/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar to /tmp/gradle_download4014297645225051937bin
+Downloading https://plugins.gradle.org/m2/de/undercouch/gradle-download-task/4.0.2/gradle-download-task-4.0.2.jar to /tmp/gradle_download1054500978695979740bin
+Downloading https://plugins.gradle.org/m2/com/github/gundy/semver4j/0.16.4/semver4j-0.16.4.jar to /tmp/gradle_download15879816616640561513bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar to /tmp/gradle_download8021952083336780932bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar to /tmp/gradle_download16433486031129725545bin
+Downloading https://plugins.gradle.org/m2/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.jar to /tmp/gradle_download11776298133765690278bin
+Downloading https://plugins.gradle.org/m2/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar to /tmp/gradle_download16347985485391644377bin
+Downloading https://plugins.gradle.org/m2/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.jar to /tmp/gradle_download6753381244101583409bin
+Downloading https://plugins.gradle.org/m2/org/antlr/antlr4-runtime/4.5.2-1/antlr4-runtime-4.5.2-1.jar to /tmp/gradle_download9320940261805655315bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-script-runtime/1.4.21/kotlin-script-runtime-1.4.21.jar to /tmp/gradle_download4556289776302374219bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/1.4.21/kotlin-daemon-embeddable-1.4.21.jar to /tmp/gradle_download8702854404903959511bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/intellij/deps/trove4j/1.0.20181211/trove4j-1.0.20181211.jar to /tmp/gradle_download15059782775117388952bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-build-common/1.4.21/kotlin-build-common-1.4.21.jar to /tmp/gradle_download16627391928106715936bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar to /tmp/gradle_download1405726320929411067bin
+Downloading https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar to /tmp/gradle_download8961900550190459616bin
+Downloading https://plugins.gradle.org/m2/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar to /tmp/gradle_download16298735761271034426bin
+Downloading https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar to /tmp/gradle_download3903141162145220196bin
+Downloading https://plugins.gradle.org/m2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar to /tmp/gradle_download2910012926407228622bin
+Downloading https://plugins.gradle.org/m2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar to /tmp/gradle_download5329790370557731279bin
+Downloading https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-allopen/1.4.21/kotlin-allopen-1.4.21.jar to /tmp/gradle_download2584697637821289265bin
+Applying dependency management to configuration 'bootArchives' in project 'search-service'
+Applying dependency management to configuration 'kotlinCompilerClasspath' in project 'search-service'
+Applying dependency management to configuration 'kotlinCompilerPluginClasspath' in project 'search-service'
+Applying dependency management to configuration 'kotlinNativeCompilerPluginClasspath' in project 'search-service'
+Applying dependency management to configuration 'kotlinKlibCommonizerClasspath' in project 'search-service'
+Applying dependency management to configuration 'archives' in project 'search-service'
+Applying dependency management to configuration 'default' in project 'search-service'
+Applying dependency management to configuration 'compile' in project 'search-service'
+Applying dependency management to configuration 'implementation' in project 'search-service'
+Applying dependency management to configuration 'runtime' in project 'search-service'
+Applying dependency management to configuration 'compileOnly' in project 'search-service'
+Applying dependency management to configuration 'compileClasspath' in project 'search-service'
+Applying dependency management to configuration 'annotationProcessor' in project 'search-service'
+Applying dependency management to configuration 'runtimeOnly' in project 'search-service'
+Applying dependency management to configuration 'runtimeClasspath' in project 'search-service'
+Applying dependency management to configuration 'testCompile' in project 'search-service'
+Applying dependency management to configuration 'testImplementation' in project 'search-service'
+Applying dependency management to configuration 'testRuntime' in project 'search-service'
+Applying dependency management to configuration 'testCompileOnly' in project 'search-service'
+Applying dependency management to configuration 'testCompileClasspath' in project 'search-service'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'search-service'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'search-service'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'search-service'
+Applying dependency management to configuration 'apiElements' in project 'search-service'
+Applying dependency management to configuration 'runtimeElements' in project 'search-service'
+Applying dependency management to configuration 'developmentOnly' in project 'search-service'
+Applying dependency management to configuration 'productionRuntimeClasspath' in project 'search-service'
+Applying dependency management to configuration 'api' in project 'search-service'
+Applying dependency management to configuration 'apiDependenciesMetadata' in project 'search-service'
+Applying dependency management to configuration 'implementationDependenciesMetadata' in project 'search-service'
+Applying dependency management to configuration 'compileOnlyDependenciesMetadata' in project 'search-service'
+Applying dependency management to configuration 'runtimeOnlyDependenciesMetadata' in project 'search-service'
+Applying dependency management to configuration 'testApi' in project 'search-service'
+Applying dependency management to configuration 'testApiDependenciesMetadata' in project 'search-service'
+Applying dependency management to configuration 'testImplementationDependenciesMetadata' in project 'search-service'
+Applying dependency management to configuration 'testCompileOnlyDependenciesMetadata' in project 'search-service'
+Applying dependency management to configuration 'testRuntimeOnlyDependenciesMetadata' in project 'search-service'
+Applying dependency management to configuration 'kotlinScriptDef' in project 'search-service'
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+Applying dependency management to configuration 'kotlinScriptDefExtensions' in project 'search-service'
+Applying dependency management to configuration 'testKotlinScriptDef' in project 'search-service'
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+Applying dependency management to configuration 'testKotlinScriptDefExtensions' in project 'search-service'
+Applying dependency management to configuration 'sourceArtifacts' in project 'search-service'
+w: Runtime JAR files in the classpath should have the same version. These files were found in the classpath:
+    /opt/gradle/lib/kotlin-stdlib-1.3.72.jar (version 1.3)
+    /opt/gradle/lib/kotlin-stdlib-common-1.3.72.jar (version 1.3)
+    /opt/gradle/lib/kotlin-stdlib-jdk7-1.3.72.jar (version 1.3)
+    /opt/gradle/lib/kotlin-stdlib-jdk8-1.3.72.jar (version 1.3)
+    /opt/gradle/lib/kotlin-reflect-1.3.72.jar (version 1.3)
+    /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.72/86613e1a669a701b0c660bfd2af4f82a7ae11fca/kotlin-reflect-1.3.72.jar (version 1.3)
+    /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/8032138f12c0180bc4e51fe139d4c52b46db6109/kotlin-stdlib-1.3.72.jar (version 1.3)
+    /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/6ca8bee3d88957eaaaef077c41c908c9940492d8/kotlin-stdlib-common-1.3.72.jar (version 1.3)
+    /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.21/1247decba314790165b4fe94d09c45b09db6b07f/kotlin-script-runtime-1.4.21.jar (version 1.4)
+w: Some runtime JAR files in the classpath have an incompatible version. Consider removing them from the classpath
+Applying dependency management to configuration 'apiElements-published' in project 'search-service'
+Applying dependency management to configuration 'runtimeElements-published' in project 'search-service'
+All projects evaluated.
+Selected primary task 'bootBuildImage' from project :
+Resolving global dependency management for project 'search-service'
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-dependencies/2.4.2/spring-boot-dependencies-2.4.2.pom to /tmp/gradle_download15669442696615850948bin
+Downloading http://nexus/repository/maven-group/com/datastax/oss/java-driver-bom/4.9.0/java-driver-bom-4.9.0.pom to /tmp/gradle_download11680505651409638829bin
+Downloading http://nexus/repository/maven-group/io/dropwizard/metrics/metrics-bom/4.1.17/metrics-bom-4.1.17.pom to /tmp/gradle_download13156008891986979688bin
+Downloading http://nexus/repository/maven-group/io/dropwizard/metrics/metrics-parent/4.1.17/metrics-parent-4.1.17.pom to /tmp/gradle_download8901048410117833484bin
+Downloading http://nexus/repository/maven-group/org/codehaus/groovy/groovy-bom/2.5.14/groovy-bom-2.5.14.pom to /tmp/gradle_download8486610999214230739bin
+Downloading http://nexus/repository/maven-group/org/infinispan/infinispan-bom/11.0.8.Final/infinispan-bom-11.0.8.Final.pom to /tmp/gradle_download14317903392684113429bin
+Downloading http://nexus/repository/maven-group/org/infinispan/infinispan-build-configuration-parent/11.0.8.Final/infinispan-build-configuration-parent-11.0.8.Final.pom to /tmp/gradle_download9165051507183954234bin
+Downloading http://nexus/repository/maven-group/org/jboss/jboss-parent/36/jboss-parent-36.pom to /tmp/gradle_download4971288366506023427bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/jackson-bom/2.11.4/jackson-bom-2.11.4.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson/jackson-bom/2.11.4/3710a510e602fe4369c9415394c0433ba7077cf5/jackson-bom-2.11.4.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/jackson-parent/2.11/jackson-parent-2.11.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson/jackson-parent/2.11/89f0f8a7f21a54125e0ae1f72e6cdd50b51c87f3/jackson-parent-2.11.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/oss-parent/38/oss-parent-38.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml/oss-parent/38/ff6b9e9e40c23235f87a44b463995b47adca8dc9/oss-parent-38.pom]
+Downloading http://nexus/repository/maven-group/org/glassfish/jersey/jersey-bom/2.32/jersey-bom-2.32.pom to /tmp/gradle_download16477135501520239202bin
+Downloading http://nexus/repository/maven-group/org/eclipse/ee4j/project/1.0.6/project-1.0.6.pom to /tmp/gradle_download10609264172043701445bin
+Downloading http://nexus/repository/maven-group/org/eclipse/jetty/jetty-bom/9.4.35.v20201120/jetty-bom-9.4.35.v20201120.pom to /tmp/gradle_download4148752405936081647bin
+Downloading http://nexus/repository/maven-group/org/junit/junit-bom/5.7.0/junit-bom-5.7.0.pom to /tmp/gradle_download13060744818046408400bin
+Downloading http://nexus/repository/maven-group/org/junit/junit-bom/5.7.0/junit-bom-5.7.0.module to /tmp/gradle_download17548182294152058228bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-bom/1.4.21/kotlin-bom-1.4.21.pom to /tmp/gradle_download2672316156571121539bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.4.2/kotlinx-coroutines-bom-1.4.2.pom to /tmp/gradle_download3294634452278390491bin
+Downloading http://nexus/repository/maven-group/org/apache/logging/log4j/log4j-bom/2.13.3/log4j-bom-2.13.3.pom to /tmp/gradle_download14852353433245030497bin
+Downloading http://nexus/repository/maven-group/org/apache/logging/logging-parent/1/logging-parent-1.pom to /tmp/gradle_download14126624220220381207bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/apache/apache/18/apache-18.pom, /****/.gradle/caches/modules-2/files-2.1/org.apache/apache/18/bd408bbea3840f2c7f914b29403e39a90f84fd5f/apache-18.pom]
+Downloading http://nexus/repository/maven-group/io/micrometer/micrometer-bom/1.6.3/micrometer-bom-1.6.3.pom to /tmp/gradle_download11574399993645167363bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-bom/4.1.58.Final/netty-bom-4.1.58.Final.pom to /tmp/gradle_download4334246663147582948bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/sonatype/oss/oss-parent/7/oss-parent-7.pom, /****/.gradle/caches/modules-2/files-2.1/org.sonatype.oss/oss-parent/7/46b8a785b60a2767095b8611613b58577e96d4c9/oss-parent-7.pom]
+Downloading http://nexus/repository/maven-group/com/oracle/database/jdbc/ojdbc-bom/19.8.0.0/ojdbc-bom-19.8.0.0.pom to /tmp/gradle_download11586075178188153933bin
+Downloading http://nexus/repository/maven-group/io/r2dbc/r2dbc-bom/Arabba-SR8/r2dbc-bom-Arabba-SR8.pom to /tmp/gradle_download16308087047169824901bin
+Downloading http://nexus/repository/maven-group/io/projectreactor/reactor-bom/2020.0.3/reactor-bom-2020.0.3.pom to /tmp/gradle_download16000992373535716195bin
+Downloading http://nexus/repository/maven-group/io/rsocket/rsocket-bom/1.1.0/rsocket-bom-1.1.0.pom to /tmp/gradle_download3641920151376361500bin
+Downloading http://nexus/repository/maven-group/org/springframework/data/spring-data-bom/2020.0.3/spring-data-bom-2020.0.3.pom to /tmp/gradle_download6736475057353234934bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-framework-bom/5.3.3/spring-framework-bom-5.3.3.pom to /tmp/gradle_download14337388261076751234bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-framework-bom/5.3.3/spring-framework-bom-5.3.3.module to /tmp/gradle_download7338846840085168241bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-bom/5.4.3/spring-integration-bom-5.4.3.pom to /tmp/gradle_download2736730525202482670bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-bom/5.4.3/spring-integration-bom-5.4.3.module to /tmp/gradle_download3908085880995336588bin
+Downloading http://nexus/repository/maven-group/org/springframework/security/spring-security-bom/5.4.2/spring-security-bom-5.4.2.pom to /tmp/gradle_download12694800710411522239bin
+Downloading http://nexus/repository/maven-group/org/springframework/session/spring-session-bom/2020.0.1/spring-session-bom-2020.0.1.pom to /tmp/gradle_download13579475534466099177bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-dependencies/2020.0.0/spring-cloud-dependencies-2020.0.0.pom to /tmp/gradle_download16954030519533725481bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-dependencies-parent/3.0.0/spring-cloud-dependencies-parent-3.0.0.pom to /tmp/gradle_download5436887499326352032bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-commons-dependencies/3.0.0/spring-cloud-commons-dependencies-3.0.0.pom to /tmp/gradle_download3357385949392419146bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-netflix-dependencies/3.0.0/spring-cloud-netflix-dependencies-3.0.0.pom to /tmp/gradle_download13946130230748804949bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream-dependencies/3.1.0/spring-cloud-stream-dependencies-3.1.0.pom to /tmp/gradle_download11865018519128236773bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-task-dependencies/2.3.0/spring-cloud-task-dependencies-2.3.0.pom to /tmp/gradle_download10299236417858044864bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-circuitbreaker-dependencies/2.0.0/spring-cloud-circuitbreaker-dependencies-2.0.0.pom to /tmp/gradle_download1364904688074166573bin
+Downloading http://nexus/repository/maven-group/io/github/resilience4j/resilience4j-bom/1.6.1/resilience4j-bom-1.6.1.pom to /tmp/gradle_download14833248207182460793bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-config-dependencies/3.0.0/spring-cloud-config-dependencies-3.0.0.pom to /tmp/gradle_download7873381099226881005bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-function-dependencies/3.1.0/spring-cloud-function-dependencies-3.1.0.pom to /tmp/gradle_download444940279178593414bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-gateway-dependencies/3.0.0/spring-cloud-gateway-dependencies-3.0.0.pom to /tmp/gradle_download2874120311753620970bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-consul-dependencies/3.0.0/spring-cloud-consul-dependencies-3.0.0.pom to /tmp/gradle_download11979549758006281278bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-sleuth-dependencies/3.0.0/spring-cloud-sleuth-dependencies-3.0.0.pom to /tmp/gradle_download14480675598000486669bin
+Downloading http://nexus/repository/maven-group/io/zipkin/brave/brave-bom/5.13.2/brave-bom-5.13.2.pom to /tmp/gradle_download6142496365982208877bin
+Downloading http://nexus/repository/maven-group/io/zipkin/reporter2/zipkin-reporter-bom/2.16.1/zipkin-reporter-bom-2.16.1.pom to /tmp/gradle_download7739083973548740514bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-vault-dependencies/3.0.0/spring-cloud-vault-dependencies-3.0.0.pom to /tmp/gradle_download18184563085671365103bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-zookeeper-dependencies/3.0.0/spring-cloud-zookeeper-dependencies-3.0.0.pom to /tmp/gradle_download7415432156464061198bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-cloudfoundry-dependencies/3.0.0/spring-cloud-cloudfoundry-dependencies-3.0.0.pom to /tmp/gradle_download3274533369005793552bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-bus-dependencies/3.0.0/spring-cloud-bus-dependencies-3.0.0.pom to /tmp/gradle_download18406873025070141574bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-contract-dependencies/3.0.0/spring-cloud-contract-dependencies-3.0.0.pom to /tmp/gradle_download9038140991588047220bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-openfeign-dependencies/3.0.0/spring-cloud-openfeign-dependencies-3.0.0.pom to /tmp/gradle_download14182287880776686963bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-kubernetes-dependencies/2.0.0/spring-cloud-kubernetes-dependencies-2.0.0.pom to /tmp/gradle_download15264989277914649756bin
+Downloading http://nexus/repository/maven-group/io/fabric8/kubernetes-client-bom/4.10.3/kubernetes-client-bom-4.10.3.pom to /tmp/gradle_download2747543265837460263bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.4.21/kotlin-compiler-embeddable-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.21/98415def7f0dd025e39172d7ecf2b9594980e5a2/kotlin-compiler-embeddable-1.4.21.pom]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-stdlib/1.4.21/kotlin-stdlib-1.4.21.pom to /tmp/gradle_download8755086819564606792bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-reflect/1.4.21/kotlin-reflect-1.4.21.pom to /tmp/gradle_download7241275826239143894bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-daemon-embeddable/1.4.21/kotlin-daemon-embeddable-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.21/9c638d129c3879b265beef60cb0f9073b1ebbba9/kotlin-daemon-embeddable-1.4.21.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/intellij/deps/trove4j/1.0.20181211/trove4j-1.0.20181211.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/ad9cb821b804f05ed013ce89e3ec4d32d101bd79/trove4j-1.0.20181211.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-script-runtime/1.4.21/kotlin-script-runtime-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.21/3a45a64c975c8470c84901999cba61a1fe562d7e/kotlin-script-runtime-1.4.21.pom]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.21/kotlin-stdlib-common-1.4.21.pom to /tmp/gradle_download6544102128534223534bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/annotations/13.0/annotations-13.0.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/fa7d3d07cc80547e2d15bf4839d3267c637c642f/annotations-13.0.pom]
+Excluding []
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.4.21/kotlin-compiler-embeddable-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.21/87db94500aaf883536ae8c8efdee76bdc839d582/kotlin-compiler-embeddable-1.4.21.jar]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-reflect/1.4.21/kotlin-reflect-1.4.21.jar to /tmp/gradle_download12506696723804954564bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-stdlib/1.4.21/kotlin-stdlib-1.4.21.jar to /tmp/gradle_download8599431404657385227bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-script-runtime/1.4.21/kotlin-script-runtime-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.21/1247decba314790165b4fe94d09c45b09db6b07f/kotlin-script-runtime-1.4.21.jar]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-daemon-embeddable/1.4.21/kotlin-daemon-embeddable-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.21/bc95bcebdc871d45d9852b0c01abe9bec373bb52/kotlin-daemon-embeddable-1.4.21.jar]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/intellij/deps/trove4j/1.0.20181211/trove4j-1.0.20181211.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.21/kotlin-stdlib-common-1.4.21.jar to /tmp/gradle_download17263337848356752422bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/annotations/13.0/annotations-13.0.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar]
+Tasks to be executed: [task ':compileKotlin', task ':compileJava', task ':processResources', task ':classes', task ':bootJarMainClassName', task ':bootJar', task ':bootBuildImage']
+Tasks that were excluded: []
+:compileKotlin (Thread[Daemon worker,5,main]) started.
+
+> Task :compileKotlin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/1.4.21/kotlin-scripting-compiler-embeddable-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/1.4.21/30b68e76cec6c51311c35f77c7a80caa919339ec/kotlin-scripting-compiler-embeddable-1.4.21.pom]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-allopen/1.4.21/kotlin-allopen-1.4.21.pom to /tmp/gradle_download18198420096149253897bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/1.4.21/kotlin-scripting-compiler-impl-embeddable-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-impl-embeddable/1.4.21/f22a77380da9a776e9c8c6f6e1485fdb722224b4/kotlin-scripting-compiler-impl-embeddable-1.4.21.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-gradle-plugin-api/1.4.21/kotlin-gradle-plugin-api-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.4.21/c79278ae1dd84c4b319f6e6d79cbe2a1abf1a89a/kotlin-gradle-plugin-api-1.4.21.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-gradle-plugin-model/1.4.21/kotlin-gradle-plugin-model-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.4.21/355aae481f319baf64cfd8b3ab08557bce448ca6/kotlin-gradle-plugin-model-1.4.21.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-scripting-common/1.4.21/kotlin-scripting-common-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.4.21/3c51073a9f3fdda25f02767e808ae823f03c786/kotlin-scripting-common-1.4.21.pom]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.4.2/kotlinx-coroutines-core-1.4.2.pom to /tmp/gradle_download3421845695157956209bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.4.2/kotlinx-coroutines-core-1.4.2.module to /tmp/gradle_download12008438351141346510bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-scripting-jvm/1.4.21/kotlin-scripting-jvm-1.4.21.pom, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.4.21/95d428231db168e805b72c1384365633fedc6dba/kotlin-scripting-jvm-1.4.21.pom]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.4.2/kotlinx-coroutines-core-jvm-1.4.2.pom to /tmp/gradle_download4152668786947648965bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.4.2/kotlinx-coroutines-core-jvm-1.4.2.module to /tmp/gradle_download13405012466124454313bin
+Excluding []
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/1.4.21/kotlin-scripting-compiler-embeddable-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/1.4.21/18ea0b88e5cf079243ef416232ed3af5c20a9374/kotlin-scripting-compiler-embeddable-1.4.21.jar]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-allopen/1.4.21/kotlin-allopen-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-allopen/1.4.21/48394bb11aac52745b099040dda1647f64170dee/kotlin-allopen-1.4.21.jar]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/1.4.21/kotlin-scripting-compiler-impl-embeddable-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-impl-embeddable/1.4.21/64cb0627049ec5b8c5d029355b45174904ace2e7/kotlin-scripting-compiler-impl-embeddable-1.4.21.jar]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-gradle-plugin-api/1.4.21/kotlin-gradle-plugin-api-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.4.21/7beb6a97e87d40bb577f12e6c13c325eef5c4d7b/kotlin-gradle-plugin-api-1.4.21.jar]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-gradle-plugin-model/1.4.21/kotlin-gradle-plugin-model-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.4.21/f5ab13238de3ae2bf8d3343cdab3f9ea6fe24a76/kotlin-gradle-plugin-model-1.4.21.jar]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-scripting-jvm/1.4.21/kotlin-scripting-jvm-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.4.21/59ecfba69264d8b2fa7687e0f1fa41e4a82301d2/kotlin-scripting-jvm-1.4.21.jar]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-scripting-common/1.4.21/kotlin-scripting-common-1.4.21.jar, /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.4.21/eb47ff9717becf5bcd1bb7ef5cb92fc3c8aa97e1/kotlin-scripting-common-1.4.21.jar]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.4.2/kotlinx-coroutines-core-jvm-1.4.2.jar to /tmp/gradle_download142724504902340103bin
+Downloading http://nexus/repository/maven-group/org/projectlombok/lombok/1.18.16/lombok-1.18.16.pom to /tmp/gradle_download16100673548508044018bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-webflux/2.4.2/spring-boot-starter-webflux-2.4.2.pom to /tmp/gradle_download1515468615282993333bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-webflux/2.4.2/spring-boot-starter-webflux-2.4.2.module to /tmp/gradle_download13882577163703368606bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-starter/1.0.1/openapi-generator-for-spring-starter-1.0.1.pom to /tmp/gradle_download16958771778516544158bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-parent/1.0.1/openapi-generator-for-spring-parent-1.0.1.pom to /tmp/gradle_download14885747595479824573bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-parent/2.3.3.RELEASE/spring-boot-starter-parent-2.3.3.RELEASE.pom to /tmp/gradle_download14604001439261694420bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-dependencies/2.3.3.RELEASE/spring-boot-dependencies-2.3.3.RELEASE.pom to /tmp/gradle_download12970200365304087539bin
+Downloading http://nexus/repository/maven-group/com/datastax/oss/java-driver-bom/4.6.1/java-driver-bom-4.6.1.pom to /tmp/gradle_download1989717632781546796bin
+Downloading http://nexus/repository/maven-group/io/dropwizard/metrics/metrics-bom/4.1.12.1/metrics-bom-4.1.12.1.pom to /tmp/gradle_download7566203926154736705bin
+Downloading http://nexus/repository/maven-group/io/dropwizard/metrics/metrics-parent/4.1.12.1/metrics-parent-4.1.12.1.pom to /tmp/gradle_download4796656355611426370bin
+Downloading http://nexus/repository/maven-group/org/codehaus/groovy/groovy-bom/2.5.13/groovy-bom-2.5.13.pom to /tmp/gradle_download16440879969056327025bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/jackson-bom/2.11.2/jackson-bom-2.11.2.pom to /tmp/gradle_download12657006445866093311bin
+Downloading http://nexus/repository/maven-group/org/glassfish/jersey/jersey-bom/2.30.1/jersey-bom-2.30.1.pom to /tmp/gradle_download1341339110432265903bin
+Downloading http://nexus/repository/maven-group/org/eclipse/ee4j/project/1.0.5/project-1.0.5.pom to /tmp/gradle_download16855373237502828443bin
+Downloading http://nexus/repository/maven-group/org/eclipse/jetty/jetty-bom/9.4.31.v20200723/jetty-bom-9.4.31.v20200723.pom to /tmp/gradle_download12511754060118778515bin
+Downloading http://nexus/repository/maven-group/org/junit/junit-bom/5.6.2/junit-bom-5.6.2.pom to /tmp/gradle_download10991802079564777007bin
+Downloading http://nexus/repository/maven-group/org/junit/junit-bom/5.6.2/junit-bom-5.6.2.module to /tmp/gradle_download3556155406877730097bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-bom/1.3.72/kotlin-bom-1.3.72.pom to /tmp/gradle_download8361920984593100191bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.3.8/kotlinx-coroutines-bom-1.3.8.pom to /tmp/gradle_download10101898029472892328bin
+Downloading http://nexus/repository/maven-group/io/micrometer/micrometer-bom/1.5.4/micrometer-bom-1.5.4.pom to /tmp/gradle_download14159116218758649326bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-bom/4.1.51.Final/netty-bom-4.1.51.Final.pom to /tmp/gradle_download6024492212954925458bin
+Downloading http://nexus/repository/maven-group/io/r2dbc/r2dbc-bom/Arabba-SR6/r2dbc-bom-Arabba-SR6.pom to /tmp/gradle_download6241738179550528102bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{362} MaxSize{400}, CacheStats{hitCount=211, missCount=362, loadSuccessCount=363, loadExceptionCount=0, totalLoadTime=281060441, evictionCount=1} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/io/projectreactor/reactor-bom/Dysprosium-SR11/reactor-bom-Dysprosium-SR11.pom to /tmp/gradle_download13524280847827913896bin
+Downloading http://nexus/repository/maven-group/io/rsocket/rsocket-bom/1.0.2/rsocket-bom-1.0.2.pom to /tmp/gradle_download8444035068245556067bin
+Downloading http://nexus/repository/maven-group/org/springframework/data/spring-data-releasetrain/Neumann-SR3/spring-data-releasetrain-Neumann-SR3.pom to /tmp/gradle_download517450127246678639bin
+Downloading http://nexus/repository/maven-group/org/springframework/data/build/spring-data-build/2.3.3.RELEASE/spring-data-build-2.3.3.RELEASE.pom to /tmp/gradle_download534385789185672240bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-framework-bom/5.2.8.RELEASE/spring-framework-bom-5.2.8.RELEASE.pom to /tmp/gradle_download14001233109156179574bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-bom/5.3.2.RELEASE/spring-integration-bom-5.3.2.RELEASE.pom to /tmp/gradle_download12262687348576455973bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-bom/5.3.2.RELEASE/spring-integration-bom-5.3.2.RELEASE.module to /tmp/gradle_download8003339727492186980bin
+Downloading http://nexus/repository/maven-group/org/springframework/security/spring-security-bom/5.3.4.RELEASE/spring-security-bom-5.3.4.RELEASE.pom to /tmp/gradle_download9156731726791847055bin
+Downloading http://nexus/repository/maven-group/org/springframework/session/spring-session-bom/Dragonfruit-RELEASE/spring-session-bom-Dragonfruit-RELEASE.pom to /tmp/gradle_download8243833121275314607bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-starter-openfeign/3.0.0/spring-cloud-starter-openfeign-3.0.0.pom to /tmp/gradle_download7436304662935616729bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-openfeign/3.0.0/spring-cloud-openfeign-3.0.0.pom to /tmp/gradle_download14370922261983340191bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-build/3.0.0/spring-cloud-build-3.0.0.pom to /tmp/gradle_download8531468722613377567bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-build-dependencies/3.0.0/spring-cloud-build-dependencies-3.0.0.pom to /tmp/gradle_download12647692408708449464bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-dependencies/2.4.1/spring-boot-dependencies-2.4.1.pom to /tmp/gradle_download17288743184291301901bin
+Downloading http://nexus/repository/maven-group/io/dropwizard/metrics/metrics-bom/4.1.16/metrics-bom-4.1.16.pom to /tmp/gradle_download18263280512400254649bin
+Downloading http://nexus/repository/maven-group/io/dropwizard/metrics/metrics-parent/4.1.16/metrics-parent-4.1.16.pom to /tmp/gradle_download8971689649423824264bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/jackson-bom/2.11.3/jackson-bom-2.11.3.pom to /tmp/gradle_download2474223787741724340bin
+Downloading http://nexus/repository/maven-group/io/micrometer/micrometer-bom/1.6.2/micrometer-bom-1.6.2.pom to /tmp/gradle_download13812562202603066561bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-bom/4.1.55.Final/netty-bom-4.1.55.Final.pom to /tmp/gradle_download17845888998573331179bin
+Downloading http://nexus/repository/maven-group/io/projectreactor/reactor-bom/2020.0.2/reactor-bom-2020.0.2.pom to /tmp/gradle_download15333868118977315062bin
+Downloading http://nexus/repository/maven-group/org/springframework/data/spring-data-bom/2020.0.2/spring-data-bom-2020.0.2.pom to /tmp/gradle_download16123810633989419283bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-framework-bom/5.3.2/spring-framework-bom-5.3.2.pom to /tmp/gradle_download10169251054347419175bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-framework-bom/5.3.2/spring-framework-bom-5.3.2.module to /tmp/gradle_download7466343935799786245bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-bom/5.4.2/spring-integration-bom-5.4.2.pom to /tmp/gradle_download3000401397570545356bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-bom/5.4.2/spring-integration-bom-5.4.2.module to /tmp/gradle_download6486973504736093625bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/feign-jackson/11.0/feign-jackson-11.0.pom to /tmp/gradle_download7499864942474061583bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/parent/11.0/parent-11.0.pom to /tmp/gradle_download6749347531997474580bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-data-elasticsearch/2.4.2/spring-boot-starter-data-elasticsearch-2.4.2.pom to /tmp/gradle_download14180416613397695371bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-data-elasticsearch/2.4.2/spring-boot-starter-data-elasticsearch-2.4.2.module to /tmp/gradle_download8968750679003338844bin
+Downloading http://nexus/repository/maven-group/com/simonjamesrowe/model/0.0.12/model-0.0.12.pom to /tmp/gradle_download1568498841515853474bin
+Downloading http://nexus/repository/maven-group/com/simonjamesrowe/model/0.0.12/model-0.0.12.module to /tmp/gradle_download7248378090694930765bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.4.21/kotlin-stdlib-jdk8-1.4.21.pom to /tmp/gradle_download2153992605004485019bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream-binder-kafka/3.1.0/spring-cloud-stream-binder-kafka-3.1.0.pom to /tmp/gradle_download11505742598259073281bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream-binder-kafka-parent/3.1.0/spring-cloud-stream-binder-kafka-parent-3.1.0.pom to /tmp/gradle_download15859647800727549512bin
+Downloading http://nexus/repository/maven-group/net/logstash/logback/logstash-logback-encoder/6.6/logstash-logback-encoder-6.6.pom to /tmp/gradle_download5111482439519035403bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/jackson-bom/2.12.0/jackson-bom-2.12.0.pom to /tmp/gradle_download16645199119730358528bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/jackson-parent/2.12/jackson-parent-2.12.pom to /tmp/gradle_download12706965584573598925bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/oss-parent/41/oss-parent-41.pom to /tmp/gradle_download11717778018803241591bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=583, missCount=440, loadSuccessCount=441, loadExceptionCount=0, totalLoadTime=409273613, evictionCount=41} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.pom to /tmp/gradle_download16704413821148847949bin
+Downloading http://nexus/repository/maven-group/ch/qos/logback/logback-parent/1.2.3/logback-parent-1.2.3.pom to /tmp/gradle_download16350132413520826841bin
+Downloading http://nexus/repository/maven-group/co/elastic/apm/apm-agent-attach/1.21.0/apm-agent-attach-1.21.0.pom to /tmp/gradle_download11035151090137860248bin
+Downloading http://nexus/repository/maven-group/co/elastic/apm/apm-agent-parent/1.21.0/apm-agent-parent-1.21.0.pom to /tmp/gradle_download13060201266735052904bin
+Downloading http://nexus/repository/maven-group/org/testcontainers/testcontainers-bom/1.15.1/testcontainers-bom-1.15.1.pom to /tmp/gradle_download9115377510126704196bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-actuator/2.4.2/spring-boot-starter-actuator-2.4.2.pom to /tmp/gradle_download7237942031166761349bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-actuator/2.4.2/spring-boot-starter-actuator-2.4.2.module to /tmp/gradle_download3392248671666516835bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter/2.4.2/spring-boot-starter-2.4.2.pom to /tmp/gradle_download4837360754795813088bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter/2.4.2/spring-boot-starter-2.4.2.module to /tmp/gradle_download16673219185263855978bin
+Downloading http://nexus/repository/maven-group/io/micrometer/micrometer-core/1.6.3/micrometer-core-1.6.3.pom to /tmp/gradle_download12064760684495381752bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-actuator-autoconfigure/2.4.2/spring-boot-actuator-autoconfigure-2.4.2.pom to /tmp/gradle_download11654611136446880201bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-actuator-autoconfigure/2.4.2/spring-boot-actuator-autoconfigure-2.4.2.module to /tmp/gradle_download486217995930068176bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-json/2.4.2/spring-boot-starter-json-2.4.2.pom to /tmp/gradle_download8704485053700964955bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-json/2.4.2/spring-boot-starter-json-2.4.2.module to /tmp/gradle_download14543153258313263777bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-web/5.3.3/spring-web-5.3.3.pom to /tmp/gradle_download2099725776283862599bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-web/5.3.3/spring-web-5.3.3.module to /tmp/gradle_download5940862651118257995bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-webflux/5.3.3/spring-webflux-5.3.3.pom to /tmp/gradle_download12334999586923028759bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-webflux/5.3.3/spring-webflux-5.3.3.module to /tmp/gradle_download2904754480902008688bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-reactor-netty/2.4.2/spring-boot-starter-reactor-netty-2.4.2.pom to /tmp/gradle_download16109018855956231047bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=593, missCount=480, loadSuccessCount=481, loadExceptionCount=0, totalLoadTime=420958305, evictionCount=81} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-reactor-netty/2.4.2/spring-boot-starter-reactor-netty-2.4.2.module to /tmp/gradle_download3429274706926812598bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-webmvc/1.0.1/openapi-generator-for-spring-webmvc-1.0.1.pom to /tmp/gradle_download1394071602289745401bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-ui/1.0.1/openapi-generator-for-spring-ui-1.0.1.pom to /tmp/gradle_download5466648331232200583bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.11.4/jackson-dataformat-yaml-2.11.4.pom to /tmp/gradle_download17101072006019327161bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/dataformat/jackson-dataformats-text/2.11.4/jackson-dataformats-text-2.11.4.pom to /tmp/gradle_download1342022273897628243bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/jackson-base/2.11.4/jackson-base-2.11.4.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson/jackson-base/2.11.4/1931807c1e9e87c81da66c318e619a49888226af/jackson-base-2.11.4.pom]
+Downloading http://nexus/repository/maven-group/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom to /tmp/gradle_download17475328309130351871bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-webflux/1.0.1/openapi-generator-for-spring-webflux-1.0.1.pom to /tmp/gradle_download1936409130898261168bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-starter/3.0.0/spring-cloud-starter-3.0.0.pom to /tmp/gradle_download13104511697715183812bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-commons-parent/3.0.0/spring-cloud-commons-parent-3.0.0.pom to /tmp/gradle_download10504511648570882006bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-commons/3.0.0/spring-cloud-commons-3.0.0.pom to /tmp/gradle_download11016149880972070468bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/feign-core/10.10.1/feign-core-10.10.1.pom to /tmp/gradle_download2635930597591660197bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/parent/10.10.1/parent-10.10.1.pom to /tmp/gradle_download1332459118969486318bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/feign-slf4j/10.10.1/feign-slf4j-10.10.1.pom to /tmp/gradle_download14545957308220002125bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-openfeign-core/3.0.0/spring-cloud-openfeign-core-3.0.0.pom to /tmp/gradle_download2525449011347171370bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.11.4/d4fda4e0fe5c2b5eda4e5addc07e1c1a404529aa/jackson-databind-2.11.4.pom]
+Downloading http://nexus/repository/maven-group/org/springframework/data/spring-data-elasticsearch/4.1.3/spring-data-elasticsearch-4.1.3.pom to /tmp/gradle_download4037028435325426694bin
+Downloading http://nexus/repository/maven-group/org/springframework/data/build/spring-data-parent/2.4.3/spring-data-parent-2.4.3.pom to /tmp/gradle_download14972260015525112712bin
+Downloading http://nexus/repository/maven-group/org/springframework/data/build/spring-data-build/2.4.3/spring-data-build-2.4.3.pom to /tmp/gradle_download7774781920758730741bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-bom/4.1.52.Final/netty-bom-4.1.52.Final.pom to /tmp/gradle_download5033313350389622436bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=870, missCount=520, loadSuccessCount=521, loadExceptionCount=0, totalLoadTime=470479640, evictionCount=121} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/springframework/kafka/spring-kafka/2.6.5/spring-kafka-2.6.5.pom to /tmp/gradle_download9151050300347305178bin
+Downloading http://nexus/repository/maven-group/org/springframework/kafka/spring-kafka/2.6.5/spring-kafka-2.6.5.module to /tmp/gradle_download1335543547102280587bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/module/jackson-module-kotlin/2.11.4/jackson-module-kotlin-2.11.4.pom to /tmp/gradle_download11508583974981005015bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.4.21/kotlin-stdlib-jdk7-1.4.21.pom to /tmp/gradle_download10961698514820889627bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream-binder-kafka-core/3.1.0/spring-cloud-stream-binder-kafka-core-3.1.0.pom to /tmp/gradle_download4867814631031867338bin
+Downloading http://nexus/repository/maven-group/org/apache/kafka/kafka-clients/2.6.0/kafka-clients-2.6.0.pom to /tmp/gradle_download9407619770027439015bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream/3.1.0/spring-cloud-stream-3.1.0.pom to /tmp/gradle_download12166909439267944144bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream-parent/3.1.0/spring-cloud-stream-parent-3.1.0.pom to /tmp/gradle_download15345779791368577914bin
+Downloading http://nexus/repository/maven-group/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.pom to /tmp/gradle_download531692039431069492bin
+Downloading http://nexus/repository/maven-group/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.pom to /tmp/gradle_download15886312082412107963bin
+Downloading http://nexus/repository/maven-group/org/slf4j/slf4j-parent/1.7.30/slf4j-parent-1.7.30.pom to /tmp/gradle_download2741276828927154853bin
+Downloading http://nexus/repository/maven-group/net/java/dev/jna/jna/5.3.1/jna-5.3.1.pom to /tmp/gradle_download8898436338312628911bin
+Downloading http://nexus/repository/maven-group/net/java/dev/jna/jna-platform/5.3.1/jna-platform-5.3.1.pom to /tmp/gradle_download10611845779511402908bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot/2.4.2/spring-boot-2.4.2.pom to /tmp/gradle_download6316981236539341192bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot/2.4.2/spring-boot-2.4.2.module to /tmp/gradle_download16050443419974476474bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-logging/2.4.2/spring-boot-starter-logging-2.4.2.pom to /tmp/gradle_download8873219345153118987bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-logging/2.4.2/spring-boot-starter-logging-2.4.2.module to /tmp/gradle_download17376623297045015797bin
+Downloading http://nexus/repository/maven-group/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.pom to /tmp/gradle_download16972094878037940225bin
+Downloading http://nexus/repository/maven-group/jakarta/annotation/ca-parent/1.3.5/ca-parent-1.3.5.pom to /tmp/gradle_download7958424784351198835bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/springframework/spring-core/5.3.3/spring-core-5.3.3.pom, /****/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.3.3/56603166c0eb6bb3a4e398f499ed85b8a780e9e4/spring-core-5.3.3.pom]
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=985, missCount=560, loadSuccessCount=561, loadExceptionCount=0, totalLoadTime=535045947, evictionCount=161} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/springframework/spring-core/5.3.3/spring-core-5.3.3.module, /****/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.3.3/2e45619ecfddeb98d43ec579361067629616e2bf/spring-core-5.3.3.module]
+Downloading http://nexus/repository/maven-group/org/yaml/snakeyaml/1.27/snakeyaml-1.27.pom to /tmp/gradle_download11359329463073564934bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-autoconfigure/2.4.2/spring-boot-autoconfigure-2.4.2.pom to /tmp/gradle_download13052952393359705279bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-autoconfigure/2.4.2/spring-boot-autoconfigure-2.4.2.module to /tmp/gradle_download5048681821066771482bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.pom to /tmp/gradle_download11611936392408323724bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/module/jackson-modules-java8/2.11.4/jackson-modules-java8-2.11.4.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-modules-java8/2.11.4/e5c1baeccb4dbec58b0974debbd1b35079cd487e/jackson-modules-java8-2.11.4.pom]
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-actuator/2.4.2/spring-boot-actuator-2.4.2.pom to /tmp/gradle_download4242329341430476695bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-actuator/2.4.2/spring-boot-actuator-2.4.2.module to /tmp/gradle_download10552237225920575233bin
+Downloading http://nexus/repository/maven-group/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.pom to /tmp/gradle_download5480304121173057004bin
+Downloading http://nexus/repository/maven-group/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.pom to /tmp/gradle_download14862163455002526957bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.pom to /tmp/gradle_download16993714636044443621bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.11.4/727669759ab24bcd1e2ebe57ef1d3aad8d07fc01/jackson-module-parameter-names-2.11.4.pom]
+Downloading http://nexus/repository/maven-group/io/projectreactor/netty/reactor-netty-http/1.0.3/reactor-netty-http-1.0.3.pom to /tmp/gradle_download11224938667403234336bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-beans/5.3.3/spring-beans-5.3.3.pom to /tmp/gradle_download14929772772869572378bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-beans/5.3.3/spring-beans-5.3.3.module to /tmp/gradle_download7631897234571890744bin
+Downloading http://nexus/repository/maven-group/io/projectreactor/reactor-core/3.4.2/reactor-core-3.4.2.pom to /tmp/gradle_download8018181234967577204bin
+Downloading http://nexus/repository/maven-group/io/projectreactor/reactor-core/3.4.2/reactor-core-3.4.2.module to /tmp/gradle_download11123747801121086210bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-autoconfigure/1.0.1/openapi-generator-for-spring-autoconfigure-1.0.1.pom to /tmp/gradle_download4238588157942788050bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-web/1.0.1/openapi-generator-for-spring-web-1.0.1.pom to /tmp/gradle_download2779924082141687510bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-common/1.0.1/openapi-generator-for-spring-common-1.0.1.pom to /tmp/gradle_download4079260395560120821bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1106, missCount=600, loadSuccessCount=601, loadExceptionCount=0, totalLoadTime=543837207, evictionCount=201} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-shaded/1.0.1/openapi-generator-for-spring-shaded-1.0.1.pom to /tmp/gradle_download10030130870126725320bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.11.4/fbf301fa1d702b938916081dfbb6ef5bb73cb709/jackson-core-2.11.4.pom]
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-context/3.0.0/spring-cloud-context-3.0.0.pom to /tmp/gradle_download5783579372408062510bin
+Downloading http://nexus/repository/maven-group/org/springframework/security/spring-security-rsa/1.0.9.RELEASE/spring-security-rsa-1.0.9.RELEASE.pom to /tmp/gradle_download5717561175326062921bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-aop/2.4.2/spring-boot-starter-aop-2.4.2.pom to /tmp/gradle_download2971046660004578762bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-aop/2.4.2/spring-boot-starter-aop-2.4.2.module to /tmp/gradle_download13508566503579258607bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/form/feign-form-spring/3.8.0/feign-form-spring-3.8.0.pom to /tmp/gradle_download14480599190048607970bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/form/parent/3.8.0/parent-3.8.0.pom to /tmp/gradle_download8971065786603382199bin
+Downloading http://nexus/repository/maven-group/org/springframework/security/spring-security-crypto/5.4.2/spring-security-crypto-5.4.2.pom to /tmp/gradle_download7455009708828668055bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.pom, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.11.4/2464021ce515c4732960f65aa52d1285cd3f63a2/jackson-annotations-2.11.4.pom]
+Downloading http://nexus/repository/maven-group/org/springframework/spring-context/5.3.3/spring-context-5.3.3.pom to /tmp/gradle_download4682746787756319379bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-context/5.3.3/spring-context-5.3.3.module to /tmp/gradle_download5065705140299056257bin
+Downloading http://nexus/repository/maven-group/org/springframework/data/spring-data-commons/2.4.3/spring-data-commons-2.4.3.pom to /tmp/gradle_download12152756410080570479bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/transport-netty4-client/7.9.3/transport-netty4-client-7.9.3.pom to /tmp/gradle_download1369605750258110270bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/plugin/transport-netty4-client/7.9.3/transport-netty4-client-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.9.3/elasticsearch-rest-high-level-client-7.9.3.pom to /tmp/gradle_download16368824462397505496bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.9.3/elasticsearch-rest-high-level-client-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/springframework/spring-tx/5.3.3/spring-tx-5.3.3.pom to /tmp/gradle_download9923315882347219275bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-tx/5.3.3/spring-tx-5.3.3.module to /tmp/gradle_download2218409379066540557bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-messaging/5.3.3/spring-messaging-5.3.3.pom to /tmp/gradle_download6120796498481610765bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-messaging/5.3.3/spring-messaging-5.3.3.module to /tmp/gradle_download14284362269268941752bin
+Downloading http://nexus/repository/maven-group/org/springframework/retry/spring-retry/1.3.1/spring-retry-1.3.1.pom to /tmp/gradle_download1888946617043739227bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-framework-bom/4.3.22.RELEASE/spring-framework-bom-4.3.22.RELEASE.pom to /tmp/gradle_download4590296713566632294bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1193, missCount=640, loadSuccessCount=641, loadExceptionCount=0, totalLoadTime=677476331, evictionCount=241} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-kafka/5.4.3/spring-integration-kafka-5.4.3.pom to /tmp/gradle_download2845934237080696969bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-kafka/5.4.3/spring-integration-kafka-5.4.3.module to /tmp/gradle_download9563478518384826280bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-validation/2.4.2/spring-boot-starter-validation-2.4.2.pom to /tmp/gradle_download12962854212737510929bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-validation/2.4.2/spring-boot-starter-validation-2.4.2.module to /tmp/gradle_download7954032445153488766bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-jmx/5.4.3/spring-integration-jmx-5.4.3.pom to /tmp/gradle_download15931777041627013076bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-jmx/5.4.3/spring-integration-jmx-5.4.3.module to /tmp/gradle_download2615981527921772826bin
+Cache entries evicted. In-memory cache of /****/.gradle/caches/journal-1/file-access.bin: Size{345} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=1} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-function-context/3.1.0/spring-cloud-function-context-3.1.0.pom to /tmp/gradle_download3620209650567487088bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-function-parent/3.1.0/spring-cloud-function-parent-3.1.0.pom to /tmp/gradle_download1708090506750532453bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-core/5.4.3/spring-integration-core-5.4.3.pom to /tmp/gradle_download10769011931745474833bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-core/5.4.3/spring-integration-core-5.4.3.module to /tmp/gradle_download16966155379871498401bin
+Downloading http://nexus/repository/maven-group/com/github/luben/zstd-jni/1.4.4-7/zstd-jni-1.4.4-7.pom to /tmp/gradle_download15208315803032608097bin
+Downloading http://nexus/repository/maven-group/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.pom to /tmp/gradle_download9936359991595034065bin
+Downloading http://nexus/repository/maven-group/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.pom to /tmp/gradle_download4678522937551174818bin
+Downloading http://nexus/repository/maven-group/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.pom to /tmp/gradle_download11599495350165666005bin
+Downloading http://nexus/repository/maven-group/org/apache/logging/log4j/log4j/2.13.3/log4j-2.13.3.pom to /tmp/gradle_download18068974822216250549bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/apache/apache/21/apache-21.pom, /****/.gradle/caches/modules-2/files-2.1/org.apache/apache/21/649b700a1b2b4a1d87e7ae8e3f47bfe101b2a4a5/apache-21.pom]
+Downloading http://nexus/repository/maven-group/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.pom to /tmp/gradle_download2097610074202006185bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.pom, /****/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.3/3d9f0dddb21f296eac4e8e1ca27d9c5a9c65aaca/spring-jcl-5.3.3.pom]
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1274, missCount=680, loadSuccessCount=681, loadExceptionCount=0, totalLoadTime=822340627, evictionCount=281} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.module, /****/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.3/d5a2d7d5998aa4ca4b43e29de062cc3db88d9646/spring-jcl-5.3.3.module]
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec-http/4.1.58.Final/netty-codec-http-4.1.58.Final.pom to /tmp/gradle_download7423010088219009672bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-parent/4.1.58.Final/netty-parent-4.1.58.Final.pom to /tmp/gradle_download12578207370762330286bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/sonatype/oss/oss-parent/9/oss-parent-9.pom, /****/.gradle/caches/modules-2/files-2.1/org.sonatype.oss/oss-parent/9/e5cdc4d23b86d79c436f16fed20853284e868f65/oss-parent-9.pom]
+Downloading http://nexus/repository/maven-group/io/netty/netty-resolver-dns/4.1.58.Final/netty-resolver-dns-4.1.58.Final.pom to /tmp/gradle_download15467777078824860072bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-resolver-dns-native-macos/4.1.58.Final/netty-resolver-dns-native-macos-4.1.58.Final.pom to /tmp/gradle_download15243299521215530761bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-transport-native-epoll/4.1.58.Final/netty-transport-native-epoll-4.1.58.Final.pom to /tmp/gradle_download13637880041765275528bin
+Downloading http://nexus/repository/maven-group/io/projectreactor/netty/reactor-netty-core/1.0.3/reactor-netty-core-1.0.3.pom to /tmp/gradle_download15196212139763464394bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec-http2/4.1.58.Final/netty-codec-http2-4.1.58.Final.pom to /tmp/gradle_download7720801614859342166bin
+Downloading http://nexus/repository/maven-group/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.pom to /tmp/gradle_download12713691090474707951bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-api/1.0.1/openapi-generator-for-spring-api-1.0.1.pom to /tmp/gradle_download1842840754372411667bin
+Downloading http://nexus/repository/maven-group/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.pom to /tmp/gradle_download407924261777874676bin
+Downloading http://nexus/repository/maven-group/org/apache/commons/commons-parent/51/commons-parent-51.pom to /tmp/gradle_download990199064655471984bin
+Downloading http://nexus/repository/maven-group/org/apache/apache/23/apache-23.pom to /tmp/gradle_download5488091082228485795bin
+Downloading http://nexus/repository/maven-group/io/github/classgraph/classgraph/4.8.69/classgraph-4.8.69.pom to /tmp/gradle_download2388339076884535931bin
+Downloading http://nexus/repository/maven-group/org/bouncycastle/bcpkix-jdk15on/1.64/bcpkix-jdk15on-1.64.pom to /tmp/gradle_download9372155570178321043bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-aop/5.3.3/spring-aop-5.3.3.pom to /tmp/gradle_download6196201757074573841bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-aop/5.3.3/spring-aop-5.3.3.module to /tmp/gradle_download12575946328341687262bin
+Downloading http://nexus/repository/maven-group/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.pom to /tmp/gradle_download849547433264337079bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/form/feign-form/3.8.0/feign-form-3.8.0.pom to /tmp/gradle_download13041927885379197086bin
+Downloading http://nexus/repository/maven-group/commons-fileupload/commons-fileupload/1.4/commons-fileupload-1.4.pom to /tmp/gradle_download15046612309188859273bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1324, missCount=720, loadSuccessCount=721, loadExceptionCount=0, totalLoadTime=832472218, evictionCount=321} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/apache/commons/commons-parent/47/commons-parent-47.pom to /tmp/gradle_download9681371987362231401bin
+Downloading http://nexus/repository/maven-group/org/apache/apache/19/apache-19.pom to /tmp/gradle_download6383443448672317556bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-expression/5.3.3/spring-expression-5.3.3.pom to /tmp/gradle_download13370320848526919867bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-expression/5.3.3/spring-expression-5.3.3.module to /tmp/gradle_download9260200217461437194bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-buffer/4.1.58.Final/netty-buffer-4.1.58.Final.pom to /tmp/gradle_download5728174306241564177bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-common/4.1.58.Final/netty-common-4.1.58.Final.pom to /tmp/gradle_download2887182458328131841bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-handler/4.1.58.Final/netty-handler-4.1.58.Final.pom to /tmp/gradle_download4698883041284874954bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-resolver/4.1.58.Final/netty-resolver-4.1.58.Final.pom to /tmp/gradle_download7550614324672170414bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.pom to /tmp/gradle_download5557455497154872213bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec/4.1.58.Final/netty-codec-4.1.58.Final.pom to /tmp/gradle_download16097213251710752690bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch/7.9.3/elasticsearch-7.9.3.pom to /tmp/gradle_download15292381415078657444bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/elasticsearch/7.9.3/elasticsearch-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/mapper-extras-client/7.9.3/mapper-extras-client-7.9.3.pom to /tmp/gradle_download4981644423445323003bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/plugin/mapper-extras-client/7.9.3/mapper-extras-client-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/parent-join-client/7.9.3/parent-join-client-7.9.3.pom to /tmp/gradle_download6246239879250245915bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/plugin/parent-join-client/7.9.3/parent-join-client-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/aggs-matrix-stats-client/7.9.3/aggs-matrix-stats-client-7.9.3.pom to /tmp/gradle_download12391603252893189782bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/plugin/aggs-matrix-stats-client/7.9.3/aggs-matrix-stats-client-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/rank-eval-client/7.9.3/rank-eval-client-7.9.3.pom to /tmp/gradle_download1913456852893536139bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/plugin/rank-eval-client/7.9.3/rank-eval-client-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/lang-mustache-client/7.9.3/lang-mustache-client-7.9.3.pom to /tmp/gradle_download8483245258659011868bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/plugin/lang-mustache-client/7.9.3/lang-mustache-client-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/client/elasticsearch-rest-client/7.9.3/elasticsearch-rest-client-7.9.3.pom to /tmp/gradle_download3122743212212936010bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/client/elasticsearch-rest-client/7.9.3/elasticsearch-rest-client-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.pom to /tmp/gradle_download11935161444255510865bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/md5-checksums.bin: Size{338} MaxSize{400}, CacheStats{hitCount=28, missCount=338, loadSuccessCount=339, loadExceptionCount=0, totalLoadTime=441605085, evictionCount=1} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.pom to /tmp/gradle_download3210601701454810857bin
+Downloading http://nexus/repository/maven-group/org/hibernate/validator/hibernate-validator-parent/6.1.7.Final/hibernate-validator-parent-6.1.7.Final.pom to /tmp/gradle_download10624747072777482415bin
+Downloading http://nexus/repository/maven-group/org/jboss/arquillian/arquillian-bom/1.6.0.Final/arquillian-bom-1.6.0.Final.pom to /tmp/gradle_download10504283333031105328bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1340, missCount=760, loadSuccessCount=761, loadExceptionCount=0, totalLoadTime=840880083, evictionCount=361} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/jboss/shrinkwrap/shrinkwrap-bom/1.2.6/shrinkwrap-bom-1.2.6.pom to /tmp/gradle_download4233226277104960483bin
+Downloading http://nexus/repository/maven-group/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-bom/3.1.4/shrinkwrap-resolver-bom-3.1.4.pom to /tmp/gradle_download12472722375574422987bin
+Downloading http://nexus/repository/maven-group/org/apache/maven/maven/3.6.3/maven-3.6.3.pom to /tmp/gradle_download1789001856043493357bin
+Downloading http://nexus/repository/maven-group/org/apache/maven/maven-parent/33/maven-parent-33.pom to /tmp/gradle_download14073360819642470753bin
+Downloading http://nexus/repository/maven-group/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-bom/2.0.0/shrinkwrap-descriptors-bom-2.0.0.pom to /tmp/gradle_download7432125889121083751bin
+Downloading http://nexus/repository/maven-group/net/jodah/typetools/0.6.2/typetools-0.6.2.pom to /tmp/gradle_download9325801556430242071bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-function-core/3.1.0/spring-cloud-function-core-3.1.0.pom to /tmp/gradle_download6918119149643274762bin
+Downloading http://nexus/repository/maven-group/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.pom to /tmp/gradle_download1762213118345291205bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec-dns/4.1.58.Final/netty-codec-dns-4.1.58.Final.pom to /tmp/gradle_download8282963125208391430bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-transport-native-unix-common/4.1.58.Final/netty-transport-native-unix-common-4.1.58.Final.pom to /tmp/gradle_download14041360090619147060bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-handler-proxy/4.1.58.Final/netty-handler-proxy-4.1.58.Final.pom to /tmp/gradle_download13665718449410117143bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-model/1.0.1/openapi-generator-for-spring-model-1.0.1.pom to /tmp/gradle_download7029244065030274472bin
+Downloading http://nexus/repository/maven-group/io/swagger/core/v3/swagger-annotations/2.1.4/swagger-annotations-2.1.4.pom to /tmp/gradle_download12063922998518220309bin
+Downloading http://nexus/repository/maven-group/io/swagger/core/v3/swagger-project/2.1.4/swagger-project-2.1.4.pom to /tmp/gradle_download8537050116278262692bin
+Downloading http://nexus/repository/maven-group/org/bouncycastle/bcprov-jdk15on/1.64/bcprov-jdk15on-1.64.pom to /tmp/gradle_download6321136113848619742bin
+Downloading http://nexus/repository/maven-group/commons-io/commons-io/2.2/commons-io-2.2.pom to /tmp/gradle_download8249423342999970858bin
+Downloading http://nexus/repository/maven-group/org/apache/commons/commons-parent/24/commons-parent-24.pom to /tmp/gradle_download9707686878840053197bin
+Downloading http://nexus/repository/maven-group/org/apache/apache/9/apache-9.pom to /tmp/gradle_download8257797587755549604bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-core/7.9.3/elasticsearch-core-7.9.3.pom to /tmp/gradle_download7011599189067112339bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1448, missCount=800, loadSuccessCount=801, loadExceptionCount=0, totalLoadTime=848030744, evictionCount=401} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-core/7.9.3/elasticsearch-core-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-x-content/7.9.3/elasticsearch-x-content-7.9.3.pom to /tmp/gradle_download3350865598720742243bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-x-content/7.9.3/elasticsearch-x-content-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-geo/7.9.3/elasticsearch-geo-7.9.3.pom to /tmp/gradle_download2370370151628443838bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-geo/7.9.3/elasticsearch-geo-7.9.3.module]
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-core/8.6.2/lucene-core-8.6.2.pom to /tmp/gradle_download7037182140344230766bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-parent/8.6.2/lucene-parent-8.6.2.pom to /tmp/gradle_download10544889176393761496bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-solr-grandparent/8.6.2/lucene-solr-grandparent-8.6.2.pom to /tmp/gradle_download7385084062903460994bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/apache/apache/13/apache-13.pom, /****/.gradle/caches/modules-2/files-2.1/org.apache/apache/13/15aff1faaec4963617f07dbe8e603f0adabc3a12/apache-13.pom]
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-analyzers-common/8.6.2/lucene-analyzers-common-8.6.2.pom to /tmp/gradle_download3675706282885326499bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-backward-codecs/8.6.2/lucene-backward-codecs-8.6.2.pom to /tmp/gradle_download7207244400678833253bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-grouping/8.6.2/lucene-grouping-8.6.2.pom to /tmp/gradle_download13974405942693524260bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-highlighter/8.6.2/lucene-highlighter-8.6.2.pom to /tmp/gradle_download17879336587706737200bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-join/8.6.2/lucene-join-8.6.2.pom to /tmp/gradle_download10726946907644339547bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-memory/8.6.2/lucene-memory-8.6.2.pom to /tmp/gradle_download9713465057353383204bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-misc/8.6.2/lucene-misc-8.6.2.pom to /tmp/gradle_download5200023693027985881bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-queries/8.6.2/lucene-queries-8.6.2.pom to /tmp/gradle_download5295220685892368763bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-queryparser/8.6.2/lucene-queryparser-8.6.2.pom to /tmp/gradle_download6670642602328560098bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-sandbox/8.6.2/lucene-sandbox-8.6.2.pom to /tmp/gradle_download10497598519262183837bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-spatial-extras/8.6.2/lucene-spatial-extras-8.6.2.pom to /tmp/gradle_download12526485873638096769bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-spatial3d/8.6.2/lucene-spatial3d-8.6.2.pom to /tmp/gradle_download10384309732931341042bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-suggest/8.6.2/lucene-suggest-8.6.2.pom to /tmp/gradle_download677094087864450424bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-cli/7.9.3/elasticsearch-cli-7.9.3.pom to /tmp/gradle_download17687086299701217614bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1495, missCount=840, loadSuccessCount=841, loadExceptionCount=0, totalLoadTime=851464663, evictionCount=441} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-cli/7.9.3/elasticsearch-cli-7.9.3.module]
+Downloading http://nexus/repository/maven-group/com/carrotsearch/hppc/0.8.1/hppc-0.8.1.pom to /tmp/gradle_download15634156234241518016bin
+Downloading http://nexus/repository/maven-group/com/carrotsearch/hppc-parent/0.8.1/hppc-parent-0.8.1.pom to /tmp/gradle_download552170564227746786bin
+Downloading http://nexus/repository/maven-group/joda-time/joda-time/2.10.4/joda-time-2.10.4.pom to /tmp/gradle_download4976322465686930071bin
+Downloading http://nexus/repository/maven-group/com/tdunning/t-digest/3.2/t-digest-3.2.pom to /tmp/gradle_download8689802625779857424bin
+Cache entries evicted. In-memory cache of /****/.gradle/caches/journal-1/file-access.bin: Size{398} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=41} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/elasticsearch/jna/5.5.0/jna-5.5.0.pom to /tmp/gradle_download8912621734615417691bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-secure-sm/7.9.3/elasticsearch-secure-sm-7.9.3.pom to /tmp/gradle_download5967762448919036256bin
+Resource missing. [HTTP GET: http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-secure-sm/7.9.3/elasticsearch-secure-sm-7.9.3.module]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.pom, /****/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5b134e5cd3e28dc431ca5397e9b53d28d1cfa74/httpclient-4.5.13.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/apache/httpcomponents/httpcomponents-client/4.5.13/httpcomponents-client-4.5.13.pom, /****/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcomponents-client/4.5.13/61045e5bac5f6b0a7e3301053de0d78fc92f09db/httpcomponents-client-4.5.13.pom]
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/apache/httpcomponents/httpcomponents-parent/11/httpcomponents-parent-11.pom, /****/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcomponents-parent/11/3ee7a841cc49326e8681089ea7ad6a3b81b88581/httpcomponents-parent-11.pom]
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4.pom to /tmp/gradle_download2058307797670654218bin
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/httpcomponents-asyncclient/4.1.4/httpcomponents-asyncclient-4.1.4.pom to /tmp/gradle_download14220858991919642757bin
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/project/7/project-7.pom to /tmp/gradle_download10173027193319768217bin
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/httpcore-nio/4.4.14/httpcore-nio-4.4.14.pom to /tmp/gradle_download7659422844809638748bin
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/httpcomponents-core/4.4.14/httpcomponents-core-4.4.14.pom to /tmp/gradle_download732777785331384243bin
+Downloading http://nexus/repository/maven-group/commons-codec/commons-codec/1.15/commons-codec-1.15.pom to /tmp/gradle_download460083278944727023bin
+Downloading http://nexus/repository/maven-group/org/apache/commons/commons-parent/52/commons-parent-52.pom to /tmp/gradle_download13820060782897243034bin
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.pom to /tmp/gradle_download3058441216226862516bin
+Downloading http://nexus/repository/maven-group/com/github/spullara/mustache/java/compiler/0.9.6/compiler-0.9.6.pom to /tmp/gradle_download6429372097166903408bin
+Downloading http://nexus/repository/maven-group/com/github/spullara/mustache/java/mustache.java/0.9.6/mustache.java-0.9.6.pom to /tmp/gradle_download4652336165365405109bin
+Downloading http://nexus/repository/maven-group/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.pom to /tmp/gradle_download10047959984820612609bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1528, missCount=880, loadSuccessCount=881, loadExceptionCount=0, totalLoadTime=859514988, evictionCount=481} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/com/fasterxml/classmate/1.5.1/classmate-1.5.1.pom to /tmp/gradle_download1497808445113052366bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/oss-parent/35/oss-parent-35.pom to /tmp/gradle_download12753102075821046604bin
+Downloading http://nexus/repository/maven-group/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.pom to /tmp/gradle_download11287075955647692388bin
+Downloading http://nexus/repository/maven-group/org/jboss/jboss-parent/34/jboss-parent-34.pom to /tmp/gradle_download17185820249536706265bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec-socks/4.1.58.Final/netty-codec-socks-4.1.58.Final.pom to /tmp/gradle_download8730630518812805890bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.11.4/jackson-dataformat-smile-2.11.4.pom to /tmp/gradle_download13446834097866898054bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.11.4/jackson-dataformats-binary-2.11.4.pom to /tmp/gradle_download3556870416033126307bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.11.4/jackson-dataformat-cbor-2.11.4.pom to /tmp/gradle_download11878495858327712058bin
+Downloading http://nexus/repository/maven-group/net/sf/jopt-simple/jopt-simple/5.0.2/jopt-simple-5.0.2.pom to /tmp/gradle_download7137066415963850590bin
+Excluding []
+Downloading http://nexus/repository/maven-group/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar to /tmp/gradle_download6278300611670145393bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-actuator/2.4.2/spring-boot-starter-actuator-2.4.2.jar to /tmp/gradle_download7630388892473930535bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-webflux/2.4.2/spring-boot-starter-webflux-2.4.2.jar to /tmp/gradle_download12520142044903518224bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-starter/1.0.1/openapi-generator-for-spring-starter-1.0.1.jar to /tmp/gradle_download7250726154560834977bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-starter-openfeign/3.0.0/spring-cloud-starter-openfeign-3.0.0.jar to /tmp/gradle_download12687691465004945327bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/feign-jackson/11.0/feign-jackson-11.0.jar to /tmp/gradle_download751097004870005219bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-data-elasticsearch/2.4.2/spring-boot-starter-data-elasticsearch-2.4.2.jar to /tmp/gradle_download8255300609340050274bin
+Downloading http://nexus/repository/maven-group/com/simonjamesrowe/model/0.0.12/model-0.0.12.jar to /tmp/gradle_download5892274387882328722bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/module/jackson-module-kotlin/2.11.4/jackson-module-kotlin-2.11.4.jar to /tmp/gradle_download11307080377075589796bin
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.4.21/kotlin-stdlib-jdk8-1.4.21.jar to /tmp/gradle_download2053680878719478720bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream-binder-kafka/3.1.0/spring-cloud-stream-binder-kafka-3.1.0.jar to /tmp/gradle_download17437288147317170111bin
+Downloading http://nexus/repository/maven-group/net/logstash/logback/logstash-logback-encoder/6.6/logstash-logback-encoder-6.6.jar to /tmp/gradle_download8249977391375342769bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-json/2.4.2/spring-boot-starter-json-2.4.2.jar to /tmp/gradle_download4637645093345730427bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-starter/3.0.0/spring-cloud-starter-3.0.0.jar to /tmp/gradle_download18384445093755790856bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-openfeign-core/3.0.0/spring-cloud-openfeign-core-3.0.0.jar to /tmp/gradle_download2129439784648432422bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-aop/2.4.2/spring-boot-starter-aop-2.4.2.jar to /tmp/gradle_download15872363456239578783bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream-binder-kafka-core/3.1.0/spring-cloud-stream-binder-kafka-core-3.1.0.jar to /tmp/gradle_download15339526612302816848bin
+Cache entries evicted. In-memory cache of /****/.gradle/caches/journal-1/file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=81} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-stream/3.1.0/spring-cloud-stream-3.1.0.jar to /tmp/gradle_download2733874664841984694bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-validation/2.4.2/spring-boot-starter-validation-2.4.2.jar to /tmp/gradle_download3123360887752813697bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter/2.4.2/spring-boot-starter-2.4.2.jar to /tmp/gradle_download10290063022149501499bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-logging/2.4.2/spring-boot-starter-logging-2.4.2.jar to /tmp/gradle_download2590576478617515925bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1548, missCount=920, loadSuccessCount=921, loadExceptionCount=0, totalLoadTime=920408226, evictionCount=521} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar to /tmp/gradle_download2619925898864994492bin
+Downloading http://nexus/repository/maven-group/co/elastic/apm/apm-agent-attach/1.21.0/apm-agent-attach-1.21.0.jar to /tmp/gradle_download17058597568726731245bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-actuator-autoconfigure/2.4.2/spring-boot-actuator-autoconfigure-2.4.2.jar to /tmp/gradle_download12538386687252474787bin
+Downloading http://nexus/repository/maven-group/io/micrometer/micrometer-core/1.6.3/micrometer-core-1.6.3.jar to /tmp/gradle_download7202766375019338218bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-starter-reactor-netty/2.4.2/spring-boot-starter-reactor-netty-2.4.2.jar to /tmp/gradle_download13477846468388927821bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-webflux/5.3.3/spring-webflux-5.3.3.jar to /tmp/gradle_download17498636041690344978bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/form/feign-form-spring/3.8.0/feign-form-spring-3.8.0.jar to /tmp/gradle_download15675470618692542384bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-web/5.3.3/spring-web-5.3.3.jar to /tmp/gradle_download5409816845401916991bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-webmvc/1.0.1/openapi-generator-for-spring-webmvc-1.0.1.jar to /tmp/gradle_download17558217670784476283bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-ui/1.0.1/openapi-generator-for-spring-ui-1.0.1.jar to /tmp/gradle_download9393480210860474011bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-webflux/1.0.1/openapi-generator-for-spring-webflux-1.0.1.jar to /tmp/gradle_download4959620684638381548bin
+Downloading http://nexus/repository/maven-group/org/springframework/data/spring-data-elasticsearch/4.1.3/spring-data-elasticsearch-4.1.3.jar to /tmp/gradle_download288807149964102740bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.9.3/elasticsearch-rest-high-level-client-7.9.3.jar to /tmp/gradle_download6562287561405606438bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch/7.9.3/elasticsearch-7.9.3.jar to /tmp/gradle_download14909046795080903602bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-x-content/7.9.3/elasticsearch-x-content-7.9.3.jar to /tmp/gradle_download8330051981625678292bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.11.4/jackson-dataformat-yaml-2.11.4.jar to /tmp/gradle_download11455028613385316330bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-web/1.0.1/openapi-generator-for-spring-web-1.0.1.jar to /tmp/gradle_download8582844267111145774bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-autoconfigure/1.0.1/openapi-generator-for-spring-autoconfigure-1.0.1.jar to /tmp/gradle_download14793928525291637678bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-common/1.0.1/openapi-generator-for-spring-common-1.0.1.jar to /tmp/gradle_download6291304154750473135bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-shaded/1.0.1/openapi-generator-for-spring-shaded-1.0.1.jar to /tmp/gradle_download14494587354017893955bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-api/1.0.1/openapi-generator-for-spring-api-1.0.1.jar to /tmp/gradle_download55711692217505977bin
+Downloading http://nexus/repository/maven-group/de/qaware/tools/openapi-generator-for-spring/openapi-generator-for-spring-model/1.0.1/openapi-generator-for-spring-model-1.0.1.jar to /tmp/gradle_download15722600339765225237bin
+Downloading http://nexus/repository/maven-group/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar to /tmp/gradle_download15247299026859794510bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-commons/3.0.0/spring-cloud-commons-3.0.0.jar to /tmp/gradle_download9457670511558938402bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/feign-slf4j/10.10.1/feign-slf4j-10.10.1.jar to /tmp/gradle_download6304991340028276791bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/feign-core/10.10.1/feign-core-10.10.1.jar to /tmp/gradle_download12734120076017445713bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar to /tmp/gradle_download12339396252158818388bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar to /tmp/gradle_download1116577236944466684bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.11.4/432e050d79f2282a66c320375d628f1b0842cb12/jackson-module-parameter-names-2.11.4.jar]
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-function-context/3.1.0/spring-cloud-function-context-3.1.0.jar to /tmp/gradle_download3802184633690880915bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.11.4/5d9f3d441f99d721b957e3497f0a6465c764fad4/jackson-databind-2.11.4.jar]
+Downloading http://nexus/repository/maven-group/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.4.21/kotlin-stdlib-jdk7-1.4.21.jar to /tmp/gradle_download13020463542560071075bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-kafka/5.4.3/spring-integration-kafka-5.4.3.jar to /tmp/gradle_download1714655013848508866bin
+Downloading http://nexus/repository/maven-group/org/springframework/kafka/spring-kafka/2.6.5/spring-kafka-2.6.5.jar to /tmp/gradle_download872192283216520380bin
+Downloading http://nexus/repository/maven-group/org/apache/kafka/kafka-clients/2.6.0/kafka-clients-2.6.0.jar to /tmp/gradle_download9422121170322141286bin
+Downloading http://nexus/repository/maven-group/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar to /tmp/gradle_download10584142152666816671bin
+Cache entries evicted. In-memory cache of /****/.gradle/caches/journal-1/file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=121} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/springframework/data/spring-data-commons/2.4.3/spring-data-commons-2.4.3.jar to /tmp/gradle_download14619682484823092204bin
+Downloading http://nexus/repository/maven-group/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar to /tmp/gradle_download17903687907312838111bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1550, missCount=960, loadSuccessCount=961, loadExceptionCount=0, totalLoadTime=927850192, evictionCount=561} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar to /tmp/gradle_download7029709885534167415bin
+Downloading http://nexus/repository/maven-group/io/github/openfeign/form/feign-form/3.8.0/feign-form-3.8.0.jar to /tmp/gradle_download14234065425227187437bin
+Downloading http://nexus/repository/maven-group/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar to /tmp/gradle_download10812273123626641977bin
+Downloading http://nexus/repository/maven-group/net/java/dev/jna/jna-platform/5.3.1/jna-platform-5.3.1.jar to /tmp/gradle_download13403482455850641561bin
+Downloading http://nexus/repository/maven-group/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar to /tmp/gradle_download14315833587035080334bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-autoconfigure/2.4.2/spring-boot-autoconfigure-2.4.2.jar to /tmp/gradle_download14395730514289092708bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot-actuator/2.4.2/spring-boot-actuator-2.4.2.jar to /tmp/gradle_download16300307865059757875bin
+Downloading http://nexus/repository/maven-group/org/springframework/boot/spring-boot/2.4.2/spring-boot-2.4.2.jar to /tmp/gradle_download10886003148717539851bin
+Downloading http://nexus/repository/maven-group/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar to /tmp/gradle_download10340591969182283491bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-jmx/5.4.3/spring-integration-jmx-5.4.3.jar to /tmp/gradle_download3259061837272221795bin
+Downloading http://nexus/repository/maven-group/org/springframework/integration/spring-integration-core/5.4.3/spring-integration-core-5.4.3.jar to /tmp/gradle_download10428949538442445302bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-context/5.3.3/spring-context-5.3.3.jar to /tmp/gradle_download548293130557584548bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-tx/5.3.3/spring-tx-5.3.3.jar to /tmp/gradle_download16694782411642957629bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-messaging/5.3.3/spring-messaging-5.3.3.jar to /tmp/gradle_download12341977762054532797bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-aop/5.3.3/spring-aop-5.3.3.jar to /tmp/gradle_download8889250840634639441bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-beans/5.3.3/spring-beans-5.3.3.jar to /tmp/gradle_download14765394408904394789bin
+Downloading http://nexus/repository/maven-group/org/springframework/spring-expression/5.3.3/spring-expression-5.3.3.jar to /tmp/gradle_download10220479809026443981bin
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-function-core/3.1.0/spring-cloud-function-core-3.1.0.jar to /tmp/gradle_download16501190832024115223bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/springframework/spring-core/5.3.3/spring-core-5.3.3.jar, /****/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.3.3/ea35bf756a880c699768ae0750e1244017d6ae84/spring-core-5.3.3.jar]
+Downloading http://nexus/repository/maven-group/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar to /tmp/gradle_download11205705402124031401bin
+Downloading http://nexus/repository/maven-group/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar to /tmp/gradle_download14527614162341413556bin
+Downloading http://nexus/repository/maven-group/io/projectreactor/netty/reactor-netty-http/1.0.3/reactor-netty-http-1.0.3.jar to /tmp/gradle_download10145636571852670560bin
+Downloading http://nexus/repository/maven-group/io/projectreactor/netty/reactor-netty-core/1.0.3/reactor-netty-core-1.0.3.jar to /tmp/gradle_download5821739848160130831bin
+Downloading http://nexus/repository/maven-group/io/projectreactor/reactor-core/3.4.2/reactor-core-3.4.2.jar to /tmp/gradle_download13500105529102120350bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.11.4/593f7b18bab07a76767f181e2a2336135ce82cc4/jackson-core-2.11.4.jar]
+Downloading http://nexus/repository/maven-group/org/springframework/cloud/spring-cloud-context/3.0.0/spring-cloud-context-3.0.0.jar to /tmp/gradle_download11970762133041659921bin
+Downloading http://nexus/repository/maven-group/org/springframework/security/spring-security-rsa/1.0.9.RELEASE/spring-security-rsa-1.0.9.RELEASE.jar to /tmp/gradle_download13737678652614424228bin
+Downloading http://nexus/repository/maven-group/org/springframework/security/spring-security-crypto/5.4.2/spring-security-crypto-5.4.2.jar to /tmp/gradle_download14117125569141637346bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar, /****/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.11.4/2c3f5c079330f3a01726686a078979420f547ae4/jackson-annotations-2.11.4.jar]
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/transport-netty4-client/7.9.3/transport-netty4-client-7.9.3.jar to /tmp/gradle_download16622847111194161351bin
+Downloading http://nexus/repository/maven-group/org/springframework/retry/spring-retry/1.3.1/spring-retry-1.3.1.jar to /tmp/gradle_download9706095925664675591bin
+Downloading http://nexus/repository/maven-group/com/github/luben/zstd-jni/1.4.4-7/zstd-jni-1.4.4-7.jar to /tmp/gradle_download3270665144716052093bin
+Downloading http://nexus/repository/maven-group/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar to /tmp/gradle_download8676665406990258481bin
+Downloading http://nexus/repository/maven-group/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar to /tmp/gradle_download10972722723438529336bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.jar, /****/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.3/29b29ac8940bfa8b07f7678e24018cee12f66706/spring-jcl-5.3.3.jar]
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec-http2/4.1.58.Final/netty-codec-http2-4.1.58.Final.jar to /tmp/gradle_download15426905441990730361bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1554, missCount=1000, loadSuccessCount=1001, loadExceptionCount=0, totalLoadTime=990272163, evictionCount=601} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/io/netty/netty-handler-proxy/4.1.58.Final/netty-handler-proxy-4.1.58.Final.jar to /tmp/gradle_download13820049672483582245bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec-http/4.1.58.Final/netty-codec-http-4.1.58.Final.jar to /tmp/gradle_download964278660232947586bin
+Cache entries evicted. In-memory cache of /****/.gradle/caches/journal-1/file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=161} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/io/netty/netty-resolver-dns-native-macos/4.1.58.Final/netty-resolver-dns-native-macos-4.1.58.Final-osx-x86_64.jar to /tmp/gradle_download14582617666089691801bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-resolver-dns/4.1.58.Final/netty-resolver-dns-4.1.58.Final.jar to /tmp/gradle_download11082828008832852499bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-transport-native-epoll/4.1.58.Final/netty-transport-native-epoll-4.1.58.Final-linux-x86_64.jar to /tmp/gradle_download6982402965475946077bin
+Downloading http://nexus/repository/maven-group/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar to /tmp/gradle_download14763376228617092464bin
+Downloading http://nexus/repository/maven-group/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar to /tmp/gradle_download7648706228396377850bin
+Downloading http://nexus/repository/maven-group/io/github/classgraph/classgraph/4.8.69/classgraph-4.8.69.jar to /tmp/gradle_download7851039450915238322bin
+Downloading http://nexus/repository/maven-group/org/bouncycastle/bcpkix-jdk15on/1.64/bcpkix-jdk15on-1.64.jar to /tmp/gradle_download15790723257535930263bin
+Downloading http://nexus/repository/maven-group/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar to /tmp/gradle_download4390576781849695991bin
+Downloading http://nexus/repository/maven-group/commons-fileupload/commons-fileupload/1.4/commons-fileupload-1.4.jar to /tmp/gradle_download1353400521552908728bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-handler/4.1.58.Final/netty-handler-4.1.58.Final.jar to /tmp/gradle_download14669947318545862494bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec-dns/4.1.58.Final/netty-codec-dns-4.1.58.Final.jar to /tmp/gradle_download701659006630068260bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec-socks/4.1.58.Final/netty-codec-socks-4.1.58.Final.jar to /tmp/gradle_download4637906207264219881bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-codec/4.1.58.Final/netty-codec-4.1.58.Final.jar to /tmp/gradle_download16081416685349079257bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-transport-native-unix-common/4.1.58.Final/netty-transport-native-unix-common-4.1.58.Final.jar to /tmp/gradle_download14765806735348953129bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.jar to /tmp/gradle_download823593093638793841bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-buffer/4.1.58.Final/netty-buffer-4.1.58.Final.jar to /tmp/gradle_download8068143766917895300bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-resolver/4.1.58.Final/netty-resolver-4.1.58.Final.jar to /tmp/gradle_download4077162585431125268bin
+Downloading http://nexus/repository/maven-group/io/netty/netty-common/4.1.58.Final/netty-common-4.1.58.Final.jar to /tmp/gradle_download5429318438516589829bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/client/elasticsearch-rest-client/7.9.3/elasticsearch-rest-client-7.9.3.jar to /tmp/gradle_download5935973475307100330bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/mapper-extras-client/7.9.3/mapper-extras-client-7.9.3.jar to /tmp/gradle_download2309622077072059496bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/parent-join-client/7.9.3/parent-join-client-7.9.3.jar to /tmp/gradle_download14748776530996425538bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/aggs-matrix-stats-client/7.9.3/aggs-matrix-stats-client-7.9.3.jar to /tmp/gradle_download8280180526623858104bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/rank-eval-client/7.9.3/rank-eval-client-7.9.3.jar to /tmp/gradle_download13179987039842976903bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/plugin/lang-mustache-client/7.9.3/lang-mustache-client-7.9.3.jar to /tmp/gradle_download2514121401059257266bin
+Downloading http://nexus/repository/maven-group/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar to /tmp/gradle_download7214266588515695791bin
+Downloading http://nexus/repository/maven-group/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar to /tmp/gradle_download13443208530945504449bin
+Downloading http://nexus/repository/maven-group/net/jodah/typetools/0.6.2/typetools-0.6.2.jar to /tmp/gradle_download14661948808598839647bin
+Downloading http://nexus/repository/maven-group/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar to /tmp/gradle_download13761505788408829232bin
+Downloading http://nexus/repository/maven-group/io/swagger/core/v3/swagger-annotations/2.1.4/swagger-annotations-2.1.4.jar to /tmp/gradle_download10694473415448285939bin
+Downloading http://nexus/repository/maven-group/org/bouncycastle/bcprov-jdk15on/1.64/bcprov-jdk15on-1.64.jar to /tmp/gradle_download12685147126921618380bin
+Downloading http://nexus/repository/maven-group/commons-io/commons-io/2.2/commons-io-2.2.jar to /tmp/gradle_download13541836727306654661bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-cli/7.9.3/elasticsearch-cli-7.9.3.jar to /tmp/gradle_download2155402522890598665bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-core/7.9.3/elasticsearch-core-7.9.3.jar to /tmp/gradle_download12206785082244410660bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-secure-sm/7.9.3/elasticsearch-secure-sm-7.9.3.jar to /tmp/gradle_download3419608536441760678bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/elasticsearch-geo/7.9.3/elasticsearch-geo-7.9.3.jar to /tmp/gradle_download1478998780783977314bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-core/8.6.2/lucene-core-8.6.2.jar to /tmp/gradle_download10100561679572475836bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-analyzers-common/8.6.2/lucene-analyzers-common-8.6.2.jar to /tmp/gradle_download10650140248120283380bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-backward-codecs/8.6.2/lucene-backward-codecs-8.6.2.jar to /tmp/gradle_download17017580957055111600bin
+Cache entries evicted. In-memory cache of /workspace/source/.gradle/checksums/sha1-checksums.bin: Size{400} MaxSize{400}, CacheStats{hitCount=1554, missCount=1040, loadSuccessCount=1041, loadExceptionCount=0, totalLoadTime=1025237691, evictionCount=641} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-grouping/8.6.2/lucene-grouping-8.6.2.jar to /tmp/gradle_download3309190152847985403bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-highlighter/8.6.2/lucene-highlighter-8.6.2.jar to /tmp/gradle_download15126780567209580632bin
+Cache entries evicted. In-memory cache of /****/.gradle/caches/journal-1/file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=201} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-join/8.6.2/lucene-join-8.6.2.jar to /tmp/gradle_download1039676399235431844bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-memory/8.6.2/lucene-memory-8.6.2.jar to /tmp/gradle_download9883142424581417924bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-misc/8.6.2/lucene-misc-8.6.2.jar to /tmp/gradle_download2769999630416074537bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-queries/8.6.2/lucene-queries-8.6.2.jar to /tmp/gradle_download7211253348500107198bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-queryparser/8.6.2/lucene-queryparser-8.6.2.jar to /tmp/gradle_download14281841840443929881bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-sandbox/8.6.2/lucene-sandbox-8.6.2.jar to /tmp/gradle_download2373014562798669704bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-spatial-extras/8.6.2/lucene-spatial-extras-8.6.2.jar to /tmp/gradle_download12813160802166660639bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-spatial3d/8.6.2/lucene-spatial3d-8.6.2.jar to /tmp/gradle_download3992997764488252537bin
+Downloading http://nexus/repository/maven-group/org/apache/lucene/lucene-suggest/8.6.2/lucene-suggest-8.6.2.jar to /tmp/gradle_download1592928899478558558bin
+Downloading http://nexus/repository/maven-group/com/carrotsearch/hppc/0.8.1/hppc-0.8.1.jar to /tmp/gradle_download15104483235766153899bin
+Downloading http://nexus/repository/maven-group/joda-time/joda-time/2.10.4/joda-time-2.10.4.jar to /tmp/gradle_download8713490669663855534bin
+Downloading http://nexus/repository/maven-group/com/tdunning/t-digest/3.2/t-digest-3.2.jar to /tmp/gradle_download10275884690038038882bin
+Downloading http://nexus/repository/maven-group/org/elasticsearch/jna/5.5.0/jna-5.5.0.jar to /tmp/gradle_download1141205036631940692bin
+Found locally available resource with matching checksum: [http://nexus/repository/maven-group/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar, /****/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada/httpclient-4.5.13.jar]
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar to /tmp/gradle_download1597252243335798564bin
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4.jar to /tmp/gradle_download5439995531585848233bin
+Downloading http://nexus/repository/maven-group/org/apache/httpcomponents/httpcore-nio/4.4.14/httpcore-nio-4.4.14.jar to /tmp/gradle_download13988125988723036159bin
+Downloading http://nexus/repository/maven-group/commons-codec/commons-codec/1.15/commons-codec-1.15.jar to /tmp/gradle_download8633266062698557021bin
+Downloading http://nexus/repository/maven-group/com/github/spullara/mustache/java/compiler/0.9.6/compiler-0.9.6.jar to /tmp/gradle_download15425198247864797847bin
+Downloading http://nexus/repository/maven-group/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar to /tmp/gradle_download10604513958755483037bin
+Downloading http://nexus/repository/maven-group/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar to /tmp/gradle_download9912317698698913560bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar to /tmp/gradle_download10422631546968824649bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.11.4/jackson-dataformat-smile-2.11.4.jar to /tmp/gradle_download10990363519000068255bin
+Downloading http://nexus/repository/maven-group/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.11.4/jackson-dataformat-cbor-2.11.4.jar to /tmp/gradle_download7332812973186328332bin
+Downloading http://nexus/repository/maven-group/net/sf/jopt-simple/jopt-simple/5.0.2/jopt-simple-5.0.2.jar to /tmp/gradle_download12645354893911772530bin
+Caching disabled for task ':compileKotlin' because:
+  Build cache is disabled
+Task ':compileKotlin' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':compileKotlin'.
+file or directory '/workspace/source/src/main/java', not found
+file or directory '/workspace/source/src/main/java', not found
+file or directory '/workspace/source/src/main/java', not found
+file or directory '/workspace/source/src/main/java', not found
+Using Kotlin/JVM incremental compilation
+i: starting the daemon as: /usr/lib/jvm/java-11-openjdk-11.0.9.11-2.el7_9.x86_64/bin/java -cp /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.21/87db94500aaf883536ae8c8efdee76bdc839d582/kotlin-compiler-embeddable-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.4.21/748f681f4e3edbe9285ff46710c79049c70f4dfa/kotlin-reflect-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.21/4a668382d7c38688d3490afde93b6a113ed46698/kotlin-stdlib-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.21/1247decba314790165b4fe94d09c45b09db6b07f/kotlin-script-runtime-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.21/bc95bcebdc871d45d9852b0c01abe9bec373bb52/kotlin-daemon-embeddable-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.21/7f48a062aa4b53215998780f7c245a4276828e1d/kotlin-stdlib-common-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx512m -XX:MaxMetaspaceSize=256m -Dkotlin.environment.keepalive -ea org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath /****/.kotlin/daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-compilerClasspath /****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.21/87db94500aaf883536ae8c8efdee76bdc839d582/kotlin-compiler-embeddable-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.4.21/748f681f4e3edbe9285ff46710c79049c70f4dfa/kotlin-reflect-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.21/4a668382d7c38688d3490afde93b6a113ed46698/kotlin-stdlib-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.21/1247decba314790165b4fe94d09c45b09db6b07f/kotlin-script-runtime-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.21/bc95bcebdc871d45d9852b0c01abe9bec373bb52/kotlin-daemon-embeddable-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.21/7f48a062aa4b53215998780f7c245a4276828e1d/kotlin-stdlib-common-1.4.21.jar:/****/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar
+i: Received the message signalling that the daemon is ready
+i: new daemon started, trying to find it
+i: found daemon on port 17780 (194 ms old), trying to connect
+i: connected to the daemon
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0], reportSeverity=2, requestedCompilationResults=[0]kotlinScriptExtensions=[kt, kts, java]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, workingDir=/workspace/source/build/kotlin/compileKotlin, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/workspace/source/build/kotlin/compileKotlin/build-history.bin, useModuleDetection=false), usePreciseJavaTracking=trueoutputFiles=[/workspace/source/build/classes/kotlin/main, /workspace/source/build/kotlin/compileKotlin])
+:compileKotlin (Thread[Daemon worker,5,main]) completed. Took 55.949 secs.
+:compileJava (Thread[Daemon worker,5,main]) started.
+
+> Task :compileJava NO-SOURCE
+file or directory '/workspace/source/src/main/java', not found
+Skipping task ':compileJava' as it has no source files and no previous output files.
+:compileJava (Thread[Daemon worker,5,main]) completed. Took 0.009 secs.
+:processResources (Thread[Daemon worker,5,main]) started.
+
+> Task :processResources
+Caching disabled for task ':processResources' because:
+  Build cache is disabled
+Task ':processResources' is not up-to-date because:
+  No history is available.
+:processResources (Thread[Daemon worker,5,main]) completed. Took 0.084 secs.
+:classes (Thread[Daemon worker,5,main]) started.
+
+> Task :classes
+Skipping task ':classes' as it has no actions.
+:classes (Thread[Daemon worker,5,main]) completed. Took 0.001 secs.
+:bootJarMainClassName (Thread[Daemon worker,5,main]) started.
+
+> Task :bootJarMainClassName
+Excluding []
+Downloading http://nexus/repository/maven-group/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar to /tmp/gradle_download4884189254782288687bin
+Excluding []
+Excluding []
+Caching disabled for task ':bootJarMainClassName' because:
+  Build cache is disabled
+Task ':bootJarMainClassName' is not up-to-date because:
+  No history is available.
+:bootJarMainClassName (Thread[Daemon worker,5,main]) completed. Took 1.169 secs.
+:bootJar (Thread[Daemon worker,5,main]) started.
+
+> Task :bootJar
+Caching disabled for task ':bootJar' because:
+  Build cache is disabled
+Task ':bootJar' is not up-to-date because:
+  No history is available.
+:bootJar (Thread[Daemon worker,5,main]) completed. Took 3.24 secs.
+:bootBuildImage (Thread[Daemon worker,5,main]) started.
+
+> Task :bootBuildImage
+Caching disabled for task ':bootBuildImage' because:
+  Build cache is disabled
+Task ':bootBuildImage' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Building image 'harbor.simonjamesrowe.com/simonjamesrowe/search-service:0.0.31'
+
+ > Pulling builder image '*********/paketobuildpacks/builder:base' ..................................................
+ > Pulled builder image 'paketobuildpacks/builder@sha256:92cf0703f7b313bd34da2f8a2f17184ed186f23c9df6817c1ef2a8b38c295b2d'
+ > Pulling run image '*********/paketobuildpacks/run:base-cnb' ..................................................
+ > Pulled run image 'paketobuildpacks/run@sha256:e89f3ba15ab6ef4d43d1521c9238b5c74efcf78c1f52470bfec04bc2a025528b'
+ > Executing lifecycle version v0.10.2
+ > Using build cache volume 'pack-cache-48fbec9112a1.build'
+
+ > Running creator
+    [creator]     ===> DETECTING
+    [creator]     5 of 18 buildpacks participating
+    [creator]     paketo-buildpacks/ca-certificates   2.1.0
+    [creator]     paketo-buildpacks/bellsoft-liberica 7.0.0
+    [creator]     paketo-buildpacks/executable-jar    4.0.0
+    [creator]     paketo-buildpacks/dist-zip          3.0.0
+    [creator]     paketo-buildpacks/spring-boot       4.0.0
+    [creator]     ===> ANALYZING
+    [creator]     Previous image with name "harbor.simonjamesrowe.com/simonjamesrowe/search-service:0.0.31" not found
+    [creator]     ===> RESTORING
+    [creator]     ===> BUILDING
+    [creator]     
+    [creator]     Paketo CA Certificates Buildpack 2.1.0
+    [creator]       https://github.com/paketo-buildpacks/ca-certificates
+    [creator]       Launch Helper: Contributing to layer
+    [creator]         Creating /layers/paketo-buildpacks_ca-certificates/helper/exec.d/ca-certificates-helper
+    [creator]     
+    [creator]     Paketo BellSoft Liberica Buildpack 7.0.0
+    [creator]       https://github.com/paketo-buildpacks/bellsoft-liberica
+    [creator]       Build Configuration:
+    [creator]         $BP_JVM_VERSION              11.*            the Java version
+    [creator]       Launch Configuration:
+    [creator]         $BPL_JVM_HEAD_ROOM           0               the headroom in memory calculation
+    [creator]         $BPL_JVM_LOADED_CLASS_COUNT  35% of classes  the number of loaded classes in memory calculation
+    [creator]         $BPL_JVM_THREAD_COUNT        250             the number of threads in memory calculation
+    [creator]         $JAVA_TOOL_OPTIONS                           the JVM launch flags
+    [creator]       BellSoft Liberica JRE 11.0.10: Contributing to layer
+    [creator]         Downloading from https://github.com/bell-sw/Liberica/releases/download/11.0.10+9/bellsoft-jre11.0.10+9-linux-amd64.tar.gz
+    [creator]         Verifying checksum
+    [creator]         Expanding to /layers/paketo-buildpacks_bellsoft-liberica/jre
+    [creator]         Adding 129 container CA certificates to JVM truststore
+    [creator]         Writing env.launch/BPI_APPLICATION_PATH.default
+    [creator]         Writing env.launch/BPI_JVM_CACERTS.default
+    [creator]         Writing env.launch/BPI_JVM_CLASS_COUNT.default
+    [creator]         Writing env.launch/BPI_JVM_SECURITY_PROVIDERS.default
+    [creator]         Writing env.launch/JAVA_HOME.default
+    [creator]         Writing env.launch/MALLOC_ARENA_MAX.default
+    [creator]       Launch Helper: Contributing to layer
+    [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/active-processor-count
+    [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/java-opts
+    [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/link-local-dns
+    [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/memory-calculator
+    [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/openssl-certificate-loader
+    [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/security-providers-configurer
+    [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/security-providers-classpath-9
+    [creator]       JVMKill Agent 1.16.0: Contributing to layer
+    [creator]         Downloading from https://github.com/cloudfoundry/jvmkill/releases/download/v1.16.0.RELEASE/jvmkill-1.16.0-RELEASE.so
+    [creator]         Verifying checksum
+    [creator]         Copying to /layers/paketo-buildpacks_bellsoft-liberica/jvmkill
+    [creator]         Writing env.launch/JAVA_TOOL_OPTIONS.append
+    [creator]         Writing env.launch/JAVA_TOOL_OPTIONS.delim
+    [creator]       Java Security Properties: Contributing to layer
+    [creator]         Writing env.launch/JAVA_SECURITY_PROPERTIES.default
+    [creator]         Writing env.launch/JAVA_TOOL_OPTIONS.append
+    [creator]         Writing env.launch/JAVA_TOOL_OPTIONS.delim
+    [creator]     
+    [creator]     Paketo Executable JAR Buildpack 4.0.0
+    [creator]       https://github.com/paketo-buildpacks/executable-jar
+    [creator]         Writing env.launch/CLASSPATH.delim
+    [creator]         Writing env.launch/CLASSPATH.prepend
+    [creator]       Process types:
+    [creator]         executable-jar: java org.springframework.boot.loader.JarLauncher (direct)
+    [creator]         task:           java org.springframework.boot.loader.JarLauncher (direct)
+    [creator]         web:            java org.springframework.boot.loader.JarLauncher (direct)
+    [creator]     
+    [creator]     Paketo Spring Boot Buildpack 4.0.0
+    [creator]       https://github.com/paketo-buildpacks/spring-boot
+    [creator]       Creating slices from layers index
+    [creator]         dependencies
+    [creator]         spring-boot-loader
+    [creator]         snapshot-dependencies
+    [creator]         application
+    [creator]       Launch Helper: Contributing to layer
+    [creator]         Creating /layers/paketo-buildpacks_spring-boot/helper/exec.d/spring-cloud-bindings
+    [creator]       Web Application Type: Contributing to layer
+    [creator]         Reactive web application detected
+    [creator]         Writing env.launch/BPL_JVM_THREAD_COUNT.default
+    [creator]       Spring Cloud Bindings 1.7.0: Contributing to layer
+    [creator]         Downloading from https://repo.spring.io/release/org/springframework/cloud/spring-cloud-bindings/1.7.0/spring-cloud-bindings-1.7.0.jar
+    [creator]         Verifying checksum
+    [creator]         Copying to /layers/paketo-buildpacks_spring-boot/spring-cloud-bindings
+    [creator]       4 application slices
+    [creator]       Image labels:
+    [creator]         org.springframework.boot.spring-configuration-metadata.json
+    [creator]         org.springframework.boot.version
+    [creator]     ===> EXPORTING
+    [creator]     Adding layer 'paketo-buildpacks/ca-certificates:helper'
+    [creator]     Adding layer 'paketo-buildpacks/bellsoft-liberica:helper'
+    [creator]     Adding layer 'paketo-buildpacks/bellsoft-liberica:java-security-properties'
+    [creator]     Adding layer 'paketo-buildpacks/bellsoft-liberica:jre'
+    [creator]     Adding layer 'paketo-buildpacks/bellsoft-liberica:jvmkill'
+    [creator]     Adding layer 'paketo-buildpacks/executable-jar:class-path'
+    [creator]     Adding layer 'paketo-buildpacks/spring-boot:helper'
+    [creator]     Adding layer 'paketo-buildpacks/spring-boot:spring-cloud-bindings'
+    [creator]     Adding layer 'paketo-buildpacks/spring-boot:web-application-type'
+    [creator]     Adding 5/5 app layer(s)
+    [creator]     Adding layer 'launcher'
+    [creator]     Adding layer 'config'
+    [creator]     Adding layer 'process-types'
+    [creator]     Adding label 'io.buildpacks.lifecycle.metadata'
+    [creator]     Adding label 'io.buildpacks.build.metadata'
+    [creator]     Adding label 'io.buildpacks.project.metadata'
+    [creator]     Adding label 'org.springframework.boot.spring-configuration-metadata.json'
+    [creator]     Adding label 'org.springframework.boot.version'
+    [creator]     Setting default process type 'web'
+    [creator]     *** Images (c935e7a742ff):
+    [creator]           harbor.simonjamesrowe.com/simonjamesrowe/search-service:0.0.31
+
+Successfully built image 'harbor.simonjamesrowe.com/simonjamesrowe/search-service:0.0.31'
+
+:bootBuildImage (Thread[Daemon worker,5,main]) completed. Took 34.396 secs.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.5.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 3m 44s
+5 actionable tasks: 5 executed
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-push[0m
+The push refers to repository [harbor.simonjamesrowe.com/simonjamesrowe/search-service]
+1dc94a70dbaa: Preparing
+e390778dc325: Preparing
+576e5f5696c6: Preparing
+5f70bf18a086: Preparing
+739ef2d74eed: Preparing
+5f70bf18a086: Preparing
+e5547256cfc7: Preparing
+af8047685cc2: Preparing
+fcc507beb4cc: Preparing
+c2e9ddddd4ef: Preparing
+410f6d58e75f: Preparing
+ab39aa8fd003: Preparing
+0b18b1f120f4: Preparing
+c220513292ef: Preparing
+ec0381c8f321: Preparing
+17496f83a998: Preparing
+84bf98cca965: Preparing
+16b4b083253b: Preparing
+ead6ee74c5a0: Preparing
+9e4f212d86a2: Preparing
+9f10818f1f96: Preparing
+27502392e386: Preparing
+c95d2191d777: Preparing
+fcc507beb4cc: Waiting
+e5547256cfc7: Waiting
+84bf98cca965: Waiting
+ab39aa8fd003: Waiting
+16b4b083253b: Waiting
+ead6ee74c5a0: Waiting
+c2e9ddddd4ef: Waiting
+0b18b1f120f4: Waiting
+9e4f212d86a2: Waiting
+c220513292ef: Waiting
+ec0381c8f321: Waiting
+17496f83a998: Waiting
+af8047685cc2: Waiting
+9f10818f1f96: Waiting
+c95d2191d777: Waiting
+27502392e386: Waiting
+410f6d58e75f: Waiting
+1dc94a70dbaa: Layer already exists
+576e5f5696c6: Layer already exists
+e390778dc325: Layer already exists
+5f70bf18a086: Layer already exists
+e5547256cfc7: Layer already exists
+fcc507beb4cc: Layer already exists
+c2e9ddddd4ef: Layer already exists
+af8047685cc2: Layer already exists
+410f6d58e75f: Layer already exists
+0b18b1f120f4: Layer already exists
+c220513292ef: Layer already exists
+ab39aa8fd003: Layer already exists
+17496f83a998: Layer already exists
+ec0381c8f321: Layer already exists
+84bf98cca965: Layer already exists
+16b4b083253b: Layer already exists
+739ef2d74eed: Pushed
+9e4f212d86a2: Layer already exists
+ead6ee74c5a0: Layer already exists
+27502392e386: Layer already exists
+c95d2191d777: Layer already exists
+9f10818f1f96: Layer already exists
+0.0.31: digest: sha256:d78ab360a9b289d6ad43f5186c67090bba4119e3a4afb9c5eb7eea47aedcc86a size: 5123
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/search-service to an unshallow repository
+Generating change log from git ref df2a6d8567733e3573c011575136cd3ad4e5a7f1 => e43a96d83cbc2516d1ed19f557b9107666d16d92
+Associating user simon-rowe in users.jenkins.io with email simon.rowe@gmail.com to git GitProvider user with login simon-rowe-0 as emails match
+Adding label jenkins.io/git-github-userid=simon-rowe-0 to user simon-rowe in users.jenkins.io
+Associating user simon-rowe in users.jenkins.io with email simon.rowe@gmail.com to git GitProvider user with login simon-rowe-0 as emails match
+Adding label jenkins.io/git-github-userid=simon-rowe-0 to user simon-rowe in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for simonjamesrowe/search-service and tag v0.0.31 so creating a new release
+Updated the release information at https://github.com/simonjamesrowe/search-service/releases/tag/v0.0.31
+generated: /workspace/source/charts/search-service/templates/release.yaml
+Created Release search-service-0-0-31 resource in namespace **
+Updating PipelineActivity simonjamesrowe-search-service-master-32 with version 0.0.31
+Updated PipelineActivities simonjamesrowe-search-service-master-32 with release notes URL: https://github.com/simonjamesrowe/search-service/releases/tag/v0.0.31
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file search-service-0.0.31.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32msimonjamesrowe-search-service-m-67s6j-32[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app search-service version 0.0.31 to namespace **-staging
+Created Pull Request: https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/87
+Added label updatebot to Pull Request https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/87
+got git provider status pending from PR https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/87
+got git provider status pending from PR https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/87
+got git provider status pending from PR https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/87
+got git provider status pending from PR https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/87
+got git provider status pending from PR https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/87
+Pull Request https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/87 is merged at sha a01b68f8af89a9a84d92593dbe8657678045427b
+Pull Request merged but we are not waiting for the update pipeline to complete!
