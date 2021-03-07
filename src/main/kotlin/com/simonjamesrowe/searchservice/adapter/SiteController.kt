@@ -14,7 +14,7 @@ class SiteController(
 ) {
 
   @GetMapping("/site")
-  fun blogsQuery(@RequestParam q: String): List<SiteResultDto> =
+  fun siteSearch(@RequestParam q: String): List<SiteResultDto> =
     siteSearchRepository.searchSite(q)
 
 
