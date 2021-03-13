@@ -89,6 +89,6 @@ sonarqube {
 	properties {
 		property("sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml")
 		property("sonar.host.url", gradlePropertiesProp["sonar.host.url"] ?: "")
-		property("sonar.login", gradlePropertiesProp["sonar.host.url"] ?: "")
+		property("sonar.login", gradlePropertiesProp["sonar.login"] ?: "")
 	}
 }
