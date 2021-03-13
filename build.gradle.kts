@@ -10,6 +10,7 @@ plugins {
 	kotlin("jvm") version "1.4.21"
 	kotlin("plugin.spring") version "1.4.21"
 }
+val gradlePropertiesProp = project.properties
 
 group = "com.simonjamesrowe"
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -87,5 +88,7 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
 sonarqube {
 	properties {
 		property("sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml")
+		property("sonar.host.url", gradlePropertiesProp["sonar.host.url"] ?: "")
+		property("sonar.login", gradlePropertiesProp["sonar.host.url"] ?: "")
 	}
 }
