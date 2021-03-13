@@ -5,6 +5,8 @@ plugins {
 	id("org.springframework.boot") version "2.4.2"
 	id("io.spring.dependency-management") version "1.0.10.RELEASE"
 	id("maven-publish")
+	id("org.sonarqube") version "3.1.1"
+	id("jacoco")
 	kotlin("jvm") version "1.4.21"
 	kotlin("plugin.spring") version "1.4.21"
 }
@@ -60,6 +62,14 @@ tasks.withType<KotlinCompile> {
 }
 tasks.withType<Test> {
 	useJUnitPlatform()
+	finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport {
+	dependsOn(tasks.test)
+	reports {
+		xml.isEnabled = true
+	}
 }
 
 publishing {
@@ -72,4 +82,10 @@ publishing {
 
 tasks.getByName<BootBuildImage>("bootBuildImage") {
 	imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
+}
+
+sonarqube {
+	properties {
+		property("sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml")
+	}
 }
