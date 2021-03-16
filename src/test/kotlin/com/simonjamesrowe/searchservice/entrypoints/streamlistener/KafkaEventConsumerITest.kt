@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice.old.adapter
+package com.simonjamesrowe.searchservice.entrypoints.streamlistener
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.convertValue
@@ -22,12 +22,11 @@ import org.springframework.test.annotation.DirtiesContext
 import java.time.Duration
 import java.time.LocalDate
 import java.time.ZonedDateTime
-import java.util.*
 
 @WithKafkaContainer
 @WithElasticsearchContainer
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
-internal class KafkaEventConsumerTest : BaseComponentTest() {
+internal class KafkaEventConsumerITest : BaseComponentTest() {
 
   @Autowired
   private lateinit var streamBridge: StreamBridge

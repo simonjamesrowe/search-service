@@ -9,9 +9,6 @@ class IndexSiteUseCase(
   private val siteSearchRepository: SiteSearchRepository
 ) {
 
-  fun indexSite(request: IndexSiteRequest) =
-    siteSearchRepository.indexSite(request)
-
   fun indexSites(requests: Collection<IndexSiteRequest>) =
     siteSearchRepository.indexSites(requests)
 

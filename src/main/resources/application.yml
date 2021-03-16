@@ -37,12 +37,12 @@ spring:
           consumeEvent-in-0:
             consumer:
               configuration:
-                value.deserializer: com.simonjamesrowe.model.serialization.EventDeserializer
+                value.deserializer: com.simonjamesrowe.model.serialization.WebhookEventDeserializer
                 key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
           output:
             producer:
               configuration:
-                value.serializer: com.simonjamesrowe.model.serialization.EventSerializer
+                value.serializer: com.simonjamesrowe.model.serialization.WebhookEventSerializer
                 key.serializer: org.apache.kafka.common.serialization.StringSerializer
   kafka:
     consumer:

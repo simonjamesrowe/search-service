@@ -92,7 +92,7 @@ internal class BlogRepositoryTest {
 
   @Test
   fun `should return correct search results`() {
-    assertThat(blogRepository.search("kotlin")).hasSize(1)
+    assertThat(blogRepository.search("kotlin")).hasSize(2)
   }
 
   @Test

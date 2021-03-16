@@ -1,6 +1,5 @@
 package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site
 
-
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.simonjamesrowe.searchservice.core.model.SiteSearchResult
@@ -15,7 +14,6 @@ import org.elasticsearch.search.aggregations.AggregatorFactories
 import org.elasticsearch.search.aggregations.BucketOrder
 import org.elasticsearch.search.builder.SearchSourceBuilder
 import org.springframework.stereotype.Repository
-
 
 @Repository
 class SiteSearchRepository(
@@ -65,10 +63,6 @@ class SiteSearchRepository(
   override fun search(q: String): List<SiteSearchResult> = searchSite(q)
 
   override fun getAll() = searchSite()
-
-  override fun indexSite(request: IndexSiteRequest) {
-    siteDocumentRepository.save(toSiteDocument(request))
-  }
 
   override fun indexSites(requests: Collection<IndexSiteRequest>) {
     siteDocumentRepository.saveAll(requests.map(::toSiteDocument))
