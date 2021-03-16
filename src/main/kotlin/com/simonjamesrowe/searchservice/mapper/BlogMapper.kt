@@ -1,12 +1,12 @@
 package com.simonjamesrowe.searchservice.mapper
 
-import com.simonjamesrowe.model.data.Blog
-import com.simonjamesrowe.searchservice.document.BlogDocument
-import com.simonjamesrowe.searchservice.document.SiteDocument
+import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
+import com.simonjamesrowe.searchservice.core.model.IndexBlogRequest
+import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 
 object BlogMapper {
-  fun toBlogDocument(blog: Blog) =
-    BlogDocument(
+  fun toBlogIndexRequest(blog: BlogResponseDTO) =
+    IndexBlogRequest(
       id = blog.id,
       title = blog.title,
       content = blog.content,
@@ -16,11 +16,12 @@ object BlogMapper {
       smallImage = blog.image.formats?.small?.url,
       mediumImage = blog.image.formats?.medium?.url,
       createdDate = blog.createdAt.toLocalDate(),
-      shortDescription = blog.shortDescription
+      shortDescription = blog.shortDescription,
+      published = blog.published
     )
 
-  fun toSiteDocument(blog: Blog) =
-    SiteDocument(
+  fun toSiteIndexRequest(blog: BlogResponseDTO) =
+    IndexSiteRequest(
       id = "blog_${blog.id}",
       siteUrl = "/blogs/${blog.id}",
       shortDescription = blog.shortDescription,

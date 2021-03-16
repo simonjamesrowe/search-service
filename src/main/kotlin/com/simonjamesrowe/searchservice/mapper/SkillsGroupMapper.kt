@@ -1,12 +1,12 @@
 package com.simonjamesrowe.searchservice.mapper
 
-import com.simonjamesrowe.model.data.SkillsGroup
-import com.simonjamesrowe.searchservice.document.SiteDocument
+import com.simonjamesrowe.model.cms.dto.SkillsGroupResponseDTO
+import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 
 object SkillsGroupMapper {
-  fun toSiteDocuments(skillsGroup: SkillsGroup) =
+  fun toSiteIndexRequests(skillsGroup: SkillsGroupResponseDTO) =
     skillsGroup.skills.map { skill ->
-      SiteDocument(
+      IndexSiteRequest(
         id = "skill_${skill.id}",
         siteUrl = "/skills-groups/${skillsGroup.id}#${skill.id}",
         shortDescription = skill.description ?: "",

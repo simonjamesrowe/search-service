@@ -1,19 +1,25 @@
 package com.simonjamesrowe.searchservice
 
-import com.simonjamesrowe.model.data.Image
+import com.github.tomakehurst.wiremock.WireMockServer
+import com.github.tomakehurst.wiremock.client.WireMock
+import com.simonjamesrowe.model.cms.dto.ImageResponseDTO
+import com.tyro.oss.arbitrater.arbitrary
+import org.springframework.core.io.ClassPathResource
+import java.nio.file.Files
+import java.util.stream.Collectors
 
 object TestUtils {
 
   fun image(image: String, size: Int) =
-    Image(
+    ImageResponseDTO(
       url = "uploads/$image.jpg",
       name = "image1",
       size = size,
       width = size * 10,
       height = size * 10,
       mime = "jpg",
-      formats = Image.ImageFormats(
-        thumbnail = Image(
+      formats = ImageResponseDTO.ImageFormats(
+        thumbnail = ImageResponseDTO(
           url = "uploads/$image-thumb.jpg",
           name = "$image-thumb",
           size = size * 2,
@@ -22,7 +28,7 @@ object TestUtils {
           mime = "jpg",
           formats = null
         ),
-        small = Image(
+        small = ImageResponseDTO(
           url = "uploads/$image-sml.jpg",
           name = "$image-sml",
           size = size * 3,
@@ -31,7 +37,7 @@ object TestUtils {
           mime = "jpg",
           formats = null
         ),
-        medium = Image(
+        medium = ImageResponseDTO(
           url = "uploads/$image-med.jpg",
           name = "$image-mde",
           size = size * 4,
@@ -40,7 +46,7 @@ object TestUtils {
           mime = "jpg",
           formats = null
         ),
-        large = Image(
+        large = ImageResponseDTO(
           url = "uploads/$image-lg.jpg",
           name = "$image-lg",
           size = size * 5,
@@ -51,4 +57,23 @@ object TestUtils {
         )
       )
     )
+
+  fun mockGet(wireMockServer: WireMockServer, uri: String, responseBodyFile: String) {
+    wireMockServer.addStubMapping(
+      WireMock.stubFor(
+        WireMock.get(WireMock.urlEqualTo(uri))
+          .willReturn(
+            WireMock.aResponse()
+              .withHeader("Content-Type", "application/json")
+              .withBody(
+                Files.lines(
+                  ClassPathResource(responseBodyFile).file.toPath()
+                ).collect(Collectors.joining(System.lineSeparator()))
+              )
+          )
+      )
+    )
+  }
+
+  inline fun <reified T> random() : T = arbitrary()
 }
