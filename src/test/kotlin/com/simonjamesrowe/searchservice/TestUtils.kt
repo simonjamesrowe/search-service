@@ -2,8 +2,11 @@ package com.simonjamesrowe.searchservice
 
 import com.github.tomakehurst.wiremock.WireMockServer
 import com.github.tomakehurst.wiremock.client.WireMock
+import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
 import com.simonjamesrowe.model.cms.dto.ImageResponseDTO
 import com.tyro.oss.arbitrater.arbitrary
+import org.jeasy.random.EasyRandom
+import org.jeasy.random.EasyRandomParameters
 import org.springframework.core.io.ClassPathResource
 import java.nio.file.Files
 import java.util.stream.Collectors
@@ -75,5 +78,13 @@ object TestUtils {
     )
   }
 
-  inline fun <reified T> random() : T = arbitrary()
+  inline fun <reified T> randomObject(args : Map<String, Any> = mapOf()) : T {
+    var parameters = EasyRandomParameters()
+    args.forEach{ param ->
+      parameters = parameters.randomize({ it.name == param.key}, { param.value })
+    }
+
+    return EasyRandom(parameters).nextObject(T::class.java)
+  }
+
 }

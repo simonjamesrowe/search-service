@@ -48,6 +48,7 @@ dependencies {
 	testImplementation("org.awaitility:awaitility:4.0.3")
 	testImplementation("com.simonjamesrowe:component-test:0.0.8")
 	testImplementation("com.tyro.oss:arbitrater:1.0.0")
+	testImplementation("org.jeasy:easy-random-core:5.0.0")
 }
 
 dependencyManagement {
