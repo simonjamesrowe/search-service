@@ -10,8 +10,10 @@ class IndexBlogUseCase(
 ) {
 
   fun indexBlogs(indexBlogRequests: Collection<IndexBlogRequest>) {
-    blogIndexRepository.indexBlogs(indexBlogRequests.filter { it.published })
-    blogIndexRepository.deleteBlogs(indexBlogRequests.filter { !it.published }.map { it.id })
+    if (indexBlogRequests.any { it.published })
+      blogIndexRepository.indexBlogs(indexBlogRequests.filter { it.published })
+    if (indexBlogRequests.any { !it.published })
+      blogIndexRepository.deleteBlogs(indexBlogRequests.filter { !it.published }.map { it.id })
   }
 
 }
