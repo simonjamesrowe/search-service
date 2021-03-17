@@ -2,7 +2,7 @@ package com.simonjamesrowe.searchservice
 
 import co.elastic.apm.attach.ElasticApmAttacher
 import co.elastic.apm.opentracing.ElasticApmTracer
-import com.simonjamesrowe.searchservice.config.CmsProperties
+import com.simonjamesrowe.searchservice.dataproviders.cms.CmsProperties
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties

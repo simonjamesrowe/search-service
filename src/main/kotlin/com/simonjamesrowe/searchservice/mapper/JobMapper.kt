@@ -1,11 +1,11 @@
 package com.simonjamesrowe.searchservice.mapper
 
-import com.simonjamesrowe.model.data.Job
-import com.simonjamesrowe.searchservice.document.SiteDocument
+import com.simonjamesrowe.model.cms.dto.JobResponseDTO
+import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 
 object JobMapper {
-  fun toSiteDocument(job: Job) =
-    SiteDocument(
+  fun toIndexSiteRequest(job: JobResponseDTO) =
+    IndexSiteRequest(
       id = "job_${job.id}",
       siteUrl = "/jobs/${job.id}",
       shortDescription = job.shortDescription,

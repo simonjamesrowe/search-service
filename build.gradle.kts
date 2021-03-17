@@ -30,7 +30,7 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 	implementation("io.github.openfeign:feign-jackson:11.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
-	implementation("com.simonjamesrowe:model:0.0.12")
+	implementation("com.simonjamesrowe:model:0.0.19")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
@@ -47,6 +47,8 @@ dependencies {
 	testImplementation("com.ninja-squad:springmockk:3.0.1")
 	testImplementation("org.awaitility:awaitility:4.0.3")
 	testImplementation("com.simonjamesrowe:component-test:0.0.8")
+	testImplementation("com.tyro.oss:arbitrater:1.0.0")
+	testImplementation("org.jeasy:easy-random-core:5.0.0")
 }
 
 dependencyManagement {
