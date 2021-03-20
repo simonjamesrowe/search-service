@@ -13,9 +13,9 @@ import org.elasticsearch.search.aggregations.AggregationBuilders
 import org.elasticsearch.search.aggregations.AggregatorFactories
 import org.elasticsearch.search.aggregations.BucketOrder
 import org.elasticsearch.search.builder.SearchSourceBuilder
-import org.springframework.stereotype.Repository
+import org.springframework.stereotype.Service
 
-@Repository
+@Service
 class SiteSearchRepository(
   private val highLevelClient: RestHighLevelClient,
   private val elasticSearchIndexProperties: ElasticSearchIndexProperties,
@@ -79,22 +79,4 @@ class SiteSearchRepository(
       image = indexSiteRequest.image
     )
 
-  /**
-  fun saveSkills(skills: List<Skill>) {
-  if (skills.isNotEmpty()) {
-  log.info("Updating site document with ${skills.size} skill documents")
-  val skillsGroups = cmsRestApi.getAllSkillsGroups()
-  skillsGroups.forEach { siteDocumentRepository.saveAll(SkillsGroupMapper.toSiteDocuments(it)) }
-  }
-  }
-
-  fun saveJobs(jobs: List<Job>) {
-  log.info("Updating site document with ${jobs.size} job documents")
-  jobs.map(::toSiteDocument).run { siteDocumentRepository.saveAll(this) }
-  }
-
-  fun saveBlogs(blogs: List<Blog>) {
-  log.info("Updating site document with ${blogs.size} blog documents")
-  blogs.map { BlogMapper.toSiteDocument(it) }.run { siteDocumentRepository.saveAll(this) }
-  }**/
 }

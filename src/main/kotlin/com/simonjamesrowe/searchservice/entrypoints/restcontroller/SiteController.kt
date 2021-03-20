@@ -13,6 +13,6 @@ class SiteController(
 ) {
 
   @GetMapping("/site")
-  fun siteSearch(@RequestParam q: String) = searchSiteUseCase.search(q)
+  suspend fun siteSearch(@RequestParam q: String) = searchSiteUseCase.search(q)
 
 }

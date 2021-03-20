@@ -13,10 +13,10 @@ class BlogController(
 ) {
 
   @GetMapping(value = ["/blogs"], params = ["q"])
-  fun search(@RequestParam q: String) = searchBlogsUseCase.search(q)
+  suspend fun search(@RequestParam q: String) = searchBlogsUseCase.search(q)
 
   @GetMapping(value = ["/blogs"], params = ["!q"])
-  fun getAll() = searchBlogsUseCase.getAll()
+  suspend fun getAll() = searchBlogsUseCase.getAll()
 
 
 }
