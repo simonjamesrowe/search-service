@@ -2,11 +2,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 
 plugins {
-	id("org.springframework.boot") version "2.4.2"
+	id("org.springframework.boot") version "2.4.3"
 	id("io.spring.dependency-management") version "1.0.10.RELEASE"
 	id("maven-publish")
 	id("org.sonarqube") version "3.1.1"
 	id("jacoco")
+	id("org.springframework.experimental.aot") version "0.9.0"
 	kotlin("jvm") version "1.4.21"
 	kotlin("plugin.spring") version "1.4.21"
 }
@@ -26,6 +27,7 @@ extra["springCloudVersion"] = "2020.0.1"
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.experimental:spring-native:0.9.0")
 	implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-starter:1.0.1")
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 	implementation("io.github.openfeign:feign-jackson:11.0")
@@ -84,6 +86,10 @@ publishing {
 }
 
 tasks.getByName<BootBuildImage>("bootBuildImage") {
+	builder = "paketobuildpacks/builder:tiny"
+	environment = mapOf(
+		"BP_NATIVE_IMAGE" to "true"
+	)
 	imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
 }
 
