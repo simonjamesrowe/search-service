@@ -20,6 +20,7 @@ repositories {
 	maven { url = uri("https://nexus-jx.simonjamesrowe.com/repository/maven-group/") }
 	mavenCentral()
 	maven { url = uri("https://repo.spring.io/milestone") }
+	maven { url = uri("https://repo.spring.io/release") }
 }
 
 extra["springCloudVersion"] = "2020.0.1"
