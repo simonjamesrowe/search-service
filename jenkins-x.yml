@@ -1,1 +1,1 @@
-buildPack: gradle6-java11-k8s
+buildPack: gradle6-java11-graalvm-k8s
