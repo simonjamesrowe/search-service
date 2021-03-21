@@ -1,6 +1,5 @@
 package com.simonjamesrowe.searchservice
 
-import co.elastic.apm.attach.ElasticApmAttacher
 import co.elastic.apm.opentracing.ElasticApmTracer
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import com.simonjamesrowe.searchservice.core.model.BlogSearchResult
@@ -30,6 +29,6 @@ class SearchServiceApplication {
 }
 
 fun main(args: Array<String>) {
-  ElasticApmAttacher.attach()
+  //ElasticApmAttacher.attach()
   runApplication<SearchServiceApplication>(*args)
 }
