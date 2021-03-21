@@ -6,6 +6,7 @@ import com.simonjamesrowe.searchservice.config.ElasticSearchDocumentNameConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.tyro.oss.arbitrater.arbitrary
+import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -82,7 +83,7 @@ internal class SiteSearchRepositoryTest {
   }
 
   @Test
-  fun `should return relevant results`() {
+  fun `should return relevant results`() = runBlocking<Unit> {
     val results = siteSearchRepository.search("spring")
     assertThat(results).hasSize(3)
     assertThat(results[0].type).isEqualTo("Blog")

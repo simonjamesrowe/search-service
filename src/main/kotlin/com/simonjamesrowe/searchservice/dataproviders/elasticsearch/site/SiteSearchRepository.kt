@@ -60,9 +60,9 @@ class SiteSearchRepository(
     return SiteResultMapper.mapList(results)
   }
 
-  override fun search(q: String): List<SiteSearchResult> = searchSite(q)
+  override suspend fun search(q: String): List<SiteSearchResult> = searchSite(q)
 
-  override fun getAll() = searchSite()
+  override suspend fun getAll() = searchSite()
 
   override fun indexSites(requests: Collection<IndexSiteRequest>) {
     siteDocumentRepository.saveAll(requests.map(::toSiteDocument))

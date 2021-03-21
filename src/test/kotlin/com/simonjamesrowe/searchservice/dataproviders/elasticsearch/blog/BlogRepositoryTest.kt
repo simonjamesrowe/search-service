@@ -7,6 +7,7 @@ import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import com.simonjamesrowe.searchservice.core.model.BlogSearchResult
 import com.simonjamesrowe.searchservice.core.model.IndexBlogRequest
 import com.tyro.oss.arbitrater.arbitrary
+import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -86,23 +87,23 @@ internal class BlogRepositoryTest {
   }
 
   @Test
-  fun `should return all blogs`() {
+  fun `should return all blogs`() = runBlocking<Unit> {
     assertThat(blogRepository.getAll()).hasSize(3)
   }
 
   @Test
-  fun `should return correct search results`() {
+  fun `should return correct search results`() = runBlocking<Unit> {
     assertThat(blogRepository.search("kotlin")).hasSize(2)
   }
 
   @Test
-  fun `should delete document`() {
+  fun `should delete document`() = runBlocking<Unit> {
     blogRepository.deleteBlog("2")
     assertThat(blogRepository.getAll()).hasSize(2)
   }
 
   @Test
-  fun `should delete documents`() {
+  fun `should delete documents`() = runBlocking<Unit> {
     blogRepository.deleteBlogs(listOf("1", "3"))
     assertThat(blogRepository.getAll()).hasSize(1)
   }

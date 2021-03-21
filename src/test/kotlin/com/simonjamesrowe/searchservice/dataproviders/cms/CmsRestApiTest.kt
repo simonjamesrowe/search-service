@@ -18,7 +18,7 @@ import org.springframework.test.context.ActiveProfiles
 import java.time.LocalDate
 
 @JsonTest
-@AutoConfigureWireMock
+@AutoConfigureWireMock(port = 0)
 @ActiveProfiles("cms")
 @ImportAutoConfiguration(FeignAutoConfiguration::class, FeignClientsConfiguration::class)
 @EnableConfigurationProperties(CmsProperties::class)
@@ -41,7 +41,7 @@ internal class CmsRestApiTest {
   @Test
   fun `should return all blogs from cms`() {
     val result = cmsRestApi.getAllBlogs()
-    assertThat(result).hasSize(16)
+    assertThat(result).hasSize(10)
     assertThat(result[0]).hasFieldOrPropertyWithValue("id", "5f0215c69d8081001fd38fa1")
     assertThat(result[0]).hasFieldOrPropertyWithValue("published", true)
     assertThat(result[0].tags.map { it.name }).contains("Kubernetes", "Jenkins", "Strapi", "TLS", "MongoDB", "React")

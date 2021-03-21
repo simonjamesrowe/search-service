@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service
 class SearchSiteUseCase(
   private val siteSearchRepository: SiteSearchRepository
 ) {
-  fun search(q: String) = siteSearchRepository.search(q)
-  fun getAll() = siteSearchRepository.getAll()
+  suspend fun search(q: String) = siteSearchRepository.search(q)
+  suspend fun getAll() = siteSearchRepository.getAll()
 }

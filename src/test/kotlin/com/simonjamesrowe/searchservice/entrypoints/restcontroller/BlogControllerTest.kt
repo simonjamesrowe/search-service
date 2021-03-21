@@ -4,6 +4,8 @@ import com.ninjasquad.springmockk.MockkBean
 import com.simonjamesrowe.searchservice.core.model.BlogSearchResult
 import com.simonjamesrowe.searchservice.core.usecase.SearchBlogsUseCase
 import com.tyro.oss.arbitrater.arbitraryInstance
+import io.mockk.coEvery
+import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.verify
 import org.junit.jupiter.api.Test
@@ -30,7 +32,7 @@ internal class BlogControllerTest {
       BlogSearchResult::class.arbitraryInstance(),
       BlogSearchResult::class.arbitraryInstance()
     )
-    every { searchBlogsUseCase.search("kotlin") } returns searchResults
+    coEvery { searchBlogsUseCase.search("kotlin") } returns searchResults
 
     webClient.get().uri("/blogs?q={q}", "kotlin").accept(MediaType.APPLICATION_JSON)
       .exchange()
@@ -43,7 +45,7 @@ internal class BlogControllerTest {
       .jsonPath("$[0].thumbnailImage").isEqualTo(searchResults[0].thumbnailImage)
       .jsonPath("$[0].title").isEqualTo(searchResults[0].title)
 
-    verify { searchBlogsUseCase.search("kotlin") }
+    coVerify { searchBlogsUseCase.search("kotlin") }
   }
 
   @Test
@@ -53,7 +55,7 @@ internal class BlogControllerTest {
       BlogSearchResult::class.arbitraryInstance(),
       BlogSearchResult::class.arbitraryInstance()
     )
-    every { searchBlogsUseCase.getAll() } returns searchResults
+    coEvery { searchBlogsUseCase.getAll() } returns searchResults
 
     webClient.get().uri("/blogs").accept(MediaType.APPLICATION_JSON)
       .exchange()
@@ -66,7 +68,7 @@ internal class BlogControllerTest {
       .jsonPath("$[0].thumbnailImage").isEqualTo(searchResults[0].thumbnailImage)
       .jsonPath("$[0].title").isEqualTo(searchResults[0].title)
 
-    verify { searchBlogsUseCase.getAll() }
+    coVerify { searchBlogsUseCase.getAll() }
   }
 
 }

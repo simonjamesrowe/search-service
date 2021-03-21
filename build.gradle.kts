@@ -3,13 +3,13 @@ import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 
 plugins {
 	id("org.springframework.boot") version "2.4.3"
-	id("io.spring.dependency-management") version "1.0.10.RELEASE"
+	id("io.spring.dependency-management") version "1.0.11.RELEASE"
 	id("maven-publish")
 	id("org.sonarqube") version "3.1.1"
 	id("jacoco")
 	id("org.springframework.experimental.aot") version "0.9.0"
-	kotlin("jvm") version "1.4.21"
-	kotlin("plugin.spring") version "1.4.21"
+	kotlin("jvm") version "1.4.31"
+	kotlin("plugin.spring") version "1.4.31"
 }
 val gradlePropertiesProp = project.properties
 
@@ -34,6 +34,7 @@ dependencies {
 	implementation("io.github.openfeign:feign-jackson:11.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
 	implementation("com.simonjamesrowe:model:0.0.19")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
@@ -49,7 +50,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("com.ninja-squad:springmockk:3.0.1")
 	testImplementation("org.awaitility:awaitility:4.0.3")
-	testImplementation("com.simonjamesrowe:component-test:0.0.8")
+	testImplementation("com.simonjamesrowe:component-test:0.0.10")
 	testImplementation("com.tyro.oss:arbitrater:1.0.0")
 	testImplementation("org.jeasy:easy-random-core:5.0.0")
 }
