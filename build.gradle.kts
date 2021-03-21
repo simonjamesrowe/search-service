@@ -69,6 +69,7 @@ tasks.withType<KotlinCompile> {
 }
 tasks.withType<Test> {
 	useJUnitPlatform()
+	jvmArgs("-agentlib:native-image-agent=config-output-dir=build/resources/aot/META-INF/native-image")
 	finalizedBy(tasks.jacocoTestReport)
 }
 
@@ -86,6 +87,11 @@ publishing {
 		}
 	}
 }
+
+springAot {
+	removeUnusedConfig.set(false)
+}
+
 
 tasks.getByName<BootBuildImage>("bootBuildImage") {
 	builder = "paketobuildpacks/builder:tiny"
