@@ -69,6 +69,8 @@ tasks.withType<KotlinCompile> {
 }
 tasks.withType<Test> {
 	useJUnitPlatform()
+	minHeapSize = "2g"
+	maxHeapSize = "4g"
 	jvmArgs("-agentlib:native-image-agent=config-output-dir=build/resources/aot/META-INF/native-image")
 	finalizedBy(tasks.jacocoTestReport)
 }
