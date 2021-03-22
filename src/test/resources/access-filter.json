@@ -1,0 +1,28 @@
+{
+  "rules": [
+    {
+      "excludeClasses": "io.mockk.**"
+    },
+    {
+      "excludeClasses": "org.junit.**"
+    },
+    {
+      "excludeClasses": "org.mockito.**"
+    },
+    {
+      "excludeClasses": "org.springframework.test.**"
+    },
+    {
+      "excludeClasses": "org.springframework.boot.test.**"
+    },
+    {
+      "excludeClasses": "com.github.tomakehurst.wiremock.**"
+    },
+    {
+      "excludeClasses": "org.jeasy.**"
+    },
+    {
+      "excludeClasses": "org.testcontainers.**"
+    }
+  ]
+}

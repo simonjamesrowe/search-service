@@ -71,7 +71,7 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 	minHeapSize = "2g"
 	maxHeapSize = "4g"
-	jvmArgs("-agentlib:native-image-agent=config-output-dir=build/resources/aot/META-INF/native-image")
+	jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,config-output-dir=build/resources/aot/META-INF/native-image")
 	finalizedBy(tasks.jacocoTestReport)
 }
 
@@ -98,7 +98,8 @@ springAot {
 tasks.getByName<BootBuildImage>("bootBuildImage") {
 	builder = "paketobuildpacks/builder:tiny"
 	environment = mapOf(
-		"BP_NATIVE_IMAGE" to "true"
+		"BP_NATIVE_IMAGE" to "true",
+		"BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--initialize-at-run-time=net.logstash,com.fasterxml.jackson.databind"
 	)
 	imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
 }
