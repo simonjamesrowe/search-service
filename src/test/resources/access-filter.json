@@ -16,6 +16,9 @@
       "excludeClasses": "org.springframework.boot.test.**"
     },
     {
+      "excludeClasses": "org.springframework.web.servlet.**"
+    },
+    {
       "excludeClasses": "com.github.tomakehurst.wiremock.**"
     },
     {
