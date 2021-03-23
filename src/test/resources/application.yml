@@ -1,4 +1,3 @@
-
 cms:
   url: https://api.simonjamesrowe.com
 spring:
@@ -54,4 +53,8 @@ elasticsearch:
   index:
     blog: blog_${namespace:local}
     site: site_${namespace:local}
+
+
+logging:
+  level: classpath:logback.xml
 

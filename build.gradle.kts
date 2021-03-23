@@ -98,8 +98,7 @@ springAot {
 tasks.getByName<BootBuildImage>("bootBuildImage") {
 	builder = "paketobuildpacks/builder:tiny"
 	environment = mapOf(
-		"BP_NATIVE_IMAGE" to "true",
-		"BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--initialize-at-run-time=com.fasterxml.jackson.core.util.BufferRecyclers,com.fasterxml.jackson.databind.type.TypeFactory,net.logstash.logback.Logback11Support,com.fasterxml.jackson.databind.SerializationConfig,com.fasterxml.jackson.databind.DeserializationConfig,com.fasterxml.jackson.databind.cfg.BaseSettings,com.fasterxml.jackson.databind.cfg.ContextAttributes\$Impl,com.fasterxml.jackson.databind.cfg.MapperConfigBase,com.fasterxml.jackson.annotation.JsonInclude\$Value,com.fasterxml.jackson.databind.MappingJsonFactory,com.fasterxml.jackson.databind.type.SimpleType,com.fasterxml.jackson.core.JsonFactory,com.fasterxml.jackson.annotation.JsonSetter\$Value,com.fasterxml.jackson.databind.type.TypeBase,com.fasterxml.jackson.databind.ObjectMapper,com.fasterxml.jackson.databind.deser.BeanDeserializerFactory,com.fasterxml.jackson.databind.ser.BasicSerializerFactory,com.fasterxml.jackson.databind.introspect.VisibilityChecker\$Std,com.fasterxml.jackson.core.io.CharTypes,com.fasterxml.jackson.databind.cfg.MapperConfig,com.fasterxml.jackson.databind.deser.std.StdDeserializer,com.fasterxml.jackson.databind.introspect.BasicClassIntrospector,com.fasterxml.jackson.databind.ser.BeanSerializerFactory"
+		"BP_NATIVE_IMAGE" to "true"
 	)
 	imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
 }
