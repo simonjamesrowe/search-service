@@ -99,7 +99,7 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
 	builder = "paketobuildpacks/builder:tiny"
 	environment = mapOf(
 		"BP_NATIVE_IMAGE" to "true",
-		"BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--initialize-at-run-time=net.logstash,com.fasterxml.jackson.databind"
+		"BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--initialize-at-run-time=net.logstash,com.fasterxml.jackson.databind.**"
 	)
 	imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
 }
