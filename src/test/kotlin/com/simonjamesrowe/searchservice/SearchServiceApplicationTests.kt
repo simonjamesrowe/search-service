@@ -9,8 +9,12 @@ import org.junit.jupiter.api.Test
 @WithKafkaContainer
 class SearchServiceApplicationTests : BaseComponentTest() {
 
-	@Test
-	fun contextLoads() {
-	}
+  init {
+    partitionCount = 1
+  }
+
+  @Test
+  fun contextLoads() {
+  }
 
 }

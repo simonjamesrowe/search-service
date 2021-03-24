@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice.entrypoints.streamlistener
+package com.simonjamesrowe.searchservice.entrypoints.kafka
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.convertValue
@@ -17,7 +17,7 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.cloud.stream.function.StreamBridge
+import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.test.annotation.DirtiesContext
 import java.time.Duration
 import java.time.LocalDate
@@ -28,8 +28,12 @@ import java.time.ZonedDateTime
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
 internal class KafkaEventConsumerITest : BaseComponentTest() {
 
+  init {
+    partitionCount = 1
+  }
+
   @Autowired
-  private lateinit var streamBridge: StreamBridge
+  private lateinit var kafkaTemplate: KafkaTemplate<Any, Any>
 
   @Autowired
   private lateinit var objectMapper: ObjectMapper
@@ -117,7 +121,7 @@ internal class KafkaEventConsumerITest : BaseComponentTest() {
           updatedAt = ZonedDateTime.now(),
           rating = 4.0,
           order = 1,
-          image = image("test-containers",5 ),
+          image = image("test-containers", 5),
           includeOnResume = true
         )
       ),
@@ -186,10 +190,10 @@ internal class KafkaEventConsumerITest : BaseComponentTest() {
       model = "blog",
       entry = objectMapper.convertValue(blog3)
     )
-    streamBridge.send("output", event1)
-    streamBridge.send("output", event2)
-    streamBridge.send("output", event3)
-    streamBridge.send("output", event4)
+    kafkaTemplate.send("LOCAL_EVENTS", event1)
+    kafkaTemplate.send("LOCAL_EVENTS", event2)
+    kafkaTemplate.send("LOCAL_EVENTS", event3)
+    kafkaTemplate.send("LOCAL_EVENTS", event4)
 
     await().atMost(Duration.ofSeconds(30)).until {
       blogDocumentRepository.count() == 2L

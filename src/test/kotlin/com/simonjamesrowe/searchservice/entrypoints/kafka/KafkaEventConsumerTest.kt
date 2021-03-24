@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice.entrypoints.streamlistener
+package com.simonjamesrowe.searchservice.entrypoints.kafka
 
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
@@ -53,7 +53,7 @@ internal class KafkaEventConsumerTest {
   }
 
   @Test
-  fun `consuming webhook blog events will index blogs and site`() {
+  fun `consuming webhook blog events will index blogs and site`() = runBlocking<Unit> {
     val blog1 = randomObject<BlogResponseDTO>(mapOf("image" to image("blog1", 200)))
     val blog2 = randomObject<BlogResponseDTO>(mapOf("image" to image("blog2", 200)))
     val webhookEvent1 = randomObject<WebhookEventDTO>(
@@ -77,7 +77,7 @@ internal class KafkaEventConsumerTest {
     val siteIndexRequest2 = randomObject<IndexSiteRequest>()
 
     every { BlogMapper.toSiteIndexRequest(any()) } returnsMany listOf(siteIndexRequest1, siteIndexRequest2)
-    kafkaEventConsumer.consumeEvent().accept(webhookEvents)
+    kafkaEventConsumer.consumeEvents(webhookEvents)
 
     verifyOrder {
       indexBlogUseCase.indexBlogs(listOf(indexBlogRequest1, indexBlogRequest2))
@@ -86,7 +86,7 @@ internal class KafkaEventConsumerTest {
   }
 
   @Test
-  fun `consuming webhook job events will site`() {
+  fun `consuming webhook job events will site`() = runBlocking {
     val job1 = randomObject<JobResponseDTO>(mapOf("companyImage" to image("blog1", 200)))
     val job2 = randomObject<JobResponseDTO>(mapOf("companyImage" to image("blog2", 200)))
     val webhookEvent1 = randomObject<WebhookEventDTO>(
@@ -105,7 +105,7 @@ internal class KafkaEventConsumerTest {
     val siteIndexRequest2 = randomObject<IndexSiteRequest>()
 
     every { JobMapper.toIndexSiteRequest(any()) } returnsMany listOf(siteIndexRequest1, siteIndexRequest2)
-    kafkaEventConsumer.consumeEvent().accept(listOf(webhookEvent1,webhookEvent2))
+    kafkaEventConsumer.consumeEvents(listOf(webhookEvent1, webhookEvent2))
 
     verifyOrder {
       indexSiteUseCase.indexSites(listOf(siteIndexRequest1, siteIndexRequest2))
@@ -140,7 +140,7 @@ internal class KafkaEventConsumerTest {
     val siteIndexRequest2 = randomObject<IndexSiteRequest>()
 
     every { SkillsGroupMapper.toSiteIndexRequests(skillsGroup) } returns listOf(siteIndexRequest1, siteIndexRequest2)
-    kafkaEventConsumer.consumeEvent().accept(listOf(webhookEvent1,webhookEvent2))
+    kafkaEventConsumer.consumeEvents(listOf(webhookEvent1, webhookEvent2))
 
     verify {
       indexSiteUseCase.indexSites(listOf(siteIndexRequest1, siteIndexRequest2))
