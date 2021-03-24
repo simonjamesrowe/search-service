@@ -2,7 +2,7 @@ package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site
 
 import com.simonjamesrowe.component.test.TestContainersExtension
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
-import com.simonjamesrowe.searchservice.config.ElasticSearchDocumentNameConfig
+import com.simonjamesrowe.searchservice.config.ElasticSearchConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.tyro.oss.arbitrater.arbitrary
@@ -29,7 +29,7 @@ import org.springframework.context.annotation.Import
   ElasticsearchRestClientAutoConfiguration::class
 )
 @EnableConfigurationProperties(ElasticSearchIndexProperties::class)
-@Import(SiteDocumentIndexConfig::class, SiteSearchRepository::class, ElasticSearchDocumentNameConfig::class)
+@Import(SiteDocumentIndexConfig::class, SiteSearchRepository::class, ElasticSearchConfig::class)
 internal class SiteSearchRepositoryTest {
 
   @Autowired

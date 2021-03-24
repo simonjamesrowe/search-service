@@ -2,9 +2,14 @@ package com.simonjamesrowe.searchservice.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.nativex.hint.TypeHint
+import java.time.LocalDate
 
 @Configuration
-class ElasticSearchDocumentNameConfig {
+@TypeHint(
+  types = [LocalDate::class]
+)
+class ElasticSearchConfig {
 
   @Bean
   fun blogIndexName(

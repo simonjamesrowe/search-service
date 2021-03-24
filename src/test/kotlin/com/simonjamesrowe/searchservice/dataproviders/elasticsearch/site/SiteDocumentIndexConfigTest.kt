@@ -1,14 +1,10 @@
 package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site
 
-import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.TestContainersExtension
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
-import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
-import com.simonjamesrowe.searchservice.config.ElasticSearchDocumentNameConfig
+import com.simonjamesrowe.searchservice.config.ElasticSearchConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
-import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog.BlogDocumentIndexConfig
 import org.assertj.core.api.Assertions
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -32,7 +28,7 @@ import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates
   ElasticsearchRestClientAutoConfiguration::class
 )
 @EnableConfigurationProperties(ElasticSearchIndexProperties::class)
-@Import(SiteDocumentIndexConfig::class, ElasticSearchDocumentNameConfig::class)
+@Import(SiteDocumentIndexConfig::class, ElasticSearchConfig::class)
 internal class SiteDocumentIndexConfigTest {
 
   @Autowired

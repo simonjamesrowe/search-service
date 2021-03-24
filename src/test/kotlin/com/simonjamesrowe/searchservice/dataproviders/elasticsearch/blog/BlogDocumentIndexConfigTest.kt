@@ -2,7 +2,7 @@ package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog
 
 import com.simonjamesrowe.component.test.TestContainersExtension
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
-import com.simonjamesrowe.searchservice.config.ElasticSearchDocumentNameConfig
+import com.simonjamesrowe.searchservice.config.ElasticSearchConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -28,7 +28,7 @@ import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates
   ElasticsearchRestClientAutoConfiguration::class
 )
 @EnableConfigurationProperties(ElasticSearchIndexProperties::class)
-@Import(BlogDocumentIndexConfig::class, ElasticSearchDocumentNameConfig::class)
+@Import(BlogDocumentIndexConfig::class, ElasticSearchConfig::class)
 internal class BlogDocumentIndexConfigTest {
 
   @Autowired

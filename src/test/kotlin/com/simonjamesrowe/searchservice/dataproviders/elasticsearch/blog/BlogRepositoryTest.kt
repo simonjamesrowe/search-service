@@ -2,7 +2,7 @@ package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog
 
 import com.simonjamesrowe.component.test.TestContainersExtension
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
-import com.simonjamesrowe.searchservice.config.ElasticSearchDocumentNameConfig
+import com.simonjamesrowe.searchservice.config.ElasticSearchConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import com.simonjamesrowe.searchservice.core.model.BlogSearchResult
 import com.simonjamesrowe.searchservice.core.model.IndexBlogRequest
@@ -32,7 +32,7 @@ import java.time.LocalDate
   ElasticsearchRestClientAutoConfiguration::class
 )
 @EnableConfigurationProperties(ElasticSearchIndexProperties::class)
-@Import(BlogDocumentIndexConfig::class, BlogRepository::class, ElasticSearchDocumentNameConfig::class)
+@Import(BlogDocumentIndexConfig::class, BlogRepository::class, ElasticSearchConfig::class)
 internal class BlogRepositoryTest {
 
   @Autowired
