@@ -50,8 +50,6 @@ spring:
     consumer:
       properties:
         spring.json.trusted.packages: com.simonjamesrowe.model
-  main:
-    web-application-type: reactive
 
 elasticsearch:
   index:
