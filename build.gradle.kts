@@ -27,7 +27,7 @@ repositories {
 extra["springCloudVersion"] = "2020.0.2"
 
 dependencies {
-  implementation("org.springframework.boot:spring-boot-starter-actuator")
+  //implementation("org.springframework.boot:spring-boot-starter-actuator")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("io.projectreactor.netty:reactor-netty")
   implementation("org.springframework.experimental:spring-native:0.9.2-SNAPSHOT")
