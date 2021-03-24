@@ -2,12 +2,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 
 plugins {
-  id("org.springframework.boot") version "2.4.3"
+  id("org.springframework.boot") version "2.4.4"
   id("io.spring.dependency-management") version "1.0.11.RELEASE"
   id("maven-publish")
   id("org.sonarqube") version "3.1.1"
   id("jacoco")
-  id("org.springframework.experimental.aot") version "0.9.0"
+  id("org.springframework.experimental.aot") version "0.9.2-SNAPSHOT"
   kotlin("jvm") version "1.4.31"
   kotlin("plugin.spring") version "1.4.31"
 }
@@ -21,15 +21,16 @@ repositories {
   mavenCentral()
   maven { url = uri("https://repo.spring.io/milestone") }
   maven { url = uri("https://repo.spring.io/release") }
+  maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
-extra["springCloudVersion"] = "2020.0.1"
+extra["springCloudVersion"] = "2020.0.2"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
-  implementation("org.springframework.experimental:spring-native:0.9.0")
-  implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
+  implementation("org.springframework.experimental:spring-native:0.9.2-SNAPSHOT")
+  //implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
   implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
   implementation("io.github.openfeign:feign-jackson:11.0")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
@@ -41,9 +42,7 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("com.ninja-squad:springmockk:3.0.1")
   testImplementation("org.awaitility:awaitility:4.0.3")
-  testImplementation("com.simonjamesrowe:component-test:0.0.11") {
-    exclude(group = "org.springframework.boot", module = "spring-boot-starter-web")
-  }
+  testImplementation("com.simonjamesrowe:component-test:0.0.11")
   testImplementation("com.tyro.oss:arbitrater:1.0.0")
   testImplementation("org.jeasy:easy-random-core:5.0.0")
 }
