@@ -28,14 +28,14 @@ class CmsSynchronization(
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  fun syncBlogDocuments() {
+  suspend fun syncBlogDocuments() {
     log.info("Synchronising blog documents from cms")
     val allBlogs = cmsRestApi.getAllBlogs()
     indexBlogUseCase.indexBlogs(allBlogs.map(::toBlogIndexRequest))
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  fun syncSiteDocuments() {
+  suspend fun syncSiteDocuments() {
     log.info("Synchronising site documents from cms")
     val allBlogs = cmsRestApi.getAllBlogs()
     val allJobs = cmsRestApi.getAllJobs()

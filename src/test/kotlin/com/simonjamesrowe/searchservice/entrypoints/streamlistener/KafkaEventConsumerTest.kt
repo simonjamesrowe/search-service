@@ -16,6 +16,7 @@ import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper
 import io.mockk.*
 import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.junit5.MockKExtension
+import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -112,7 +113,7 @@ internal class KafkaEventConsumerTest {
   }
 
   @Test
-  fun `consuming webhook skill events will site`() {
+  fun `consuming webhook skill events will site`() = runBlocking<Unit> {
     val skill1 = randomObject<SkillResponseDTO>(mapOf("image" to image("blog1", 200)))
     val skill2 = randomObject<SkillResponseDTO>(mapOf("image" to image("blog2", 200)))
     val webhookEvent1 = randomObject<WebhookEventDTO>(
@@ -133,7 +134,7 @@ internal class KafkaEventConsumerTest {
         "image" to image("skillGroup", 300)
       )
     )
-    every { cmsRestApi.getAllSkillsGroups() } returns listOf(skillsGroup)
+    coEvery { cmsRestApi.getAllSkillsGroups() } returns listOf(skillsGroup)
 
     val siteIndexRequest1 = randomObject<IndexSiteRequest>()
     val siteIndexRequest2 = randomObject<IndexSiteRequest>()

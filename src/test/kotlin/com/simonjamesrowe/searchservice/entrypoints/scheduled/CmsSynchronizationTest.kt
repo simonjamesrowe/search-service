@@ -14,6 +14,7 @@ import io.mockk.*
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.junit5.MockKExtension
+import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -48,11 +49,11 @@ internal class CmsSynchronizationTest {
   }
 
   @Test
-  fun `should index blog documents`() {
+  fun `should index blog documents`() = runBlocking<Unit>{
     val blog1 = TestUtils.randomObject<BlogResponseDTO>(mapOf("image" to TestUtils.image("blog1", 200)))
     val blog2 = TestUtils.randomObject<BlogResponseDTO>(mapOf("image" to TestUtils.image("blog2", 200)))
 
-    every { cmsRestApi.getAllBlogs() } returns listOf(blog1, blog2)
+    coEvery { cmsRestApi.getAllBlogs() } returns listOf(blog1, blog2)
 
     val indexBlogRequest1 = TestUtils.randomObject<IndexBlogRequest>()
     val indexBlogRequest2 = TestUtils.randomObject<IndexBlogRequest>()
@@ -67,11 +68,11 @@ internal class CmsSynchronizationTest {
   }
 
   @Test
-  fun `should index site documents`() {
+  fun `should index site documents`() = runBlocking{
 
     val blog1 = TestUtils.randomObject<BlogResponseDTO>(mapOf("image" to TestUtils.image("blog1", 200)))
     val blog2 = TestUtils.randomObject<BlogResponseDTO>(mapOf("image" to TestUtils.image("blog2", 200)))
-    every { cmsRestApi.getAllBlogs() } returns listOf(blog1, blog2)
+    coEvery { cmsRestApi.getAllBlogs() } returns listOf(blog1, blog2)
 
     val siteIndexRequest1 = TestUtils.randomObject<IndexSiteRequest>()
     val siteIndexRequest2 = TestUtils.randomObject<IndexSiteRequest>()
@@ -79,7 +80,7 @@ internal class CmsSynchronizationTest {
 
     val job1 = TestUtils.randomObject<JobResponseDTO>(mapOf("companyImage" to TestUtils.image("blog1", 200)))
     val job2 = TestUtils.randomObject<JobResponseDTO>(mapOf("companyImage" to TestUtils.image("blog2", 200)))
-    every { cmsRestApi.getAllJobs() } returns listOf(job1, job2)
+    coEvery { cmsRestApi.getAllJobs() } returns listOf(job1, job2)
 
     val siteIndexRequest3 = TestUtils.randomObject<IndexSiteRequest>()
     val siteIndexRequest4 = TestUtils.randomObject<IndexSiteRequest>()
@@ -100,7 +101,7 @@ internal class CmsSynchronizationTest {
         "image" to TestUtils.image("skillGroup2", 300)
       )
     )
-    every { cmsRestApi.getAllSkillsGroups() } returns listOf(skillsGroup1, skillsGroup2)
+    coEvery { cmsRestApi.getAllSkillsGroups() } returns listOf(skillsGroup1, skillsGroup2)
     val siteIndexRequest5 = TestUtils.randomObject<IndexSiteRequest>()
     val siteIndexRequest6 = TestUtils.randomObject<IndexSiteRequest>()
     val siteIndexRequest7 = TestUtils.randomObject<IndexSiteRequest>()

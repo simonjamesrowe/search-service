@@ -5,6 +5,8 @@ spring:
   jackson:
     serialization:
       write_dates_as_timestamps: false
+  codec:
+    max-in-memory-size: 10MB
   cloud:
     function:
       definition: consumeEvent

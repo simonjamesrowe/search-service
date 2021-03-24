@@ -2,17 +2,15 @@ package com.simonjamesrowe.searchservice.dataproviders.cms
 
 import com.github.tomakehurst.wiremock.WireMockServer
 import com.simonjamesrowe.searchservice.TestUtils.mockGet
-import com.simonjamesrowe.searchservice.config.FeignConfiguration
+import com.simonjamesrowe.searchservice.config.WebClientConfiguration
+import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.test.autoconfigure.json.JsonTest
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock
-import org.springframework.cloud.openfeign.FeignAutoConfiguration
-import org.springframework.cloud.openfeign.FeignClientsConfiguration
 import org.springframework.context.annotation.Import
 import org.springframework.test.context.ActiveProfiles
 import java.time.LocalDate
@@ -20,9 +18,8 @@ import java.time.LocalDate
 @JsonTest
 @AutoConfigureWireMock(port = 0)
 @ActiveProfiles("cms")
-@ImportAutoConfiguration(FeignAutoConfiguration::class, FeignClientsConfiguration::class)
 @EnableConfigurationProperties(CmsProperties::class)
-@Import(FeignConfiguration::class)
+@Import(CmsRestApi::class, WebClientConfiguration::class)
 internal class CmsRestApiTest {
 
   @Autowired
@@ -39,7 +36,7 @@ internal class CmsRestApiTest {
   }
 
   @Test
-  fun `should return all blogs from cms`() {
+  fun `should return all blogs from cms`() = runBlocking<Unit> {
     val result = cmsRestApi.getAllBlogs()
     assertThat(result).hasSize(10)
     assertThat(result[0]).hasFieldOrPropertyWithValue("id", "5f0215c69d8081001fd38fa1")
@@ -52,7 +49,7 @@ internal class CmsRestApiTest {
   }
 
   @Test
-  fun `should return all jobs from cms`() {
+  fun `should return all jobs from cms`() = runBlocking<Unit> {
     val result = cmsRestApi.getAllJobs()
     assertThat(result).hasSize(9)
     assertThat(result[0]).hasFieldOrPropertyWithValue("id", "5e53704f11c196001d06f914")
@@ -66,11 +63,11 @@ internal class CmsRestApiTest {
   }
 
   @Test
-  fun `should return all skills groups from cms`() {
+  fun `should return all skills groups from cms`() = runBlocking<Unit> {
     val result = cmsRestApi.getAllSkillsGroups()
     assertThat(result).hasSize(9)
-    assertThat(result[0]).hasFieldOrPropertyWithValue("name","Java / Kotlin")
-    assertThat(result[0]).hasFieldOrPropertyWithValue("rating",9.2)
+    assertThat(result[0]).hasFieldOrPropertyWithValue("name", "Java / Kotlin")
+    assertThat(result[0]).hasFieldOrPropertyWithValue("rating", 9.2)
     assertThat(result[0].skills).hasSize(3)
   }
 

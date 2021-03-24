@@ -14,6 +14,7 @@ import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
 import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.JobMapper
 import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper
+import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -47,7 +48,7 @@ class KafkaEventConsumer(
       }
     }
 
-  private fun updateSiteSearchIndex(events: List<WebhookEventDTO>) {
+  private fun updateSiteSearchIndex(events: List<WebhookEventDTO>) = runBlocking{
     if (events.any { it.model == TYPE_SKILL }) {
       cmsRestApi.getAllSkillsGroups().map { SkillsGroupMapper.toSiteIndexRequests(it) }.forEach {
         indexSiteUseCase.indexSites(it)
