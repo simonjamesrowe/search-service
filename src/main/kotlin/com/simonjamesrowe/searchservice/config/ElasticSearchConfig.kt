@@ -17,7 +17,9 @@ import java.time.LocalDate
     QPageRequest::class,
     Sort::class,
     Slice::class,
-    Page::class
+    Page::class,
+    Iterable::class,
+    java.lang.Iterable::class
   ]
 )
 class ElasticSearchConfig {
