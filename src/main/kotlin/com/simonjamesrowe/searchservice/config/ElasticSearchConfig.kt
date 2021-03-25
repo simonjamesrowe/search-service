@@ -23,7 +23,9 @@ import java.time.LocalDate
     java.lang.Iterable::class
   ],
   typeNames = [
-    "java.lang.Iterable[]"
+    "java.lang.Iterable[]",
+    "org.springframework.data.domain.Slice[]",
+    "org.springframework.data.domain.Streamable[]"
   ],
   access = AccessBits.FULL_REFLECTION
 )
