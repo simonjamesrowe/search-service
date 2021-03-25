@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.domain.*
 import org.springframework.data.querydsl.QPageRequest
+import org.springframework.nativex.hint.AccessBits
 import org.springframework.nativex.hint.TypeHint
 import java.time.LocalDate
 
@@ -20,7 +21,8 @@ import java.time.LocalDate
     Page::class,
     Iterable::class,
     java.lang.Iterable::class
-  ]
+  ],
+  access = AccessBits.FULL_REFLECTION
 )
 class ElasticSearchConfig {
 
