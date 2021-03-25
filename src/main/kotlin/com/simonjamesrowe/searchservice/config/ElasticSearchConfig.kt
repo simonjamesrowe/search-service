@@ -22,6 +22,9 @@ import java.time.LocalDate
     Iterable::class,
     java.lang.Iterable::class
   ],
+  typeNames = [
+    "java.lang.Iterable[]"
+  ],
   access = AccessBits.FULL_REFLECTION
 )
 class ElasticSearchConfig {
