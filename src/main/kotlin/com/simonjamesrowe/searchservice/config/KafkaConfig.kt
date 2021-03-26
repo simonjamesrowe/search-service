@@ -8,10 +8,12 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.nativex.hint.AccessBits
 import org.springframework.nativex.hint.TypeHint
+import java.time.LocalDateTime
+import java.time.ZonedDateTime
 
 @Configuration
 @TypeHint(
-  types = [WebhookEventDeserializer::class, WebhookEventSerializer::class],
+  types = [WebhookEventDeserializer::class, WebhookEventSerializer::class, ZonedDateTime::class, LocalDateTime::class],
   access = AccessBits.FULL_REFLECTION
 )
 class KafkaConfig {
