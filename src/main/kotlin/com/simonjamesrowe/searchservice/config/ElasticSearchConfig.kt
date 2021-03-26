@@ -28,7 +28,8 @@ import java.time.LocalDate
     "org.springframework.data.domain.Streamable[]",
     "org.springframework.data.domain.Sort[]",
     "org.springframework.data.domain.Pageable[]",
-    "org.springframework.data.domain.Page[]"
+    "org.springframework.data.domain.Page[]",
+    "org.springframework.data.elasticsearch.core.query.Query[]"
   ],
   access = AccessBits.FULL_REFLECTION
 )
