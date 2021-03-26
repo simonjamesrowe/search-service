@@ -25,7 +25,8 @@ import java.time.LocalDate
   typeNames = [
     "java.lang.Iterable[]",
     "org.springframework.data.domain.Slice[]",
-    "org.springframework.data.domain.Streamable[]"
+    "org.springframework.data.domain.Streamable[]",
+    "org.springframework.data.domain.Sort[]"
   ],
   access = AccessBits.FULL_REFLECTION
 )
