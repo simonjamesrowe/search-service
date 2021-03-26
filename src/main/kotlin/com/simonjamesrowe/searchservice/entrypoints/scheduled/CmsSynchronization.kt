@@ -8,6 +8,8 @@ import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.BlogMapper.toBlogIndexRequest
 import com.simonjamesrowe.searchservice.mapper.JobMapper
 import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Profile
 import org.springframework.scheduling.annotation.Scheduled
@@ -28,14 +30,14 @@ class CmsSynchronization(
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  suspend fun syncBlogDocuments() {
+  fun syncBlogDocuments() = GlobalScope.launch {
     log.info("Synchronising blog documents from cms")
     val allBlogs = cmsRestApi.getAllBlogs()
     indexBlogUseCase.indexBlogs(allBlogs.map(::toBlogIndexRequest))
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  suspend fun syncSiteDocuments() {
+  fun syncSiteDocuments() = GlobalScope.launch {
     log.info("Synchronising site documents from cms")
     val allBlogs = cmsRestApi.getAllBlogs()
     val allJobs = cmsRestApi.getAllJobs()
