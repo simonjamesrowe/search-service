@@ -6,10 +6,14 @@ import com.simonjamesrowe.model.config.JacksonConfig
 import com.simonjamesrowe.model.serialization.WebhookEventDeserializer
 import com.simonjamesrowe.model.serialization.WebhookEventSerializer
 import org.apache.kafka.clients.admin.NewTopic
+import org.apache.kafka.clients.consumer.Consumer
+import org.springframework.aop.framework.Advised
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.core.DecoratingProxy
 import org.springframework.nativex.hint.AccessBits
+import org.springframework.nativex.hint.ProxyHint
 import org.springframework.nativex.hint.TypeHint
 import java.time.LocalDateTime
 import java.time.ZonedDateTime
@@ -26,6 +30,13 @@ import java.time.ZonedDateTime
     JacksonConfig::class
   ],
   access = AccessBits.FULL_REFLECTION
+)
+@ProxyHint(
+  types = [
+    Consumer::class,
+    Advised::class,
+    DecoratingProxy::class
+  ]
 )
 class KafkaConfig {
 
