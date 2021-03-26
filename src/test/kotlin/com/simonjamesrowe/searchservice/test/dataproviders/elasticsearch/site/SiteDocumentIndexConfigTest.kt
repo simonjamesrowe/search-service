@@ -1,9 +1,10 @@
-package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site
+package com.simonjamesrowe.searchservice.test.dataproviders.elasticsearch.site
 
 import com.simonjamesrowe.component.test.TestContainersExtension
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
 import com.simonjamesrowe.searchservice.config.ElasticSearchConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site.SiteDocumentIndexConfig
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith

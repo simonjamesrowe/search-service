@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice.entrypoints.kafka
+package com.simonjamesrowe.searchservice.test.entrypoints.kafka
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.convertValue
@@ -9,7 +9,7 @@ import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
 import com.simonjamesrowe.model.cms.dto.SkillResponseDTO
 import com.simonjamesrowe.model.cms.dto.TagResponseDTO
 import com.simonjamesrowe.model.cms.dto.WebhookEventDTO
-import com.simonjamesrowe.searchservice.TestUtils.image
+import com.simonjamesrowe.searchservice.test.TestUtils.image
 import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog.BlogDocumentRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.awaitility.Awaitility.await

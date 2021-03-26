@@ -1,7 +1,8 @@
-package com.simonjamesrowe.searchservice.core.usecase
+package com.simonjamesrowe.searchservice.test.usecase
 
-import com.simonjamesrowe.searchservice.TestUtils.randomObject
+import com.simonjamesrowe.searchservice.test.TestUtils.randomObject
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
+import com.simonjamesrowe.searchservice.core.usecase.IndexSiteUseCase
 import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site.SiteSearchRepository
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.RelaxedMockK

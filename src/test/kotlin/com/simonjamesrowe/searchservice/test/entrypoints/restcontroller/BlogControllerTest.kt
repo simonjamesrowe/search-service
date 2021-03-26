@@ -1,8 +1,9 @@
-package com.simonjamesrowe.searchservice.entrypoints.restcontroller
+package com.simonjamesrowe.searchservice.test.entrypoints.restcontroller
 
 import com.ninjasquad.springmockk.MockkBean
 import com.simonjamesrowe.searchservice.core.model.BlogSearchResult
 import com.simonjamesrowe.searchservice.core.usecase.SearchBlogsUseCase
+import com.simonjamesrowe.searchservice.entrypoints.restcontroller.BlogController
 import com.tyro.oss.arbitrater.arbitraryInstance
 import io.mockk.coEvery
 import io.mockk.coVerify

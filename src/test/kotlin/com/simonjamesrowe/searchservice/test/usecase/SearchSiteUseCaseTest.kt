@@ -1,10 +1,10 @@
-package com.simonjamesrowe.searchservice.core.usecase
+package com.simonjamesrowe.searchservice.test.usecase
 
-import com.simonjamesrowe.searchservice.TestUtils.randomObject
+import com.simonjamesrowe.searchservice.test.TestUtils.randomObject
 import com.simonjamesrowe.searchservice.core.model.SiteSearchResult
 import com.simonjamesrowe.searchservice.core.repository.SiteSearchRepository
+import com.simonjamesrowe.searchservice.core.usecase.SearchSiteUseCase
 import io.mockk.coEvery
-import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.junit5.MockKExtension

@@ -1,15 +1,16 @@
-package com.simonjamesrowe.searchservice.entrypoints.kafka
+package com.simonjamesrowe.searchservice.test.entrypoints.kafka
 
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.simonjamesrowe.model.cms.dto.*
-import com.simonjamesrowe.searchservice.TestUtils.image
-import com.simonjamesrowe.searchservice.TestUtils.randomObject
+import com.simonjamesrowe.searchservice.test.TestUtils.image
+import com.simonjamesrowe.searchservice.test.TestUtils.randomObject
 import com.simonjamesrowe.searchservice.core.model.IndexBlogRequest
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.simonjamesrowe.searchservice.core.usecase.IndexBlogUseCase
 import com.simonjamesrowe.searchservice.core.usecase.IndexSiteUseCase
 import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
+import com.simonjamesrowe.searchservice.entrypoints.kafka.KafkaEventConsumer
 import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.JobMapper
 import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper

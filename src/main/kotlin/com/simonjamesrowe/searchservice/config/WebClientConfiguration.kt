@@ -11,10 +11,11 @@ import org.springframework.web.reactive.function.client.WebClient
 
 
 @Configuration
+/*
 @TypeHint(
   types = [JobResponseDTO::class, SkillResponseDTO::class, BlogResponseDTO::class, ImageResponseDTO::class, SkillsGroupResponseDTO::class, TagResponseDTO::class],
   access = AccessBits.FULL_REFLECTION
-)
+)*/
 class WebClientConfiguration {
 
   @Bean

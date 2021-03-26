@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice
+package com.simonjamesrowe.searchservice.test
 
 import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer

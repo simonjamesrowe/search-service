@@ -1,12 +1,13 @@
-package com.simonjamesrowe.searchservice.entrypoints.scheduled
+package com.simonjamesrowe.searchservice.test.entrypoints.scheduled
 
 import com.simonjamesrowe.model.cms.dto.*
-import com.simonjamesrowe.searchservice.TestUtils
+import com.simonjamesrowe.searchservice.test.TestUtils
 import com.simonjamesrowe.searchservice.core.model.IndexBlogRequest
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.simonjamesrowe.searchservice.core.usecase.IndexBlogUseCase
 import com.simonjamesrowe.searchservice.core.usecase.IndexSiteUseCase
 import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
+import com.simonjamesrowe.searchservice.entrypoints.scheduled.CmsSynchronization
 import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.JobMapper
 import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper

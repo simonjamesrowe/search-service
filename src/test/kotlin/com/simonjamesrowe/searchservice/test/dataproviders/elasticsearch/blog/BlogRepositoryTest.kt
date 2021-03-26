@@ -1,4 +1,4 @@
-package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog
+package com.simonjamesrowe.searchservice.test.dataproviders.elasticsearch.blog
 
 import com.simonjamesrowe.component.test.TestContainersExtension
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
@@ -6,6 +6,10 @@ import com.simonjamesrowe.searchservice.config.ElasticSearchConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import com.simonjamesrowe.searchservice.core.model.BlogSearchResult
 import com.simonjamesrowe.searchservice.core.model.IndexBlogRequest
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog.BlogDocument
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog.BlogDocumentIndexConfig
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog.BlogDocumentRepository
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog.BlogRepository
 import com.tyro.oss.arbitrater.arbitrary
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat

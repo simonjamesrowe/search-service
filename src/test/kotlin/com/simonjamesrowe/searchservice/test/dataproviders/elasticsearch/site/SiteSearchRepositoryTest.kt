@@ -1,10 +1,14 @@
-package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site
+package com.simonjamesrowe.searchservice.test.dataproviders.elasticsearch.site
 
 import com.simonjamesrowe.component.test.TestContainersExtension
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
 import com.simonjamesrowe.searchservice.config.ElasticSearchConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site.SiteDocument
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site.SiteDocumentIndexConfig
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site.SiteDocumentRepository
+import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.site.SiteSearchRepository
 import com.tyro.oss.arbitrater.arbitrary
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat

@@ -25,7 +25,19 @@
       "excludeClasses": "org.jeasy.**"
     },
     {
+      "excludeClasses": "com.simonjamesrowe.searchservice.test.**"
+    },
+    {
+      "excludeClasses": "com.simonjamesrowe.component.test.**"
+    },
+    {
       "excludeClasses": "org.testcontainers.**"
+    },
+    {
+      "excludeClasses": "org.assertj.**"
+    },
+    {
+      "excludeClasses": "org.awaitility.**"
     }
   ]
 }

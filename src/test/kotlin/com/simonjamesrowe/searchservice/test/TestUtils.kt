@@ -1,10 +1,8 @@
-package com.simonjamesrowe.searchservice
+package com.simonjamesrowe.searchservice.test
 
 import com.github.tomakehurst.wiremock.WireMockServer
 import com.github.tomakehurst.wiremock.client.WireMock
-import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
 import com.simonjamesrowe.model.cms.dto.ImageResponseDTO
-import com.tyro.oss.arbitrater.arbitrary
 import org.jeasy.random.EasyRandom
 import org.jeasy.random.EasyRandomParameters
 import org.springframework.core.io.ClassPathResource

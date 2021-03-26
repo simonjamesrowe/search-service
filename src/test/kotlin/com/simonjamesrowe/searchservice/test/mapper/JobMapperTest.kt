@@ -1,9 +1,10 @@
-package com.simonjamesrowe.searchservice.mapper
+package com.simonjamesrowe.searchservice.test.mapper
 
 import com.simonjamesrowe.model.cms.dto.JobResponseDTO
-import com.simonjamesrowe.searchservice.TestUtils.image
-import com.simonjamesrowe.searchservice.TestUtils.randomObject
+import com.simonjamesrowe.searchservice.test.TestUtils.image
+import com.simonjamesrowe.searchservice.test.TestUtils.randomObject
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
+import com.simonjamesrowe.searchservice.mapper.JobMapper
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 

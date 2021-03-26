@@ -19,7 +19,7 @@ import java.time.LocalDateTime
 import java.time.ZonedDateTime
 
 @Configuration
-@TypeHint(
+/*@TypeHint(
   types = [
     WebhookEventDeserializer::class,
     WebhookEventSerializer::class,
@@ -37,7 +37,7 @@ import java.time.ZonedDateTime
     Advised::class,
     DecoratingProxy::class
   ]
-)
+)*/
 class KafkaConfig {
 
   @Bean

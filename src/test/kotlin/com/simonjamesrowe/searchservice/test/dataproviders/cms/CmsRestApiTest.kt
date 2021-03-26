@@ -1,8 +1,10 @@
-package com.simonjamesrowe.searchservice.dataproviders.cms
+package com.simonjamesrowe.searchservice.test.dataproviders.cms
 
 import com.github.tomakehurst.wiremock.WireMockServer
-import com.simonjamesrowe.searchservice.TestUtils.mockGet
+import com.simonjamesrowe.searchservice.test.TestUtils.mockGet
 import com.simonjamesrowe.searchservice.config.WebClientConfiguration
+import com.simonjamesrowe.searchservice.dataproviders.cms.CmsProperties
+import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach

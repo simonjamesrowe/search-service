@@ -9,7 +9,7 @@ import org.springframework.nativex.hint.TypeHint
 import java.time.LocalDate
 
 @Configuration
-@TypeHint(
+/**@TypeHint(
   types = [
     LocalDate::class,
     Pageable::class,
@@ -33,7 +33,7 @@ import java.time.LocalDate
     "org.elasticsearch.index.query.QueryBuilder[]"
   ],
   access = AccessBits.FULL_REFLECTION
-)
+)*/
 class ElasticSearchConfig {
 
   @Bean
