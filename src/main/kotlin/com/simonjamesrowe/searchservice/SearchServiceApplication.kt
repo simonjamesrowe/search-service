@@ -19,7 +19,7 @@ import org.springframework.scheduling.annotation.EnableScheduling
   CmsProperties::class
 )
 @TypeHint(
-  types = [BlogSearchResult::class, SiteSearchResult::class, WebhookEventDTO::class],
+  types = [BlogSearchResult::class, SiteSearchResult::class],
   access = AccessBits.FULL_REFLECTION
 )
 class SearchServiceApplication
