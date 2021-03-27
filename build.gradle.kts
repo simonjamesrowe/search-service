@@ -8,7 +8,7 @@ plugins {
   id("maven-publish")
   id("org.sonarqube") version "3.1.1"
   id("jacoco")
-  //id("org.springframework.experimental.aot") version "0.9.2-SNAPSHOT"
+  id("org.springframework.experimental.aot") version "0.9.2-SNAPSHOT"
   kotlin("jvm") version "1.4.31"
   kotlin("plugin.spring") version "1.4.31"
 }
@@ -31,7 +31,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("io.projectreactor.netty:reactor-netty")
-  //implementation("org.springframework.experimental:spring-native:0.9.2-SNAPSHOT")
+  implementation("org.springframework.experimental:spring-native:0.9.2-SNAPSHOT")
   //implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
   implementation("com.simonjamesrowe:model:0.0.19")
