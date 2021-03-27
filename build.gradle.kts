@@ -34,6 +34,7 @@ dependencies {
   implementation("org.springframework.experimental:spring-native:0.9.2-SNAPSHOT")
   //implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
+  implementation("org.hibernate:hibernate-validator:7.0.1.Final")
   implementation("com.simonjamesrowe:model:0.0.19")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
