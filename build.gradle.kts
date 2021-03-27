@@ -34,7 +34,6 @@ dependencies {
   implementation("org.springframework.experimental:spring-native:0.9.2-SNAPSHOT")
   //implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
-  implementation("org.hibernate:hibernate-validator:7.0.1.Final")
   implementation("com.simonjamesrowe:model:0.0.19")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
@@ -45,7 +44,9 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("com.ninja-squad:springmockk:3.0.1")
   testImplementation("org.awaitility:awaitility:4.0.3")
-  testImplementation("com.simonjamesrowe:component-test:0.0.11")
+  testImplementation("com.simonjamesrowe:component-test:0.0.11") {
+    exclude(group = "org.hibernate.validator")
+  }
   testImplementation("com.tyro.oss:arbitrater:1.0.0")
   testImplementation("org.jeasy:easy-random-core:5.0.0")
 }
@@ -92,7 +93,8 @@ tasks.getByName<BootJar>("bootJar") {
 tasks.getByName<BootBuildImage>("bootBuildImage") {
   builder = "paketobuildpacks/builder:tiny"
   environment = mapOf(
-    "BP_NATIVE_IMAGE" to "true"
+    "BP_NATIVE_IMAGE" to "true",
+    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath"
   )
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
 }
