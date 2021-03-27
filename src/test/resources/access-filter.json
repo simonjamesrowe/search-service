@@ -38,6 +38,9 @@
     },
     {
       "excludeClasses": "org.awaitility.**"
+    },
+    {
+      "excludeClasses": "com.ninjasquad.**"
     }
   ]
 }
