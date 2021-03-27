@@ -41,6 +41,21 @@
     },
     {
       "excludeClasses": "com.ninjasquad.**"
+    },
+    {
+      "excludeClasses": "com.github.dockerjava.**"
+    },
+    {
+      "excludeClasses": "io.restassured.**"
+    },
+    {
+      "excludeClasses": "org.codehaus.groovy.**"
+    },
+    {
+      "excludeClasses": "org.springframework.cloud.contract.wiremock.**"
+    },
+    {
+      "excludeClasses": "wiremock.**"
     }
   ]
 }
