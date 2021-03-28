@@ -14,7 +14,7 @@ import java.util.*
 data class BlogDocument(
 
   @Id
-  val id : String,
+  var id : String,
 
   @Field
   val title: String,

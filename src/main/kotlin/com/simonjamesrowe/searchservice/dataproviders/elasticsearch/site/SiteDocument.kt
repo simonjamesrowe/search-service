@@ -7,7 +7,7 @@ import org.springframework.data.elasticsearch.annotations.Field
 @Document(indexName = "#{@siteIndexName}", createIndex = false)
 data class SiteDocument(
   @Id
-  val id: String,
+  var id: String,
 
   @Field
   val siteUrl: String,
