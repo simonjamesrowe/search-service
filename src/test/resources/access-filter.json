@@ -59,6 +59,15 @@
     },
     {
       "excludeClasses": "org.gradle.**"
+    },
+    {
+      "excludeClasses": "org.graalvm.**"
+    },
+    {
+      "excludeClasses": "com.sun.**"
+    },
+    {
+      "excludeClasses": "sun.**"
     }
   ]
 }
