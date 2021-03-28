@@ -7,7 +7,7 @@ plugins {
   id("io.spring.dependency-management") version "1.0.11.RELEASE"
   id("maven-publish")
   id("org.sonarqube") version "3.1.1"
-  id("jacoco")
+  //id("jacoco")
   id("org.springframework.experimental.aot") version "0.9.2-SNAPSHOT"
   kotlin("jvm") version "1.4.31"
   kotlin("plugin.spring") version "1.4.31"
@@ -73,15 +73,15 @@ tasks.withType<Test> {
   minHeapSize = "2g"
   maxHeapSize = "4g"
   jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/META-INF/native-image")
-  finalizedBy(tasks.jacocoTestReport, tasks.getByName<Delete>("deleteSerializationConfig"))
+  finalizedBy(/*tasks.jacocoTestReport,*/ tasks.getByName<Delete>("deleteSerializationConfig"))
 }
 
-tasks.jacocoTestReport {
+/*tasks.jacocoTestReport {
   dependsOn(tasks.test)
   reports {
     xml.isEnabled = true
   }
-}
+}*/
 
 
 
