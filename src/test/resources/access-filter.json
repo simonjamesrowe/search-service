@@ -80,12 +80,6 @@
     },
     {
       "excludeClasses": "groovy.**"
-    },
-    {
-      "excludeClasses": "net.bytebuddy.**"
-    },
-    {
-      "excludeClasses": "java.security.**"
     }
   ]
 }
