@@ -94,7 +94,7 @@ publishing {
 }
 
 tasks.getByName<BootJar>("bootJar") {
-  dependsOn(tasks.test)
+  dependsOn(tasks.test, tasks.getByName<Delete>("deleteSerializationConfig"))
 }
 
 tasks.getByName<BootBuildImage>("bootBuildImage") {
