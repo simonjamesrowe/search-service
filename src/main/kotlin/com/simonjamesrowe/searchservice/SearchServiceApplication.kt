@@ -13,14 +13,8 @@ import org.springframework.scheduling.annotation.EnableScheduling
   ElasticSearchIndexProperties::class,
   CmsProperties::class
 )
-/*
-@TypeHint(
-  types = [BlogSearchResult::class, SiteSearchResult::class],
-  access = AccessBits.FULL_REFLECTION
-)*/
 class SearchServiceApplication
 
 fun main(args: Array<String>) {
-  //ElasticApmAttacher.attach()
   runApplication<SearchServiceApplication>(*args)
 }
