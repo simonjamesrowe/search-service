@@ -1,0 +1,29 @@
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1617081389.2941754,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+Unable to retrieve container logs for containerd://6c274785be1d64eb16022ac2d7f1820b37d208eb05cf4378686b8799670132d9
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+Unable to retrieve container logs for containerd://38b6d325ba7d40bee1f07f54f7b5ebcdf9ba3181ab8c81f3c9376470cb6ad695
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-search-service-m-bl26v-s5q4n[0m
+Unable to retrieve container logs for containerd://849c325ce449048654edc2e5a43d6077032ff434e2e6b2ad9b8adf61b8d2aca1
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+Unable to retrieve container logs for containerd://897e2af4107019f5fdbbc598e6b079205e330227e9a50e465ecdefed920791ec
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Unable to retrieve container logs for containerd://ff7d43c6ac45f90ad30c1bc246fcbab831d2755dc559ddd149568b43456cf63c
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Unable to retrieve container logs for containerd://7580fb8edb020f2ed1fb9b958e5d5071fade9434884d274bdaa08faddee8f7f4
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mstep-build-copy-gradle-properties[0m
+Unable to retrieve container logs for containerd://2f529f604efc2d7fa80ef8d74baf74e40fc4a5a7f143d1ee6b6d51038ea8f333
+
+Showing logs for build [32msimonjamesrowe-search-service-m-bl26v-113[0m stage [32mfrom-build-pack[0m and container [32mstep-build-gradle-build[0m
+Unable to retrieve container logs for containerd://707c5386150d5a00435d636f45c3bf1131f0a7653b5dfd267a544db3b2d62cae
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-gradle-build'. The execution of the pipeline has stopped.[0m
