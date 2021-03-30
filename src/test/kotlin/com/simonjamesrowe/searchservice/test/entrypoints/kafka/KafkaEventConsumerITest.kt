@@ -9,8 +9,8 @@ import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
 import com.simonjamesrowe.model.cms.dto.SkillResponseDTO
 import com.simonjamesrowe.model.cms.dto.TagResponseDTO
 import com.simonjamesrowe.model.cms.dto.WebhookEventDTO
-import com.simonjamesrowe.searchservice.test.TestUtils.image
 import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog.BlogDocumentRepository
+import com.simonjamesrowe.searchservice.test.TestUtils.image
 import org.assertj.core.api.Assertions.assertThat
 import org.awaitility.Awaitility.await
 import org.junit.jupiter.api.AfterEach
@@ -18,19 +18,13 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.kafka.core.KafkaTemplate
-import org.springframework.test.annotation.DirtiesContext
 import java.time.Duration
 import java.time.LocalDate
 import java.time.ZonedDateTime
 
 @WithKafkaContainer
 @WithElasticsearchContainer
-@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
 internal class KafkaEventConsumerITest : BaseComponentTest() {
-
-  init {
-    partitionCount = 1
-  }
 
   @Autowired
   private lateinit var kafkaTemplate: KafkaTemplate<Any, Any>
@@ -195,7 +189,7 @@ internal class KafkaEventConsumerITest : BaseComponentTest() {
     kafkaTemplate.send("LOCAL_EVENTS", event3)
     kafkaTemplate.send("LOCAL_EVENTS", event4)
 
-    await().atMost(Duration.ofSeconds(30)).until {
+    await().atMost(Duration.ofSeconds(60)).until {
       blogDocumentRepository.count() == 2L
     }
 

@@ -20,6 +20,8 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
+import org.springframework.core.env.Environment
+import org.springframework.core.env.Profiles
 
 @ExtendWith(MockKExtension::class)
 internal class CmsSynchronizationTest {
@@ -33,6 +35,9 @@ internal class CmsSynchronizationTest {
   @RelaxedMockK
   private lateinit var indexBlogUseCase: IndexBlogUseCase
 
+  @RelaxedMockK
+  private lateinit var environment: Environment
+
   @InjectMockKs
   private lateinit var cmsSynchronization: CmsSynchronization
 
@@ -41,6 +46,7 @@ internal class CmsSynchronizationTest {
     mockkObject(BlogMapper)
     mockkObject(JobMapper)
     mockkObject(SkillsGroupMapper)
+    every { environment.acceptsProfiles(Profiles.of("cloud"))} returns true
   }
 
   @AfterEach
