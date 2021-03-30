@@ -11,16 +11,17 @@ import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.slf4j.LoggerFactory
-import org.springframework.context.annotation.Profile
+import org.springframework.core.env.Environment
+import org.springframework.core.env.Profiles
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Service
 
-@Profile("cloud")
 @Service
 class CmsSynchronization(
   private val cmsRestApi: CmsRestApi,
   private val indexBlogUseCase: IndexBlogUseCase,
-  private val indexSiteUseCase: IndexSiteUseCase
+  private val indexSiteUseCase: IndexSiteUseCase,
+  private val env: Environment
 ) {
 
   companion object {
@@ -31,6 +32,9 @@ class CmsSynchronization(
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
   fun syncBlogDocuments() = GlobalScope.launch {
+    if (!env.acceptsProfiles(Profiles.of("cloud"))) {
+      return@launch
+    }
     log.info("Synchronising blog documents from cms")
     val allBlogs = cmsRestApi.getAllBlogs()
     indexBlogUseCase.indexBlogs(allBlogs.map(::toBlogIndexRequest))
@@ -38,6 +42,9 @@ class CmsSynchronization(
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
   fun syncSiteDocuments() = GlobalScope.launch {
+    if (!env.acceptsProfiles(Profiles.of("cloud"))) {
+      return@launch
+    }
     log.info("Synchronising site documents from cms")
     val allBlogs = cmsRestApi.getAllBlogs()
     val allJobs = cmsRestApi.getAllJobs()
