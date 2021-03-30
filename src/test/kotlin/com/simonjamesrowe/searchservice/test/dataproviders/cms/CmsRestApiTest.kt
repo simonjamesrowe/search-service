@@ -1,10 +1,11 @@
 package com.simonjamesrowe.searchservice.test.dataproviders.cms
 
 import com.github.tomakehurst.wiremock.WireMockServer
-import com.simonjamesrowe.searchservice.test.TestUtils.mockGet
 import com.simonjamesrowe.searchservice.config.WebClientConfiguration
 import com.simonjamesrowe.searchservice.dataproviders.cms.CmsProperties
 import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
+import com.simonjamesrowe.searchservice.dataproviders.cms.ICmsRestApi
+import com.simonjamesrowe.searchservice.test.TestUtils.mockGet
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
@@ -25,7 +26,7 @@ import java.time.LocalDate
 internal class CmsRestApiTest {
 
   @Autowired
-  private lateinit var cmsRestApi: CmsRestApi
+  private lateinit var cmsRestApi: ICmsRestApi
 
   @Autowired
   private lateinit var wireMockServer: WireMockServer

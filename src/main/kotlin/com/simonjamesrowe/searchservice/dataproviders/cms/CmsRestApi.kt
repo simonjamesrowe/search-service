@@ -15,9 +15,9 @@ class CmsRestApi(
   private val webClient: WebClient,
   @Value("\${cms.url}")
   private val cmsUrl: String
-) {
+) : ICmsRestApi {
 
-  suspend fun getAllBlogs(): List<BlogResponseDTO> =
+  override suspend fun getAllBlogs(): List<BlogResponseDTO> =
     webClient.get()
       .uri("$cmsUrl/blogs")
       .accept(MediaType.APPLICATION_JSON)
@@ -25,14 +25,14 @@ class CmsRestApi(
       .bodyToMono(object : ParameterizedTypeReference<List<BlogResponseDTO>>() {})
       .awaitFirst()
 
-  suspend fun getAllJobs(): List<JobResponseDTO> = webClient.get()
+  override suspend fun getAllJobs(): List<JobResponseDTO> = webClient.get()
     .uri("$cmsUrl/jobs")
     .accept(MediaType.APPLICATION_JSON)
     .retrieve()
     .bodyToMono(object : ParameterizedTypeReference<List<JobResponseDTO>>() {})
     .awaitFirst()
 
-  suspend fun getAllSkillsGroups(): List<SkillsGroupResponseDTO> =
+  override suspend fun getAllSkillsGroups(): List<SkillsGroupResponseDTO> =
     webClient.get()
       .uri("$cmsUrl/skills-groups")
       .accept(MediaType.APPLICATION_JSON)
@@ -40,7 +40,7 @@ class CmsRestApi(
       .bodyToMono(object : ParameterizedTypeReference<List<SkillsGroupResponseDTO>>() {})
       .awaitFirst()
 
-  suspend fun getSkillsGroupBySkillId(skillId: String): List<SkillsGroupResponseDTO> = webClient.get()
+  override suspend fun getSkillsGroupBySkillId(skillId: String): List<SkillsGroupResponseDTO> = webClient.get()
     .uri("$cmsUrl/skills-groups?skill._id={id}", skillId)
     .accept(MediaType.APPLICATION_JSON)
     .retrieve()

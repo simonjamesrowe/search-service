@@ -3,7 +3,7 @@ package com.simonjamesrowe.searchservice.entrypoints.scheduled
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.simonjamesrowe.searchservice.core.usecase.IndexBlogUseCase
 import com.simonjamesrowe.searchservice.core.usecase.IndexSiteUseCase
-import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
+import com.simonjamesrowe.searchservice.dataproviders.cms.ICmsRestApi
 import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.BlogMapper.toBlogIndexRequest
 import com.simonjamesrowe.searchservice.mapper.JobMapper
@@ -18,11 +18,11 @@ import org.springframework.stereotype.Service
 
 @Service
 class CmsSynchronization(
-  private val cmsRestApi: CmsRestApi,
+  private val cmsRestApi: ICmsRestApi,
   private val indexBlogUseCase: IndexBlogUseCase,
   private val indexSiteUseCase: IndexSiteUseCase,
   private val env: Environment
-) {
+) : ICmsSynchronization {
 
   companion object {
     val log = LoggerFactory.getLogger(CmsSynchronization::class.java)
@@ -31,7 +31,7 @@ class CmsSynchronization(
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  fun syncBlogDocuments() = GlobalScope.launch {
+  override fun syncBlogDocuments() = GlobalScope.launch {
     if (!env.acceptsProfiles(Profiles.of("cloud"))) {
       return@launch
     }
@@ -41,7 +41,7 @@ class CmsSynchronization(
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  fun syncSiteDocuments() = GlobalScope.launch {
+  override fun syncSiteDocuments() = GlobalScope.launch {
     if (!env.acceptsProfiles(Profiles.of("cloud"))) {
       return@launch
     }

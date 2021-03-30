@@ -10,7 +10,7 @@ import com.simonjamesrowe.model.cms.dto.JobResponseDTO
 import com.simonjamesrowe.model.cms.dto.WebhookEventDTO
 import com.simonjamesrowe.searchservice.core.usecase.IndexBlogUseCase
 import com.simonjamesrowe.searchservice.core.usecase.IndexSiteUseCase
-import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
+import com.simonjamesrowe.searchservice.dataproviders.cms.ICmsRestApi
 import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.JobMapper
 import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper
@@ -24,15 +24,15 @@ class KafkaEventConsumer(
   private val indexBlogUseCase: IndexBlogUseCase,
   private val indexSiteUseCase: IndexSiteUseCase,
   private val objectMapper: ObjectMapper,
-  private val cmsRestApi: CmsRestApi
-) {
+  private val cmsRestApi: ICmsRestApi
+) : IKafkaEventConsumer {
 
   companion object {
     val log = LoggerFactory.getLogger(KafkaEventConsumer::class.java)
   }
 
   @KafkaListener(topics = ["\${namespace:LOCAL}_EVENTS"])
-  fun consumeEvents(events: List<WebhookEventDTO>) = runBlocking<Unit> {
+  override fun consumeEvents(events: List<WebhookEventDTO>) = runBlocking<Unit> {
     runCatching {
       log.info("Received events from kafka: ${events.map { "${it.event}-${it.model}" }}")
       updateBlogSearchIndex(events)

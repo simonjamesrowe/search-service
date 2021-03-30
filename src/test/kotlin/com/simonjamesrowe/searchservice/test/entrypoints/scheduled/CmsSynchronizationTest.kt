@@ -1,16 +1,19 @@
 package com.simonjamesrowe.searchservice.test.entrypoints.scheduled
 
-import com.simonjamesrowe.model.cms.dto.*
-import com.simonjamesrowe.searchservice.test.TestUtils
+import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
+import com.simonjamesrowe.model.cms.dto.JobResponseDTO
+import com.simonjamesrowe.model.cms.dto.SkillResponseDTO
+import com.simonjamesrowe.model.cms.dto.SkillsGroupResponseDTO
 import com.simonjamesrowe.searchservice.core.model.IndexBlogRequest
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.simonjamesrowe.searchservice.core.usecase.IndexBlogUseCase
 import com.simonjamesrowe.searchservice.core.usecase.IndexSiteUseCase
-import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
+import com.simonjamesrowe.searchservice.dataproviders.cms.ICmsRestApi
 import com.simonjamesrowe.searchservice.entrypoints.scheduled.CmsSynchronization
 import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.JobMapper
 import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper
+import com.simonjamesrowe.searchservice.test.TestUtils
 import io.mockk.*
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.RelaxedMockK
@@ -27,7 +30,7 @@ import org.springframework.core.env.Profiles
 internal class CmsSynchronizationTest {
 
   @RelaxedMockK
-  private lateinit var cmsRestApi: CmsRestApi
+  private lateinit var cmsRestApi: ICmsRestApi
 
   @RelaxedMockK
   private lateinit var indexSiteUseCase: IndexSiteUseCase
@@ -46,7 +49,7 @@ internal class CmsSynchronizationTest {
     mockkObject(BlogMapper)
     mockkObject(JobMapper)
     mockkObject(SkillsGroupMapper)
-    every { environment.acceptsProfiles(Profiles.of("cloud"))} returns true
+    every { environment.acceptsProfiles(Profiles.of("cloud")) } returns true
   }
 
   @AfterEach
@@ -56,7 +59,7 @@ internal class CmsSynchronizationTest {
   }
 
   @Test
-  fun `should index blog documents`() = runBlocking<Unit>{
+  fun `should index blog documents`() = runBlocking<Unit> {
     val blog1 = TestUtils.randomObject<BlogResponseDTO>(mapOf("image" to TestUtils.image("blog1", 200)))
     val blog2 = TestUtils.randomObject<BlogResponseDTO>(mapOf("image" to TestUtils.image("blog2", 200)))
 
@@ -75,7 +78,7 @@ internal class CmsSynchronizationTest {
   }
 
   @Test
-  fun `should index site documents`() = runBlocking{
+  fun `should index site documents`() = runBlocking {
 
     val blog1 = TestUtils.randomObject<BlogResponseDTO>(mapOf("image" to TestUtils.image("blog1", 200)))
     val blog2 = TestUtils.randomObject<BlogResponseDTO>(mapOf("image" to TestUtils.image("blog2", 200)))

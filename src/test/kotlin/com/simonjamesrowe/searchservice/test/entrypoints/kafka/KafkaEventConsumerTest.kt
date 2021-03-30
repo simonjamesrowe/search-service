@@ -10,6 +10,7 @@ import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.simonjamesrowe.searchservice.core.usecase.IndexBlogUseCase
 import com.simonjamesrowe.searchservice.core.usecase.IndexSiteUseCase
 import com.simonjamesrowe.searchservice.dataproviders.cms.CmsRestApi
+import com.simonjamesrowe.searchservice.dataproviders.cms.ICmsRestApi
 import com.simonjamesrowe.searchservice.entrypoints.kafka.KafkaEventConsumer
 import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.JobMapper
@@ -27,7 +28,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 internal class KafkaEventConsumerTest {
 
   @RelaxedMockK
-  private lateinit var cmsRestApi: CmsRestApi
+  private lateinit var cmsRestApi: ICmsRestApi
 
   @RelaxedMockK
   private lateinit var indexBlogUseCase: IndexBlogUseCase
