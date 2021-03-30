@@ -100,7 +100,7 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
   builder = "paketobuildpacks/builder:tiny"
   environment = mapOf(
     "BP_NATIVE_IMAGE" to "true",
-    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl"
+    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets"
   )
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
 }
