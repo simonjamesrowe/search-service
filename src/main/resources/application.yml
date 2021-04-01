@@ -18,7 +18,10 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: com.simonjamesrowe.model.serialization.WebhookEventSerializer
-
+  sleuth:
+    messaging:
+      kafka:
+        enabled: false
 
 jaeger:
   service-name: search-service-${namespace:local}
