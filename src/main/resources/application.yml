@@ -19,11 +19,11 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: com.simonjamesrowe.model.serialization.WebhookEventSerializer
 
-opentracing:
-  jaeger:
-    service-name: search-service-${namespace:local}
-    http-sender:
-      url: ${apm.jager.http.url:}
+
+jaeger:
+  service-name: search-service-${namespace:local}
+  url: ${JAEGER_URL:}
+
 elasticsearch:
   index:
     blog: blog_${namespace:local}

@@ -18,12 +18,14 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.kafka.core.KafkaTemplate
+import org.springframework.test.context.ActiveProfiles
 import java.time.Duration
 import java.time.LocalDate
 import java.time.ZonedDateTime
 
 @WithKafkaContainer
 @WithElasticsearchContainer
+@ActiveProfiles("cms")
 internal class KafkaEventConsumerITest : BaseComponentTest() {
 
   @Autowired
