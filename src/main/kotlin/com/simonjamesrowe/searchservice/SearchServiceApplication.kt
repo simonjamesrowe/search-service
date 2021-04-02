@@ -15,6 +15,8 @@ import org.springframework.scheduling.annotation.EnableScheduling
 )
 class SearchServiceApplication
 
+
 fun main(args: Array<String>) {
   runApplication<SearchServiceApplication>(*args)
 }
+
