@@ -35,7 +35,7 @@ dependencies {
   implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
   implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
-  implementation("io.jaegertracing:jaeger-client:1.3.2")
+  implementation("io.opentracing.contrib:opentracing-spring-jaeger-cloud-starter:3.3.1")
   implementation("com.simonjamesrowe:model:0.0.19")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")

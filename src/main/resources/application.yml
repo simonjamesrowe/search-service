@@ -22,13 +22,25 @@ spring:
     messaging:
       kafka:
         enabled: false
-
-jaeger:
-  service-name: search-service-${namespace:local}
-  url: ${JAEGER_URL:}
+  main:
+    allow-bean-definition-overriding: true
 
 elasticsearch:
   index:
     blog: blog_${namespace:local}
     site: site_${namespace:local}
+
+opentracing:
+  jaeger:
+    http-sender:
+      url: http://jenkins-x-apm-server-jaeger.jx:14268/api/traces
+    service-name: search-service-${namespace:local}
+  spring:
+    cloud:
+      scheduled:
+        enabled: false
+      async:
+        enabled: false
+    web:
+      enabled: false
 
