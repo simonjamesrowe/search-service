@@ -15,7 +15,7 @@ env:
   SPRING_DATA_ELASTICSEARCH_CLIENT_REACTIVE_ENDPOINTS: elasticsearch-master.jx:9200
   SPRING_ELASTICSEARCH_REST_URIS: http://elasticsearch-master.jx:9200
   SPRING_PROFILES_ACTIVE: cloud
-  JAEGER_URL: http://jenkins-x-apm-server-jager.jx:14268/api/traces
+  JAEGER_URL: http://jenkins-x-apm-server-jaeger.jx:14268/api/traces
 
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
@@ -61,10 +61,10 @@ service:
 resources:
   limits:
     cpu: 200m
-    memory: 128Mi
+    memory: 256Mi
   requests:
     cpu: 100m
-    memory: 128i
+    memory: 128Mi
 probePath: /actuator/health
 livenessProbe:
   initialDelaySeconds: 10
