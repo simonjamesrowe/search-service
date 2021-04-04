@@ -8,8 +8,9 @@ import org.springframework.cloud.sleuth.annotation.NewSpan
 import org.springframework.cloud.sleuth.annotation.SpanTag
 import org.springframework.data.domain.Sort
 import org.springframework.stereotype.Component
+import org.springframework.stereotype.Service
 
-@Component
+@Service
 class BlogRepository(
   private val blogDocumentRepository: BlogDocumentRepository
 ) : BlogSearchRepository, BlogIndexRepository {

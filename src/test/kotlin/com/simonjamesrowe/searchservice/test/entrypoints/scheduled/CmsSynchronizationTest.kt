@@ -83,7 +83,7 @@ internal class CmsSynchronizationTest {
 
     every { BlogMapper.toBlogIndexRequest(any()) } returnsMany listOf(indexBlogRequest1, indexBlogRequest2)
 
-    cmsSynchronization.syncBlogDocuments().join()
+    cmsSynchronization.syncBlogDocuments()
 
     verifyOrder {
       tracer.nextSpan(any())
@@ -140,7 +140,7 @@ internal class CmsSynchronizationTest {
       ), listOf(siteIndexRequest7)
     )
 
-    cmsSynchronization.syncSiteDocuments().join()
+    cmsSynchronization.syncSiteDocuments()
 
     verifyOrder {
       tracer.nextSpan(any())
