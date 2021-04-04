@@ -8,15 +8,10 @@ import org.springframework.web.reactive.function.client.WebClient
 
 
 @Configuration
-/*
-@TypeHint(
-  types = [JobResponseDTO::class, SkillResponseDTO::class, BlogResponseDTO::class, ImageResponseDTO::class, SkillsGroupResponseDTO::class, TagResponseDTO::class],
-  access = AccessBits.FULL_REFLECTION
-)*/
 class WebClientConfiguration {
 
   @Bean
-  fun webClient() = WebClient.builder().exchangeStrategies(ExchangeStrategies.builder()
+  fun webClient(): WebClient = WebClient.builder().exchangeStrategies(ExchangeStrategies.builder()
     .codecs { configurer: ClientCodecConfigurer ->
       configurer
         .defaultCodecs()

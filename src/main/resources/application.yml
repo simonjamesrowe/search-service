@@ -24,6 +24,9 @@ spring:
     messaging:
       kafka:
         enabled: false
+    web:
+      webclient:
+        enabled: true
   main:
     allow-bean-definition-overriding: true
   zipkin:
