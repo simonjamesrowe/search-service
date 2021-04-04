@@ -20,6 +20,7 @@ import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
 import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.messaging.handler.annotation.Header
+import org.springframework.messaging.handler.annotation.Headers
 import org.springframework.stereotype.Service
 
 @Service
@@ -38,9 +39,11 @@ class KafkaEventConsumer(
   @KafkaListener(topics = ["\${namespace:LOCAL}_EVENTS"])
   override fun consumeEvents(
     events: List<WebhookEventDTO>,
-    @Header(name ="b3", required = false) traceIds: List<String?>?
+    @Header(name = "b3", required = false) traceIds: List<String?>?,
+    @Headers headers: Map<String, Any>,
   ) = runBlocking<Unit> {
     val traceId = traceIds?.first()?.toLong()
+    log.info("Kafka Headers are : ${headers.keys}")
     runInSpan(tracer, "consumeEvents", traceId) {
       runCatching {
         log.info("Received events from kafka: $events")

@@ -35,7 +35,7 @@ dependencies {
   implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
   implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
-  implementation("io.opentracing.contrib:opentracing-spring-jaeger-cloud-starter:3.3.1")
+  implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
   implementation("com.simonjamesrowe:model:0.0.19")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
@@ -112,4 +112,8 @@ sonarqube {
     property("sonar.host.url", gradlePropertiesProp["sonar.host.url"] ?: "")
     property("sonar.login", gradlePropertiesProp["sonar.login"] ?: "")
   }
+}
+
+springAot {
+  failOnMissingSelectorHint.set(false)
 }
