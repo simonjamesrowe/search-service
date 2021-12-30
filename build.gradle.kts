@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 import org.springframework.boot.gradle.tasks.bundling.BootJar
+import org.springframework.aot.gradle.dsl.AotMode
 
 plugins {
   id("org.springframework.boot") version "2.6.2"
@@ -111,4 +112,8 @@ sonarqube {
     property("sonar.host.url", gradlePropertiesProp["sonar.host.url"] ?: "")
     property("sonar.login", gradlePropertiesProp["sonar.login"] ?: "")
   }
+}
+
+springAot {
+  mode.set(AotMode.NATIVE_AGENT)
 }
