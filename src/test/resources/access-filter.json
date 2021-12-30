@@ -10,6 +10,9 @@
       "excludeClasses": "org.mockito.**"
     },
     {
+      "excludeClasses": "net.bytebuddy.**"
+    },
+    {
       "excludeClasses": "org.springframework.test.**"
     },
     {
