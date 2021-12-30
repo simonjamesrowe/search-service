@@ -45,7 +45,7 @@ dependencies {
   testImplementation("io.mockk:mockk:1.12.1")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("org.awaitility:awaitility:4.0.3")
-  testImplementation("com.simonjamesrowe:component-test:0.2.0") {
+  testImplementation("com.simonjamesrowe:component-test:0.3.0") {
     exclude(group = "org.hibernate.validator")
   }
   testImplementation("com.tyro.oss:arbitrater:1.0.0")
