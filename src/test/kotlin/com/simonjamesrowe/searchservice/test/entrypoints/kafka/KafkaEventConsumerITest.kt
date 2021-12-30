@@ -4,6 +4,7 @@ import brave.Tracer
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.convertValue
 import com.simonjamesrowe.component.test.BaseComponentTest
+import com.simonjamesrowe.component.test.ComponentTest
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
 import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
@@ -29,6 +30,7 @@ import java.time.ZonedDateTime
 
 @WithKafkaContainer
 @WithElasticsearchContainer
+@ComponentTest
 @ActiveProfiles("cms")
 internal class KafkaEventConsumerITest : BaseComponentTest() {
 

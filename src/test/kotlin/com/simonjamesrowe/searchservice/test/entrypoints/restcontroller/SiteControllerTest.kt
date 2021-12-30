@@ -1,23 +1,27 @@
 package com.simonjamesrowe.searchservice.test.entrypoints.restcontroller
 
-import com.ninjasquad.springmockk.MockkBean
 import com.simonjamesrowe.searchservice.core.model.SiteSearchResult
+import com.simonjamesrowe.searchservice.core.usecase.SearchBlogsUseCase
 import com.simonjamesrowe.searchservice.core.usecase.SearchSiteUseCase
 import com.simonjamesrowe.searchservice.entrypoints.restcontroller.SiteController
 import com.tyro.oss.arbitrater.arbitraryInstance
 import io.mockk.coEvery
 import io.mockk.coVerify
+import io.mockk.mockkClass
 import io.mockk.verify
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Import
 import org.springframework.http.MediaType
 import org.springframework.test.web.reactive.server.WebTestClient
 
 @WebFluxTest(controllers = [SiteController::class])
+@Import(SiteControllerTest.MockBeanConfiguration::class)
 internal class SiteControllerTest {
 
-  @MockkBean
+  @Autowired
   lateinit var searchSiteUseCase: SearchSiteUseCase
 
   @Autowired
@@ -43,5 +47,12 @@ internal class SiteControllerTest {
       .jsonPath("$[0].hits[0].name").isEqualTo(searchResults[0].hits[0].name)
 
     coVerify { searchSiteUseCase.search("Universal") }
+  }
+
+  class MockBeanConfiguration {
+
+    @Bean
+    fun searchSiteUseCase() = mockkClass(SearchSiteUseCase::class);
+
   }
 }

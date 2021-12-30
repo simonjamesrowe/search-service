@@ -19,7 +19,7 @@ import org.springframework.test.context.ActiveProfiles
 import java.time.LocalDate
 
 @JsonTest
-@AutoConfigureWireMock(port = 0)
+@AutoConfigureWireMock
 @ActiveProfiles("cms")
 @EnableConfigurationProperties(CmsProperties::class)
 @Import(CmsRestApi::class, WebClientConfiguration::class)

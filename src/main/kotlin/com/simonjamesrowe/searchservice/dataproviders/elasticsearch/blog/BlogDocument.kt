@@ -43,8 +43,8 @@ data class BlogDocument(
 
   @Field(
     type = FieldType.Date,
-    format = DateFormat.custom,
-    pattern = "uuuu-MM-dd"
+    format = [DateFormat.custom],
+    pattern = ["uuuu-MM-dd"]
   )
   val createdDate: LocalDate
 

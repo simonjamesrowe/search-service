@@ -1,6 +1,5 @@
 package com.simonjamesrowe.searchservice.test.dataproviders.elasticsearch.site
 
-import com.simonjamesrowe.component.test.TestContainersExtension
 import com.simonjamesrowe.component.test.elasticsearch.WithElasticsearchContainer
 import com.simonjamesrowe.searchservice.config.ElasticSearchConfig
 import com.simonjamesrowe.searchservice.config.ElasticSearchIndexProperties
@@ -24,9 +23,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.test.autoconfigure.json.JsonTest
 import org.springframework.context.annotation.Import
 
-@JsonTest
-@ExtendWith(TestContainersExtension::class)
 @WithElasticsearchContainer
+@JsonTest
 @ImportAutoConfiguration(
   ElasticsearchDataAutoConfiguration::class,
   ElasticsearchRepositoriesAutoConfiguration::class,

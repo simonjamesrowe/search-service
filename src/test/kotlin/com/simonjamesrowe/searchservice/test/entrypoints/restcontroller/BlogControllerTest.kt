@@ -1,30 +1,39 @@
 package com.simonjamesrowe.searchservice.test.entrypoints.restcontroller
 
-import com.ninjasquad.springmockk.MockkBean
 import com.simonjamesrowe.searchservice.core.model.BlogSearchResult
 import com.simonjamesrowe.searchservice.core.usecase.SearchBlogsUseCase
 import com.simonjamesrowe.searchservice.entrypoints.restcontroller.BlogController
 import com.tyro.oss.arbitrater.arbitraryInstance
-import io.mockk.coEvery
-import io.mockk.coVerify
-import io.mockk.every
-import io.mockk.verify
+import io.mockk.*
+import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Import
 import org.springframework.http.MediaType
 import org.springframework.test.web.reactive.server.WebTestClient
 import java.time.format.DateTimeFormatter
 
 
 @WebFluxTest(controllers = [BlogController::class])
+@Import(BlogControllerTest.MockBeanConfiguration::class)
 internal class BlogControllerTest {
 
-  @MockkBean
+  @Autowired
   lateinit var searchBlogsUseCase: SearchBlogsUseCase
 
   @Autowired
   private lateinit var webClient: WebTestClient
+
+  @BeforeEach
+  @AfterEach
+  fun beforeAndAfter() {
+    clearAllMocks();
+  }
+
+
 
   @Test
   fun `search should return expected results`() {
@@ -70,6 +79,13 @@ internal class BlogControllerTest {
       .jsonPath("$[0].title").isEqualTo(searchResults[0].title)
 
     coVerify { searchBlogsUseCase.getAll() }
+  }
+
+  class MockBeanConfiguration {
+
+    @Bean
+    fun searchBlogUseCase() = mockkClass(SearchBlogsUseCase::class);
+
   }
 
 }
