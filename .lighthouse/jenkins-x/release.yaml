@@ -17,6 +17,22 @@ spec:
             requests:
               cpu: 1
               memory: 8Gi
+          env:
+            - name: DEPLOY_IMAGE_REPO_URL
+              valueFrom:
+                secretKeyRef:
+                  name: container-registry-auth
+                  key: url
+            - name: DEPLOY_IMAGE_REPO_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: container-registry-auth
+                  key: username
+            - name: DEPLOY_IMAGE_REPO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: container-registry-auth
+                  key: password
           workingDir: /workspace/source
         steps:
         - image: uses:simonjamesrowe/jx3-pipeline-catalog/tasks/git-clone/git-clone.yaml@HEAD
@@ -33,7 +49,6 @@ spec:
             source .jx/variables.sh
             cp /.gradle/gradle.properties gradle.properties
             env
-            cat /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson
             #gradle -I /.gradle/init.gradle build sonarqube publish bootBuildImage -Pversion=$(cat VERSION) --info
         - name: promote-changelog
           resources: {}
