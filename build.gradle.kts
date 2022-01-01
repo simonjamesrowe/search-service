@@ -104,6 +104,14 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
     "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http --verbose"
   )
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
+  docker {
+    publishRegistry {
+      username = gradlePropertiesProp["publishRegistryUsername"] as String
+      password = gradlePropertiesProp["publishRegistryPassword"] as String
+      url = "https://${gradlePropertiesProp["publishingRegistryUrl"]}"
+      email = gradlePropertiesProp["publishingRegistryEmail"] as String
+    }
+  }
 }
 
 sonarqube {

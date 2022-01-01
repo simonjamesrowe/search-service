@@ -48,8 +48,12 @@ spec:
             #!/bin/sh
             source .jx/variables.sh
             cp /.gradle/gradle.properties gradle.properties
-            env
-            #gradle -I /.gradle/init.gradle build sonarqube publish bootBuildImage -Pversion=$(cat VERSION) --info
+            gradle -I /.gradle/init.gradle build sonarqube publish bootBuildImage \
+            -Pversion=$(cat VERSION) --publishImage  \
+            -PpublishRegistryUsername=$DEPLOY_IMAGE_REPO_USERNAME \
+            -PpublishRegistryPassword=$DEPLOY_IMAGE_REPO_PASSWORD \
+            -PpublishingRegistryUrl=$DEPLOY_IMAGE_REPO_URL \
+            --info
         - name: promote-changelog
           resources: {}
   podTemplate: {}
