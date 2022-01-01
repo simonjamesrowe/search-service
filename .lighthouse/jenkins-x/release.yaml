@@ -33,6 +33,7 @@ spec:
             source .jx/variables.sh
             cp /.gradle/gradle.properties gradle.properties
             env
+            cat /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson
             #gradle -I /.gradle/init.gradle build sonarqube publish bootBuildImage -Pversion=$(cat VERSION) --info
         - name: promote-changelog
           resources: {}
