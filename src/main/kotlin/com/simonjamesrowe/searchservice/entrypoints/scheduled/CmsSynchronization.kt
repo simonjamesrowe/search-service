@@ -10,8 +10,6 @@ import com.simonjamesrowe.searchservice.mapper.BlogMapper
 import com.simonjamesrowe.searchservice.mapper.BlogMapper.toBlogIndexRequest
 import com.simonjamesrowe.searchservice.mapper.JobMapper
 import com.simonjamesrowe.searchservice.mapper.SkillsGroupMapper
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
 import org.springframework.core.env.Environment
@@ -49,7 +47,7 @@ class CmsSynchronization(
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  override fun syncSiteDocuments() = runBlocking{
+  override fun syncSiteDocuments() = runBlocking {
     if (!env.acceptsProfiles(Profiles.of("cloud"))) {
       return@runBlocking
     }

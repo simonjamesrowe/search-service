@@ -10,5 +10,5 @@ interface BlogIndexRepository {
 
   fun deleteBlog(id: String)
 
-  fun deleteBlogs(id: Collection<String>)
+  fun deleteBlogs(ids: Collection<String>)
 }

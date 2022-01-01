@@ -7,7 +7,6 @@ import com.simonjamesrowe.searchservice.core.repository.BlogSearchRepository
 import org.springframework.cloud.sleuth.annotation.NewSpan
 import org.springframework.cloud.sleuth.annotation.SpanTag
 import org.springframework.data.domain.Sort
-import org.springframework.stereotype.Component
 import org.springframework.stereotype.Service
 
 @Service

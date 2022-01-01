@@ -32,10 +32,10 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("io.projectreactor.netty:reactor-netty")
-  implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
+//  implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
   implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
-  implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
+//  implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
   implementation("com.simonjamesrowe:model:0.0.20")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
@@ -67,14 +67,14 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.register<Delete>("deleteSerializationConfig") {
-  delete(files("${project.buildDir}/classes/kotlin/main/META-INF/native-image/serialization-config.json"))
+  delete(files("${project.buildDir}/resources/native-image/serialization-config.json"))
 }
 
 tasks.withType<Test> {
   useJUnitPlatform()
   minHeapSize = "2g"
   maxHeapSize = "4g"
-  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/META-INF/native-image")
+  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/resources/META-INF/native-image")
   finalizedBy(tasks.jacocoTestReport, tasks.getByName<Delete>("deleteSerializationConfig"))
 }
 
@@ -101,7 +101,7 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
   builder = "paketobuildpacks/builder:tiny"
   environment = mapOf(
     "BP_NATIVE_IMAGE" to "true",
-    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http"
+    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http --verbose"
   )
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
 }
@@ -115,5 +115,7 @@ sonarqube {
 }
 
 springAot {
-  mode.set(AotMode.NATIVE_AGENT)
+//  mode.set(AotMode.NATIVE_AGENT)
+  verify.set(false)
+
 }

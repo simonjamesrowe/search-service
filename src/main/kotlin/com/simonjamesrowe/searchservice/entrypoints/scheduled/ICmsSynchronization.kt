@@ -1,6 +1,5 @@
 package com.simonjamesrowe.searchservice.entrypoints.scheduled
 
-import kotlinx.coroutines.Job
 import org.springframework.scheduling.annotation.Scheduled
 
 interface ICmsSynchronization {

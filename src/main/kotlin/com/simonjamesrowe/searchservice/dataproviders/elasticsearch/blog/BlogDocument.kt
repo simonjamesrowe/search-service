@@ -7,14 +7,12 @@ import org.springframework.data.elasticsearch.annotations.Document
 import org.springframework.data.elasticsearch.annotations.Field
 import org.springframework.data.elasticsearch.annotations.FieldType
 import java.time.LocalDate
-import java.time.LocalDateTime
-import java.util.*
 
 @Document(indexName = "#{@blogIndexName}", createIndex = false)
 data class BlogDocument(
 
   @Id
-  var id : String,
+  var id: String,
 
   @Field
   val title: String,
@@ -43,7 +41,7 @@ data class BlogDocument(
 
   @Field(
     type = FieldType.Date,
-    format = [DateFormat.custom],
+    format = [DateFormat.date],
     pattern = ["uuuu-MM-dd"]
   )
   val createdDate: LocalDate

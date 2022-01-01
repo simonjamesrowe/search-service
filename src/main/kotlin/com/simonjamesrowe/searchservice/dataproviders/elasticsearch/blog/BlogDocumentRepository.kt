@@ -6,7 +6,8 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 
 interface BlogDocumentRepository : ElasticsearchRepository<BlogDocument, String> {
 
-  @Query("""
+  @Query(
+    """
       {
         "bool": {
           "should": [
@@ -39,10 +40,12 @@ interface BlogDocumentRepository : ElasticsearchRepository<BlogDocument, String>
           ]
         }
       }
-  """)
+  """
+  )
   fun getBlogsByQuery(q: String): Collection<BlogDocument>
 
-  @Query("""
+  @Query(
+    """
     {
       "bool": {
         "must": {
@@ -55,6 +58,6 @@ interface BlogDocumentRepository : ElasticsearchRepository<BlogDocument, String>
     }
   """
   )
-  fun getBlogsByTag(tag: String, pageable: Pageable) : List<BlogDocument>
+  fun getBlogsByTag(tag: String, pageable: Pageable): List<BlogDocument>
 
 }

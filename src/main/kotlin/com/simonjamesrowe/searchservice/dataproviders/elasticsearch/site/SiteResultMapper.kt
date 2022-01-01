@@ -10,8 +10,8 @@ object SiteResultMapper {
     return type.buckets.map { bucket ->
       SiteSearchResult(
         type = bucket.keyAsString,
-        hits = bucket.aggregations.get<Terms>("id").buckets.map {idBucket ->
-          SiteSearchResult.Hit (
+        hits = bucket.aggregations.get<Terms>("id").buckets.map { idBucket ->
+          SiteSearchResult.Hit(
             imageUrl = idBucket.aggregations.get<Terms>("imageUrl").buckets[0].keyAsString,
             name = idBucket.aggregations.get<Terms>("name").buckets[0].keyAsString,
             link = idBucket.aggregations.get<Terms>("url").buckets[0].keyAsString
