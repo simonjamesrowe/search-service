@@ -1,7 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 import org.springframework.boot.gradle.tasks.bundling.BootJar
-import org.springframework.aot.gradle.dsl.AotMode
 
 plugins {
   id("org.springframework.boot") version "2.6.2"
@@ -30,6 +29,7 @@ extra["springCloudVersion"] = "2021.0.0"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
+  implementation("org.springframework.experimental:spring-native")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("io.projectreactor.netty:reactor-netty")
 //  implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
@@ -74,8 +74,11 @@ tasks.withType<Test> {
   useJUnitPlatform()
   minHeapSize = "2g"
   maxHeapSize = "4g"
-  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/META-INF/native-image")
-  finalizedBy(tasks.jacocoTestReport, tasks.getByName<Delete>("deleteSerializationConfig"))
+  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/META-INF/native-image/com.simonjamesrowe")
+  finalizedBy(
+    tasks.jacocoTestReport
+    /**, tasks.getByName<Delete>("deleteSerializationConfig")**/
+  )
 }
 
 tasks.jacocoTestReport {
@@ -94,14 +97,17 @@ publishing {
 }
 
 tasks.getByName<BootJar>("bootJar") {
-  dependsOn(tasks.test, tasks.getByName<Delete>("deleteSerializationConfig"))
+  dependsOn(
+    tasks.test
+    /**, tasks.getByName<Delete>("deleteSerializationConfig")**/
+  )
 }
 
 tasks.getByName<BootBuildImage>("bootBuildImage") {
   builder = "paketobuildpacks/builder:tiny"
   environment = mapOf(
     "BP_NATIVE_IMAGE" to "true",
-    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http --verbose"
+    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --verbose"
   )
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
   docker {
@@ -123,7 +129,6 @@ sonarqube {
 }
 
 springAot {
-  mode.set(AotMode.NATIVE_AGENT)
   verify.set(false)
   debugVerify.set(true)
 }
