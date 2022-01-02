@@ -48,7 +48,6 @@ spec:
             #!/bin/sh
             source .jx/variables.sh
             cp /.gradle/gradle.properties gradle.properties
-            echo
             gradle -I /.gradle/init.gradle build sonarqube publish bootBuildImage \
             -Pversion=$(cat VERSION) --publishImage  \
             -PpublishRegistryUsername=$DEPLOY_IMAGE_REPO_USERNAME \
