@@ -3,7 +3,9 @@ package com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog
 import org.springframework.data.domain.Pageable
 import org.springframework.data.elasticsearch.annotations.Query
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+import org.springframework.stereotype.Repository
 
+@Repository
 interface BlogDocumentRepository : ElasticsearchRepository<BlogDocument, String> {
 
   @Query(

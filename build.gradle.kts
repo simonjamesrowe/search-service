@@ -125,4 +125,5 @@ sonarqube {
 springAot {
   mode.set(AotMode.NATIVE_AGENT)
   verify.set(false)
+  debugVerify.set(true)
 }
