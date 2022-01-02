@@ -7,6 +7,9 @@
       "excludeClasses": "org.junit.**"
     },
     {
+      "excludeClasses": "java.lang.annotation.**"
+    },
+    {
       "excludeClasses": "org.mockito.**"
     },
     {
@@ -68,6 +71,9 @@
     },
     {
       "excludeClasses": "com.sun.**"
+    },
+    {
+      "excludeClasses": "sun.**"
     },
     {
       "excludeClasses": "worker.org.gradle.**"
