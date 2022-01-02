@@ -24,6 +24,7 @@ class SiteSearchRepository(
   private val siteDocumentRepository: SiteDocumentRepository,
 ) : com.simonjamesrowe.searchservice.core.repository.SiteSearchRepository, SiteIndexRepository {
 
+
   private fun searchSite(q: String = ""): List<SiteSearchResult> {
     val boolQuery = QueryBuilders
       .boolQuery()
