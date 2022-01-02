@@ -70,9 +70,6 @@
       "excludeClasses": "com.sun.**"
     },
     {
-      "excludeClasses": "sun.**"
-    },
-    {
       "excludeClasses": "worker.org.gradle.**"
     },
     {
