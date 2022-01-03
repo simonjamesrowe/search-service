@@ -67,7 +67,7 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.register<Delete>("deleteSerializationConfig") {
-  delete(files("${project.buildDir}/classes/kotlin/main/META-INF/native-image/serialization-config.json"))
+  delete(files("${project.buildDir}/classes/kotlin/main/META-INF/native-image/com.simonjamesrowe/serialization-config.json"))
 }
 
 tasks.withType<Test> {
@@ -76,8 +76,8 @@ tasks.withType<Test> {
   maxHeapSize = "4g"
   jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/META-INF/native-image/com.simonjamesrowe")
   finalizedBy(
-    tasks.jacocoTestReport
-    /**, tasks.getByName<Delete>("deleteSerializationConfig")**/
+    tasks.jacocoTestReport,
+    tasks.getByName<Delete>("deleteSerializationConfig")
   )
 }
 
@@ -98,8 +98,8 @@ publishing {
 
 tasks.getByName<BootJar>("bootJar") {
   dependsOn(
-    tasks.test
-    /**, tasks.getByName<Delete>("deleteSerializationConfig")**/
+    tasks.test,
+    tasks.getByName<Delete>("deleteSerializationConfig")
   )
 }
 
