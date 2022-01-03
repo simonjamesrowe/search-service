@@ -3,11 +3,11 @@ import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-  id("org.springframework.boot") version "2.6.2"
+  id("org.springframework.boot") version "2.6.3-SNAPSHOT"
   id("io.spring.dependency-management") version "1.0.11.RELEASE"
   kotlin("jvm") version "1.6.10"
   kotlin("plugin.spring") version "1.6.10"
-  id("org.springframework.experimental.aot") version "0.11.1"
+  id("org.springframework.experimental.aot") version "0.11.2-SNAPSHOT"
   id("maven-publish")
   id("org.sonarqube") version "3.1.1"
   id("jacoco")
@@ -25,7 +25,7 @@ repositories {
   maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
-extra["springCloudVersion"] = "2021.0.0"
+extra["springCloudVersion"] = "2021.0.1-SNAPSHOT"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
