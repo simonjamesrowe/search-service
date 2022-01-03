@@ -64,14 +64,14 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.register<Delete>("deleteSerializationConfig") {
-  delete(files("build/classes/kotlin/main/native-image/com.simonjamesrowe/serialization-config.json"))
+  delete(files("build/classes/kotlin/main/META-INF/native-image/com.simonjamesrowe/serialization-config.json"))
 }
 
 tasks.withType<Test> {
   useJUnitPlatform()
   minHeapSize = "2g"
   maxHeapSize = "4g"
-  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/native-image/com.simonjamesrowe")
+  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/META-INF/native-image/com.simonjamesrowe")
   finalizedBy(
     tasks.jacocoTestReport,
     tasks.getByName<Delete>("deleteSerializationConfig")
