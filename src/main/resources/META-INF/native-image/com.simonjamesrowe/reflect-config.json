@@ -1323,15 +1323,6 @@
     ]
   },
   {
-    "name": "com.jayway.jsonpath.internal.function.text.Length",
-    "methods": [
-      {
-        "name": "<init>",
-        "parameterTypes": []
-      }
-    ]
-  },
-  {
     "name": "com.simonjamesrowe.model.cms.dto.BlogResponseDTO",
     "allDeclaredFields": true,
     "queryAllDeclaredMethods": true,
@@ -2426,95 +2417,7 @@
       }
     ]
   },
-  {
-    "name": "com.simonjamesrowe.searchservice.test.entrypoints.kafka.KafkaEventConsumerTest$consuming webhook skill events will site$1",
-    "methods": [
-      {
-        "name": "invokeSuspend",
-        "parameterTypes": [
-          "java.lang.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "com.simonjamesrowe.searchservice.test.entrypoints.restcontroller.BlogControllerTest",
-    "methods": [
-      {
-        "name": "get all should return expected results",
-        "parameterTypes": []
-      },
-      {
-        "name": "search should return expected results",
-        "parameterTypes": []
-      }
-    ]
-  },
-  {
-    "name": "com.simonjamesrowe.searchservice.test.entrypoints.restcontroller.SiteControllerTest",
-    "methods": [
-      {
-        "name": "search results should be correct",
-        "parameterTypes": []
-      }
-    ]
-  },
-  {
-    "name": "com.simonjamesrowe.searchservice.test.entrypoints.scheduled.CmsSynchronizationTest$should index blog documents$1",
-    "methods": [
-      {
-        "name": "invokeSuspend",
-        "parameterTypes": [
-          "java.lang.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "com.simonjamesrowe.searchservice.test.entrypoints.scheduled.CmsSynchronizationTest$should index site documents$1",
-    "methods": [
-      {
-        "name": "invokeSuspend",
-        "parameterTypes": [
-          "java.lang.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "com.simonjamesrowe.searchservice.test.usecase.SearchBlogsUseCaseTest$should return all blogs$1",
-    "methods": [
-      {
-        "name": "invokeSuspend",
-        "parameterTypes": [
-          "java.lang.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "com.simonjamesrowe.searchservice.test.usecase.SearchBlogsUseCaseTest$should search for blogs with query$1",
-    "methods": [
-      {
-        "name": "invokeSuspend",
-        "parameterTypes": [
-          "java.lang.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "com.simonjamesrowe.searchservice.test.usecase.SearchSiteUseCaseTest$should return site search results$1",
-    "methods": [
-      {
-        "name": "invokeSuspend",
-        "parameterTypes": [
-          "java.lang.Object"
-        ]
-      }
-    ]
-  },
-  {
+ {
     "name": "double",
     "queryAllDeclaredMethods": true
   },
