@@ -1,208 +1,228 @@
 {
-  "resources": {
-    "includes": [
-      {
-        "pattern": "\\QMETA-INF/dgminfo\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/groovy-release-info.properties\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/groovy/org.codehaus.groovy.runtime.ExtensionModule\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/native/libconscrypt_openjdk_jni-osx-x86_64.dylib\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/native/libnetty_resolver_dns_native_macos_x86_64.jnilib\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/com.fasterxml.jackson.databind.Module\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/java.nio.file.spi.FileSystemProvider\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/kotlin.reflect.jvm.internal.impl.builtins.BuiltInsLoader\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/kotlin.reflect.jvm.internal.impl.resolve.ExternalOverridabilityCondition\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/kotlinx.coroutines.reactive.ContextInjector\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.apache.commons.logging.LogFactory\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.apache.logging.log4j.spi.Provider\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.apache.logging.log4j.util.PropertySource\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.elasticsearch.common.xcontent.XContentBuilderExtension\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.elasticsearch.plugins.spi.NamedXContentProvider\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.jeasy.random.api.RandomizerRegistry\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.junit.platform.engine.TestEngine\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.junit.platform.launcher.TestExecutionListener\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/org.testcontainers.dockerclient.DockerClientProviderStrategy\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/wiremock.org.eclipse.jetty.http.HttpFieldPreEncoder\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/services/wiremock.org.eclipse.jetty.io.ssl.ALPNProcessor$Server\\E"
-      },
-      {
-        "pattern": "\\QMETA-INF/spring.components\\E"
-      },
-      {
-        "pattern": "\\Qapplication-cms.properties\\E"
-      },
-      {
-        "pattern": "\\Qapplication.properties\\E"
-      },
-      {
-        "pattern": "\\Qapplication.yml\\E"
-      },
-      {
-        "pattern": "\\Qassets/swagger-ui/index.html\\E"
-      },
-      {
-        "pattern": "\\Qassets\\E"
-      },
-      {
-        "pattern": "\\Qcom/fasterxml/jackson/core/type/TypeReference.class\\E"
-      },
-      {
-        "pattern": "\\Qcom/fasterxml/jackson/module/scala/build.properties\\E"
-      },
-      {
-        "pattern": "\\Qcom/github/dockerjava/zerodep/shaded/org/apache/hc/client5/version.properties\\E"
-      },
-      {
-        "pattern": "\\Qcom/simonjamesrowe/component/test/BaseComponentTest.class\\E"
-      },
-      {
-        "pattern": "\\Qcom/simonjamesrowe/searchservice/SearchServiceApplication.class\\E"
-      },
-      {
-        "pattern": "\\Qcom/simonjamesrowe/searchservice/\\E"
-      },
-      {
-        "pattern": "\\Qcom/simonjamesrowe/searchservice/dataproviders/elasticsearch/AbstractIndexConfig.class\\E"
-      },
-      {
-        "pattern": "\\QgetAllBlogs.json\\E"
-      },
-      {
-        "pattern": "\\QgetAllJobs.json\\E"
-      },
-      {
-        "pattern": "\\QgetAllSkillsGroups.json\\E"
-      },
-      {
-        "pattern": "\\Qhelpers.nashorn.js\\E"
-      },
-      {
-        "pattern": "\\Qio/mockk/proxy/jvm/advice/jvm/JvmMockKProxyAdvice.class\\E"
-      },
-      {
-        "pattern": "\\Qio/mockk/proxy/jvm/dispatcher/JvmMockKDispatcher.clazz\\E"
-      },
-      {
-        "pattern": "\\Qio/mockk/proxy/jvm/dispatcher/JvmMockKWeakMap$StrongKey.clazz\\E"
-      },
-      {
-        "pattern": "\\Qio/mockk/proxy/jvm/dispatcher/JvmMockKWeakMap$WeakKey.clazz\\E"
-      },
-      {
-        "pattern": "\\Qio/mockk/proxy/jvm/dispatcher/JvmMockKWeakMap.clazz\\E"
-      },
-      {
-        "pattern": "\\Qjava/lang/reflect/AccessibleObject.class\\E"
-      },
-      {
-        "pattern": "\\Qkafka/kafka-version.properties\\E"
-      },
-      {
-        "pattern": "\\Qkeystore\\E"
-      },
-      {
-        "pattern": "\\Qkotlin/coroutines/jvm/internal/BaseContinuationImpl.class\\E"
-      },
-      {
-        "pattern": "\\Qkotlin/coroutines/jvm/internal/ContinuationImpl.class\\E"
-      },
-      {
-        "pattern": "\\Qkotlin/coroutines/jvm/internal/SuspendLambda.class\\E"
-      },
-      {
-        "pattern": "\\Qkotlin/jvm/internal/Lambda.class\\E"
-      },
-      {
-        "pattern": "\\Qlibrary.properties\\E"
-      },
-      {
-        "pattern": "\\Qmockito-extensions/org.mockito.plugins.MockResolver\\E"
-      },
-      {
-        "pattern": "\\Qmozilla/public-suffix-list.txt\\E"
-      },
-      {
-        "pattern": "\\Qorg/apache/http/client/version.properties\\E"
-      },
-      {
-        "pattern": "\\Qorg/apache/http/nio/client/version.properties\\E"
-      },
-      {
-        "pattern": "\\Qorg/elasticsearch/client/version.properties\\E"
-      },
-      {
-        "pattern": "\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"
-      },
-      {
-        "pattern": "\\Qorg/springframework/core/ParameterizedTypeReference.class\\E"
-      },
-      {
-        "pattern": "\\Qorg/springframework/http/codec/CodecConfigurer.properties\\E"
-      },
-      {
-        "pattern": "\\Qorg/springframework/messaging/handler/annotation/MessageMapping.class\\E"
-      },
-      {
-        "pattern": "\\Qorg/springframework/scheduling/annotation/Scheduled.class\\E"
-      },
-      {
-        "pattern": "\\Qtestcontainers.properties\\E"
-      },
-      {
-        "pattern": "\\Qversions.properties\\E"
-      },
-      {
-        "pattern": "\\Qwiremock/org/apache/http/client/version.properties\\E"
-      },
-      {
-        "pattern": "\\Qwiremock/org/eclipse/jetty/http/encoding.properties\\E"
-      },
-      {
-        "pattern": "\\Qwiremock/org/eclipse/jetty/http/mime.properties\\E"
-      },
-      {
-        "pattern": "\\Qwiremock/org/eclipse/jetty/version/build.properties\\E"
-      }
-    ]
-  },
-  "bundles": []
+  "resources":{
+  "includes":[
+    {
+      "pattern":"\\QMETA-INF/dgminfo\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/groovy-release-info.properties\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/groovy/org.codehaus.groovy.runtime.ExtensionModule\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/native/libconscrypt_openjdk_jni-osx-x86_64.dylib\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/native/libnetty_resolver_dns_native_macos_x86_64.jnilib\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/com.fasterxml.jackson.databind.Module\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/java.nio.file.spi.FileSystemProvider\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/kotlin.reflect.jvm.internal.impl.builtins.BuiltInsLoader\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/kotlin.reflect.jvm.internal.impl.resolve.ExternalOverridabilityCondition\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/kotlinx.coroutines.reactive.ContextInjector\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.apache.commons.logging.LogFactory\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.apache.logging.log4j.spi.Provider\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.apache.logging.log4j.util.PropertySource\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.elasticsearch.common.xcontent.XContentBuilderExtension\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.elasticsearch.plugins.spi.NamedXContentProvider\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.jeasy.random.api.RandomizerRegistry\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.junit.platform.engine.TestEngine\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.junit.platform.launcher.TestExecutionListener\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.testcontainers.dockerclient.DockerClientProviderStrategy\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/wiremock.org.eclipse.jetty.http.HttpFieldPreEncoder\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/wiremock.org.eclipse.jetty.io.ssl.ALPNProcessor$Server\\E"
+    }, 
+    {
+      "pattern":"\\Qapplication-cms.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qapplication.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qapplication.yml\\E"
+    }, 
+    {
+      "pattern":"\\Qassets/swagger-ui/index.html\\E"
+    }, 
+    {
+      "pattern":"\\Qassets\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/fasterxml/jackson/core/type/TypeReference.class\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/fasterxml/jackson/module/scala/build.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/github/dockerjava/zerodep/shaded/org/apache/hc/client5/version.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/component/test/BaseComponentTest.class\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/dataproviders/elasticsearch/AbstractIndexConfig.class\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/dataproviders/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/dataproviders/cms/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/dataproviders/elasticsearch/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/dataproviders/elasticsearch/blog/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/dataproviders/elasticsearch/site/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/entrypoints/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/entrypoints/kafka/\\E"
+    }, 
+    {
+      "pattern":"\\Qcom/simonjamesrowe/searchservice/test/entrypoints/restcontroller/\\E"
+    }, 
+    {
+      "pattern":"\\QgetAllBlogs.json\\E"
+    }, 
+    {
+      "pattern":"\\QgetAllJobs.json\\E"
+    }, 
+    {
+      "pattern":"\\QgetAllSkillsGroups.json\\E"
+    }, 
+    {
+      "pattern":"\\Qhelpers.nashorn.js\\E"
+    }, 
+    {
+      "pattern":"\\Qio/mockk/proxy/jvm/advice/jvm/JvmMockKProxyAdvice.class\\E"
+    }, 
+    {
+      "pattern":"\\Qio/mockk/proxy/jvm/dispatcher/JvmMockKDispatcher.clazz\\E"
+    }, 
+    {
+      "pattern":"\\Qio/mockk/proxy/jvm/dispatcher/JvmMockKWeakMap$StrongKey.clazz\\E"
+    }, 
+    {
+      "pattern":"\\Qio/mockk/proxy/jvm/dispatcher/JvmMockKWeakMap$WeakKey.clazz\\E"
+    }, 
+    {
+      "pattern":"\\Qio/mockk/proxy/jvm/dispatcher/JvmMockKWeakMap.clazz\\E"
+    }, 
+    {
+      "pattern":"\\Qjava/lang/reflect/AccessibleObject.class\\E"
+    }, 
+    {
+      "pattern":"\\Qkafka/kafka-version.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qkeystore\\E"
+    }, 
+    {
+      "pattern":"\\Qkotlin/coroutines/jvm/internal/BaseContinuationImpl.class\\E"
+    }, 
+    {
+      "pattern":"\\Qkotlin/coroutines/jvm/internal/ContinuationImpl.class\\E"
+    }, 
+    {
+      "pattern":"\\Qkotlin/coroutines/jvm/internal/SuspendLambda.class\\E"
+    }, 
+    {
+      "pattern":"\\Qkotlin/jvm/internal/Lambda.class\\E"
+    }, 
+    {
+      "pattern":"\\Qlibrary.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qmockito-extensions/org.mockito.plugins.MockResolver\\E"
+    }, 
+    {
+      "pattern":"\\Qmozilla/public-suffix-list.txt\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/apache/http/client/version.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/apache/http/nio/client/version.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/elasticsearch/client/version.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/springframework/core/ParameterizedTypeReference.class\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/springframework/http/codec/CodecConfigurer.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/springframework/messaging/handler/annotation/MessageMapping.class\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/springframework/scheduling/annotation/Scheduled.class\\E"
+    }, 
+    {
+      "pattern":"\\Qtestcontainers.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qversions.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qwiremock/org/apache/http/client/version.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qwiremock/org/eclipse/jetty/http/encoding.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qwiremock/org/eclipse/jetty/http/mime.properties\\E"
+    }, 
+    {
+      "pattern":"\\Qwiremock/org/eclipse/jetty/version/build.properties\\E"
+    }
+  ]},
+  "bundles":[]
 }
