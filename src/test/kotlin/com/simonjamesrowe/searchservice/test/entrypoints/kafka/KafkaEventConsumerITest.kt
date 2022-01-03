@@ -1,6 +1,5 @@
 package com.simonjamesrowe.searchservice.test.entrypoints.kafka
 
-import brave.Tracer
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.convertValue
 import com.simonjamesrowe.component.test.BaseComponentTest
@@ -11,7 +10,6 @@ import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
 import com.simonjamesrowe.model.cms.dto.SkillResponseDTO
 import com.simonjamesrowe.model.cms.dto.TagResponseDTO
 import com.simonjamesrowe.model.cms.dto.WebhookEventDTO
-import com.simonjamesrowe.searchservice.config.runInSpan
 import com.simonjamesrowe.searchservice.dataproviders.elasticsearch.blog.BlogDocumentRepository
 import com.simonjamesrowe.searchservice.test.TestUtils.image
 import org.assertj.core.api.Assertions.assertThat
@@ -42,9 +40,6 @@ internal class KafkaEventConsumerITest : BaseComponentTest() {
 
   @Autowired
   private lateinit var blogDocumentRepository: BlogDocumentRepository
-
-  @Autowired
-  private lateinit var tracer: Tracer
 
   @BeforeEach
   @AfterEach
@@ -196,30 +191,29 @@ internal class KafkaEventConsumerITest : BaseComponentTest() {
       entry = objectMapper.convertValue(blog3)
     )
 
-    runInSpan(tracer, "kafkaEventConsumerTest", null) {
-      println("Trace Id is ${it.context().traceId()}")
 
-      kafkaTemplate.send(
-        MessageBuilder.withPayload(event1)
-          .setHeader(KafkaHeaders.TOPIC, "LOCAL_EVENTS")
-          .setHeader("b3", it.context().traceId())
-          .build())
-      kafkaTemplate.send(
-        MessageBuilder.withPayload(event2)
-          .setHeader(KafkaHeaders.TOPIC, "LOCAL_EVENTS")
-          .setHeader("b3", it.context().traceId())
-          .build())
-      kafkaTemplate.send(
-        MessageBuilder.withPayload(event3)
-          .setHeader(KafkaHeaders.TOPIC, "LOCAL_EVENTS")
-          .setHeader("b3", it.context().traceId())
-          .build())
-      kafkaTemplate.send(
-        MessageBuilder.withPayload(event4)
-          .setHeader(KafkaHeaders.TOPIC, "LOCAL_EVENTS")
-          .setHeader("b3", it.context().traceId())
-          .build())
-    }
+
+    kafkaTemplate.send(
+      MessageBuilder.withPayload(event1)
+        .setHeader(KafkaHeaders.TOPIC, "LOCAL_EVENTS")
+        .build()
+    )
+    kafkaTemplate.send(
+      MessageBuilder.withPayload(event2)
+        .setHeader(KafkaHeaders.TOPIC, "LOCAL_EVENTS")
+        .build()
+    )
+    kafkaTemplate.send(
+      MessageBuilder.withPayload(event3)
+        .setHeader(KafkaHeaders.TOPIC, "LOCAL_EVENTS")
+        .build()
+    )
+    kafkaTemplate.send(
+      MessageBuilder.withPayload(event4)
+        .setHeader(KafkaHeaders.TOPIC, "LOCAL_EVENTS")
+        .build()
+    )
+
 
     await().atMost(Duration.ofSeconds(60)).until {
       blogDocumentRepository.count() == 2L

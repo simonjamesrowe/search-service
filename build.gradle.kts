@@ -32,10 +32,7 @@ dependencies {
   implementation("org.springframework.experimental:spring-native")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("io.projectreactor.netty:reactor-netty")
-//  implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-webflux:1.0.1")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
-  implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
-//  implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
   implementation("com.simonjamesrowe:model:0.0.20")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
@@ -67,14 +64,14 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.register<Delete>("deleteSerializationConfig") {
-  delete(files("generated/native-image/com.simonjamesrowe/serialization-config.json"))
+  delete(files("build/classes/kotlin/main/native-image/com.simonjamesrowe/serialization-config.json"))
 }
 
 tasks.withType<Test> {
   useJUnitPlatform()
   minHeapSize = "2g"
   maxHeapSize = "4g"
-  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=generated/native-image/com.simonjamesrowe")
+  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/native-image/com.simonjamesrowe")
   finalizedBy(
     tasks.jacocoTestReport,
     tasks.getByName<Delete>("deleteSerializationConfig")

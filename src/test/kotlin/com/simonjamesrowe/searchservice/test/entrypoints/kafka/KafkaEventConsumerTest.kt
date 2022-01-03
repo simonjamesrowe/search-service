@@ -1,7 +1,5 @@
 package com.simonjamesrowe.searchservice.test.entrypoints.kafka
 
-import brave.Span
-import brave.Tracer
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.simonjamesrowe.model.cms.dto.*
@@ -37,27 +35,16 @@ internal class KafkaEventConsumerTest {
   @RelaxedMockK
   private lateinit var indexSiteUseCase: IndexSiteUseCase
 
-  @RelaxedMockK
-  private lateinit var tracer: Tracer
-
   private val objectMapper = jacksonObjectMapper().findAndRegisterModules()
 
   private lateinit var kafkaEventConsumer: KafkaEventConsumer
-
-  private val span = mockk<Span>()
 
   @BeforeEach
   fun beforeEach() {
     mockkObject(BlogMapper)
     mockkObject(JobMapper)
     mockkObject(SkillsGroupMapper)
-    kafkaEventConsumer = KafkaEventConsumer(indexBlogUseCase, indexSiteUseCase, objectMapper, cmsRestApi, tracer)
-
-    every { tracer.nextSpan(any()) } returns span
-    every { span.name(any() )} returns span
-    every { span.start() } returns span
-    every { tracer.withSpanInScope(span) } returns mockk()
-    every { span.finish() } returns Unit
+    kafkaEventConsumer = KafkaEventConsumer(indexBlogUseCase, indexSiteUseCase, objectMapper, cmsRestApi)
   }
 
   @AfterEach
@@ -94,13 +81,8 @@ internal class KafkaEventConsumerTest {
     kafkaEventConsumer.consumeEvents(webhookEvents)
 
     verifyOrder {
-      tracer.nextSpan(any())
-      span.name("consumeEvents")
-      span.start()
-      tracer.withSpanInScope(span)
       indexBlogUseCase.indexBlogs(listOf(indexBlogRequest1, indexBlogRequest2))
       indexSiteUseCase.indexSites(listOf(siteIndexRequest1, siteIndexRequest2))
-      span.finish()
     }
   }
 
@@ -127,12 +109,7 @@ internal class KafkaEventConsumerTest {
     kafkaEventConsumer.consumeEvents(listOf(webhookEvent1, webhookEvent2))
 
     verifyOrder {
-      tracer.nextSpan(any())
-      span.name("consumeEvents")
-      span.start()
-      tracer.withSpanInScope(span)
       indexSiteUseCase.indexSites(listOf(siteIndexRequest1, siteIndexRequest2))
-      span.finish()
     }
   }
 
@@ -167,12 +144,7 @@ internal class KafkaEventConsumerTest {
     kafkaEventConsumer.consumeEvents(listOf(webhookEvent1, webhookEvent2))
 
     verify {
-      tracer.nextSpan(any())
-      span.name("consumeEvents")
-      span.start()
-      tracer.withSpanInScope(span)
       indexSiteUseCase.indexSites(listOf(siteIndexRequest1, siteIndexRequest2))
-      span.finish()
     }
   }
 

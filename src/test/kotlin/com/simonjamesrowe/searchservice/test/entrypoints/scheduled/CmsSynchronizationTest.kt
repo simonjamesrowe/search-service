@@ -1,7 +1,5 @@
 package com.simonjamesrowe.searchservice.test.entrypoints.scheduled
 
-import brave.Span
-import brave.Tracer
 import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
 import com.simonjamesrowe.model.cms.dto.JobResponseDTO
 import com.simonjamesrowe.model.cms.dto.SkillResponseDTO
@@ -43,13 +41,8 @@ internal class CmsSynchronizationTest {
   @RelaxedMockK
   private lateinit var environment: Environment
 
-  @RelaxedMockK
-  private lateinit var tracer: Tracer
-
   @InjectMockKs
   private lateinit var cmsSynchronization: CmsSynchronization
-
-  private val span = mockk<Span>()
 
   @BeforeEach
   fun beforeEach() {
@@ -57,12 +50,6 @@ internal class CmsSynchronizationTest {
     mockkObject(JobMapper)
     mockkObject(SkillsGroupMapper)
     every { environment.acceptsProfiles(Profiles.of("cloud")) } returns true
-
-    every { tracer.nextSpan((any())) } returns span
-    every { span.name(any()) } returns span
-    every { span.start() } returns span
-    every { tracer.withSpanInScope(span) } returns mockk()
-    every { span.finish() } returns Unit
   }
 
   @AfterEach
@@ -86,12 +73,7 @@ internal class CmsSynchronizationTest {
     cmsSynchronization.syncBlogDocuments()
 
     verifyOrder {
-      tracer.nextSpan(any())
-      span.name("syncBlogDocuments")
-      span.start()
-      tracer.withSpanInScope(span)
       indexBlogUseCase.indexBlogs(listOf(indexBlogRequest1, indexBlogRequest2))
-      span.finish()
     }
   }
 
@@ -143,10 +125,6 @@ internal class CmsSynchronizationTest {
     cmsSynchronization.syncSiteDocuments()
 
     verifyOrder {
-      tracer.nextSpan(any())
-      span.name("syncSiteDocuments")
-      span.start()
-      tracer.withSpanInScope(span)
       indexSiteUseCase.indexSites(
         listOf(
           siteIndexRequest1,
@@ -158,7 +136,6 @@ internal class CmsSynchronizationTest {
           siteIndexRequest7
         )
       )
-      span.finish()
     }
 
   }

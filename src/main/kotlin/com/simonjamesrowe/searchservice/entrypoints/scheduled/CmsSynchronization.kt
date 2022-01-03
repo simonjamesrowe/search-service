@@ -1,7 +1,5 @@
 package com.simonjamesrowe.searchservice.entrypoints.scheduled
 
-import brave.Tracer
-import com.simonjamesrowe.searchservice.config.runInSpan
 import com.simonjamesrowe.searchservice.core.model.IndexSiteRequest
 import com.simonjamesrowe.searchservice.core.usecase.IndexBlogUseCase
 import com.simonjamesrowe.searchservice.core.usecase.IndexSiteUseCase
@@ -23,7 +21,6 @@ class CmsSynchronization(
   private val indexBlogUseCase: IndexBlogUseCase,
   private val indexSiteUseCase: IndexSiteUseCase,
   private val env: Environment,
-  private val tracer: Tracer
 ) : ICmsSynchronization {
 
   companion object {
@@ -33,39 +30,35 @@ class CmsSynchronization(
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  override fun syncBlogDocuments() = runBlocking {
+  override fun syncBlogDocuments() = runBlocking<Unit> {
     if (!env.acceptsProfiles(Profiles.of("cloud"))) {
       return@runBlocking
     }
-    runInSpan(tracer, "syncBlogDocuments") {
-      runCatching {
-        log.info("Synchronising blog documents from cms")
-        val allBlogs = cmsRestApi.getAllBlogs()
-        indexBlogUseCase.indexBlogs(allBlogs.map(::toBlogIndexRequest))
-      }
+    runCatching {
+      log.info("Synchronising blog documents from cms")
+      val allBlogs = cmsRestApi.getAllBlogs()
+      indexBlogUseCase.indexBlogs(allBlogs.map(::toBlogIndexRequest))
     }
   }
 
   @Scheduled(initialDelay = ONE_MINUTE, fixedDelay = FOUR_HOURS)
-  override fun syncSiteDocuments() = runBlocking {
+  override fun syncSiteDocuments() = runBlocking<Unit> {
     if (!env.acceptsProfiles(Profiles.of("cloud"))) {
       return@runBlocking
     }
-    runInSpan(tracer, "syncSiteDocuments") {
-      runCatching {
-        log.info("Synchronising site documents from cms")
-        val allBlogs = cmsRestApi.getAllBlogs()
-        val allJobs = cmsRestApi.getAllJobs()
-        val allSkillsGroupStore = cmsRestApi.getAllSkillsGroups()
-        val allSiteDocuments = mutableListOf<IndexSiteRequest>()
-        allSiteDocuments.addAll(allBlogs.map { BlogMapper.toSiteIndexRequest(it) })
-        allSiteDocuments.addAll(allJobs.map { JobMapper.toIndexSiteRequest(it) })
-        allSkillsGroupStore.forEach { skillsGroup ->
-          allSiteDocuments.addAll(SkillsGroupMapper.toSiteIndexRequests(skillsGroup))
-        }
-        log.info("Indexing ${allSiteDocuments.size} site documents")
-        indexSiteUseCase.indexSites(allSiteDocuments)
+    runCatching {
+      log.info("Synchronising site documents from cms")
+      val allBlogs = cmsRestApi.getAllBlogs()
+      val allJobs = cmsRestApi.getAllJobs()
+      val allSkillsGroupStore = cmsRestApi.getAllSkillsGroups()
+      val allSiteDocuments = mutableListOf<IndexSiteRequest>()
+      allSiteDocuments.addAll(allBlogs.map { BlogMapper.toSiteIndexRequest(it) })
+      allSiteDocuments.addAll(allJobs.map { JobMapper.toIndexSiteRequest(it) })
+      allSkillsGroupStore.forEach { skillsGroup ->
+        allSiteDocuments.addAll(SkillsGroupMapper.toSiteIndexRequests(skillsGroup))
       }
+      log.info("Indexing ${allSiteDocuments.size} site documents")
+      indexSiteUseCase.indexSites(allSiteDocuments)
     }
   }
 

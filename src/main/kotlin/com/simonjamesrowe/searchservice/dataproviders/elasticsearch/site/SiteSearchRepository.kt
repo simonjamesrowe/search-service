@@ -13,8 +13,6 @@ import org.elasticsearch.search.aggregations.AggregationBuilders
 import org.elasticsearch.search.aggregations.AggregatorFactories
 import org.elasticsearch.search.aggregations.BucketOrder
 import org.elasticsearch.search.builder.SearchSourceBuilder
-import org.springframework.cloud.sleuth.annotation.NewSpan
-import org.springframework.cloud.sleuth.annotation.SpanTag
 import org.springframework.stereotype.Service
 
 @Service
@@ -63,13 +61,10 @@ class SiteSearchRepository(
     return SiteResultMapper.mapList(results)
   }
 
-  @NewSpan("searchSite-elastic")
-  override suspend fun search(@SpanTag("q") q: String): List<SiteSearchResult> = searchSite(q)
+  override suspend fun search(q: String): List<SiteSearchResult> = searchSite(q)
 
-  @NewSpan("getAllSite-elastic")
   override suspend fun getAll() = searchSite()
 
-  @NewSpan("indexSite-elastic")
   override fun indexSites(requests: Collection<IndexSiteRequest>) {
     siteDocumentRepository.saveAll(requests.map(::toSiteDocument))
   }
