@@ -124,7 +124,3 @@ sonarqube {
     property("sonar.login", gradlePropertiesProp["sonar.login"] ?: "")
   }
 }
-
-springAot {
-  mode.set(org.springframework.aot.gradle.dsl.AotMode.NATIVE_AGENT)
-}
