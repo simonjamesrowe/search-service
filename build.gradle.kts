@@ -67,14 +67,14 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.register<Delete>("deleteSerializationConfig") {
-  delete(files("${project.buildDir}/classes/kotlin/main/META-INF/native-image/com.simonjamesrowe/serialization-config.json"))
+  delete(files("src/main/resources/META-INF/native-image/com.simonjamesrowe/serialization-config.json"))
 }
 
 tasks.withType<Test> {
   useJUnitPlatform()
   minHeapSize = "2g"
   maxHeapSize = "4g"
-  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=build/classes/kotlin/main/META-INF/native-image/com.simonjamesrowe")
+  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-output-dir=src/main/resources/META-INF/native-image/com.simonjamesrowe")
   finalizedBy(
     tasks.jacocoTestReport,
     tasks.getByName<Delete>("deleteSerializationConfig")
@@ -112,10 +112,10 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
   docker {
     publishRegistry {
-      username = gradlePropertiesProp["publishRegistryUsername"] as String
-      password = gradlePropertiesProp["publishRegistryPassword"] as String
+      username = gradlePropertiesProp["publishRegistryUsername"] as String? ?: ""
+      password = gradlePropertiesProp["publishRegistryPassword"] as String? ?: ""
       url = "https://${gradlePropertiesProp["publishingRegistryUrl"]}"
-      email = gradlePropertiesProp["publishingRegistryEmail"] as String
+      email = gradlePropertiesProp["publishingRegistryEmail"] as String? ?: ""
     }
   }
 }
@@ -129,6 +129,5 @@ sonarqube {
 }
 
 springAot {
-  verify.set(false)
-  debugVerify.set(true)
+  mode.set(org.springframework.aot.gradle.dsl.AotMode.NATIVE_AGENT)
 }
