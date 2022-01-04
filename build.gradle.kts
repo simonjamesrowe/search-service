@@ -3,11 +3,10 @@ import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-  id("org.springframework.boot") version "2.6.3-SNAPSHOT"
+  id("org.springframework.boot") version "2.6.2"
   id("io.spring.dependency-management") version "1.0.11.RELEASE"
   kotlin("jvm") version "1.6.10"
   kotlin("plugin.spring") version "1.6.10"
-  id("org.springframework.experimental.aot") version "0.11.2-SNAPSHOT"
   id("maven-publish")
   id("org.sonarqube") version "3.1.1"
   id("jacoco")
@@ -25,11 +24,10 @@ repositories {
   maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
-extra["springCloudVersion"] = "2021.0.1-SNAPSHOT"
+extra["springCloudVersion"] = "2021.0.0"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
-  implementation("org.springframework.experimental:spring-native")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("io.projectreactor.netty:reactor-netty")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
@@ -105,7 +103,6 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
   environment = mapOf(
     "BP_NATIVE_IMAGE" to "true",
     "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --verbose",
-    "BP_JVM_VERSION" to "17"
   )
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
   docker {
