@@ -63,14 +63,14 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.register<Delete>("deleteSerializationConfig") {
-  delete(files("${project.buildDir}/generated/resources/aotMain/META-INF/native-image/org.springframework.aot/spring-aot/serialization-config.json"))
+  delete(files("${project.buildDir}/resources/aotMain/META-INF/native-image/org.springframework.aot/spring-aot/serialization-config.json"))
 }
 
 tasks.withType<Test> {
   useJUnitPlatform()
   minHeapSize = "2g"
   maxHeapSize = "4g"
-  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=${project.buildDir}/generated/resources/aotMain/META-INF/native-image/org.springframework.aot/spring-aot")
+  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=${project.buildDir}/resources/aotMain/META-INF/native-image/org.springframework.aot/spring-aot")
   finalizedBy(tasks.jacocoTestReport, tasks.getByName<Delete>("deleteSerializationConfig"))
 }
 
@@ -90,6 +90,10 @@ publishing {
 }
 
 tasks.getByName<BootJar>("bootJar") {
+  dependsOn(tasks.test, tasks.getByName<Delete>("deleteSerializationConfig"))
+}
+
+tasks.getByName<Jar>("aotMainJar") {
   dependsOn(tasks.test, tasks.getByName<Delete>("deleteSerializationConfig"))
 }
 
