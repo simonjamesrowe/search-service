@@ -3,10 +3,9 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: draft
-  tag: dev
+  repository: harbor.simonjamesrowe.com/simonjamesrowe/search-service
+  tag: 0.0.174
   pullPolicy: IfNotPresent
-
 # define environment variables here as a map of key: value
 env:
   SERVER_PORT: 8080
@@ -16,10 +15,8 @@ env:
   SPRING_ELASTICSEARCH_REST_URIS: http://elasticsearch-master.jx:9200
   SPRING_PROFILES_ACTIVE: cloud
   SPRING_ZIPKIN_BASE-URL: http://zipkin.jx:9411
-
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
-
 # HorizontalPodAutoscaler
 hpa:
   enabled: false
@@ -27,7 +24,6 @@ hpa:
   maxReplicas: 6
   cpuTargetAverageUtilization: 80
   memoryTargetAverageUtilization: 80
-
 # Canary deployments
 # If enabled, Istio v1.5+ and Flagger need to be installed in the cluster
 canary:
@@ -49,7 +45,6 @@ canary:
   # The host is using Istio Gateway and is currently not auto-generated
   # Please overwrite the `canary.host` in `values.yaml` in each environment repository (e.g., staging, production)
   host: acme.com
-
 service:
   name: search-service
   type: ClusterIP
@@ -76,8 +71,6 @@ readinessProbe:
   periodSeconds: 10
   successThreshold: 1
   timeoutSeconds: 2
-
-
 # custom ingress annotations on this service
 ingress:
   annotations:
@@ -93,11 +86,9 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
-
     # For Kubernetes v1.14+, use 'networking.k8s.io/v1beta1'
     apiVersion: "extensions/v1beta1"
-
     # shared ingress annotations on all services
     annotations:
-    #  kubernetes.io/ingress.class: nginx
 
+#  kubernetes.io/ingress.class: nginx
