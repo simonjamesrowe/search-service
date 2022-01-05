@@ -15,7 +15,7 @@ plugins {
 val gradlePropertiesProp = project.properties
 
 group = "com.simonjamesrowe"
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_16
 
 repositories {
   maven { url = uri("https://nexus.simonjamesrowe.com/repository/maven-public/") }
@@ -58,7 +58,7 @@ dependencyManagement {
 tasks.withType<KotlinCompile> {
   kotlinOptions {
     freeCompilerArgs = listOf("-Xjsr305=strict")
-    jvmTarget = "17"
+    jvmTarget = "16"
   }
 }
 
