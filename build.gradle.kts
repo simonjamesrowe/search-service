@@ -32,7 +32,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("io.projectreactor.netty:reactor-netty")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
-  implementation("com.simonjamesrowe:model:0.0.20")
+  implementation("com.simonjamesrowe:model:0.0.21")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
@@ -42,7 +42,7 @@ dependencies {
   testImplementation("io.mockk:mockk:1.12.1")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("org.awaitility:awaitility:4.0.3")
-  testImplementation("com.simonjamesrowe:component-test:0.3.0") {
+  testImplementation("com.simonjamesrowe:component-test:0.3.1") {
     exclude(group = "org.hibernate.validator")
   }
   testImplementation("com.tyro.oss:arbitrater:1.0.0")
