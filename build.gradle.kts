@@ -103,7 +103,7 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
   builder = "paketobuildpacks/builder:tiny"
   environment = mapOf(
     "BP_NATIVE_IMAGE" to "true",
-    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl --initialize-at-run-time=io.netty.internal.tcnative.SSLPrivateKeyMethod -H:+AddAllCharsets --enable-url-protocols=http --verbose"
+    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl --initialize-at-run-time=io.netty.internal.tcnative.SSLPrivateKeyMethod --initialize-at-run-time=io.netty.internal.tcnative.SSL -H:+AddAllCharsets --enable-url-protocols=http --verbose"
   )
   buildpacks = listOf("gcr.io/paketo-buildpacks/java-native-image:5.5.0")
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
