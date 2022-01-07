@@ -7,7 +7,7 @@ plugins {
   id("io.spring.dependency-management") version "1.0.11.RELEASE"
   kotlin("jvm") version "1.6.10"
   kotlin("plugin.spring") version "1.6.10"
-  id("org.springframework.experimental.aot") version "0.11.1"
+  id("org.springframework.experimental.aot") version "0.10.5"
   id("maven-publish")
   id("org.sonarqube") version "3.1.1"
   id("jacoco")
@@ -63,14 +63,15 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.register<Delete>("deleteSerializationConfig") {
-  delete(files("${project.buildDir}/resources/aotMain/META-INF/native-image/org.springframework.aot/spring-aot/serialization-config.json"))
+  delete(files("${project.buildDir}/resources/aot/META-INF/native-image/org.springframework.aot/spring-aot/serialization-config.json"))
 }
 
 tasks.withType<Test> {
   useJUnitPlatform()
   minHeapSize = "2g"
   maxHeapSize = "4g"
-  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=${project.buildDir}/resources/aotMain/META-INF/native-image/org.springframework.aot/spring-aot")
+  //will be aotMain in next version
+  jvmArgs("-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=${project.buildDir}/resources/aot/META-INF/native-image/org.springframework.aot/spring-aot")
   finalizedBy(tasks.jacocoTestReport, tasks.getByName<Delete>("deleteSerializationConfig"))
 }
 
@@ -93,16 +94,18 @@ tasks.getByName<BootJar>("bootJar") {
   dependsOn(tasks.test, tasks.getByName<Delete>("deleteSerializationConfig"))
 }
 
-tasks.getByName<Jar>("aotMainJar") {
-  dependsOn(tasks.test, tasks.getByName<Delete>("deleteSerializationConfig"))
-}
+//
+//tasks.getByName<Jar>("aotMainJar") {
+//  dependsOn(tasks.test, tasks.getByName<Delete>("deleteSerializationConfig"))
+//}
 
 tasks.getByName<BootBuildImage>("bootBuildImage") {
   builder = "paketobuildpacks/builder:tiny"
   environment = mapOf(
     "BP_NATIVE_IMAGE" to "true",
-    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http --verbose"
+    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl --initialize-at-run-time=io.netty.internal.tcnative.SSLPrivateKeyMethod -H:+AddAllCharsets --enable-url-protocols=http --verbose"
   )
+  buildpacks = listOf("gcr.io/paketo-buildpacks/java-native-image:5.5.0")
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
   docker {
     publishRegistry {
@@ -122,3 +125,6 @@ sonarqube {
   }
 }
 
+springAot {
+  failOnMissingSelectorHint.set(false)
+}
