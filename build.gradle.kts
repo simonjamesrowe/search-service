@@ -32,6 +32,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-webflux") {
     exclude(group = "org.springframework.boot", module = "spring-boot-starter-reactor-netty")
   }
+  implementation("io.projectreactor.netty:reactor-netty")
   implementation("org.springframework.boot:spring-boot-starter-tomcat")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
   implementation("com.simonjamesrowe:model:0.0.22")
