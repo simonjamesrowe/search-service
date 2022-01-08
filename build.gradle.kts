@@ -29,8 +29,10 @@ extra["springCloudVersion"] = "2020.0.5"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
-  implementation("org.springframework.boot:spring-boot-starter-webflux")
-  implementation("io.projectreactor.netty:reactor-netty")
+  implementation("org.springframework.boot:spring-boot-starter-webflux") {
+    exclude(group = "org.springframework.boot", module = "spring-boot-starter-reactor-netty")
+  }
+  implementation("org.springframework.boot:spring-boot-starter-tomcat")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
   implementation("com.simonjamesrowe:model:0.0.22")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
