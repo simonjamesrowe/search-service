@@ -3,10 +3,10 @@ import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-  id("org.springframework.boot") version "2.6.2"
+  id("org.springframework.boot") version "2.5.8"
   id("io.spring.dependency-management") version "1.0.11.RELEASE"
-  kotlin("jvm") version "1.6.10"
-  kotlin("plugin.spring") version "1.6.10"
+  kotlin("jvm") version "1.5.32"
+  kotlin("plugin.spring") version "1.5.32"
   id("org.springframework.experimental.aot") version "0.10.5"
   id("maven-publish")
   id("org.sonarqube") version "3.1.1"
@@ -25,14 +25,14 @@ repositories {
   maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
-extra["springCloudVersion"] = "2021.0.0"
+extra["springCloudVersion"] = "2020.0.5"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("io.projectreactor.netty:reactor-netty")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
-  implementation("com.simonjamesrowe:model:0.0.21")
+  implementation("com.simonjamesrowe:model:0.0.22")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
@@ -42,7 +42,7 @@ dependencies {
   testImplementation("io.mockk:mockk:1.12.1")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("org.awaitility:awaitility:4.0.3")
-  testImplementation("com.simonjamesrowe:component-test:0.3.1") {
+  testImplementation("com.simonjamesrowe:component-test:0.3.3") {
     exclude(group = "org.hibernate.validator")
   }
   testImplementation("com.tyro.oss:arbitrater:1.0.0")
@@ -103,7 +103,7 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
   builder = "paketobuildpacks/builder:tiny"
   environment = mapOf(
     "BP_NATIVE_IMAGE" to "true",
-    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl --initialize-at-run-time=io.netty.internal.tcnative.SSLPrivateKeyMethod --initialize-at-run-time=io.netty.internal.tcnative.SSL -H:+AddAllCharsets --enable-url-protocols=http --verbose"
+    "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http --verbose"
   )
   buildpacks = listOf("gcr.io/paketo-buildpacks/java-native-image:5.5.0")
   imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
