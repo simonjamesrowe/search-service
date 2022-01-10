@@ -34,6 +34,7 @@ dependencies {
   }
   implementation("org.springframework.boot:spring-boot-starter-jetty")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
+  implementation("org.eclipse.jetty:jetty-reactive-httpclient")
   implementation("com.simonjamesrowe:model:0.0.22")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
