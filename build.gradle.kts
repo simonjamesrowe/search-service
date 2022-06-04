@@ -120,13 +120,13 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
     "BP_NATIVE_IMAGE" to "true",
     "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http --verbose"
   )
-  imageName = "ghcr.io/simonjamesrowe/search-service:${project.version}"
+  imageName = "ghcr.io/simonjamesrowe/search-service/search-service:${project.version}"
+
   docker {
     publishRegistry {
       username = System.getenv("GITHUB_ACTOR")
       password = System.getenv("GITHUB_TOKEN")
       url = "https://ghcr.io"
-      email = gradlePropertiesProp["publishingRegistryEmail"] as String?  ?: ""
     }
   }
 }
