@@ -3,11 +3,11 @@ import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-  id("org.springframework.boot") version "2.5.8"
+  id("org.springframework.boot") version "2.7.0"
   id("io.spring.dependency-management") version "1.0.11.RELEASE"
-  kotlin("jvm") version "1.5.32"
-  kotlin("plugin.spring") version "1.5.32"
-  id("org.springframework.experimental.aot") version "0.10.5"
+  kotlin("jvm") version "1.6.21"
+  kotlin("plugin.spring") version "1.6.21"
+  id("org.springframework.experimental.aot") version "0.12.0"
   id("maven-publish")
   id("org.sonarqube") version "3.1.1"
   id("jacoco")
@@ -15,17 +15,29 @@ plugins {
 val gradlePropertiesProp = project.properties
 
 group = "com.simonjamesrowe"
-java.sourceCompatibility = JavaVersion.VERSION_16
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
-  maven { url = uri("https://nexus.simonjamesrowe.com/repository/maven-public/") }
+  maven {
+    name = "GitHubPackages"
+    url = uri("https://maven.pkg.github.com/simonjamesrowe/model")
+    credentials {
+      username = System.getenv("GITHUB_ACTOR")
+      password = System.getenv("GITHUB_TOKEN")
+    }
+    url = uri("https://maven.pkg.github.com/simonjamesrowe/component-test")
+    credentials {
+      username = System.getenv("GITHUB_ACTOR")
+      password = System.getenv("GITHUB_TOKEN")
+    }
+  }
   mavenCentral()
   maven { url = uri("https://repo.spring.io/milestone") }
   maven { url = uri("https://repo.spring.io/release") }
   maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
-extra["springCloudVersion"] = "2020.0.5"
+extra["springCloudVersion"] = "2021.0.3"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
@@ -35,7 +47,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-jetty")
   implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
   implementation("org.eclipse.jetty:jetty-reactive-httpclient")
-  implementation("com.simonjamesrowe:model:0.0.22")
+  implementation("com.simonjamesrowe:model:v0.0.25")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
@@ -45,7 +57,7 @@ dependencies {
   testImplementation("io.mockk:mockk:1.12.1")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("org.awaitility:awaitility:4.0.3")
-  testImplementation("com.simonjamesrowe:component-test:0.3.3") {
+  testImplementation("com.simonjamesrowe:component-test:v0.3.7") {
     exclude(group = "org.hibernate.validator")
   }
   testImplementation("com.tyro.oss:arbitrater:1.0.0")
@@ -108,14 +120,13 @@ tasks.getByName<BootBuildImage>("bootBuildImage") {
     "BP_NATIVE_IMAGE" to "true",
     "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" to "--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http --verbose"
   )
-  buildpacks = listOf("gcr.io/paketo-buildpacks/java-native-image:5.5.0")
-  imageName = "harbor.simonjamesrowe.com/simonjamesrowe/${project.name}:${project.version}"
+  imageName = "ghcr.io/simonjamesrowe/search-service/search-service:${project.version}"
+
   docker {
     publishRegistry {
-      username = gradlePropertiesProp["publishRegistryUsername"] as String? ?: ""
-      password = gradlePropertiesProp["publishRegistryPassword"] as String? ?: ""
-      url = "https://${gradlePropertiesProp["publishingRegistryUrl"]}"
-      email = gradlePropertiesProp["publishingRegistryEmail"] as String?  ?: ""
+      username = System.getenv("GITHUB_ACTOR")
+      password = System.getenv("GITHUB_TOKEN")
+      url = "https://ghcr.io"
     }
   }
 }
@@ -126,8 +137,4 @@ sonarqube {
     property("sonar.host.url", gradlePropertiesProp["sonar.host.url"] ?: "")
     property("sonar.login", gradlePropertiesProp["sonar.login"] ?: "")
   }
-}
-
-springAot {
-  failOnMissingSelectorHint.set(false)
 }
